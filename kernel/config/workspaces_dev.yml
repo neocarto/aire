@@ -1,0 +1,154 @@
+
+default:
+  title: Cartes 1° Hurepoix - CartaPatate
+  gmapKey: ABQIAAAAbLRoNMqR4Pen1V9KJHqHFxQIEZYXS1xL9TiWNpXW1Rj76Uuj9RTtctqibZiCwemgGivc_9UXn56X9w
+  widgets:
+    root:
+      _class: jig.layout.RootPane
+      state:
+        children:
+          - mainContainer
+    mainContainer:
+      _class: jig.layout.BorderContainer
+      state:
+        design: sidebar
+        children:
+          - map
+          - sideContainer
+        paneSize: 250
+    map:
+      _class: ploomap.map.Classical
+      state:
+        __center:         # Etampes
+          x: 239878
+          y: 6179274
+          zoom: 14
+        center:      # Paris
+          x: 260535
+          y: 6249816
+          zoom: 13
+        controls:
+          #- OpenLayers.Control.KeyboardDefaults
+          - OpenLayers.Control.Navigation
+          - OpenLayers.Control.PanZoomBar
+    sideContainer:
+      _class: jig.layout.BorderContainer
+      state:
+        design: headline
+        children:
+          - layers
+          - about #sideContainer2
+        paneSize: 400
+    sideContainer2:
+      _class: jig.layout.BorderContainer
+      state:
+        design: headline
+        children:
+          - overviewMap
+          - about
+        paneSize: 150
+    layers:
+      _class: ploomap.tool.Layers
+      state:
+        mapWidget: map
+        appearTarget: bottom
+    overviewMap:
+      _class: ploomap.tool.OverviewMap
+      state:
+        mapWidget: map
+    about:
+      _class: hurepoix.info.About
+  settings:
+    layers:
+      - ign
+      - geol
+      - igc_paris
+      - igc_versailles
+      - osm
+      - cassini
+      - velib
+      - communes_fr
+      - elements
+      - bss
+    ploomap.tool.MapTools:
+      tools:
+        - ploomap.tool.Export
+        - ploomap.tool.Measure
+        - ploomap.tool.OverviewMap
+        - ploomap.tool.StreetView
+        - ploomap.tool.Itineraries
+        - hurepoix.info.About
+
+old:
+  widgets:
+    root:
+      _class: jig.layout.RootPane
+      state:
+        children:
+          - firstContainer
+    firstContainer:
+      _class: jig.layout.BorderContainer
+      state:
+        design: sidebar
+        children:
+          - secondContainer
+          - myTest2
+    secondContainer:
+      _class: jig.layout.BorderContainer
+      state:
+        design: headline
+        children:
+          - myMap
+          #- myTest3
+          - thirdContainer
+    thirdContainer:
+      _class: jig.layout.BorderContainer
+      state:
+        design: sidebar
+        children:
+          - myTest4
+          #- myTest5
+          - myMap2
+    myTest:
+      _class: jig.tool.Test
+    myTest2:
+      _class: jig.tool.Test
+    myTest3:
+      _class: jig.tool.Test
+    myTest4:
+      _class: jig.tool.Test
+      state:
+        ___floatingChildrenProperties:
+          anchor1:
+            bottom: "30px"
+            right: "30px"
+        #children:
+        #  - anchor1
+    myTest5:
+      _class: jig.tool.Test
+    myTest6:
+      _class: jig.tool.Test
+    myMap:
+      _class: ploomap.map.Classical
+      state:
+        center:
+          x: 260535
+          "y": 6249816
+          zoom: 13
+        #floatingChildrenProperties:
+        #  myTest6:
+        #    width: "80px"
+        #    height: "80px"
+        #    bottom: "30px"
+        #    right: "30px"
+        #children:
+        #  - myTest6
+    myMap2:
+      _class: ploomap.map.Classical
+      state:
+        center:
+          x: 260535
+          "y": 6249816
+          zoom: 16
+    anchor1:
+      _class: jig.layout.AnchorButton

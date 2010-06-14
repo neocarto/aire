@@ -1,0 +1,40 @@
+kernel.config:
+  charset: UTF-8
+  error_handler_level: null
+
+web.web: ~
+web.templating: ~
+
+#swift.mailer:
+#  transport: gmail
+#  username:  xxxxxxxx
+#  password:  xxxxxxxx
+#
+
+# http://www.jwage.com/index.php/blog-post/using-symfony-2-and-doctrine-2
+#doctrine.dbal.driver: PDOPgSql  # PDOSqlite, PDOMySql, PDOMsSql, PDOOracle, PDOPgSql, OCI8
+#doctrine.dbal.dbname: cartapatate_hurepoix
+#doctrine.dbal.user: cartapatate
+#doctrine.dbal.password: pFWxLvY58
+#doctrine.dbal.driver.class: Doctrine\DBAL\Driver\PDOPgSql\Driver
+
+doctrine.dbal:
+  default_connection: default
+  connections:
+    default:
+      driver: PDOPgSql  # PDOSqlite, PDOMySql, PDOMsSql, PDOOracle, PDOPgSql, OCI8
+      dbname: cartapatate_hurepoix
+      user: cartapatate
+      password: pFWxLvY58
+      a:
+        a1: sde
+        a2: zedfzre
+
+doctrine.orm:
+  default_entity_manager: default
+  metadata_driver: annotation           # xml, yml, annotation
+  cache_driver: apc                     # array, apc, memcache, xcache
+  entity_managers:
+    default:
+      connection: default
+

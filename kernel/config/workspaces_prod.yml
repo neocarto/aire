@@ -1,0 +1,74 @@
+
+default:
+  title: Cartes 1° Hurepoix - CartaPatate
+  gmapKey: ABQIAAAAbLRoNMqR4Pen1V9KJHqHFxR8LCrIApkag7e2Ys8b_uzh20QCThSoLziwEEBX_zMriMcJhAtf5ZeRzQ
+  widgets:
+    root:
+      _class: jig.layout.RootPane
+      state:
+        children:
+          - mainContainer
+    mainContainer:
+      _class: jig.layout.BorderContainer
+      state:
+        design: sidebar
+        children:
+          - map
+          - sideContainer
+        paneSize: 250
+    map:
+      _class: ploomap.map.Classical
+      state:
+        center:         # Etampes
+          x: 239878
+          y: 6179274
+          zoom: 14
+        ___center:      # Paris
+          x: 260535
+          y: 6249816
+          zoom: 13
+        controls:
+          #- OpenLayers.Control.KeyboardDefaults
+          - OpenLayers.Control.Navigation
+          - OpenLayers.Control.PanZoomBar
+    sideContainer:
+      _class: jig.layout.BorderContainer
+      state:
+        design: headline
+        children:
+          - layers
+          - sideContainer2
+        paneSize: 400
+    sideContainer2:
+      _class: jig.layout.BorderContainer
+      state:
+        design: headline
+        children:
+          - overviewMap
+          - about
+        paneSize: 150
+    layers:
+      _class: ploomap.tool.Layers
+      state:
+        mapWidget: map
+        appearTarget: bottom
+    overviewMap:
+      _class: ploomap.tool.OverviewMap
+      state:
+        mapWidget: map
+    about:
+      _class: hurepoix.info.About
+  settings:
+    layers:
+      - ign
+      - geol
+      - osm
+      - cassini
+      - communes_fr
+      - velib
+    ploomap.tool.MapTools:
+      tools:
+        - ploomap.tool.Export
+        - ploomap.tool.Measure
+        - ploomap.tool.OverviewMap
+        - hurepoix.info.About

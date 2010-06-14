@@ -1,0 +1,13 @@
+imports:
+  - { resource: config.yml }
+
+#web.debug:
+#  exception: %kernel.debug%
+#  toolbar:   %kernel.debug%
+
+zend.logger:
+  priority: debug
+  path:     %kernel.root_dir%/logs/%kernel.environment%.log
+
+profiler.config:
+  toolbar: false

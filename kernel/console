@@ -1,0 +1,11 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__.'/HurepoixKernel.php';
+
+use Symfony\Framework\WebBundle\Console\Application;
+
+$kernel = new HurepoixKernel('dev', true);
+
+$application = new Application($kernel);
+$application->run();
