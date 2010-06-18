@@ -7,7 +7,7 @@ use Symfony\Foundation\Kernel;
 use Symfony\Components\DependencyInjection\Loader\YamlFileLoader as ContainerLoader;
 use Symfony\Components\Routing\Loader\YamlFileLoader as RoutingLoader;
 
-class HurepoixKernel extends Kernel
+class Kernel extends Kernel
 {
   public function registerRootDir()
   {
