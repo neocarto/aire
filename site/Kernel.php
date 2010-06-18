@@ -3,11 +3,11 @@
 require_once __DIR__.'/../src/autoload.php';
 require_once __DIR__.'/../src/cartapatate/symfony/src/Symfony/Foundation/bootstrap.php';
 
-use Symfony\Foundation\Kernel;
+use Symfony\Foundation\Kernel as BaseKernel;
 use Symfony\Components\DependencyInjection\Loader\YamlFileLoader as ContainerLoader;
 use Symfony\Components\Routing\Loader\YamlFileLoader as RoutingLoader;
 
-class Kernel extends Kernel
+class Kernel extends BaseKernel
 {
   public function registerRootDir()
   {
