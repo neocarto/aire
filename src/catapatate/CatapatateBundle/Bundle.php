@@ -1,6 +1,6 @@
 <?php
 
-namespace HurepoixBundle;
+namespace CatapatateBundle;
 
 use Symfony\Foundation\Bundle\Bundle as BaseBundle;
 use Symfony\Components\DependencyInjection\ContainerInterface;

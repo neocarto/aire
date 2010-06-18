@@ -1,6 +1,6 @@
 <?php
 
-namespace HurepoixBundle\Controller;
+namespace CatapatateBundle\Controller;
 
 use Symfony\Framework\WebBundle\Controller;
 use Symfony\Components\DependencyInjection\Dumper\YamlDumper;

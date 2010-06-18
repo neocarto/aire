@@ -8,7 +8,7 @@ __homepage:
   defaults: { _bundle: WebBundle, _controller: Default, _action: index }
 
 hurepoix:
-  resource: HurepoixBundle/Resources/config/routing.yml
+  resource: CatapatateBundle/Resources/config/routing.yml
 
 zig:
   resource: ZigBundle/Resources/config/routing.yml
