@@ -1,0 +1,148 @@
+#############################################################
+##
+##  PHP view of Jig workspace
+##
+#############################################################
+
+class: Zig\View\Document\Workspace
+title: Workspace
+
+#############################################################
+## HEADER
+
+# GMap key is
+#   for http://okamap.dev.lapatate.org :
+#     ABQIAAAAbLRoNMqR4Pen1V9KJHqHFxTJc1TUOWfJSEQIrIow9EO1M6xJcxSGLig3Jv_uQH7Ib8J_8p3ymhPI0w
+#   for dev.hurepoix.cartapatate.eu :
+#     ABQIAAAAbLRoNMqR4Pen1V9KJHqHFxQIEZYXS1xL9TiWNpXW1Rj76Uuj9RTtctqibZiCwemgGivc_9UXn56X9w
+
+packageScripts: false
+packageStyles: false
+
+scripts:
+  - /x/dojo/dojo.js
+  # cartapatate.net : ABQIAAAAbLRoNMqR4Pen1V9KJHqHFxQA367lAHlkjABbUcAop0DGCpL_0RR1Fbs6U1WlvDJ0jWdsrgcAgGKukA
+  # hurepoix.cartapatate.net : ABQIAAAAbLRoNMqR4Pen1V9KJHqHFxR8LCrIApkag7e2Ys8b_uzh20QCThSoLziwEEBX_zMriMcJhAtf5ZeRzQ
+  # dev.hurepoix.cartapatate.net : ABQIAAAAbLRoNMqR4Pen1V9KJHqHFxQIEZYXS1xL9TiWNpXW1Rj76Uuj9RTtctqibZiCwemgGivc_9UXn56X9w
+  - http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAbLRoNMqR4Pen1V9KJHqHFxQA367lAHlkjABbUcAop0DGCpL_0RR1Fbs6U1WlvDJ0jWdsrgcAgGKukA
+  - http://openlayers.org/api/OpenLayers.js
+  #- /js/openlayers/build/OpenLayers.js
+  - /js/ploomap/ol/Layer_pmTMS.js
+  #- /js/ploomap/ol/Marker_Label.js
+  #- /js/ploomap/ol/Control_FeatureHover.js
+  #- /js/ploomap/ol/Control_LoadingPanel.js
+  - /x/workspace_default.js
+  - /js/start.js
+
+scriptAffectations:
+  window\.workspaceKey: home
+  #window\.workspaceData:
+
+css:
+ - /x/dijit/themes/tundra/tundra.css
+ #- /js/dijit/themes/tundra/tundra.css
+ - /x/jig/css/jig.css
+ #- /js/jig/css/jig.css
+
+
+#############################################################
+## BODY
+
+bodyAttributes:
+  class: patate tundra
+
+
+bodyInnerHtml:
+  app:
+    tag: div
+    attributes:
+      id: app
+    content: ""
+  wait:
+    tag: div
+    attributes:
+      id: wait
+    content:
+      sub:
+        tag: div
+        content: "Chargement de l'application..."
+
+widgets:
+  root:
+    _class: jig.layout.RootPane
+    state:
+      children:
+        - mainContainer
+  mainContainer:
+    _class: jig.layout.BorderContainer
+    state:
+      design: sidebar
+      children:
+        - map
+        - sideContainer
+      paneSize: 250
+  map:
+    _class: ploomap.map.Classical
+    state:
+      __center:         # Etampes
+        x: 239878
+        y: 6179274
+        zoom: 14
+      center:      # Paris
+        x: 260535
+        y: 6249816
+        zoom: 13
+      controls:
+        #- OpenLayers.Control.KeyboardDefaults
+        - OpenLayers.Control.Navigation
+        - OpenLayers.Control.PanZoomBar
+  sideContainer:
+    _class: jig.layout.BorderContainer
+    state:
+      design: headline
+      children:
+        - layers
+        - about #sideContainer2
+      paneSize: 400
+  sideContainer2:
+    _class: jig.layout.BorderContainer
+    state:
+      design: headline
+      children:
+        - overviewMap
+        - about
+      paneSize: 150
+  layers:
+    _class: ploomap.tool.Layers
+    state:
+      mapWidget: map
+      appearTarget: bottom
+  overviewMap:
+    _class: ploomap.tool.OverviewMap
+    state:
+      mapWidget: map
+  about:
+    _class: hurepoix.info.About
+
+settings:
+  layers:
+    - ign
+    - geol
+    - igc_paris
+    - igc_versailles
+    - osm
+    - cassini
+    - velib
+    - communes_fr
+    - elements
+    - bss
+    - test
+  mapTools:
+    tools:
+      - ploomap.tool.Export
+      - ploomap.tool.Measure
+      - ploomap.tool.OverviewMap
+      - ploomap.tool.StreetView
+      - ploomap.tool.Itineraries
+      - hurepoix.info.About
+

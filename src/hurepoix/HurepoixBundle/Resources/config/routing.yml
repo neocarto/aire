@@ -1,0 +1,4 @@
+
+test:
+  pattern: /test
+  defaults: { _bundle: HurepoixBundle, _controller: Test, _action: test }

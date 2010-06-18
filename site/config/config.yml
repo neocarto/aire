@@ -1,0 +1,23 @@
+imports:
+  - { resource: doctrine.yml }
+  - { resource: zig.install.yml }
+
+parameters:
+    kernel.include_core_classes: false
+
+kernel.config:
+  charset: UTF-8
+  error_handler_level: null
+
+web.config: ~
+web.templating: ~
+
+zig.registry: ~
+
+#  directory: config/registry
+
+#swift.mailer:
+#  transport: gmail
+#  username:  xxxxxxxx
+#  password:  xxxxxxxx
+#

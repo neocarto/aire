@@ -1,0 +1,50 @@
+zig.install:
+  # all paths are relative to the parameter 'kernel.root_dir'
+  manager_class: hehe
+  public_dir: public
+  public_mappings:
+    - { location: '', directory: '../src/hurepoix/HurepoixBundle/Resources/web' }
+    - { location: '', directory: '../src/cartapatate/cartapatate/lib/Cartapatate/Bundles/CartapatateBundle/Resources/public' }
+    - { location: '', directory: '../src/cartapatate/ploomap/lib/Ploomap/Bundle/PloomapBundle/Resources/public' }
+    - { location: 'js', directory: '../src/cartapatate/zig/res/js' }
+    - { location: 'images/openlayers', directory: '../src/cartapatate/ploomap/lib/Ploomap/Bundle/PloomapBundle/Resources/public/js/openlayers/img' }
+
+  shrinksafe:
+    #profile: etc/hurepoix.profile.js
+    buildscripts_dir: /home/okapi/dev/dojo/util/buildscripts
+    release_name: x
+    release_dir: public
+    profileData:
+      prefixes:
+        - [dojo, /home/okapi/dev/dojo/dojo]
+        - [dijit, /home/okapi/dev/dojo/dijit]
+        - [dojox, /home/okapi/dev/dojo/dojox]
+        - [jig, public/js/jig]
+        - [ploomap, public/js/ploomap]
+        - [hurepoix, public/js/hurepoix]
+      layers:
+        -
+          name: ../workspace_default.js
+          dependencies:
+            # misc deps
+            - dojo.fx.easing3
+            - dojox.io.xhrPlugins
+            - jig.workspace
+            - ploomap.tool.layer.Simple
+            - ploomap.tool.layer.Select
+            - ploomap.layer.Simple
+            - ploomap.layer.Vector
+            # initial cacoins
+            - jig.layout.RootPane
+            - jig.layout.BorderContainer
+            - ploomap.map.Classical
+            - ploomap.tool.Layers
+            - hurepoix.info.About
+            # tools
+            - ploomap.tool.Export
+            - ploomap.tool.Measure
+            - ploomap.tool.OverviewMap
+            - ploomap.tool.StreetView
+            - ploomap.tool.Itineraries
+            - hurepoix.info.About
+
