@@ -28,7 +28,7 @@ class Kernel extends BaseKernel
                  // third-party : my owns
                  new Zig\Framework\ZigBundle\Bundle(),
                  new Ploomap\Bundle\PloomapBundle\Bundle(),
-                 new HurepoixBundle\Bundle(),
+                 new CatapatateBundle\Bundle(),
                  );
   }
 
@@ -37,8 +37,8 @@ class Kernel extends BaseKernel
     return array(
                  //'Application'        => __DIR__.'/../src/Application',
                  //'Bundle'             => __DIR__.'/../src/Bundle',
-                 //'HurepoixBundle'             => __DIR__.'/../src/hurepoix/HurepoixBundle',
-                 'HurepoixBundle'           => __DIR__.'/../src/hurepoix',
+                 //'CatapatateBundle'             => __DIR__.'/../src/catapatate/CatapatateBundle',
+                 'CatapatateBundle'           => __DIR__.'/../src/catapatate',
                  'Symfony\\Framework' => __DIR__.'/../src/cartapatate/symfony/src/Symfony/Framework',
                  'Zig\\Framework'     => __DIR__.'/../src/cartapatate/zig/lib/Zig/Framework',
                  'Ploomap\\Bundle'     => __DIR__.'/../src/cartapatate/ploomap/lib/Ploomap/Bundle',

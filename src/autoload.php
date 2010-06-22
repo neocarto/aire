@@ -13,7 +13,7 @@ $loader->registerNamespaces(array(
   //'DoctrineExtensions' => __DIR__,
   'Zig'         => __DIR__.'/cartapatate/zig/lib',
   'Ploomap'     => __DIR__.'/cartapatate/ploomap/lib',
-  'HurepoixBundle' => __DIR__.'/hurepoix',
+  'CatapatateBundle' => __DIR__.'/catapatate',
   //'Zend' => __DIR__.'/cartapatate/compat/lib',
   'Zend' => '/usr/src/zf2/library',
 ));

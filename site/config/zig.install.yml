@@ -3,14 +3,14 @@ zig.install:
   manager_class: hehe
   public_dir: public
   public_mappings:
-    - { location: '', directory: '../src/hurepoix/HurepoixBundle/Resources/web' }
+    - { location: '', directory: '../src/catapatate/CatapatateBundle/Resources/web' }
     - { location: '', directory: '../src/cartapatate/cartapatate/lib/Cartapatate/Bundles/CartapatateBundle/Resources/public' }
     - { location: '', directory: '../src/cartapatate/ploomap/lib/Ploomap/Bundle/PloomapBundle/Resources/public' }
     - { location: 'js', directory: '../src/cartapatate/zig/res/js' }
     - { location: 'images/openlayers', directory: '../src/cartapatate/ploomap/lib/Ploomap/Bundle/PloomapBundle/Resources/public/js/openlayers/img' }
 
   shrinksafe:
-    #profile: etc/hurepoix.profile.js
+    #profile: etc/catapatate.profile.js
     buildscripts_dir: /home/okapi/dev/dojo/util/buildscripts
     release_name: x
     release_dir: public
@@ -21,7 +21,7 @@ zig.install:
         - [dojox, /home/okapi/dev/dojo/dojox]
         - [jig, public/js/jig]
         - [ploomap, public/js/ploomap]
-        - [hurepoix, public/js/hurepoix]
+        - [catapatate, public/js/catapatate]
       layers:
         -
           name: ../workspace_default.js
@@ -39,12 +39,12 @@ zig.install:
             - jig.layout.BorderContainer
             - ploomap.map.Classical
             - ploomap.tool.Layers
-            - hurepoix.info.About
+            - catapatate.info.About
             # tools
             - ploomap.tool.Export
             - ploomap.tool.Measure
             - ploomap.tool.OverviewMap
             - ploomap.tool.StreetView
             - ploomap.tool.Itineraries
-            - hurepoix.info.About
+            - catapatate.info.About
 
