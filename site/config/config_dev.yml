@@ -6,4 +6,4 @@ zend.logger:
     path:     %kernel.logs_dir%/%kernel.environment%.log
 
 web.config:
-    toolbar: true
+    toolbar: false

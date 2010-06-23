@@ -4,10 +4,10 @@ zig.install:
   public_dir: public
   public_mappings:
     - { location: '', directory: '../src/catapatate/CatapatateBundle/Resources/web' }
-    - { location: '', directory: '../src/cartapatate/cartapatate/lib/Cartapatate/Bundles/CartapatateBundle/Resources/public' }
-    - { location: '', directory: '../src/cartapatate/ploomap/lib/Ploomap/Bundle/PloomapBundle/Resources/public' }
+    - { location: '', directory: '../src/cartapatate/cartapatate/public' }
+    - { location: '', directory: '../src/cartapatate/ploomap/public' }
     - { location: 'js', directory: '../src/cartapatate/zig/res/js' }
-    - { location: 'images/openlayers', directory: '../src/cartapatate/ploomap/lib/Ploomap/Bundle/PloomapBundle/Resources/public/js/openlayers/img' }
+    - { location: 'images/openlayers', directory: '../src/cartapatate/ploomap/public/js/openlayers/img' }
 
   shrinksafe:
     #profile: etc/catapatate.profile.js
@@ -34,6 +34,7 @@ zig.install:
             - ploomap.tool.layer.Select
             - ploomap.layer.Simple
             - ploomap.layer.Vector
+            - ploomap.OpenLayers.Control.TileLoadSpinner
             # initial cacoins
             - jig.layout.RootPane
             - jig.layout.BorderContainer
