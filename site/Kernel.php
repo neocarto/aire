@@ -7,8 +7,28 @@ use Symfony\Foundation\Kernel as BaseKernel;
 use Symfony\Components\DependencyInjection\Loader\YamlFileLoader as ContainerLoader;
 use Symfony\Components\Routing\Loader\YamlFileLoader as RoutingLoader;
 
+use Symfony\Foundation\Bundle\KernelBundle;
+use Symfony\Framework\FoundationBundle\FoundationBundle;
+use Symfony\Framework\ZendBundle\ZendBundle;
+use Symfony\Framework\DoctrineBundle\DoctrineBundle;
+use Symfony\Framework\SwiftmailerBundle\SwiftmailerBundle;
+use Symfony\Framework\DoctrineMigrationsBundle\DoctrineMigrationsBundle;
+use Bundle\DoctrineMongoDBBundle\DoctrineMongoDBBundle;
+use Zig\Framework\ZigBundle\ZigBundle;
+use Ploomap\Bundle\PloomapBundle\PloomapBundle;
+use CatapatateBundle\CatapatateBundle;
+
 class Kernel extends BaseKernel
 {
+  /**
+   * Overloaded, only to provide an app name
+   */
+  public function __construct($environment, $debug)
+  {
+    parent::__construct($environment, $debug);
+    $this->name = 'aire';
+  }
+
   public function registerRootDir()
   {
     return __DIR__;
@@ -17,18 +37,21 @@ class Kernel extends BaseKernel
   public function registerBundles()
   {
     return array(
-                 new Symfony\Foundation\Bundle\KernelBundle(),
-                 new Symfony\Framework\WebBundle\Bundle(),
+                 // essential bundles
+                 new KernelBundle(),
+                 new FoundationBundle(),
 
                  // third-party : Symfony-related
-                 new Symfony\Framework\ZendBundle\Bundle(),
-                 new Symfony\Framework\SwiftmailerBundle\Bundle(),
-                 new Symfony\Framework\DoctrineBundle\Bundle(),
+                 new ZendBundle(),
+                 new SwiftmailerBundle(),
+                 new DoctrineBundle(),
+                 //new DoctrineMigrationsBundle(),
+                 new DoctrineMongoDBBundle(),
 
                  // third-party : my owns
-                 new Zig\Framework\ZigBundle\Bundle(),
-                 new Ploomap\Bundle\PloomapBundle\Bundle(),
-                 new CatapatateBundle\Bundle(),
+                 new ZigBundle(),
+                 new PloomapBundle(),
+                 new CatapatateBundle(),
                  );
   }
 

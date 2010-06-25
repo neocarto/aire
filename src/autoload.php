@@ -7,10 +7,8 @@ use Symfony\Foundation\UniversalClassLoader;
 $loader = new UniversalClassLoader();
 $loader->registerNamespaces(array(
   'Symfony'     => __DIR__.'/cartapatate/symfony/src',
-  //'Application' => __DIR__,
-  //'Bundle'      => __DIR__,
   'Doctrine'    => __DIR__.'/cartapatate/doctrine/lib',
-  //'DoctrineExtensions' => __DIR__,
+  'Bundle\\DoctrineMongoDBBundle' => __DIR__.'/cartapatate/doctrine-mongodb-bundle',
   'Zig'         => __DIR__.'/cartapatate/zig/lib',
   'Ploomap'     => __DIR__.'/cartapatate/ploomap/lib',
   'CatapatateBundle' => __DIR__.'/catapatate',
