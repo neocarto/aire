@@ -1,20 +1,21 @@
 <?php
 
 require_once __DIR__.'/../src/autoload.php';
-require_once __DIR__.'/../src/cartapatate/symfony/src/Symfony/Foundation/bootstrap.php';
+//require_once __DIR__.'/../src/cartapatate/symfony/src/Symfony/Foundation/bootstrap.php';
 
-use Symfony\Foundation\Kernel as BaseKernel;
+use Symfony\Framework\Kernel as BaseKernel;
 use Symfony\Components\DependencyInjection\Loader\YamlFileLoader as ContainerLoader;
 use Symfony\Components\Routing\Loader\YamlFileLoader as RoutingLoader;
+use Symfony\Components\DependencyInjection\ContainerBuilder;
 
-use Symfony\Foundation\Bundle\KernelBundle;
-use Symfony\Framework\FoundationBundle\FoundationBundle;
-use Symfony\Framework\ZendBundle\ZendBundle;
-use Symfony\Framework\DoctrineBundle\DoctrineBundle;
-use Symfony\Framework\SwiftmailerBundle\SwiftmailerBundle;
-use Symfony\Framework\DoctrineMigrationsBundle\DoctrineMigrationsBundle;
-use Bundle\DoctrineMongoDBBundle\DoctrineMongoDBBundle;
-use Zig\Framework\ZigBundle\ZigBundle;
+use Symfony\Framework\KernelBundle;
+use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
+use Symfony\Bundle\ZendBundle\ZendBundle;
+use Symfony\Bundle\DoctrineBundle\DoctrineBundle;
+use Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle;
+use Symfony\Bundle\DoctrineMongoDBBundle\DoctrineMongoDBBundle;
+
+use Zig\Bundle\ZigBundle\ZigBundle;
 use Ploomap\Bundle\PloomapBundle\PloomapBundle;
 use CatapatateBundle\CatapatateBundle;
 
@@ -26,7 +27,7 @@ class Kernel extends BaseKernel
   public function __construct($environment, $debug)
   {
     parent::__construct($environment, $debug);
-    $this->name = 'aire';
+    $this->name = 'catapatate';
   }
 
   public function registerRootDir()
@@ -39,7 +40,7 @@ class Kernel extends BaseKernel
     return array(
                  // essential bundles
                  new KernelBundle(),
-                 new FoundationBundle(),
+                 new FrameworkBundle(),
 
                  // third-party : Symfony-related
                  new ZendBundle(),
@@ -70,9 +71,11 @@ class Kernel extends BaseKernel
 
   public function registerContainerConfiguration()
   {
-    $loader = new ContainerLoader($this->getBundleDirs());
+    $container = new ContainerBuilder();
+    $loader = new ContainerLoader($container, $this->getBundleDirs());
+    $loader->load(__DIR__.'/config/config_'.$this->getEnvironment().'.yml');
 
-    return $loader->load(__DIR__.'/config/config_'.$this->getEnvironment().'.yml');
+    return $container;
   }
 
   public function registerRoutes()
