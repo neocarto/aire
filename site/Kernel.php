@@ -4,6 +4,7 @@ require_once __DIR__.'/../src/autoload.php';
 //require_once __DIR__.'/../src/cartapatate/symfony/src/Symfony/Foundation/bootstrap.php';
 
 use Symfony\Framework\Kernel as BaseKernel;
+use Symfony\Components\DependencyInjection\Loader\LoaderInterface;
 use Symfony\Components\DependencyInjection\Loader\YamlFileLoader as ContainerLoader;
 use Symfony\Components\Routing\Loader\YamlFileLoader as RoutingLoader;
 use Symfony\Components\DependencyInjection\ContainerBuilder;
@@ -64,24 +65,14 @@ class Kernel extends BaseKernel
                  //'CatapatateBundle'             => __DIR__.'/../src/catapatate/CatapatateBundle',
                  'CatapatateBundle'           => __DIR__.'/../src/catapatate',
                  'Symfony\\Framework' => __DIR__.'/../src/cartapatate/symfony/src/Symfony/Framework',
-                 'Zig\\Framework'     => __DIR__.'/../src/cartapatate/zig/lib/Zig/Framework',
+                 'Zig\\Bundle'     => __DIR__.'/../src/cartapatate/zig/lib/Zig/Bundle',
                  'Ploomap\\Bundle'     => __DIR__.'/../src/cartapatate/ploomap/lib/Ploomap/Bundle',
                  );
   }
 
-  public function registerContainerConfiguration()
+  public function registerContainerConfiguration(LoaderInterface $loader)
   {
-    $container = new ContainerBuilder();
-    $loader = new ContainerLoader($container, $this->getBundleDirs());
     $loader->load(__DIR__.'/config/config_'.$this->getEnvironment().'.yml');
-
-    return $container;
   }
 
-  public function registerRoutes()
-  {
-    $loader = new RoutingLoader($this->getBundleDirs());
-
-    return $loader->load(__DIR__.'/config/routing.yml');
-  }
 }

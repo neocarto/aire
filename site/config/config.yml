@@ -9,15 +9,24 @@ kernel.config:
   charset: UTF-8
   error_handler_level: null
 
-web.config: ~
+web.templating:
+  escaping:       htmlspecialchars
+  assets_version: SomeVersionScheme
+
+web.config:
+  router: { resource: "%kernel.root_dir%/config/routing.yml" }
+
 web.templating: ~
 
 zig.registry: ~
 
+zig.api: ~
+
 #  directory: config/registry
 
-#swift.mailer:
-#  transport: gmail
-#  username:  xxxxxxxx
-#  password:  xxxxxxxx
-#
+swift.mailer:
+  transport: smtp #gmail
+  host: smtp.dedibox.fr
+  #username:
+  #password:
+

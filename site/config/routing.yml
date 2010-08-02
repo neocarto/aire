@@ -1,18 +1,10 @@
+catapatate:
+  resource: CatapatateBundle/Resources/config/routing.yml
+zig:
+  resource: ZigBundle/Resources/config/routing.yml
+ploomap:
+  resource: PloomapBundle/Resources/config/routing.yml
+
 homepage:
   pattern: /
   defaults: { _controller: "ZigBundle:ViewClass:render", path: "views.workspace" }
-  #defaults: { _controller: "ZigBundle:Workspace:view", key: default }
-
-__homepage:
-  pattern:  /___
-  defaults: { _bundle: WebBundle, _controller: Default, _action: index }
-
-hurepoix:
-  resource: CatapatateBundle/Resources/config/routing.yml
-
-zig:
-  resource: ZigBundle/Resources/config/routing.yml
-
-# testz:
-#   pattern: /testz
-#   defaults: { _bundle: ZigBundle, _controller: Json, _action: process }

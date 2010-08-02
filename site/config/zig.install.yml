@@ -14,6 +14,7 @@ zig.install:
     buildscripts_dir: /home/okapi/dev/dojo/util/buildscripts
     release_name: x
     release_dir: public
+    build_version: 0.2.2
     profileData:
       prefixes:
         - [dojo, /home/okapi/dev/dojo/dojo]
@@ -25,6 +26,7 @@ zig.install:
       layers:
         -
           name: ../workspace_default.js
+          copyrightFile: '../src/cartapatate/ploomap/public/js/ploomap/copyright.txt'
           dependencies:
             # misc deps
             - dojo.fx.easing3

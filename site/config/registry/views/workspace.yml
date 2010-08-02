@@ -26,8 +26,8 @@ scripts:
   # hurepoix.cartapatate.net : ABQIAAAAbLRoNMqR4Pen1V9KJHqHFxR8LCrIApkag7e2Ys8b_uzh20QCThSoLziwEEBX_zMriMcJhAtf5ZeRzQ
   # dev.hurepoix.cartapatate.net : ABQIAAAAbLRoNMqR4Pen1V9KJHqHFxQIEZYXS1xL9TiWNpXW1Rj76Uuj9RTtctqibZiCwemgGivc_9UXn56X9w
   - http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAbLRoNMqR4Pen1V9KJHqHFxQA367lAHlkjABbUcAop0DGCpL_0RR1Fbs6U1WlvDJ0jWdsrgcAgGKukA
-  #- http://openlayers.org/api/OpenLayers.js
-  - /js/openlayers/build/OpenLayers.js
+  - http://openlayers.org/api/OpenLayers.js
+  #- /js/openlayers/build/OpenLayers.js
   - /x/workspace_default.js
   - /js/start.js
 
@@ -39,7 +39,7 @@ css:
   - /js/catapatate/css/application.css
   #- /x/dijit/themes/tundra/tundra.css
   #- /js/dijit/themes/tundra/tundra.css
-  # /x/jig/css/jig.css
+  - /x/jig/css/jig.css
   #- /js/jig/css/jig.css
 
 
@@ -71,6 +71,9 @@ widgets:
     state:
       children:
         - mainContainer
+      toaster:
+        positionDirection: bl-up
+        # "br-up", "br-left", "bl-up", "bl-right", "tr-down", "tr-left", "tl-down", "tl-right"
   mainContainer:
     _class: jig.layout.BorderContainer
     state:
@@ -141,7 +144,9 @@ settings:
       - ploomap.tool.Export
       - ploomap.tool.Measure
       - ploomap.tool.OverviewMap
-      #- ploomap.tool.StreetView
-      #- ploomap.tool.Itineraries
+      - ploomap.tool.StreetView
+      - ploomap.tool.Itineraries
+      - ploomap.tool.Magnifier
+      - jig.tool.UserFeedback
       - catapatate.info.About
 
