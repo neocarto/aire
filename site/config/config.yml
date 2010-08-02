@@ -26,7 +26,7 @@ zig.api: ~
 
 swift.mailer:
   transport: smtp #gmail
-  host: smtp.dedibox.fr
+  host: localhost #smtp.dedibox.fr
   #username:
   #password:
 
