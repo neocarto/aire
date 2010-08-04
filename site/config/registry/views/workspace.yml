@@ -137,8 +137,8 @@ settings:
     - cassini
     - velib
     - communes_fr
-    #- elements
-    #- bss
+    - elements
+    - bss
     #- test
   mapTools:
     tools:
