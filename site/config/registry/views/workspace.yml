@@ -98,6 +98,7 @@ widgets:
         #- OpenLayers.Control.KeyboardDefaults
         - { class: OpenLayers.Control.Navigation, options: { mouseWheelOptions: { interval: 100 } } }
         - OpenLayers.Control.PanZoomBar
+        - { class: OpenLayers.Control.ScaleLine, options: { maxWidth: 150, geodesic: true } }
         - ploomap.OpenLayers.Control.TileLoadSpinner
   sideContainer:
     _class: jig.layout.BorderContainer
@@ -105,7 +106,8 @@ widgets:
       design: headline
       children:
         - layers
-        - about #sideContainer2
+        - overviewMap
+        #- about #sideContainer2
       paneSize: 400
   sideContainer2:
     _class: jig.layout.BorderContainer
