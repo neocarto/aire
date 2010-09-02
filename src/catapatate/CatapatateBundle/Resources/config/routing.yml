@@ -1,4 +1,4 @@
 
-test:
-  pattern: /test
-  defaults: { _bundle: CatapatateBundle, _controller: Test, _action: test }
+#test:
+#  pattern: /test
+#  defaults: { _controller: 'CatapatateBundle:Test:test' }

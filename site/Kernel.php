@@ -4,10 +4,7 @@ require_once __DIR__.'/../src/autoload.php';
 //require_once __DIR__.'/../src/cartapatate/symfony/src/Symfony/Foundation/bootstrap.php';
 
 use Symfony\Framework\Kernel as BaseKernel;
-use Symfony\Components\DependencyInjection\Loader\LoaderInterface;
-use Symfony\Components\DependencyInjection\Loader\YamlFileLoader as ContainerLoader;
-use Symfony\Components\Routing\Loader\YamlFileLoader as RoutingLoader;
-use Symfony\Components\DependencyInjection\ContainerBuilder;
+use Symfony\Component\DependencyInjection\Loader\LoaderInterface;
 
 use Symfony\Framework\KernelBundle;
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
@@ -38,23 +35,28 @@ class Kernel extends BaseKernel
 
   public function registerBundles()
   {
-    return array(
-                 // essential bundles
-                 new KernelBundle(),
-                 new FrameworkBundle(),
+    $bundles = array(
+                     // essential bundles
+                     new KernelBundle(),
+                     new FrameworkBundle(),
 
-                 // third-party : Symfony-related
-                 new ZendBundle(),
-                 new SwiftmailerBundle(),
-                 new DoctrineBundle(),
-                 //new DoctrineMigrationsBundle(),
-                 new DoctrineMongoDBBundle(),
+                     // third-party : Symfony-related
+                     new ZendBundle(),
+                     new SwiftmailerBundle(),
+                     new DoctrineBundle(),
+                     //new DoctrineMigrationsBundle(),
+                     new DoctrineMongoDBBundle(),
 
-                 // third-party : my owns
-                 new ZigBundle(),
-                 new PloomapBundle(),
-                 new CatapatateBundle(),
-                 );
+                     // third-party : my owns
+                     new ZigBundle(),
+                     new PloomapBundle(),
+                     new CatapatateBundle(),
+                     );
+    /*if ($this->isDebug()) {
+      $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
+      }*/
+
+    return $bundles;
   }
 
   public function registerBundleDirs()
@@ -64,7 +66,7 @@ class Kernel extends BaseKernel
                  //'Bundle'             => __DIR__.'/../src/Bundle',
                  //'CatapatateBundle'             => __DIR__.'/../src/catapatate/CatapatateBundle',
                  'CatapatateBundle'           => __DIR__.'/../src/catapatate',
-                 'Symfony\\Framework' => __DIR__.'/../src/cartapatate/symfony/src/Symfony/Framework',
+                 'Symfony\\Bundle' => __DIR__.'/../src/cartapatate/symfony/src/Symfony/Bundle',
                  'Zig\\Bundle'     => __DIR__.'/../src/cartapatate/zig/lib/Zig/Bundle',
                  'Ploomap\\Bundle'     => __DIR__.'/../src/cartapatate/ploomap/lib/Ploomap/Bundle',
                  );

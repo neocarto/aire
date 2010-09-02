@@ -1,5 +1,5 @@
-catapatate:
-  resource: CatapatateBundle/Resources/config/routing.yml
+#catapatate:
+#  resource: CatapatateBundle/Resources/config/routing.yml
 zig:
   resource: ZigBundle/Resources/config/routing.yml
 ploomap:
