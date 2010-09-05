@@ -52,9 +52,9 @@ class Kernel extends BaseKernel
                      new PloomapBundle(),
                      new CatapatateBundle(),
                      );
-    /*if ($this->isDebug()) {
+    if ($this->isDebug()) {
       $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
-      }*/
+    }
 
     return $bundles;
   }
