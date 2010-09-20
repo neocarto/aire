@@ -74,9 +74,9 @@ widgets:
     state:
       children:
         - mainContainer
-      toaster:
-        positionDirection: bl-up
-        # "br-up", "br-left", "bl-up", "bl-right", "tr-down", "tr-left", "tl-down", "tl-right"
+      #toaster:
+      #  positionDirection: bl-up
+      #  # "br-up", "br-left", "bl-up", "bl-right", "tr-down", "tr-left", "tl-down", "tl-right"
   mainContainer:
     _class: jig.layout.BorderContainer
     state:
@@ -96,17 +96,27 @@ widgets:
         x: 5439163
         y: 179712
         zoom: 14
-      _buttons:
+      buttons:
         location: false
         tools: false
       controls:
         #- OpenLayers.Control.KeyboardDefaults
         - { class: OpenLayers.Control.Navigation, options: { mouseWheelOptions: { interval: 100 } } }
         #- OpenLayers.Control.MousePosition
-        - OpenLayers.Control.PanZoomBar
+        #- OpenLayers.Control.PanZoomBar
+        - ploomap.OpenLayers.Control.SexyZoomBar
         #- Geoportal.Control.SearchToolbar
-        - Geoportal.Control.ToolBox
-        - { class: OpenLayers.Control.ScaleLine, options: { maxWidth: 150, geodesic: true } }
+        #- Geoportal.Control.ToolBox
+        #- Geoportal.Control.AddImageLayer
+        #- Geoportal.Control.AddVectorLayer
+        #- Geoportal.Control.BasicLayerToolbar
+        #- Geoportal.Control.EditingToolbar
+        #- Geoportal.Control.LayerToolbar
+        #- Geoportal.Control.LocationUtilityService.Geocode
+        #-
+        #- Geoportal.Control.
+        #- Geoportal.Control.
+        #- { class: OpenLayers.Control.ScaleLine, options: { maxWidth: 150, geodesic: true } }
         #- ploomap.OpenLayers.Control.TileLoadSpinner
   sideContainer:
     _class: jig.layout.BorderContainer
@@ -140,16 +150,15 @@ widgets:
 
 settings:
   layers:
-    - ign
-    - geol
-    - igc_paris
-    - igc_versailles
+    #- ign
+    #- geol
+    #- igc_paris
+    #- igc_versailles
     - osm
-    - cassini
-    - velib
-    - communes_fr
-    - elements
-    - bss
+    #- cassini
+    #- velib
+    - communes_fr_geoportal
+    - histoire_faits
     #- test
   mapTools:
     tools:
@@ -164,6 +173,14 @@ settings:
 
 
 
+  historicalFacts:
+    attributes:
+      name:
+        label: Nom
+        type: string
+      date:
+        label: Date
+        type: string
 
   elementTypes:
     acces:
