@@ -39,6 +39,7 @@ scriptAffectations:
   #window\.workspaceData:
 
 css:
+  #- /js/openlayers/themes/default/style.css
   - /js/catapatate/css/application.css
   #- /x/dijit/themes/tundra/tundra.css
   #- /js/dijit/themes/tundra/tundra.css
