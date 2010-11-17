@@ -1,13 +1,9 @@
-title: "AIRE [DEV]"
+title: "Catapatate [DEV]"
 
-#scripts.openlayers: /js/openlayers/lib/OpenLayers.js
-
+# uncomment this to get non-schrinked dojo
 #scripts.dojo: /js/dojo/dojo.js
-scripts.workspace: null
-scripts.start1: /js/cartapatate/start.js
-scripts.start2: /js/cartapatate/start/loadWorkspace.js
 
-css.app: /js/aire/css/application.css
+css.app: /js/catapatate/css/application.css
 
 scriptAffectations.window\.devMode: true
 

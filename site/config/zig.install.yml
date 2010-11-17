@@ -25,29 +25,34 @@ zig.install:
         - [catapatate, public/js/catapatate]
       layers:
         -
-          name: ../workspace_default.js
+          name: ../workspace.js
           copyrightFile: '../src/cartapatate/ploomap/public/js/ploomap/copyright.txt'
           dependencies:
-            # misc deps
-            - dojo.fx.easing3
-            - dojox.io.xhrPlugins
-            - jig.workspace
-            - ploomap.tool.layer.Simple
-            - ploomap.tool.layer.Select
-            - ploomap.layer.Simple
-            - ploomap.layer.Vector
-            - ploomap.OpenLayers.Control.TileLoadSpinner
-            # initial cacoins
-            - jig.layout.RootPane
-            - jig.layout.BorderContainer
-            - ploomap.map.Classical
-            - ploomap.tool.Layers
-            - catapatate.info.About
-            # tools
-            - ploomap.tool.Export
-            - ploomap.tool.Measure
-            - ploomap.tool.OverviewMap
-            - ploomap.tool.StreetView
-            - ploomap.tool.Itineraries
-            - catapatate.info.About
+            - cartapatate.start.loadWorkspace
+            - package.workspace
+
+
+
+            # # misc deps
+            # - dojo.fx.easing3
+            # - dojox.io.xhrPlugins
+            # - jig.workspace
+            # - ploomap.tool.layer.Simple
+            # - ploomap.tool.layer.Select
+            # - ploomap.layer.Simple
+            # - ploomap.layer.Vector
+            # - ploomap.OpenLayers.Control.TileLoadSpinner
+            # # initial cacoins
+            # - jig.layout.RootPane
+            # - jig.layout.BorderContainer
+            # - ploomap.map.Classical
+            # - ploomap.tool.Layers
+            # - catapatate.info.About
+            # # tools
+            # - ploomap.tool.Export
+            # - ploomap.tool.Measure
+            # - ploomap.tool.OverviewMap
+            # - ploomap.tool.StreetView
+            # - ploomap.tool.Itineraries
+            # - catapatate.info.About
 

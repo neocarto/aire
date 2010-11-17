@@ -35,7 +35,6 @@ class AppKernel extends Kernel
   {
     $bundles = array(
                      // essential bundles
-                     new KernelBundle(),
                      new FrameworkBundle(),
 
                      // third-party : Symfony-related

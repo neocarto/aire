@@ -2,10 +2,9 @@
 
 namespace CatapatateBundle;
 
-use Symfony\Framework\Bundle\Bundle as BaseBundle;
-use Symfony\Components\DependencyInjection\ContainerInterface;
+use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class CatapatateBundle extends BaseBundle
+class CatapatateBundle extends Bundle
 {
   /*public function boot(ContainerInterface $container)
   {

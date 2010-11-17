@@ -2,21 +2,14 @@ imports:
   - { resource: doctrine.yml }
   - { resource: zig.install.yml }
 
-parameters:
-    kernel.include_core_classes: false
-
-kernel.config:
+app.config:
+  name: catapatate
   charset: UTF-8
-  error_handler_level: null
-
-web.templating:
-  escaping:       htmlspecialchars
-  assets_version: SomeVersionScheme
-
-web.config:
+  error_handler: null
   router: { resource: "%kernel.root_dir%/config/routing.yml" }
-
-web.templating: ~
+  validation: { enabled: true, annotations: true }
+  templating:
+    escaping: htmlspecialchars
 
 zig.registry: ~
 
@@ -24,9 +17,10 @@ zig.api: ~
 
 #  directory: config/registry
 
-swift.mailer:
-  transport: smtp #gmail
-  host: localhost #smtp.dedibox.fr
+# disabled because "extension is not enabled" (exception)
+#swift.mailer:
+#  transport: smtp #gmail
+#  host: localhost #smtp.dedibox.fr
   #username:
   #password:
 
