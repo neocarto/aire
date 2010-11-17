@@ -1,12 +1,12 @@
 #!/usr/bin/env php
 <?php
 
-require_once __DIR__.'/Kernel.php';
+require_once __DIR__.'/AppKernel.php';
 
 use Symfony\Bundle\FrameworkBundle\Console\Application;
 
 $env = trim(file_get_contents(__DIR__.'/ENV'));
-$kernel = new Kernel($env, true);
+$kernel = new AppKernel($env, true);
 
 $application = new Application($kernel);
 $application->run();

@@ -1,0 +1,14 @@
+title: "AIRE [DEV]"
+
+#scripts.openlayers: /js/openlayers/lib/OpenLayers.js
+
+#scripts.dojo: /js/dojo/dojo.js
+scripts.workspace: null
+scripts.start1: /js/cartapatate/start.js
+scripts.start2: /js/cartapatate/start/loadWorkspace.js
+
+css.app: /js/aire/css/application.css
+
+scriptAffectations.window\.devMode: true
+
+bodyAttributes.class: patate tundra dev

@@ -1,23 +1,21 @@
 <?php
 
 require_once __DIR__.'/../src/autoload.php';
-//require_once __DIR__.'/../src/cartapatate/symfony/src/Symfony/Foundation/bootstrap.php';
 
-use Symfony\Framework\Kernel as BaseKernel;
+use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\DependencyInjection\Loader\LoaderInterface;
 
-use Symfony\Framework\KernelBundle;
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Bundle\ZendBundle\ZendBundle;
-use Symfony\Bundle\DoctrineBundle\DoctrineBundle;
 use Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle;
+use Symfony\Bundle\DoctrineBundle\DoctrineBundle;
 use Symfony\Bundle\DoctrineMongoDBBundle\DoctrineMongoDBBundle;
 
 use Zig\Bundle\ZigBundle\ZigBundle;
 use Ploomap\Bundle\PloomapBundle\PloomapBundle;
 use CatapatateBundle\CatapatateBundle;
 
-class Kernel extends BaseKernel
+class AppKernel extends Kernel
 {
   /**
    * Overloaded, only to provide an app name
@@ -61,15 +59,11 @@ class Kernel extends BaseKernel
 
   public function registerBundleDirs()
   {
-    return array(
-                 //'Application'        => __DIR__.'/../src/Application',
-                 //'Bundle'             => __DIR__.'/../src/Bundle',
-                 //'CatapatateBundle'             => __DIR__.'/../src/catapatate/CatapatateBundle',
-                 'CatapatateBundle'           => __DIR__.'/../src/catapatate',
-                 'Symfony\\Bundle' => __DIR__.'/../src/cartapatate/symfony/src/Symfony/Bundle',
-                 'Zig\\Bundle'     => __DIR__.'/../src/cartapatate/zig/lib/Zig/Bundle',
-                 'Ploomap\\Bundle'     => __DIR__.'/../src/cartapatate/ploomap/lib/Ploomap/Bundle',
-                 );
+    return array
+      ('CatapatateBundle' => __DIR__.'/../src/catapatate',
+       'Symfony\\Bundle' => __DIR__.'/../src/cartapatate/symfony/src/Symfony/Bundle',
+       'Zig\\Bundle' => __DIR__.'/../src/cartapatate/zig/lib/Zig/Bundle',
+       'Ploomap\\Bundle' => __DIR__.'/../src/cartapatate/ploomap/lib/Ploomap/Bundle');
   }
 
   public function registerContainerConfiguration(LoaderInterface $loader)

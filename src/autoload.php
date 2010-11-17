@@ -1,8 +1,8 @@
 <?php
 
-require_once __DIR__.'/cartapatate/symfony/src/Symfony/Framework/UniversalClassLoader.php';
+require_once __DIR__.'/cartapatate/symfony/src/Symfony/Component/HttpFoundation/UniversalClassLoader.php';
 
-use Symfony\Framework\UniversalClassLoader;
+use Symfony\Component\HttpFoundation\UniversalClassLoader;
 
 $loader = new UniversalClassLoader();
 $loader->registerNamespaces(array(
@@ -11,17 +11,15 @@ $loader->registerNamespaces(array(
   'Doctrine\\DBAL'    => __DIR__.'/cartapatate/doctrine2-dbal/lib',
   'Doctrine\\ORM'    => __DIR__.'/cartapatate/doctrine2-orm/lib',
   'Doctrine\\ODM'    => __DIR__.'/cartapatate/doctrine-mongodb-odm/lib',
-  //'Bundle\\DoctrineMongoDBBundle' => __DIR__.'/cartapatate/doctrine-mongodb-bundle',
   'Zig'         => __DIR__.'/cartapatate/zig/lib',
   'Ploomap'     => __DIR__.'/cartapatate/ploomap/lib',
   'CatapatateBundle' => __DIR__.'/catapatate',
-  //'Zend' => __DIR__.'/cartapatate/compat/lib',
   'Zend' => '/usr/src/zf2/library',
 ));
-$loader->registerPrefixes(array(
-                                'Swift_' => '/usr/local/lib/php', //__DIR__.'/vendor/swiftmailer/lib/classes',
-                                //'Zend_'  => __DIR__.'/cartapatate/zend/library',
-));
+$loader->registerPrefixes
+  (array('Swift_' => '/usr/local/lib/php', //__DIR__.'/vendor/swiftmailer/lib/classes',
+         //'Zend_'  => __DIR__.'/cartapatate/zend/library',
+         ));
 $loader->register();
 
 // for Zend Framework & SwiftMailer
