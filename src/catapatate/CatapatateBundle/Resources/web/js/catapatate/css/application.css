@@ -4,8 +4,42 @@
  **
  */
 
-@import url("/js/dijit/themes/tundra/tundra.css");
-@import url("/js/jig/css/jig.css");
+/* Style par défaut OpenLayers  */
+@import url("../../openlayers/themes/default/style.css");
+
+/* Style commun à la plateforme cartapatate */
+@import url("../../../css/cartapatate.css");
+
+/*
+ * Couleurs - dominante orange
+ *********/
+
+a, .link { color: #530; }
+a:hover, .link:hover { color: #500; }
+.jigLayoutRootPane .dijitSplitter .dijitSplitterThumb { background-color: #444; }
+.jigLayoutRootPane .dijitSplitterActive {  background-color: #fd5; }
+.jigCacoin, .jigCacoin .dijitContentPane { background-color: #fec; }
+.jigCacoin .dijitTabContainerTop-tabs div.dijitTabChecked { background-color: #fec; border-bottom-color: #fec; }
+.tundra .dijitBorderContainer-child.jigCacoin { border-color: #005; }
+.tundra .dijitBorderContainer { background-color: #ffe; }
+.jigCacoin .list .item:hover, .jigCacoin table.list > tbody > tr:hover > td { background-color: #fdc; }
+.jigCacoin .list .item.selected, .jigCacoin table.list > tbody > tr.selected > td { background-color: #f9f; }
+.jigCacoin .list .item, .jigCacoin table.list > tbody > tr > td { background-color: #fc9; }
+.jigCacoin.dijitTooltipDialog table.list > tbody > tr > td { background-color: #feb; }
+/*.jigCacoin.about { background-color: #9cf; }*/
+.olControlScaleLineTop {  background-color: #fc9; }
+.jigLayoutRootPane .dijitToasterClip { margin-left: 200px; }
+.jigLayoutRootPane .dijitToasterContainer > .opacity { background-color: #ffa; opacity: 0.75; }
+.jigLayoutRootPane .dijitToasterContainer { width: 320px; border-top: 0; border-width: 1px; background: transparent; }
+* > .opacity { background-color: #fc9; border-color: #fc0; }
+.jigLayoutSwitch .rightLayoutSwitcher { background-color: #fc9; }
+.ploomapControlSexyZoomBar .rightLabels .dijitRuleLabelContainer { background-color: #fdb; }
+.ploomapControlSexyZoomBar span.dijitButton .dijitButtonNode, .ploomapControlSexyZoomBar span.dijitToggleButton .dijitButtonNode, .ploomapControlSexyZoomBar span.dijitDropDownButton .dijitButtonNode { border-color: #963; }
+.ploomapControlSexyZoomBar .rightLabels .dijitRuleLabelContainer:hover { background-color: #fc9; }
+
+/*
+ * Styles propres
+ ********/
 
 
 
