@@ -5,7 +5,7 @@
  */
 
 /* Style par défaut OpenLayers  */
-@import url("../../openlayers/themes/default/style.css");
+@import url("../../openlayers/theme/default/style.css");
 
 /* Style commun à la plateforme cartapatate */
 @import url("../../../css/cartapatate.css");
@@ -38,8 +38,9 @@ a:hover, .link:hover { color: #500; }
 .ploomapControlSexyZoomBar .rightLabels .dijitRuleLabelContainer:hover { background-color: #fc9; }
 
 /*
- * Styles propres
+ * Overloads (for positionning, etc)
  ********/
+.ploomapMap .olControlScaleLine { bottom: 10px; left: 10px; }
 
 
 
