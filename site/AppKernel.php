@@ -11,7 +11,6 @@ use Symfony\Bundle\ZendBundle\ZendBundle;
 use Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle;
 use Symfony\Bundle\DoctrineBundle\DoctrineBundle;
 use Symfony\Bundle\DoctrineMongoDBBundle\DoctrineMongoDBBundle;
-
 use Zig\Bundle\ZigBundle\ZigBundle;
 use Ploomap\Bundle\PloomapBundle\PloomapBundle;
 use CatapatateBundle\CatapatateBundle;
@@ -61,7 +60,7 @@ class AppKernel extends Kernel
   public function registerBundleDirs()
   {
     return array
-      ('CatapatateBundle' => __DIR__.'/../src/catapatate',
+      ('CatapatateBundle' => __DIR__.'/../src/catapatate/server',
        'Symfony\\Bundle' => __DIR__.'/../src/cartapatate/symfony/src/Symfony/Bundle',
        'Zig\\Bundle' => __DIR__.'/../src/cartapatate/zig/server/Zig/Bundle',
        'Ploomap\\Bundle' => __DIR__.'/../src/cartapatate/ploomap/server/Ploomap/Bundle');

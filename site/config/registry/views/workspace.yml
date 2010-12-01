@@ -116,7 +116,7 @@ widgets:
       children:
         - about
         - overviewMap
-      paneSize: 150
+      paneSize: 120
   layers:
     _class: ploomap.tool.Layers
     state:
