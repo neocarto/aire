@@ -1,0 +1,50 @@
+<tinyows online_resource="http://dev.hurepoix.cartapatate.net/cgi-bin/tinyows"
+	 schema_dir="/usr/local/opt/tinyows/schema/">
+
+  <pg host="127.0.0.1" user="tinyows" password="fsh3rdV" dbname="catapatate-dev" port="5432"/>
+
+  <metadata name="Service WFS pour hurepoix-dev"
+	    title="Cartes 1° Hurepoix [DEV]"/>
+
+  <contact name="Jean-Francois Gigand"
+    	   site="http://dev.hurepoix.cartapatate.net/"
+   	   email="okapi@lapatate.org" />
+
+  <!--layer retrievable="1"
+	 writable="0"
+	 prefix="feature"
+	 server="http://histoire.cartapatate.net/"
+         srid="900913,4326"
+         name="communes_fr"
+         title="Communes de France" /-->
+
+  <layer retrievable="1"
+	 writable="0"
+	 prefix="feature"
+	 server="http://cartapatate.net/"
+         srid="900913,4326"
+         name="communes_fr"
+         title="Communes de France" />
+
+  <!--layer retrievable="1"
+	 writable="1"
+	 prefix="feature"
+	 server="http://hurepoix.cartapatate.net/"
+         name="lieuxactivites"
+         title="Lieux d'activité" />
+
+  <layer retrievable="1"
+	 writable="1"
+	 prefix="feature"
+	 server="http://hurepoix.cartapatate.net/"
+         name="annuaire"
+         title="Annuaire" /-->
+
+  <layer retrievable="1"
+	 writable="1"
+	 prefix="feature"
+	 server="http://cartapatate.net/"
+         name="element"
+         title="Éléments" />
+
+</tinyows>

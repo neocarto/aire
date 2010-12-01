@@ -8,8 +8,14 @@ app.config:
   error_handler: null
   router: { resource: "%kernel.root_dir%/config/routing.yml" }
   validation: { enabled: true, annotations: true }
-  templating:
-    escaping: htmlspecialchars
+  templating: ~
+    #escaping: htmlspecialchars
+    #renderers:
+  #session
+  #translator:
+  #  fallback:
+
+twig.config: ~
 
 zig.registry: ~
 

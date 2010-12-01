@@ -14,8 +14,9 @@
  * Couleurs - dominante orange
  *********/
 
-a, .link { color: #530; }
+a, .link, .dijitButtonNode { color: #606; }
 a:hover, .link:hover { color: #500; }
+.jigAutogrid .dijitButtonHover .dijitButtonNode { background: #fc3; }
 .jigLayoutRootPane .dijitSplitter .dijitSplitterThumb { background-color: #444; }
 .jigLayoutRootPane .dijitSplitterActive {  background-color: #fd5; }
 .jigCacoin, .jigCacoin .dijitContentPane { background-color: #fec; }

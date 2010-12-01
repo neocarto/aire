@@ -106,16 +106,16 @@ widgets:
       children:
         - layers
         #- overviewMap
-        - about
-        #sideContainer2
+        #- about
+        - sideContainer2
       paneSize: 400
   sideContainer2:
     _class: jig.layout.BorderContainer
     state:
       design: headline
       children:
-        - overviewMap
         - about
+        - overviewMap
       paneSize: 150
   layers:
     _class: ploomap.tool.Layers
@@ -144,7 +144,15 @@ settings:
     - communes_fr
     - elements
     - bss
-    #- test
+    - acces
+    - lieu
+    - galerie
+    - grandaxe
+    - egout
+    - galerie_technique
+    - delimitation
+    - secteur
+    - reseau
   mapTools:
     tools:
       - ploomap.tool.Magnifier
@@ -162,6 +170,8 @@ settings:
   elementTypes:
     acces:
       label: Accès
+      layerTitle: Accès
+      icon: /images/markers/acces.png
       minResolution: 0.07464553542137146
       maxResolution: 4.777314266967774
       attributes:
@@ -295,6 +305,8 @@ settings:
 
     lieu:
       label: Lieu
+      layerTitle: Lieux
+      icon: /images/markers/lieu.png
       minResolution: 0.07464553542137146
       maxResolution: 4.777314266967774
       attributes:
@@ -337,6 +349,7 @@ settings:
     galerie:
       label: Galerie
       layerTitle: Galeries
+      icon: /images/icons/layer_element_galerie.png
       minResolution: 0.07464553542137146
       maxResolution: 2.388657133483887
       attributes:
@@ -352,6 +365,7 @@ settings:
     grandaxe:
       label: Grand axe
       layerTitle: Grands axes
+      icon: /images/icons/layer_element_grandaxe.png
       minResolution: 0.07464553542137146
       maxResolution: 38.21851413574219
       attributes:
@@ -367,6 +381,7 @@ settings:
     egout:
       label: Égout
       layerTitle: Égouts
+      icon: /images/icons/layer_element_egout.png
       minResolution: 0.07464553542137146
       maxResolution: 38.21851413574219
       attributes:
@@ -393,7 +408,8 @@ settings:
 
     galerie_technique:
       label: Galerie technique
-      layerTitle: Galeries techniques
+      layerTitle: G. techniques
+      icon: /images/icons/layer_element_galerie_technique.png
       minResolution: 0.07464553542137146
       maxResolution: 38.21851413574219
       attributes:
@@ -419,6 +435,7 @@ settings:
     delimitation:
       label: Délimitation
       layerTitle: Délimitations
+      icon: /images/icons/layer_element_delimitation.png
       attributes:
         nom:
           label: Nom
@@ -441,6 +458,7 @@ settings:
     secteur:
       label: Secteur
       layerTitle: Secteurs
+      icon: /images/icons/layer_element_secteur.png
       minResolution: 1.1943285667419434
       maxResolution: 38.21851413574219
       attributes:
@@ -456,6 +474,7 @@ settings:
     reseau:
       label: Réseau
       layerTitle: Réseaux
+      icon: /images/icons/layer_element_reseau.png
       minResolution: 4.777314266967774
       maxResolution: 76.43702827148438
       attributes:

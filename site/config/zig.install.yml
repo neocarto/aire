@@ -3,18 +3,18 @@ zig.install:
   manager_class: hehe
   public_dir: public
   public_mappings:
-    - { location: '', directory: '../src/catapatate/CatapatateBundle/Resources/web' }
-    - { location: '', directory: '../src/cartapatate/cartapatate/public' }
-    - { location: '', directory: '../src/cartapatate/ploomap/public' }
-    - { location: 'js', directory: '../src/cartapatate/zig/res/js' }
-    - { location: 'images/openlayers', directory: '../src/cartapatate/ploomap/public/js/openlayers/img' }
+    - { location: '', directory: '../src/catapatate/client' }
+    - { location: '', directory: '../src/cartapatate/cartapatate/client' }
+    - { location: '', directory: '../src/cartapatate/ploomap/client' }
+    - { location: '', directory: '../src/cartapatate/zig/client' }
+    - { location: 'images/openlayers', directory: '../src/cartapatate/ploomap/client/js/openlayers/img' }
 
   shrinksafe:
     #profile: etc/catapatate.profile.js
     buildscripts_dir: /home/okapi/dev/dojo/util/buildscripts
     release_name: x
     release_dir: public
-    build_version: 0.2.2
+    build_version: 0.2.10
     profileData:
       prefixes:
         - [dojo, /home/okapi/dev/dojo/dojo]
@@ -26,7 +26,7 @@ zig.install:
       layers:
         -
           name: ../workspace.js
-          copyrightFile: '../src/cartapatate/ploomap/public/js/ploomap/copyright.txt'
+          copyrightFile: '../src/cartapatate/ploomap/client/js/ploomap/copyright.txt'
           dependencies:
             - cartapatate.start.loadWorkspace
             - package.workspace

@@ -6,6 +6,7 @@ use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\DependencyInjection\Loader\LoaderInterface;
 
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
+use Symfony\Bundle\TwigBundle\TwigBundle;
 use Symfony\Bundle\ZendBundle\ZendBundle;
 use Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle;
 use Symfony\Bundle\DoctrineBundle\DoctrineBundle;
@@ -36,6 +37,7 @@ class AppKernel extends Kernel
     $bundles = array(
                      // essential bundles
                      new FrameworkBundle(),
+                     new TwigBundle(),
 
                      // third-party : Symfony-related
                      new ZendBundle(),
@@ -61,8 +63,8 @@ class AppKernel extends Kernel
     return array
       ('CatapatateBundle' => __DIR__.'/../src/catapatate',
        'Symfony\\Bundle' => __DIR__.'/../src/cartapatate/symfony/src/Symfony/Bundle',
-       'Zig\\Bundle' => __DIR__.'/../src/cartapatate/zig/lib/Zig/Bundle',
-       'Ploomap\\Bundle' => __DIR__.'/../src/cartapatate/ploomap/lib/Ploomap/Bundle');
+       'Zig\\Bundle' => __DIR__.'/../src/cartapatate/zig/server/Zig/Bundle',
+       'Ploomap\\Bundle' => __DIR__.'/../src/cartapatate/ploomap/server/Ploomap/Bundle');
   }
 
   public function registerContainerConfiguration(LoaderInterface $loader)
