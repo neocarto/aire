@@ -21,12 +21,5 @@ zig.registry: ~
 
 zig.api: ~
 
-#  directory: config/registry
-
-# disabled because "extension is not enabled" (exception)
-#swift.mailer:
-#  transport: smtp #gmail
-#  host: localhost #smtp.dedibox.fr
-  #username:
-  #password:
+swiftmailer.config: ~
 

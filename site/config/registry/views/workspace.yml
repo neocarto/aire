@@ -85,7 +85,8 @@ widgets:
     _class: ploomap.map.Classical
     state:
       layersDefsClass: catapatate.layerDef.Application
-      #layers:
+      layers:
+        - reseau
       #  - { name: gmaps }
       center:      # Paris
         x: 260535
@@ -137,7 +138,9 @@ settings:
     - ign
     - geol
     - igc_paris
+    - igc_paris_vector
     - igc_versailles
+    - igc_versailles_vector
     - osm
     - cassini
     - velib
@@ -171,15 +174,13 @@ settings:
     acces:
       label: Accès
       layerTitle: Accès
+      wikiCategory: Accès
+      description: "Accès aux cavités souterraines"
       icon: /images/markers/acces.png
       minResolution: 0.07464553542137146
       maxResolution: 4.777314266967774
       attributes:
-        coords:
-          label: Coordonnées
-          type: coords
-          save: false
-        nom:
+        name:
           label: Nom
           type: name
         emplacement:
@@ -253,11 +254,39 @@ settings:
             edf_cpde: EDF - CPDE
             edf_cpde_mht: EDF - CPDE-MHT
             edf_verrins: EDF - à verrins
+            edf_victor_popp: Plaques EDF (Victor Popp)
             ptt_rdlr: PTT - RDLR
             ptt_barat: PTT - BARAT
             ptt_sebel: PTT - SEBEL
             ptt_trefle: PTT - sans marquage, serrure trèfle
             ptt_accroche: "PTT - sans marquage, trou d'accroche"
+            ptt_carree_esperluette: 'Plaques PTT carrées (esperluette)'
+            ptt_carree_quadrillage: Plaques PTT carrées (quadrillage gravé)
+            ptt_double_triangle: Plaques PTT à double triangle
+            ptt_double_triangle_multiples: Plaques PTT à double triangle multiple
+            tortue_petite: Plaques tortues petites
+            tortue_moyenne: Plaques tortues moyennes
+            tortue_grande: Plaques tortue grandes
+            tampon_pierre: Tampons en pierre
+            couvercle_beton: Couvercles en béton
+            plaque_acier_uasm: Plaques type acier/UASM
+            trappe_inclinee: Trappes inclinées simples
+            trappe_inclinee_battants: Trappes inclinées 2+ battants
+            porte: Portes
+            porte_metal: Portes en métal
+            porte_bois: Portes en bois
+            porte_grillagee: Portes grillagées
+            porte_carossable: Portes carrossables
+            porte_et_plaque: Portes avec plaque
+            port_grille_multiple: Portes/grilles multiples
+            grille_mobile: Grilles mobiles
+            grille_fixe: Grilles fixes
+            grillage: Grillages
+            chatiere_verticale: Chatières verticales simples
+            chatiere_horizontale: Chatières horizontales simples
+            cavage_pieton: Cavages piéton simples
+            cavage_vehicule: Cavages véhicules simples
+            fontis: Fontis
         descente:
           label: Descente
           type: select
@@ -296,6 +325,10 @@ settings:
             beton: Bétonné
             recouvement: Recouvert
             comblement: Comblé
+            disparu: Disparu
+            goudron: Goudronné
+            enseveli: Enseveli
+            amarre: Amarré
             autre: Autre
             inconnu: Inconnu
         remarques:
@@ -305,12 +338,14 @@ settings:
 
     lieu:
       label: Lieu
+      description: "Lieux particuliers des cavités souterraines"
       layerTitle: Lieux
+      wikiCategory: Lieux
       icon: /images/markers/lieu.png
       minResolution: 0.07464553542137146
       maxResolution: 4.777314266967774
       attributes:
-        nom:
+        name:
           label: Nom
           type: name
           default:
@@ -349,11 +384,13 @@ settings:
     galerie:
       label: Galerie
       layerTitle: Galeries
+      wikiCategory: Galeries
+      description: "Galeries en carrière"
       icon: /images/icons/layer_element_galerie.png
       minResolution: 0.07464553542137146
       maxResolution: 2.388657133483887
       attributes:
-        nom:
+        name:
           label: Nom
           type: name
           default:
@@ -365,11 +402,13 @@ settings:
     grandaxe:
       label: Grand axe
       layerTitle: Grands axes
+      wikiCategory: Grands axes
+      description: "Galeries principales en carrière"
       icon: /images/icons/layer_element_grandaxe.png
       minResolution: 0.07464553542137146
       maxResolution: 38.21851413574219
       attributes:
-        nom:
+        name:
           label: Nom
           type: name
           default:
@@ -379,13 +418,15 @@ settings:
           default:
 
     egout:
-      label: Égout
-      layerTitle: Égouts
+      label: "Cours d'eau"
+      layerTitle: "Cours d'eau"
+      wikiCategory: "Cours d'eau"
+      description: "Cours d'eau enterrés - naturel ou artificiel"
       icon: /images/icons/layer_element_egout.png
       minResolution: 0.07464553542137146
       maxResolution: 38.21851413574219
       attributes:
-        nom:
+        name:
           label: Nom
           type: name
           default:
@@ -409,11 +450,13 @@ settings:
     galerie_technique:
       label: Galerie technique
       layerTitle: G. techniques
+      wikiCategory: Galeries techniques
+      description: "Galeries techniques (PTT, électricité...)"
       icon: /images/icons/layer_element_galerie_technique.png
       minResolution: 0.07464553542137146
       maxResolution: 38.21851413574219
       attributes:
-        nom:
+        name:
           label: Nom
           type: name
           default:
@@ -435,9 +478,11 @@ settings:
     delimitation:
       label: Délimitation
       layerTitle: Délimitations
+      wikiCategory: Délimitations
+      description: "Délimitations diverses"
       icon: /images/icons/layer_element_delimitation.png
       attributes:
-        nom:
+        name:
           label: Nom
           type: name
           default:
@@ -458,11 +503,13 @@ settings:
     secteur:
       label: Secteur
       layerTitle: Secteurs
+      wikiCategory: Secteurs
+      description: "Secteurs de cavités souterraines délimité par un critère quelconque"
       icon: /images/icons/layer_element_secteur.png
       minResolution: 1.1943285667419434
       maxResolution: 38.21851413574219
       attributes:
-        nom:
+        name:
           label: Nom
           type: name
           default:
@@ -474,11 +521,13 @@ settings:
     reseau:
       label: Réseau
       layerTitle: Réseaux
+      wikiCategory: Réseaux
+      description: "Réseau de galeries communiquantes appartenant à une ou plusieurs exploitations en carrière"
       icon: /images/icons/layer_element_reseau.png
       minResolution: 4.777314266967774
       maxResolution: 76.43702827148438
       attributes:
-        nom:
+        name:
           label: Nom
           type: name
           default:
