@@ -7,7 +7,12 @@ zig.install:
     - { location: '', directory: '../src/cartapatate/cartapatate/client' }
     - { location: '', directory: '../src/cartapatate/ploomap/client' }
     - { location: '', directory: '../src/cartapatate/zig/client' }
-    - { location: 'images/openlayers', directory: '../src/cartapatate/ploomap/client/js/openlayers/img' }
+    - { location: 'images/openlayers', directory: '../src/openlayers/img' }
+    - { location: 'js/openlayers', directory: '../src/openlayers' }
+    - { location: 'js/proj4js', directory: '../src/proj4js' }
+    - { location: 'js/dojo', directory: '../src/dojo-release/dojo' }
+    - { location: 'js/dijit', directory: '../src/dojo-release/dijit' }
+    - { location: 'js/dojox', directory: '../src/dojo-release/dojox' }
 
   shrinksafe:
     #profile: etc/catapatate.profile.js
@@ -17,11 +22,12 @@ zig.install:
     build_version: 0.2.10
     profileData:
       prefixes:
-        - [dojo, /home/okapi/dev/dojo/dojo]
-        - [dijit, /home/okapi/dev/dojo/dijit]
-        - [dojox, /home/okapi/dev/dojo/dojox]
+        - [dojo, public/js/dojo]
+        - [dijit, public/js/dijit]
+        - [dojox, public/js/dojox]
         - [jig, public/js/jig]
         - [ploomap, public/js/ploomap]
+        - [cartapatate, public/js/cartapatate]
         - [catapatate, public/js/catapatate]
       layers:
         -
@@ -30,29 +36,3 @@ zig.install:
           dependencies:
             - cartapatate.start.loadWorkspace
             - package.workspace
-
-
-
-            # # misc deps
-            # - dojo.fx.easing3
-            # - dojox.io.xhrPlugins
-            # - jig.workspace
-            # - ploomap.tool.layer.Simple
-            # - ploomap.tool.layer.Select
-            # - ploomap.layer.Simple
-            # - ploomap.layer.Vector
-            # - ploomap.OpenLayers.Control.TileLoadSpinner
-            # # initial cacoins
-            # - jig.layout.RootPane
-            # - jig.layout.BorderContainer
-            # - ploomap.map.Classical
-            # - ploomap.tool.Layers
-            # - catapatate.info.About
-            # # tools
-            # - ploomap.tool.Export
-            # - ploomap.tool.Measure
-            # - ploomap.tool.OverviewMap
-            # - ploomap.tool.StreetView
-            # - ploomap.tool.Itineraries
-            # - catapatate.info.About
-
