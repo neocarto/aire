@@ -46,4 +46,11 @@
          name="element"
          title="Éléments" />
 
+  <layer retrievable="1"
+	 writable="0"
+	 prefix="feature"
+	 server="http://cartapatate.net/"
+         name="bss"
+         title="Banque de données du sous-sol" />
+
 </tinyows>
