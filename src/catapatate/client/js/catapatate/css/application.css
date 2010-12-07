@@ -37,6 +37,7 @@ a:hover, .link:hover { color: #500; }
 * > .opacity { background-color: #fc9; border-color: #fc0; }
 .jigLayoutSwitch .rightLayoutSwitcher { background-color: #fc9; }
 .ploomapControlSexyZoomBar .rightLabels .dijitRuleLabelContainer { background-color: #fdb; }
+.jigLayoutSwitch .opaque { background-color: #fdb; }
 /*.ploomapControlSexyZoomBar span.dijitButton .dijitButtonNode, .ploomapControlSexyZoomBar span.dijitToggleButton .dijitButtonNode, .ploomapControlSexyZoomBar span.dijitDropDownButton .dijitButtonNode { border-color: #963; }
 .ploomapControlSexyZoomBar .rightLabels .dijitRuleLabelContainer:hover { background-color: #fc9; }*/
 

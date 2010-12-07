@@ -85,8 +85,8 @@ widgets:
     _class: ploomap.map.Classical
     state:
       layersDefsClass: catapatate.layerDef.Application
-      layers:
-        - reseau
+      #layers:
+      #  - reseau
       #  - { name: gmaps }
       center:      # Paris
         x: 260535

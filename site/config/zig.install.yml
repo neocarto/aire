@@ -15,8 +15,7 @@ zig.install:
     - { location: 'js/dojox', directory: '../src/dojo-release/dojox' }
 
   shrinksafe:
-    #profile: etc/catapatate.profile.js
-    buildscripts_dir: /home/okapi/dev/dojo/util/buildscripts
+    buildscripts_dir: ../src/dojo-release/util/buildscripts
     release_name: x
     release_dir: public
     build_version: 0.2.10
