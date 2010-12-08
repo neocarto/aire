@@ -179,6 +179,7 @@ settings:
       icon: /images/markers/acces.png
       minResolution: 0.07464553542137146
       maxResolution: 4.777314266967774
+      geometry: point
       attributes:
         name:
           label: Nom
@@ -344,6 +345,7 @@ settings:
       icon: /images/markers/lieu.png
       minResolution: 0.07464553542137146
       maxResolution: 4.777314266967774
+      geometry: point
       attributes:
         name:
           label: Nom
@@ -389,6 +391,7 @@ settings:
       icon: /images/icons/layer_element_galerie.png
       minResolution: 0.07464553542137146
       maxResolution: 2.388657133483887
+      geometry: line
       attributes:
         name:
           label: Nom
@@ -407,6 +410,7 @@ settings:
       icon: /images/icons/layer_element_grandaxe.png
       minResolution: 0.07464553542137146
       maxResolution: 38.21851413574219
+      geometry: line
       attributes:
         name:
           label: Nom
@@ -425,6 +429,7 @@ settings:
       icon: /images/icons/layer_element_egout.png
       minResolution: 0.07464553542137146
       maxResolution: 38.21851413574219
+      geometry: line
       attributes:
         name:
           label: Nom
@@ -455,6 +460,7 @@ settings:
       icon: /images/icons/layer_element_galerie_technique.png
       minResolution: 0.07464553542137146
       maxResolution: 38.21851413574219
+      geometry: line
       attributes:
         name:
           label: Nom
@@ -481,6 +487,7 @@ settings:
       wikiCategory: Délimitations
       description: "Délimitations diverses"
       icon: /images/icons/layer_element_delimitation.png
+      geometry: polygon
       attributes:
         name:
           label: Nom
@@ -508,6 +515,7 @@ settings:
       icon: /images/icons/layer_element_secteur.png
       minResolution: 1.1943285667419434
       maxResolution: 38.21851413574219
+      geometry: polygon
       attributes:
         name:
           label: Nom
@@ -526,6 +534,7 @@ settings:
       icon: /images/icons/layer_element_reseau.png
       minResolution: 4.777314266967774
       maxResolution: 76.43702827148438
+      geometry: polygon
       attributes:
         name:
           label: Nom
