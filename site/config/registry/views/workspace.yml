@@ -130,17 +130,17 @@ settings:
     layerLibraryClass: catapatate.layerLibrary.Application
   layers:
     - gmaps
-    #- ign
-    #- geol
-    #- igc_paris
+    - ign
+    - geol
+    - igc_paris
     - igc_paris_vector
-    #- igc_versailles
+    - igc_versailles
     - igc_versailles_vector
     - osm
-    #- cassini
+    - cassini
     - velib
-    #- communes_fr
-    #- elements
+    - communes_fr
+    - elements
     #- bss
     - acces
     - lieu
