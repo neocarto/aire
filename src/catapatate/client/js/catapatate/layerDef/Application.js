@@ -9,6 +9,9 @@ dojo.require('cartapatate.layerDef.Underground');
 //dojo.require('ploomap.layerDef.Google');
 dojo.require('ploomap.layerDef.Default');
 
+// used in code
+dojo.require('ploomap.layer.featureDetails.Info');
+
 dojo.declare('catapatate.layerDef.Application',
              [ catapatate.layerDef.Common,
                cartapatate.layerDef.Common,

@@ -30,8 +30,8 @@ zig.install:
         - [catapatate, public/js/catapatate]
       layers:
         -
-          name: ../workspace.js
+          name: ../application.js
           copyrightFile: '../src/cartapatate/ploomap/client/js/ploomap/copyright.txt'
           dependencies:
             - cartapatate.start.loadWorkspace
-            - package.workspace
+            - package.application

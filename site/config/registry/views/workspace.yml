@@ -11,13 +11,8 @@ title: Catapatate 2 preview
 ## HEADER
 
 # GMap key is
-#   for http://okamap.dev.lapatate.org :
-#     ABQIAAAAbLRoNMqR4Pen1V9KJHqHFxTJc1TUOWfJSEQIrIow9EO1M6xJcxSGLig3Jv_uQH7Ib8J_8p3ymhPI0w
-#   for dev.hurepoix.cartapatate.eu :
-#     ABQIAAAAbLRoNMqR4Pen1V9KJHqHFxQIEZYXS1xL9TiWNpXW1Rj76Uuj9RTtctqibZiCwemgGivc_9UXn56X9w
 # cartapatate.net : ABQIAAAAbLRoNMqR4Pen1V9KJHqHFxQA367lAHlkjABbUcAop0DGCpL_0RR1Fbs6U1WlvDJ0jWdsrgcAgGKukA
-# hurepoix.cartapatate.net : ABQIAAAAbLRoNMqR4Pen1V9KJHqHFxR8LCrIApkag7e2Ys8b_uzh20QCThSoLziwEEBX_zMriMcJhAtf5ZeRzQ
-# dev.hurepoix.cartapatate.net : ABQIAAAAbLRoNMqR4Pen1V9KJHqHFxQIEZYXS1xL9TiWNpXW1Rj76Uuj9RTtctqibZiCwemgGivc_9UXn56X9w
+# catapatate.net : ABQIAAAAbLRoNMqR4Pen1V9KJHqHFxSDsnPkFEP6x-dHoKmFbN1aOTzr0BQOWNYucEIrZDL4llsOWnS81AteRQ
 #
 
 packageScripts: false
@@ -31,7 +26,7 @@ scripts:
   proj4js: /js/proj4js/lib/proj4js-compressed.js
   #- http://openlayers.org/api/OpenLayers.js
   openLayers: /js/openlayers/build/OpenLayers.js
-  workspace: /x/workspace.js
+  application: /x/application.js
   #start: /js/start.js
 
 scriptAffectations:

@@ -1,13 +1,13 @@
 <tinyows online_resource="http://dev.hurepoix.cartapatate.net/cgi-bin/tinyows"
 	 schema_dir="/usr/local/opt/tinyows/schema/">
 
-  <pg host="127.0.0.1" user="tinyows" password="fsh3rdV" dbname="catapatate-dev" port="5432"/>
+  <pg host="127.0.0.1" user="tinyows" password="fsh3rdV" dbname="catapatate-preview" port="5432"/>
 
-  <metadata name="Service WFS pour hurepoix-dev"
-	    title="Cartes 1° Hurepoix [DEV]"/>
+  <metadata name="Service WFS pour catapatate-preview"
+	    title="Cartes Catapatate [PREVIEW]"/>
 
-  <contact name="Jean-Francois Gigand"
-    	   site="http://dev.hurepoix.cartapatate.net/"
+  <contact name="Okapi P"
+    	   site="http://preview.catapatate.net/"
    	   email="okapi@lapatate.org" />
 
   <layer retrievable="1"
