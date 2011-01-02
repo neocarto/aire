@@ -140,6 +140,7 @@ settings:
     - cassini
     - velib
     - communes_fr
+    - plans
     - elements
     #- bss
     - acces

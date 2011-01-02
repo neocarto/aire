@@ -45,4 +45,11 @@
          name="bss"
          title="Banque de données du sous-sol" />
 
+  <layer retrievable="1"
+	 writable="0"
+	 prefix="feature"
+	 server="http://cartapatate.net/"
+         name="plans"
+         title="Plans souterrains" />
+
 </tinyows>
