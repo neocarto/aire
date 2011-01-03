@@ -18,5 +18,12 @@ dojo.require('ploomap.tool.OverviewMap');
 dojo.require('catapatate.layerDef.Application');
 dojo.require('catapatate.layerLibrary.Application');
 
+// tools
+dojo.require('ploomap.tool.Export');
+dojo.require('ploomap.tool.StreetView');
+dojo.require('ploomap.tool.OverviewMap');
+dojo.require('ploomap.tool.Itineraries');
+dojo.require('jig.tool.UserFeedback');
+
 // Optional
 //dojo.require('package.presentationView');
