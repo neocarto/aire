@@ -84,6 +84,7 @@ widgets:
       #  - reseau
       #  - { name: gmaps }
       center:      # Paris
+        geoloc: true
         x: 260535
         y: 6249816
         zoom: 13
