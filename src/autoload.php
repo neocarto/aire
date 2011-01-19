@@ -11,6 +11,7 @@ $loader->registerNamespaces(array(
   'Doctrine\\DBAL'    => __DIR__.'/cartapatate/doctrine2-dbal/lib',
   'Doctrine\\ORM'    => __DIR__.'/cartapatate/doctrine2-orm/lib',
   'Doctrine\\ODM'    => __DIR__.'/cartapatate/doctrine-mongodb-odm/lib',
+  'Doctrine\\MongoDB'           => __DIR__.'/cartapatate/doctrine-mongodb/lib',
   'Zig'         => __DIR__.'/cartapatate/zig/server',
   'Ploomap'     => __DIR__.'/cartapatate/ploomap/server',
   'CatapatateBundle' => __DIR__.'/catapatate/server',
@@ -20,7 +21,6 @@ $loader->registerPrefixes
 (array(
        'Twig_' => __DIR__.'/cartapatate/twig/lib',
        'Swift_' => '/usr/share/php',
-       //__DIR__.'/vendor/swiftmailer/lib/classes',
        //'Zend_'  => __DIR__.'/cartapatate/zend/library',
        ));
 $loader->register();

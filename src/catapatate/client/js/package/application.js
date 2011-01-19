@@ -1,6 +1,10 @@
 
 dojo.provide('package.application');
 
+// third-party
+dojo.require('package.proj4js');
+dojo.require('package.openlayers');
+
 // basic
 dojo.require('jig.workspace');
 dojo.require('ploomap.tool.layer.Simple');

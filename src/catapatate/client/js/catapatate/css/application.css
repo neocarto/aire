@@ -30,8 +30,8 @@ a:hover, .link:hover { color: #500; }
 .jigCacoin .list .item, .jigCacoin table.list > tbody > tr > td { background-color: #fc9; }
 .jigCacoin.dijitTooltipDialog table.list > tbody > tr > td { background-color: #feb; }
 /*.jigCacoin.about { background-color: #9cf; }*/
-.olControlScaleLineTop {  background-color: #fc9; }
-.olControlScaleLineTop:hover {  background-color: #fdc; }
+/*.olControlScaleLineTop {  background-color: #fc9; }
+.olControlScaleLineTop:hover {  background-color: #fdc; } (handled already by rule above?)*/
 .jigLayoutRootPane .dijitToasterClip { margin-left: 200px; }
 .jigLayoutRootPane .dijitToasterContainer > .opacity { background-color: #ffa; opacity: 0.75; }
 .jigLayoutRootPane .dijitToasterContainer { width: 320px; border-top: 0; border-width: 1px; background: transparent; }

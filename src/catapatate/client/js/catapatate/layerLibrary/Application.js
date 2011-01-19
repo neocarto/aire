@@ -8,6 +8,7 @@ dojo.require('ploomap.MapBinding');
 
 // used in template
 dojo.require('ploomap.tool.layerLibrary.AutoGrid');
+dojo.require('jig.button.TooltipWidget');
 
 dojo.declare('catapatate.layerLibrary.Application',
              [ jig.layout._Anchor, dijit._Templated, ploomap.MapBinding ],
