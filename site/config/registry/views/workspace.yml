@@ -20,13 +20,11 @@ packageStyles: false
 
 scripts:
   dojo: /x/dojo/dojo.js
-  #- /js/dojo/dojo.js
-  #- http://maps.google.com/maps/api/js?v=3&sensor=false
   gmaps: http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAbLRoNMqR4Pen1V9KJHqHFxQA367lAHlkjABbUcAop0DGCpL_0RR1Fbs6U1WlvDJ0jWdsrgcAgGKukA
-  #req-proj4js: /js/proj4js/lib/proj4js-compressed.js
-  #reg-openLayers: /js/openlayers/build/OpenLayers.js
+  #proj4js: /js/proj4js/lib/proj4js-compressed.js
+  #openLayers: /js/openlayers/build/OpenLayers.js
   application: /x/application.js
-  #start: /js/start.js
+  # start code added in dev mixin
 
 scriptAffectations:
   window\.workspaceKey: home
@@ -84,6 +82,14 @@ widgets:
         - google_normal
         - google_satellite
         - google_physical
+        - google_aerial
+        - google_aerial_hybrid
+        - google_moon_elevation
+        - google_moon_visible
+        - google_mars_elevation
+        - google_mars_visible
+        - google_mars_infrared
+        - google_sky_visible
       center:      # Paris
         geoloc: true
         x: 260535
@@ -135,6 +141,14 @@ settings:
     - google_normal
     - google_satellite
     - google_physical
+    - google_aerial
+    - google_aerial_hybrid
+    - google_moon_elevation
+    - google_moon_visible
+    - google_mars_elevation
+    - google_mars_visible
+    - google_mars_infrared
+    - google_sky_visible
     - ign
     - geol
     - igc_paris
