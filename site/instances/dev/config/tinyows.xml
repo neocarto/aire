@@ -1,5 +1,6 @@
-<tinyows online_resource="http://dev.hurepoix.cartapatate.net/cgi-bin/tinyows"
-	 schema_dir="/usr/local/opt/tinyows/schema/">
+<tinyows online_resource="http://dev.catapatate.cartapatate.net/wfs"
+	 schema_dir="/usr/local/opt/okapi/share/tinyows/schema/"
+         log="/home/okapi/dev/cartapatate/catapatate/site/logs/tinyows.log">
 
   <pg host="127.0.0.1" user="tinyows" password="fsh3rdV" dbname="catapatate-dev" port="5432"/>
 
