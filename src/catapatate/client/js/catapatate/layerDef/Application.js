@@ -5,7 +5,7 @@ dojo.provide('catapatate.layerDef.Application');
 dojo.require('catapatate.layerDef.Common');
 dojo.require('cartapatate.layerDef.Common');
 dojo.require('cartapatate.layerDef.Underground');
-//dojo.require('ploomap.layerDef.Geoportal');
+dojo.require('cartapatate.layerDef.Space');
 dojo.require('ploomap.layerDef.Google');
 dojo.require('ploomap.layerDef.Default');
 
@@ -16,6 +16,7 @@ dojo.declare('catapatate.layerDef.Application',
              [ catapatate.layerDef.Common,
                cartapatate.layerDef.Common,
                cartapatate.layerDef.Underground,
+               cartapatate.layerDef.Space,
                ploomap.layerDef.Google,
                ploomap.layerDef.Default ],
 {
