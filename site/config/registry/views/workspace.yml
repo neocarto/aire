@@ -179,9 +179,9 @@ settings:
       - ploomap.tool.Magnifier
       - ploomap.tool.OverviewMap
       - ploomap.tool.Measure
-      - ploomap.tool.Export
+      #- ploomap.tool.Export
       - ploomap.tool.StreetView
-      - ploomap.tool.Itineraries
+      #- ploomap.tool.Itineraries
       - jig.tool.UserFeedback
       - catapatate.info.About
 
