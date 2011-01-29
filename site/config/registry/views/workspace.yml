@@ -104,7 +104,7 @@ widgets:
         #- OpenLayers.Control.PanZoomBar
         - { class: ploomap.OpenLayers.Control.SexyZoomBar, options: { numZoomLevels: 22 } }
         - { class: ploomap.OpenLayers.Control.ScaleLine, options: { maxWidth: 150, geodesic: true } }
-        - ploomap.OpenLayers.Control.TileLoadSpinner
+        #- ploomap.OpenLayers.Control.TileLoadSpinner
   sideContainer:
     _class: jig.layout.BorderContainer
     state:
