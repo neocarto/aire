@@ -198,6 +198,7 @@ settings:
       minResolution: 0.07464553542137146
       maxResolution: 4.777314266967774
       geometry: point
+      popupHeight: 310
       attributes:
         name:
           label: Nom
