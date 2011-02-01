@@ -18,7 +18,7 @@ zig.install:
     buildscripts_dir: ../src/dojo-release/util/buildscripts
     release_name: x
     release_dir: public
-    build_version: 0.2.13
+    build_version: 0.2.16
     profileData:
       prefixes:
         - [dojo, public/js/dojo]
