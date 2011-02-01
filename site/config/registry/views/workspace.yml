@@ -145,13 +145,9 @@ settings:
     - google_physical
     - google_aerial
     - google_aerial_hybrid
-    - google_moon
-    - google_moon_elevation
-    - google_moon_visible
-    - google_mars_elevation
-    - google_mars_visible
-    - google_mars_infrared
-    - google_sky
+    # - google_moon
+    # - google_mars
+    # - google_sky
     - ign
     - geol
     - igc_paris
