@@ -9,7 +9,7 @@ homepage:
   pattern: /
   defaults: { _controller: "ZigBundle:ViewClass:render", path: "views.workspace" }
 
-geoportal:
-  pattern: /geoportal
-  defaults: { _controller: "ZigBundle:ViewClass:render", path: "views.geoportal" }
+admin:
+  pattern: /admin
+  defaults: { _controller: "ZigBundle:ViewClass:render", path: "views.admin" }
 

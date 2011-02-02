@@ -1,0 +1,112 @@
+#############################################################
+##
+##  PHP view of CARTAPATATE admin screen
+##
+#############################################################
+
+class: Zig\View\Document\Workspace
+title: Admin-Catapatate
+
+#############################################################
+## HEADER
+
+packageScripts: false
+packageStyles: false
+
+scripts:
+  dojo: /x/dojo/dojo.js
+  #openlayers: /js/openlayers/build/OpenLayers.js
+  #application: /x/admin.js
+  #
+  start1: /js/cartapatate/start.js
+  start2: /js/cartapatate/start/loadWorkspace.js
+
+scriptAffectations:
+  window\.workspaceKey: home
+  window\.startPackage: package.admin
+  #
+  window\.devMode: true
+
+css:
+ tundra: /x/dijit/themes/tundra/tundra.css
+ #app: /x/catapatate/css/application.css
+ app: /js/catapatate/css/application.css
+
+
+#############################################################
+## BODY
+
+bodyAttributes:
+  class: patate tundra dev
+
+
+bodyInnerHtml:
+  app:
+    tag: div
+    attributes:
+      id: app
+    content: ""
+  wait:
+    tag: div
+    attributes:
+      id: wait
+    content:
+      sub:
+        tag: div
+        content: "Chargement de l'interface d'administration..."
+
+widgets:
+  root:
+    _class: jig.layout.RootPane
+    state:
+      children:
+        - tabContainer
+        #- mainContainer
+      toaster:
+        #positionDirection: br-left
+        positionDirection: bl-up
+  mainContainer:
+    _class: jig.layout.BorderContainer
+    state:
+      design: sidebar
+      children:
+        - tabContainer
+        #- about
+        - adminLibrarySide
+      paneSize: 250
+  tabContainer:
+    _class: jig.layout.TabContainer
+    state:
+      children:
+        - adminLibrary
+      appearTarget: add
+      neverEmpty: adminLibrary
+  adminLibrary:
+    _class: cartapatate.admin.Library
+    #state:
+    #  appearTarget: bottom
+  adminLibrarySide:
+    _class: cartapatate.admin.Library
+    state:
+      gridNbColumns: 1
+  about:
+    _class: catapatate.info.About
+
+
+settings:
+  devWidgets:
+    - catapatate.info.About
+    - ploomap.list.OgrDataSource
+    - ploomap.list.OgrLayer
+    - ploomap.list.MapCategory
+    - ploomap.list.MapCollection
+    - ploomap.list.Map
+    - jig.test.Api
+  adminWidgets:
+    - ploomap.list.OgrDataSource
+    - ploomap.list.OgrLayer
+    - ploomap.list.MapCategory
+    - ploomap.list.MapCollection
+    - ploomap.list.Map
+    - ploomap.list.ColorFamily
+    - jig.list.File
