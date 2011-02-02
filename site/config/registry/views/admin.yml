@@ -16,28 +16,22 @@ packageStyles: false
 scripts:
   dojo: /x/dojo/dojo.js
   #openlayers: /js/openlayers/build/OpenLayers.js
-  #application: /x/admin.js
-  #
-  start1: /js/cartapatate/start.js
-  start2: /js/cartapatate/start/loadWorkspace.js
+  application: /x/admin.js
 
 scriptAffectations:
   window\.workspaceKey: home
   window\.startPackage: package.admin
-  #
-  window\.devMode: true
 
 css:
  tundra: /x/dijit/themes/tundra/tundra.css
- #app: /x/catapatate/css/application.css
- app: /js/catapatate/css/application.css
+ app: /x/catapatate/css/application.css
 
 
 #############################################################
 ## BODY
 
 bodyAttributes:
-  class: patate tundra dev
+  class: patate tundra
 
 
 bodyInnerHtml:

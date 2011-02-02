@@ -17,3 +17,14 @@ doctrine.orm:
   entity_managers:
     default:
       connection: default
+
+doctrine_odm.mongodb:
+  server: mongodb://localhost:27017
+  default_database: "%kernel.name%_%kernel.environment%"
+  #default_document_manager: default
+  auto_generate_proxy_classes: true
+  auto_generate_hydrator_classes: true
+  metadata_cache_driver: array
+  mappings:
+    PloomapBundle: ~
+    ZigBundle: ~
