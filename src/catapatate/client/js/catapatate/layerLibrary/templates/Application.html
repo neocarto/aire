@@ -26,11 +26,14 @@
            gridNbColumns="4" gridFillDummy="true"
            mapGetterWidget="${id}"></div>
     </div>
-    <div dojoType="dijit.layout.ContentPane" title="Externe">
+    <div dojoType="dijit.layout.ContentPane" title="Utilisateur">
       <button dojoType="jig.button.TooltipWidget"
               childWidgetClass="ploomap.tool.WmsCapabilities"
               childWidgetParams="{mapGetterWidget:'${id}'}"
               label="Service WMS"></button>
+      <button dojoType="jig.button.Action"
+              dojoAttachEvent="onClick:createVectorLayer"
+              >Créer couche vecteur</button>
     </div>
   </div>
 </div>

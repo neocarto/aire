@@ -24,6 +24,26 @@ dojo.declare('catapatate.layerLibrary.Application',
   startup: function() {
     this.inherited(arguments);
     this.tabContainer.resize();
+  },
+
+  createVectorLayer: function() {
+    var title = window.prompt("Nom de la couche ?");
+    if (!title) { return; }
+    var layer = new OpenLayers.Layer.Vector('Plans',
+      {
+        projection: 'EPSG:4326',
+        strategies: [new OpenLayers.Strategy.Save()],
+        //protocol: new OpenLayers.Protocol(),
+        //optClass: 'ploomap.layer.UserVector',
+        getFeatureTitle: function(feature) {
+          return feature.attributes.title;
+        },
+        geometryType: OpenLayers.Geometry.Polygon
+        //sldUrl: '/sld/plans.xml',
+        //icon: '/images/icons/layer_plans.png'
+      });
+    this.mapWidget.map.addLayer(layer);
   }
+
 
 });
