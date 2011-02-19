@@ -12,6 +12,7 @@ use Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle;
 use Symfony\Bundle\DoctrineBundle\DoctrineBundle;
 use Symfony\Bundle\DoctrineMongoDBBundle\DoctrineMongoDBBundle;
 use Zig\Bundle\ZigBundle\ZigBundle;
+use Zig\Bundle\PgLinkBundle\PgLinkBundle;
 use Ploomap\Bundle\PloomapBundle\PloomapBundle;
 use CatapatateBundle\CatapatateBundle;
 
@@ -47,6 +48,7 @@ class AppKernel extends Kernel
 
                      // third-party : my owns
                      new ZigBundle(),
+                     new PgLinkBundle(),
                      new PloomapBundle(),
                      new CatapatateBundle(),
                      );
