@@ -1,7 +1,7 @@
 imports:
   - { resource: doctrine.yml }
   - { resource: zig.install.yml }
-  - { resource: pg-link.yml }
+  - { resource: pglink.yml }
 
 app.config:
   name: catapatate
