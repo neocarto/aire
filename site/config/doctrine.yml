@@ -28,3 +28,4 @@ doctrine_odm.mongodb:
   mappings:
     PloomapBundle: ~
     ZigBundle: ~
+    PgLinkBundle: ~
