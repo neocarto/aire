@@ -1,0 +1,5 @@
+
+zig_pglink.config:
+  database: pglink-test
+  user: pglink-test
+  password: KIrt3SgPdiftnvTxc5T
