@@ -104,3 +104,4 @@ settings:
     - ploomap.list.Map
     - ploomap.list.ColorFamily
     - jig.list.File
+    - jig.data.list.PgLinkView
