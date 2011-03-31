@@ -1,38 +1,39 @@
-zig.install:
-  # all paths are relative to the parameter 'kernel.root_dir'
-  manager_class: hehe
-  public_dir: public
-  public_mappings:
-    - { location: '', directory: '../src/catapatate/client' }
-    - { location: '', directory: '../src/cartapatate/cartapatate/client' }
-    - { location: '', directory: '../src/cartapatate/ploomap/client' }
-    - { location: '', directory: '../src/cartapatate/zig/client' }
-    - { location: 'images/openlayers', directory: '../src/openlayers/img' }
-    - { location: 'js/openlayers', directory: '../src/openlayers' }
-    - { location: 'js/proj4js', directory: '../src/proj4js' }
-    - { location: 'js/dojo', directory: '../src/dojo-release/dojo' }
-    - { location: 'js/dijit', directory: '../src/dojo-release/dijit' }
-    - { location: 'js/dojox', directory: '../src/dojo-release/dojox' }
+zig:
+  install:
+    # all paths are relative to the parameter 'kernel.root_dir'
+    #manager_class: hehe
+    public_dir: public
+    public_mappings:
+      - { location: '', directory: '../src/catapatate/client' }
+      - { location: '', directory: '../src/cartapatate/cartapatate/client' }
+      - { location: '', directory: '../src/cartapatate/ploomap/client' }
+      - { location: '', directory: '../src/cartapatate/zig/client' }
+      - { location: 'images/openlayers', directory: '../src/openlayers/img' }
+      - { location: 'js/openlayers', directory: '../src/openlayers' }
+      - { location: 'js/proj4js', directory: '../src/proj4js' }
+      - { location: 'js/dojo', directory: '../src/dojo-release/dojo' }
+      - { location: 'js/dijit', directory: '../src/dojo-release/dijit' }
+      - { location: 'js/dojox', directory: '../src/dojo-release/dojox' }
 
-  shrinksafe:
-    buildscripts_dir: ../src/dojo-release/util/buildscripts
-    release_name: x
-    release_dir: public
-    build_version: 0.2.16
-    profileData:
-      prefixes:
-        - [dojo, public/js/dojo]
-        - [dijit, public/js/dijit]
-        - [dojox, public/js/dojox]
-        - [jig, public/js/jig]
-        - [ploomap, public/js/ploomap]
-        - [cartapatate, public/js/cartapatate]
-        - [catapatate, public/js/catapatate]
-        - [package, public/js/package]
-      layers:
-        -
-          name: ../application.js
-          copyrightFile: '../src/cartapatate/ploomap/client/js/ploomap/copyright.txt'
-          dependencies:
-            - cartapatate.start.loadWorkspace
-            - package.application
+    shrinksafe:
+      buildscripts_dir: ../src/dojo-release/util/buildscripts
+      release_name: x
+      release_dir: public
+      build_version: 0.2.16
+      profileData:
+        prefixes:
+          - { ns: dojo, path: public/js/dojo }
+          - { ns: dijit, path: public/js/dijit }
+          - { ns: dojox, path: public/js/dojox }
+          - { ns: jig, path: public/js/jig }
+          - { ns: ploomap, path: public/js/ploomap }
+          - { ns: cartapatate, path: public/js/cartapatate }
+          - { ns: catapatate, path: public/js/catapatate }
+          - { ns: package, path: public/js/package }
+        layers:
+          -
+            name: ../application.js
+            copyrightFile: '../src/cartapatate/ploomap/client/js/ploomap/copyright.txt'
+            dependencies:
+              - cartapatate.start.loadWorkspace
+              - package.application

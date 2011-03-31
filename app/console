@@ -4,6 +4,7 @@
 require_once __DIR__.'/AppKernel.php';
 
 use Symfony\Bundle\FrameworkBundle\Console\Application;
+use Symfony\Component\Console\Input\ArgvInput;
 
 $env = trim(file_get_contents(__DIR__.'/ENV'));
 $kernel = new AppKernel($env, true);

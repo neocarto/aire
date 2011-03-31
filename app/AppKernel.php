@@ -3,7 +3,7 @@
 require_once __DIR__.'/../src/autoload.php';
 
 use Symfony\Component\HttpKernel\Kernel;
-use Symfony\Component\DependencyInjection\Loader\LoaderInterface;
+use Symfony\Component\Config\Loader\LoaderInterface;
 
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Bundle\TwigBundle\TwigBundle;
@@ -42,7 +42,7 @@ class AppKernel extends Kernel
                      // third-party : Symfony-related
                      new ZendBundle(),
                      new SwiftmailerBundle(),
-                     new DoctrineBundle(),
+                     //new DoctrineBundle(),
                      //new DoctrineMigrationsBundle(),
                      new DoctrineMongoDBBundle(),
 
