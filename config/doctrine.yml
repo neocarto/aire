@@ -18,7 +18,7 @@
 #     default:
 #       connection: default
 
-doctrine_mongo_db:
+doctrine_mongodb:
   #server: mongodb://localhost:27017
   connections:
     default:
@@ -36,6 +36,6 @@ doctrine_mongo_db:
     default:
       metadata_cache_driver: array
       mappings:
-        Ploomap: ~
-        Zig: ~
-        PgLink: ~
+        PloomapBundle: ~
+        ZigBundle: ~
+        PgLinkBundle: ~

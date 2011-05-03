@@ -1,20 +1,20 @@
 <?php
 
-require_once __DIR__.'/../src/autoload.php';
+require_once __DIR__.'/autoload.php';
 
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
 
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Bundle\TwigBundle\TwigBundle;
-use Symfony\Bundle\ZendBundle\ZendBundle;
+//use Symfony\Bundle\ZendBundle\ZendBundle;
 use Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle;
-use Symfony\Bundle\DoctrineBundle\DoctrineBundle;
+//use Symfony\Bundle\DoctrineBundle\DoctrineBundle;
 use Symfony\Bundle\DoctrineMongoDBBundle\DoctrineMongoDBBundle;
 use Zig\Bundle\ZigBundle\ZigBundle;
 use Zig\Bundle\PgLinkBundle\PgLinkBundle;
 use Ploomap\Bundle\PloomapBundle\PloomapBundle;
-use CatapatateBundle\CatapatateBundle;
+use CarnetsBundle\CarnetsBundle;
 
 class AppKernel extends Kernel
 {
@@ -40,7 +40,7 @@ class AppKernel extends Kernel
                      new TwigBundle(),
 
                      // third-party : Symfony-related
-                     new ZendBundle(),
+                     //new ZendBundle(),
                      new SwiftmailerBundle(),
                      //new DoctrineBundle(),
                      //new DoctrineMigrationsBundle(),
@@ -50,7 +50,7 @@ class AppKernel extends Kernel
                      new ZigBundle(),
                      new PgLinkBundle(),
                      new PloomapBundle(),
-                     new CatapatateBundle(),
+                     new CarnetsBundle(),
                      );
     if ($this->isDebug()) {
       $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
@@ -62,10 +62,10 @@ class AppKernel extends Kernel
   public function registerBundleDirs()
   {
     return array
-      ('CatapatateBundle' => __DIR__.'/../src/catapatate/server',
-       'Symfony\\Bundle' => __DIR__.'/../src/cartapatate/symfony/src/Symfony/Bundle',
-       'Zig\\Bundle' => __DIR__.'/../src/cartapatate/zig/server/Zig/Bundle',
-       'Ploomap\\Bundle' => __DIR__.'/../src/cartapatate/ploomap/server/Ploomap/Bundle');
+      ('CarnetsBundle' => __DIR__.'/../lib/carnets/server',
+       'Symfony\\Bundle' => __DIR__.'/../lib/symfony/src/Symfony/Bundle',
+       'Zig\\Bundle' => __DIR__.'/../lib/zig/server/Zig/Bundle',
+       'Ploomap\\Bundle' => __DIR__.'/../lib/ploomap/server/Ploomap/Bundle');
   }
 
   public function registerContainerConfiguration(LoaderInterface $loader)

@@ -4,19 +4,19 @@ zig:
     #manager_class: hehe
     public_dir: public
     public_mappings:
-      - { location: '', directory: '../src/catapatate/client' }
-      - { location: '', directory: '../src/cartapatate/cartapatate/client' }
-      - { location: '', directory: '../src/cartapatate/ploomap/client' }
-      - { location: '', directory: '../src/cartapatate/zig/client' }
-      - { location: 'images/openlayers', directory: '../src/openlayers/img' }
-      - { location: 'js/openlayers', directory: '../src/openlayers' }
-      - { location: 'js/proj4js', directory: '../src/proj4js' }
-      - { location: 'js/dojo', directory: '../src/dojo-release/dojo' }
-      - { location: 'js/dijit', directory: '../src/dojo-release/dijit' }
-      - { location: 'js/dojox', directory: '../src/dojo-release/dojox' }
+      - { location: '', directory: '../lib/carnets/client' }
+      - { location: '', directory: '../lib/cartapatate/client' }
+      - { location: '', directory: '../lib/ploomap/client' }
+      - { location: '', directory: '../lib/zig/client' }
+      - { location: 'images/openlayers', directory: '../lib/openlayers/img' }
+      - { location: 'js/openlayers', directory: '../lib/openlayers' }
+      - { location: 'js/proj4js', directory: '../lib/proj4js' }
+      - { location: 'js/dojo', directory: '../lib/dojo-release/dojo' }
+      - { location: 'js/dijit', directory: '../lib/dojo-release/dijit' }
+      - { location: 'js/dojox', directory: '../lib/dojo-release/dojox' }
 
     shrinksafe:
-      buildscripts_dir: ../src/dojo-release/util/buildscripts
+      buildscripts_dir: ../lib/dojo-release/util/buildscripts
       release_name: x
       release_dir: public
       build_version: 0.2.16
@@ -33,7 +33,7 @@ zig:
         layers:
           -
             name: ../application.js
-            copyrightFile: '../src/cartapatate/ploomap/client/js/ploomap/copyright.txt'
+            copyrightFile: '../lib/ploomap/client/js/ploomap/copyright.txt'
             dependencies:
               - cartapatate.start.loadWorkspace
               - package.application

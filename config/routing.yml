@@ -1,15 +1,15 @@
 #catapatate:
 #  resource: CatapatateBundle/Resources/config/routing.yml
 zig:
-  resource: "@Zig/Resources/config/routing.yml"
-ploomap:
-  resource: "@Ploomap/Resources/config/routing.yml"
+  resource: "@ZigBundle/Resources/config/routing.yml"
+# ploomap:
+#   resource: "@Ploomap/Resources/config/routing.yml"
 
 homepage:
   pattern: /
-  defaults: { _controller: "Zig:ViewClass:render", path: "views.workspace" }
+  defaults: { _controller: "ZigBundle:ViewClass:render", path: "views.workspace" }
 
 admin:
   pattern: /admin
-  defaults: { _controller: "Zig:ViewClass:render", path: "views.admin" }
+  defaults: { _controller: "ZigBundle:ViewClass:render", path: "views.admin" }
 

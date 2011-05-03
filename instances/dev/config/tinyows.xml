@@ -1,15 +1,15 @@
 <tinyows online_resource="http://dev.catapatate.cartapatate.net/wfs"
 	 schema_dir="/usr/local/opt/okapi/share/tinyows/schema/"
-         log="/home/okapi/dev/cartapatate/catapatate/site/logs/tinyows.log">
+         log="/var/www/carnets/demo/app/logs/tinyows.log">
 
-  <pg host="127.0.0.1" user="tinyows" password="fsh3rdV" dbname="catapatate-dev" port="5432"/>
+  <pg host="localhost" user="carnets" password="Q9UuV9Avcg" dbname="carnets-demo" port="5432"/>
 
   <metadata name="Service WFS pour hurepoix-dev"
 	    title="Cartes 1° Hurepoix [DEV]"/>
 
-  <contact name="Jean-Francois Gigand"
-    	   site="http://dev.hurepoix.cartapatate.net/"
-   	   email="okapi@lapatate.org" />
+  <contact name="Geonef"
+    	   site="http://www.geonef.fr/"
+   	   email="contact@geonef.fr" />
 
   <layer retrievable="1"
 	 writable="0"
