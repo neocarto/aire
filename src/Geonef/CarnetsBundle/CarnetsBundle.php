@@ -1,10 +1,10 @@
 <?php
 
-namespace CarnetsBundle;
+namespace Geonef\CarnetsBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class CarnetsBundle extends Bundle
+class GeonefCarnetsBundle extends Bundle
 {
   /*public function boot(ContainerInterface $container)
   {
