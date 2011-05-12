@@ -63,8 +63,8 @@ class AppKernel extends Kernel
   {
     return array
       ('Symfony\\Bundle' => __DIR__.'/../vendor/symfony/src/Symfony/Bundle',
-       'Geonef\\ZigBundle' => __DIR__.'/../vendor/bundles/Geonef/ZigBundle',
-       'Geonef\\PloomapBundle' => __DIR__.'/../vendor/bundles/Geonef/PloomapBundle',
+       'Geonef\\ZigBundle' => __DIR__.'/../vendor/zig/src/Geonef/ZigBundle',
+       'Geonef\\PloomapBundle' => __DIR__.'/../vendor/ploomap/src/Geonef/PloomapBundle',
        'Geonef\\CarnetsBundle' => __DIR__.'/../src/Geonef/CarnetsBundle');
   }
 
