@@ -1,5 +1,5 @@
 
-pg_link:
+geonef_pg_link:
   database: pglink-test
   user: pglink-test
   password: KIrt3SgPdiftnvTxc5T

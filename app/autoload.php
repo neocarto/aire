@@ -16,8 +16,9 @@ $loader->registerNamespaces(array(
   'Doctrine\\MongoDB' => $__lib_dir.'/doctrine-mongodb/lib',
   'Geonef\\Zig'         => $__lib_dir.'/zig/src',
   'Geonef\\ZigBundle'     => $__lib_dir.'/zig/src',
-  'Geonef\\Ploomap'     => $__lib_dir.'/ploomap/src',
-  'Geonef\\PloomapBundle' => $__lib_dir.'/ploomap/src',
+  'Geonef\\PgLinkBundle'     => $__lib_dir.'/zig/src',
+  'Geonef\\Ploomap'     => $__lib_dir.'/ploomap-server/src',
+  'Geonef\\PloomapBundle' => $__lib_dir.'/ploomap-server/src',
   'Geonef\\CarnetsBundle' => $__lib_dir.'/../src',
   //'Zend' => '/usr/src/zf2/library',
 ));
