@@ -5,7 +5,7 @@ geonef_zig:
     public_dir: %kernel.cache_dir%/public
     public_mappings:
       - { location: '', directory: '../src/Geonef/CarnetsBundle/Resources/public' }
-      #- { location: '', directory: '../vendor/cartapatate/client' }
+      - { location: '', directory: '../vendor/cartapatate' }
       - { location: 'js', directory: '../vendor/ploomap-client/src' }
       - { location: 'js', directory: '../vendor/jig/src' }
       - { location: 'images/openlayers', directory: '../vendor/openlayers/img' }
