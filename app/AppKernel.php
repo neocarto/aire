@@ -11,10 +11,10 @@ use Symfony\Bundle\TwigBundle\TwigBundle;
 use Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle;
 //use Symfony\Bundle\DoctrineBundle\DoctrineBundle;
 use Symfony\Bundle\DoctrineMongoDBBundle\DoctrineMongoDBBundle;
-use Zig\Bundle\ZigBundle\ZigBundle;
-use Zig\Bundle\PgLinkBundle\PgLinkBundle;
-use Ploomap\Bundle\PloomapBundle\PloomapBundle;
-use CarnetsBundle\CarnetsBundle;
+use Geonef\ZigBundle\GeonefZigBundle;
+use Geonef\PgLinkBundle\GeonefPgLinkBundle;
+use Geonef\PloomapBundle\GeonefPloomapBundle;
+use Geonef\CarnetsBundle\GeonefCarnetsBundle;
 
 class AppKernel extends Kernel
 {
@@ -47,10 +47,10 @@ class AppKernel extends Kernel
                      new DoctrineMongoDBBundle(),
 
                      // third-party : my owns
-                     new ZigBundle(),
-                     new PgLinkBundle(),
-                     new PloomapBundle(),
-                     new CarnetsBundle(),
+                     new GeonefZigBundle(),
+                     new GeonefPgLinkBundle(),
+                     new GeonefPloomapBundle(),
+                     new GeonefCarnetsBundle(),
                      );
     if ($this->isDebug()) {
       $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
@@ -62,10 +62,10 @@ class AppKernel extends Kernel
   public function registerBundleDirs()
   {
     return array
-      ('CarnetsBundle' => __DIR__.'/../lib/carnets/server',
-       'Symfony\\Bundle' => __DIR__.'/../lib/symfony/src/Symfony/Bundle',
-       'Zig\\Bundle' => __DIR__.'/../lib/zig/server/Zig/Bundle',
-       'Ploomap\\Bundle' => __DIR__.'/../lib/ploomap/server/Ploomap/Bundle');
+      ('Symfony\\Bundle' => __DIR__.'/../vendor/symfony/src/Symfony/Bundle',
+       'Geonef\\ZigBundle' => __DIR__.'/../vendor/bundles/Geonef/ZigBundle',
+       'Geonef\\PloomapBundle' => __DIR__.'/../vendor/bundles/Geonef/PloomapBundle',
+       'Geonef\\CarnetsBundle' => __DIR__.'/../src/Geonef/CarnetsBundle');
   }
 
   public function registerContainerConfiguration(LoaderInterface $loader)
