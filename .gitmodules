@@ -37,3 +37,6 @@
 [submodule "vendor/bundles/Geonef/PloomapBundle"]
 	path = vendor/bundles/Geonef/PloomapBundle
 	url = /var/lib/git/package/ploomap-bundle.git
+[submodule "vendor/bundles/Geonef/PgLinkBundle"]
+	path = vendor/bundles/Geonef/PgLinkBundle
+	url = /var/lib/git/package/pglink-bundle.git
