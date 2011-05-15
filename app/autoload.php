@@ -14,6 +14,7 @@ $loader->registerNamespaces(array(
   'Doctrine\\ORM'    => $__lib_dir.'/doctrine-orm/lib',
   'Doctrine\\ODM'    => $__lib_dir.'/doctrine-mongodb-odm/lib',
   'Doctrine\\MongoDB' => $__lib_dir.'/doctrine-mongodb/lib',
+  'Monolog'           => $__lib_dir.'/monolog/src',
   'Geonef\\Zig'         => $__lib_dir.'/zig/src',
   'Geonef\\ZigBundle'     => $__lib_dir.'/zig/src',
   'Geonef\\PgLinkBundle'     => $__lib_dir.'/zig/src',

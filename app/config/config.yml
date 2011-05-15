@@ -9,8 +9,8 @@ framework:
   secret: d3c5eb72-98cd-4db9-bfec-9395a65bc94a
   charset: UTF-8
   #error_handler: null
-  # csrf_protection:
-  #   enabled: true
+  csrf_protection:
+     enabled: true
   router: { resource: "%kernel.root_dir%/config/routing.yml" }
   validation: { enabled: true, annotations: true }
   templating:    { engines: ['twig'] } #assets_version: SomeVersionScheme

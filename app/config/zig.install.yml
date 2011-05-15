@@ -6,14 +6,14 @@ geonef_zig:
     public_mappings:
       - { location: '', directory: '../src/Geonef/CarnetsBundle/Resources/public' }
       - { location: '', directory: '../vendor/cartapatate' }
-      - { location: 'js', directory: '../vendor/ploomap-client/src' }
-      - { location: 'js', directory: '../vendor/jig/src' }
-      - { location: 'images/openlayers', directory: '../vendor/openlayers/img' }
-      - { location: 'js/openlayers', directory: '../vendor/openlayers' }
-      - { location: 'js/proj4js', directory: '../vendor/proj4js' }
-      - { location: 'js/dojo', directory: '../vendor/dojo-release/dojo' }
-      - { location: 'js/dijit', directory: '../vendor/dojo-release/dijit' }
-      - { location: 'js/dojox', directory: '../vendor/dojo-release/dojox' }
+      - { location: 'lib', directory: '../vendor/ploomap-client/src' }
+      - { location: 'lib', directory: '../vendor/jig/src' }
+      #- { location: 'images/openlayers', directory: '../vendor/openlayers/img' }
+      - { location: 'lib/openlayers', directory: '../vendor/openlayers' }
+      - { location: 'lib/proj4js', directory: '../vendor/proj4js' }
+      - { location: 'lib/dojo', directory: '../vendor/dojo-release/dojo' }
+      - { location: 'lib/dijit', directory: '../vendor/dojo-release/dijit' }
+      - { location: 'lib/dojox', directory: '../vendor/dojo-release/dojox' }
 
     shrinksafe:
       buildscripts_dir: ../vendor/dojo-release/util/buildscripts
@@ -22,14 +22,14 @@ geonef_zig:
       build_version: 0.2.16
       profileData:
         prefixes:
-          - { ns: dojo, path: %kernel.cache_dir%/public/js/dojo }
-          - { ns: dijit, path: %kernel.cache_dir%/public/js/dijit }
-          - { ns: dojox, path: %kernel.cache_dir%/public/js/dojox }
-          - { ns: jig, path: %kernel.cache_dir%/public/js/jig }
-          - { ns: ploomap, path: %kernel.cache_dir%/public/js/ploomap }
-          - { ns: cartapatate, path: %kernel.cache_dir%/public/js/cartapatate }
-          - { ns: catapatate, path: %kernel.cache_dir%/public/js/catapatate }
-          - { ns: package, path: %kernel.cache_dir%/public/js/package }
+          - { ns: dojo, path: %kernel.cache_dir%/public/lib/dojo }
+          - { ns: dijit, path: %kernel.cache_dir%/public/lib/dijit }
+          - { ns: dojox, path: %kernel.cache_dir%/public/lib/dojox }
+          - { ns: jig, path: %kernel.cache_dir%/public/lib/jig }
+          - { ns: ploomap, path: %kernel.cache_dir%/public/lib/ploomap }
+          - { ns: cartapatate, path: %kernel.cache_dir%/public/lib/cartapatate }
+          - { ns: catapatate, path: %kernel.cache_dir%/public/lib/catapatate }
+          - { ns: package, path: %kernel.cache_dir%/public/lib/package }
         layers:
           -
             name: ../application.js

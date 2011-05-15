@@ -4,7 +4,7 @@
 ##
 #############################################################
 
-class: Zig\View\Document\Workspace
+class: Geonef\Zig\View\Document\Workspace
 title: Catapatate 2 preview
 
 #############################################################
@@ -33,7 +33,7 @@ scriptAffectations:
   #window\.workspaceObjDeps: [GBrowserIsCompatible]
 
 css:
-  app: /x/catapatate/css/application.css
+  app: /x/catapatate/style/application.css
 
 
 #############################################################
@@ -190,7 +190,7 @@ settings:
       layerTitle: Accès
       wikiCategory: Accès
       description: "Accès aux cavités souterraines"
-      icon: /images/markers/acces.png
+      icon: /lib/cartapatate/style/marker/acces.png
       minResolution: 0.07464553542137146
       maxResolution: 4.777314266967774
       geometry: point
@@ -357,7 +357,7 @@ settings:
       description: "Lieux particuliers des cavités souterraines"
       layerTitle: Lieux
       wikiCategory: Lieux
-      icon: /images/markers/lieu.png
+      icon: /lib/cartapatate/style/marker/lieu.png
       minResolution: 0.07464553542137146
       maxResolution: 4.777314266967774
       geometry: point
@@ -403,7 +403,7 @@ settings:
       layerTitle: Galeries
       wikiCategory: Galeries
       description: "Galeries en carrière"
-      icon: /images/icons/layer_element_galerie.png
+      icon: /lib/cartapatate/style/icon/layer_element_galerie.png
       minResolution: 0.07464553542137146
       maxResolution: 2.388657133483887
       geometry: lineString
@@ -422,7 +422,7 @@ settings:
       layerTitle: Grands axes
       wikiCategory: Grands axes
       description: "Galeries principales en carrière"
-      icon: /images/icons/layer_element_grandaxe.png
+      icon: /lib/cartapatate/style/icon/layer_element_grandaxe.png
       minResolution: 0.07464553542137146
       maxResolution: 38.21851413574219
       geometry: lineString
@@ -441,7 +441,7 @@ settings:
       layerTitle: "Cours d'eau"
       wikiCategory: "Cours d'eau"
       description: "Cours d'eau enterrés - naturel ou artificiel"
-      icon: /images/icons/layer_element_egout.png
+      icon: /lib/cartapatate/style/icon/layer_element_egout.png
       minResolution: 0.07464553542137146
       maxResolution: 38.21851413574219
       geometry: lineString
@@ -472,7 +472,7 @@ settings:
       layerTitle: G. techniques
       wikiCategory: Galeries techniques
       description: "Galeries techniques (PTT, électricité...)"
-      icon: /images/icons/layer_element_galerie_technique.png
+      icon: /lib/cartapatate/style/icon/layer_element_galerie_technique.png
       minResolution: 0.07464553542137146
       maxResolution: 38.21851413574219
       geometry: lineString
@@ -501,7 +501,7 @@ settings:
       layerTitle: Délimitations
       wikiCategory: Délimitations
       description: "Délimitations diverses"
-      icon: /images/icons/layer_element_delimitation.png
+      icon: /lib/cartapatate/style/icon/layer_element_delimitation.png
       geometry: polygon
       attributes:
         name:
@@ -527,7 +527,7 @@ settings:
       layerTitle: Secteurs
       wikiCategory: Secteurs
       description: "Secteurs de cavités souterraines délimité par un critère quelconque"
-      icon: /images/icons/layer_element_secteur.png
+      icon: /lib/cartapatate/style/icon/layer_element_secteur.png
       minResolution: 1.1943285667419434
       maxResolution: 38.21851413574219
       geometry: polygon
@@ -546,7 +546,7 @@ settings:
       layerTitle: Réseaux
       wikiCategory: Réseaux
       description: "Réseau de galeries communiquantes appartenant à une ou plusieurs exploitations en carrière"
-      icon: /images/icons/layer_element_reseau.png
+      icon: /lib/cartapatate/style/icon/layer_element_reseau.png
       minResolution: 4.777314266967774
       maxResolution: 76.43702827148438
       geometry: polygon

@@ -5,11 +5,10 @@
  */
 
 /* Style par défaut OpenLayers  */
-@import url("../../../js/openlayers/theme/default/style.css");
-/*@import url("../../../js/openlayers/theme/default/google.css");*/
+@import url("../../openlayers/theme/default/style.css");
 
 /* Style commun à la plateforme cartapatate */
-@import url("../../../css/cartapatate.css");
+@import url("../../cartapatate/style/cartapatate.css");
 
 /*
  * Couleurs - dominante orange

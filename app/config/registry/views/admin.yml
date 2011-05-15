@@ -4,7 +4,7 @@
 ##
 #############################################################
 
-class: Zig\View\Document\Workspace
+class: Geonef\Zig\View\Document\Workspace
 title: Admin-Catapatate
 
 #############################################################
@@ -24,7 +24,7 @@ scriptAffectations:
 
 css:
  tundra: /x/dijit/themes/tundra/tundra.css
- app: /x/catapatate/css/application.css
+ app: /x/catapatate/style/application.css
 
 
 #############################################################
