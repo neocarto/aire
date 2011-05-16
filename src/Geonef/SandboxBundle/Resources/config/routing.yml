@@ -1,4 +1,0 @@
-
-#test:
-#  pattern: /test
-#  defaults: { _controller: 'CatapatateBundle:Test:test' }
