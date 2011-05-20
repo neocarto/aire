@@ -1,19 +1,19 @@
 
-dojo.provide('catapatate.info.About');
+dojo.provide('geonef.sandbox.info.About');
 
-dojo.require('jig.layout._Anchor');
+dojo.require('geonef.jig.layout._Anchor');
 dojo.require('dijit._Templated');
-dojo.require('jig.version');
+dojo.require('geonef.jig.version');
 
-dojo.declare('catapatate.info.About', [ jig.layout._Anchor, dijit._Templated ],
+dojo.declare('geonef.sandbox.info.About', [ geonef.jig.layout._Anchor, dijit._Templated ],
 {
-  templateString: dojo.cache("catapatate.info", "templates/About.html"),
+  templateString: dojo.cache("geonef.sandbox.info", "templates/About.html"),
   widgetsInTemplate: true,
   name: 'Notice',
   icon: '/images/icons/tool_about.png',
 
   postMixInProperties: function() {
-    this.version = jig.version;
+    this.version = geonef.jig.version;
   }
 
 

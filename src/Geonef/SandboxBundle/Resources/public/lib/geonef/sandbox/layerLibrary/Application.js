@@ -1,24 +1,25 @@
 
-dojo.provide('catapatate.layerLibrary.Application');
+dojo.provide('geonef.sandbox.layerLibrary.Application');
 
 // parents
-dojo.require('jig.layout._Anchor');
+dojo.require('geonef.jig.layout._Anchor');
 dojo.require('dijit._Templated');
-dojo.require('ploomap.MapBinding');
+dojo.require('geonef.ploomap.MapBinding');
 
 // used in template
-dojo.require('ploomap.tool.layerLibrary.AutoGrid');
-dojo.require('jig.button.TooltipWidget');
+dojo.require('geonef.ploomap.tool.layerLibrary.AutoGrid');
+dojo.require('geonef.jig.button.TooltipWidget');
 
-dojo.declare('catapatate.layerLibrary.Application',
-             [ jig.layout._Anchor, dijit._Templated, ploomap.MapBinding ],
+dojo.declare('geonef.sandbox.layerLibrary.Application',
+             [ geonef.jig.layout._Anchor, dijit._Templated, geonef.ploomap.MapBinding ],
 {
   // summary:
-  //   // Layer library for application "catapatate""
+  //   // Layer library for application "geonef.sandbox""
   //
 
 
-  templateString: dojo.cache('catapatate.layerLibrary', 'templates/Application.html'),
+  templateString: dojo.cache('geonef.sandbox.layerLibrary',
+                             'templates/Application.html'),
   widgetsInTemplate: true,
 
   startup: function() {
@@ -34,7 +35,7 @@ dojo.declare('catapatate.layerLibrary.Application',
         projection: 'EPSG:4326',
         strategies: [new OpenLayers.Strategy.Save()],
         //protocol: new OpenLayers.Protocol(),
-        //optClass: 'ploomap.layer.UserVector',
+        //optClass: 'geonef.ploomap.layer.UserVector',
         getFeatureTitle: function(feature) {
           return feature.attributes.title;
         },

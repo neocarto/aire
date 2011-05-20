@@ -1,11 +1,11 @@
 
 
-dojo.provide('catapatate.layerDef.Common');
+dojo.provide('geonef.sandbox.layerDef.Common');
 
 // parents
-dojo.require('ploomap.layerDef.Base');
+dojo.require('geonef.ploomap.layerDef.Base');
 
-dojo.declare('catapatate.layerDef.Common', [ ploomap.layerDef.Base ],
+dojo.declare('geonef.sandbox.layerDef.Common', [ geonef.ploomap.layerDef.Base ],
 {
   // summary:
   //   Couches spécifique à l'application Catapatate
@@ -37,7 +37,7 @@ dojo.declare('catapatate.layerDef.Common', [ ploomap.layerDef.Base ],
     //             minResolution: 0.07464553542137146,
     //             maxResolution: 76.43702827148438,
     //             noOpacity: true,
-    //             strategies: [new ploomap.OpenLayers.Strategy.BBOX({ ratio: 1.0 }),
+    //             strategies: [new geonef.ploomap.OpenLayers.Strategy.BBOX({ ratio: 1.0 }),
     //                          new OpenLayers.Strategy.Save()],
     //             protocol: new OpenLayers.Protocol.WFS(
     //               {
@@ -74,7 +74,7 @@ dojo.declare('catapatate.layerDef.Common', [ ploomap.layerDef.Base ],
     //             minResolution: 0.07464553542137146,
     //             maxResolution: 76.43702827148438,
     //             noOpacity: true,
-    //             strategies: [new ploomap.OpenLayers.Strategy.BBOX({ ratio: 1.0 }),
+    //             strategies: [new geonef.ploomap.OpenLayers.Strategy.BBOX({ ratio: 1.0 }),
     //                          new OpenLayers.Strategy.Save()],
     //             protocol: new OpenLayers.Protocol.WFS(
     //               {

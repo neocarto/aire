@@ -5,7 +5,7 @@
 #############################################################
 
 class: Geonef\Zig\View\Document\Workspace
-title: Catapatate 2 preview
+title: Geonef Mapping Sandbox
 
 #############################################################
 ## HEADER
@@ -33,7 +33,7 @@ scriptAffectations:
   #window\.workspaceObjDeps: [GBrowserIsCompatible]
 
 css:
-  app: /x/catapatate/style/application.css
+  app: /x/geonef/sandbox/style/application.css
 
 
 #############################################################
@@ -60,7 +60,7 @@ bodyInnerHtml:
 
 widgets:
   root:
-    _class: jig.layout.RootPane
+    _class: geonef.jig.layout.RootPane
     state:
       children:
         - mainContainer
@@ -68,7 +68,7 @@ widgets:
         positionDirection: bl-up
         # "br-up", "br-left", "bl-up", "bl-right", "tr-down", "tr-left", "tl-down", "tl-right"
   mainContainer:
-    _class: jig.layout.BorderContainer
+    _class: geonef.jig.layout.BorderContainer
     state:
       design: sidebar
       children:
@@ -76,9 +76,9 @@ widgets:
         - sideContainer
       paneSize: 250
   map:
-    _class: ploomap.map.Classical
+    _class: geonef.ploomap.map.Classical
     state:
-      layersDefsClass: catapatate.layerDef.Application
+      layersDefsClass: geonef.sandbox.layerDef.Application
       layers:
         - google_hybrid
         - google_normal
@@ -102,11 +102,11 @@ widgets:
         - { class: OpenLayers.Control.Navigation, options: { zoomWheelEnabled: true } }
         #, mouseWheelOptions: { interval: 100 } } }
         #- OpenLayers.Control.PanZoomBar
-        - { class: ploomap.OpenLayers.Control.SexyZoomBar, options: { numZoomLevels: 22 } }
-        - { class: ploomap.OpenLayers.Control.ScaleLine, options: { maxWidth: 150, geodesic: true } }
-        - ploomap.OpenLayers.Control.TileLoadSpinner
+        - { class: geonef.ploomap.OpenLayers.Control.SexyZoomBar, options: { numZoomLevels: 22 } }
+        - { class: geonef.ploomap.OpenLayers.Control.ScaleLine, options: { maxWidth: 150, geodesic: true } }
+        - geonef.ploomap.OpenLayers.Control.TileLoadSpinner
   sideContainer:
-    _class: jig.layout.BorderContainer
+    _class: geonef.jig.layout.BorderContainer
     state:
       design: headline
       children:
@@ -116,7 +116,7 @@ widgets:
         #- sideContainer2
       paneSize: 200
   sideContainer2:
-    _class: jig.layout.BorderContainer
+    _class: geonef.jig.layout.BorderContainer
     state:
       design: headline
       children:
@@ -124,20 +124,20 @@ widgets:
         - overviewMap
       paneSize: 120
   layers:
-    _class: ploomap.tool.Layers
+    _class: geonef.ploomap.tool.Layers
     state:
       mapWidget: map
       appearTarget: bottom
   overviewMap:
-    _class: ploomap.tool.OverviewMap
+    _class: geonef.ploomap.tool.OverviewMap
     state:
       mapWidget: map
   about:
-    _class: catapatate.info.About
+    _class: geonef.sandbox.info.About
 
 settings:
   layerManager:
-    layerLibraryClass: catapatate.layerLibrary.Application
+    layerLibraryClass: geonef.sandbox.layerLibrary.Application
   layers:
     - google_hybrid
     - google_normal
@@ -172,14 +172,14 @@ settings:
     - reseau
   mapTools:
     tools:
-      - ploomap.tool.Magnifier
-      - ploomap.tool.OverviewMap
-      - ploomap.tool.Measure
-      - ploomap.tool.Export
-      - ploomap.tool.StreetView
-      - ploomap.tool.Itineraries
-      - jig.tool.UserFeedback
-      - catapatate.info.About
+      - geonef.ploomap.tool.Magnifier
+      - geonef.ploomap.tool.OverviewMap
+      - geonef.ploomap.tool.Measure
+      - geonef.ploomap.tool.Export
+      - geonef.ploomap.tool.StreetView
+      - geonef.ploomap.tool.Itineraries
+      - geonef.jig.tool.UserFeedback
+      - geonef.sandbox.info.About
 
 
 

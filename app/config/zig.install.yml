@@ -4,11 +4,12 @@ geonef_zig:
     #manager_class: hehe
     public_dir: %kernel.cache_dir%/public
     public_mappings:
-      - { location: '', directory: '../src/Geonef/CarnetsBundle/Resources/public' }
+      - { location: '', directory: '../src/Geonef/SandboxBundle/Resources/public' }
       - { location: '', directory: '../vendor/cartapatate' }
       - { location: 'lib', directory: '../vendor/ploomap-client/src' }
       - { location: 'lib', directory: '../vendor/jig/src' }
-      #- { location: 'images/openlayers', directory: '../vendor/openlayers/img' }
+      - { location: 'images/openlayers', directory: '../vendor/ploomap-client/src/geonef/ploomap/style/openlayers' }
+      - { location: 'images/openlayers', directory: '../vendor/openlayers/img' }
       - { location: 'lib/openlayers', directory: '../vendor/openlayers' }
       - { location: 'lib/proj4js', directory: '../vendor/proj4js' }
       - { location: 'lib/dojo', directory: '../vendor/dojo-release/dojo' }
@@ -25,15 +26,15 @@ geonef_zig:
           - { ns: dojo, path: %kernel.cache_dir%/public/lib/dojo }
           - { ns: dijit, path: %kernel.cache_dir%/public/lib/dijit }
           - { ns: dojox, path: %kernel.cache_dir%/public/lib/dojox }
-          - { ns: jig, path: %kernel.cache_dir%/public/lib/jig }
-          - { ns: ploomap, path: %kernel.cache_dir%/public/lib/ploomap }
+          #- { ns: jig, path: %kernel.cache_dir%/public/lib/jig }
+          #- { ns: ploomap, path: %kernel.cache_dir%/public/lib/ploomap }
           - { ns: cartapatate, path: %kernel.cache_dir%/public/lib/cartapatate }
-          - { ns: catapatate, path: %kernel.cache_dir%/public/lib/catapatate }
+          - { ns: geonef, path: %kernel.cache_dir%/public/lib/geonef }
           - { ns: package, path: %kernel.cache_dir%/public/lib/package }
         layers:
           -
             name: ../application.js
-            copyrightFile: '../vendor/ploomap-client/src/ploomap/copyright.txt'
+            copyrightFile: '../vendor/ploomap-client/src/geonef/ploomap/copyright.txt'
             dependencies:
               - cartapatate.start.loadWorkspace
               - package.application

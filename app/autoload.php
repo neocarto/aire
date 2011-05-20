@@ -20,7 +20,7 @@ $loader->registerNamespaces(array(
   'Geonef\\PgLinkBundle'     => $__lib_dir.'/zig/src',
   'Geonef\\Ploomap'     => $__lib_dir.'/ploomap-server/src',
   'Geonef\\PloomapBundle' => $__lib_dir.'/ploomap-server/src',
-  'Geonef\\CarnetsBundle' => $__lib_dir.'/../src',
+  'Geonef\\SandboxBundle' => $__lib_dir.'/../src',
   //'Zend' => '/usr/src/zf2/library',
 ));
 $loader->registerPrefixes
