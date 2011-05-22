@@ -20,7 +20,7 @@ geonef_zig:
       buildscripts_dir: ../vendor/dojo-release/util/buildscripts
       release_name: x
       release_dir: %kernel.cache_dir%/public
-      build_version: 0.2.16
+      build_version: 0.3.0
       profileData:
         prefixes:
           - { ns: dojo, path: %kernel.cache_dir%/public/lib/dojo }

@@ -4,8 +4,8 @@
 
   <pg host="localhost" user="carnets" password="Q9UuV9Avcg" dbname="carnets-demo" port="5432"/>
 
-  <metadata name="Service WFS pour hurepoix-dev"
-	    title="Cartes 1° Hurepoix [DEV]"/>
+  <metadata name="Service WFS pour Geonef Sandbox"
+	    title="Geonef Mapping Sandbox [DEV]"/>
 
   <contact name="Geonef"
     	   site="http://www.geonef.fr/"

@@ -24,10 +24,15 @@ dojo.require('geonef.sandbox.layerLibrary.Application');
 
 // tools
 dojo.require('geonef.ploomap.tool.Export');
+dojo.require('geonef.ploomap.tool.Measure');
 dojo.require('geonef.ploomap.tool.StreetView');
 dojo.require('geonef.ploomap.tool.OverviewMap');
 dojo.require('geonef.ploomap.tool.Itineraries');
 dojo.require('geonef.jig.tool.UserFeedback');
+
+// misc
+dojo.require('geonef.ploomap.OpenLayers.Control.ScaleLine');
+dojo.require('geonef.ploomap.OpenLayers.Control.TileLoadSpinner');
 
 // Optional
 //dojo.require('package.presentationView');
