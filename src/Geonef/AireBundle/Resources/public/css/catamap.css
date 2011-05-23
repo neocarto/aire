@@ -1,0 +1,243 @@
+
+body {
+  background: #111;
+  color: #b94;
+}
+
+a, a:visited {
+  color: #595;
+}
+
+input, select, textarea {
+  background: #001;
+  color: #7cc;
+  border: 1px solid #b94;
+}
+
+input[type=checkbox] {
+  background: #559;
+}
+/*
+#chicken, #chicken_GroupDiv {
+  background: #333;
+}*/
+
+#app {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 300px;
+  bottom: 0px;
+  border: 1px solid #b94;
+}
+
+#pane {
+/*  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;*/
+  width: 300px;
+  max-height: 100%;
+  overflow: auto;
+  float: right;
+  font-size: 12px;
+}
+
+#corner {
+  position: absolute;
+  top: 1px;
+  right: 301px;
+/*  float: right;
+  margin-right: 300px;*/
+  text-align: right;
+}
+
+#flash {
+  background: #fd7;
+  color: black;
+  font-weight: bold;
+}
+
+#items {
+  max-height: 400px;
+  overflow: auto;
+}
+
+#coords {
+  text-decoration: none;
+  color: #b94;
+  font-size: 10px;
+}
+#coords:hover {
+  text-decoration: underline;
+}
+
+#permalink {
+  text-decoration: none;
+  color: #b94;
+  font-size: 10px;
+}
+#permalink:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  display: none;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 auto 20px auto;
+}
+
+h2 {
+  font-size: 13px;
+  font-weight: bold;
+  margin: 0 auto 0 0;
+/*  margin: 10px auto 10px 10px;*/
+}
+
+#google-search {
+}
+
+#layerswitcher {
+  width: 100%;
+  border: none;
+  background: none;
+}
+
+#browse > div {
+  display: inline;
+}
+
+input.opacity {
+  border: none;
+  background: white;
+}
+.olControlScaleLineTop {
+  background: #000;
+  color: #f94;
+  border-color: #f94 !important;
+  border-bottom-style: none !important;
+}
+
+.olControlScaleLineBottom {
+  display: none;
+}
+
+.olControlPermalink {
+  background: black;
+  border: 1px solid #f94;
+}
+.olControlPermalink > a {
+  color: #f94;
+}
+.olControlPermalink > a:hover {
+  color: #fc1;
+  text-decoration: none;
+}
+
+#OpenLayers_Control_PanZoom_panup, #OpenLayers_Control_PanZoom_pandown, #OpenLayers_Control_PanZoom_panleft, #OpenLayers_Control_PanZoom_panright {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.type {
+  font-size: 16px;
+}
+
+.feature-form {
+  font-size: 12px;
+}
+
+.feature-form h2 {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.rf {
+  float: right;
+}
+
+ul.mode {
+  list-style-type: disc;
+}
+
+ul.ft {
+  list-style-type: square;
+}
+
+.cmbox {
+  border: 1px solid;
+  margin: 10px;
+  padding: 10px;
+  background: #333;
+}
+
+.cmbox > ul {
+  padding-left: 10px;
+  list-style-type: none;
+}
+
+ul#lst-ft-layers {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+ul#lst-ft-layers > li {
+  margin-left: 15px;
+}
+
+ul#lst-ft {
+  list-style-type: none;
+  padding-left: 23px;
+}
+
+ul#lst-ft ul {
+  list-style-type: square;
+}
+
+ul a {
+  text-decoration: none;
+}
+
+.toggle {
+  background: url(/images/toggle.png);
+}
+.collapsed {
+  background-position: 0px 11px;
+}
+.toggle img {
+  border: 0px none;
+  width: 11px;
+  height: 11px;
+}
+
+.pmCheckbox {
+  background: url(/images/checkbox.png);
+  cursor: default;
+}
+.checked {
+  background-position: 0px 11px;
+}
+.pmCheckbox img {
+  border: 0px none;
+  width: 11px;
+  height: 11px;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}

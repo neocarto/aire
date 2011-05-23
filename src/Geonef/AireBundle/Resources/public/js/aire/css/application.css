@@ -1,0 +1,151 @@
+
+/**
+ ** Style propre à l'application AIRE
+ **
+ */
+
+
+/* Dojo - tundra theme */
+@import url("../../../js/dijit/themes/tundra/tundra.css");
+
+/* Jig JS library */
+@import url("../../../js/jig/css/jig.css");
+
+/* Ploomap JS library */
+@import url("../../../js/ploomap/css/ploomap.css");
+
+/*
+ * Application
+ *********/
+
+body { font-size: 0.8em; font-family: Verdana,sans-serif; background-color: white; overflow: auto; }
+/*h1 { font-size: 1.2em; font-variant: small-caps; margin: 0 0 15px 0; }*/
+h2 { font-size: 1.1em; font-weight: bold; margin: 10px 5px 5px 5px; }
+a, .link {  color: #0e7aa5; text-decoration: none; }
+a:hover, .link:hover { text-decoration: underline; }
+
+table#screen { border-spacing: 3px; margin: 3px auto; }
+table#screen td { }
+table#screen h1.s { height: 22px; padding: 5px; text-align: center; font-size: 1.2em; font-variant: small-caps; margin: 0; background-color: #3360A8; color: #fff; }
+table#screen div.area { height: 483px; margin: 3px 0; border: 1px solid #ccc; }
+table#screen div.bottom { height: 26px; padding: 3px; background-color: #3360A8; color: #fff; text-align: center; }
+
+table#screen .reprs .dijitAccordionContainer { width: 100%; height: 100%; }
+table#screen .collections { width: 232px; }
+table#screen .map { width: 543px; }
+table#screen .comment { width: 469px; }
+table#screen .reprs { width: 232px; }
+table#screen .collections h1, table#screen .comment h1 { background: url("/images/aire/corners.png") no-repeat scroll 0 0 #3360A8; }
+table#screen .collections .area { height: 403px; }
+table#screen .collections .commentSmall { height: 69px; border: 1px solid #ccc; margin: 3px 0; padding: 3px; }
+/*table#screen .collections .bottom { height: 76px; }*/
+table#screen .collections .bottom, table#screen .comment .bottom { background: url("/images/aire/corners.png") no-repeat scroll left -42px #3360A8; }
+table#screen .reprs h1, body.layoutComment table#screen .map h1 { background: url("/images/aire/corners.png") no-repeat scroll right -74px #3360A8; }
+body.layoutComment table#screen .map .bottom { background: url("/images/aire/corners.png") no-repeat scroll right -111px #3360A8; }
+
+body.layoutNormal table#screen td.comment { display: none; }
+body.layoutNormal table#screen td.help { display: none; }
+body.layoutComment table#screen td.collections { display: none; }
+body.layoutComment table#screen td.reprs { display: none; }
+body.layoutComment table#screen td.help { display: none; }
+
+/* p { /\*text-align: justify;*\/ } */
+/* #main { margin: 0 auto; width: 1000px; height: 573px; } */
+/* /\* home *\/ */
+/* #themes, #presentation { background-color: #d8e6ff; padding: 5px; /\*overflow: auto;*\/ } */
+/* #themes { float: left; width: 450px;  } */
+/* .themes h2 {  background: url("/images/aire/br-arrow.png") no-repeat 0 3px; padding-left: 16px; } */
+/* .themes ul {  list-style-type: square; } */
+/* div#presentation { margin-left: 468px; } */
+/* /\* set *\/ */
+/* /\*#main.set { height: 100%; }*\/ */
+/* .themes {  } */
+/* .center {  } */
+/* .repr {  } */
+
+/*body, .tundra .dijitSplitterV, .tundra .dijitGutterV { background: #eee; }*/
+
+/*
+ * Couleurs
+ *********/
+
+/*a, .link { color: #530; }
+a:hover, .link:hover { color: #500; }*/
+/*.jigButtonArea .dijitButtonHover .dijitButtonNode,
+ .jigButtonArea .dijitDropDownButtonHover .dijitButtonNode,
+ .jigButtonArea .dijitToggleButtonHover .dijitButtonNode { background: #fc3; }
+.jigLayoutRootPane .dijitSplitter .dijitSplitterThumb { background-color: #444; }*/
+/*.jigLayoutRootPane .dijitSplitterActive {  background-color: #fd5; }*/
+/*.jigCacoin, .jigCacoin .dijitContentPane { background-color: #def; }*/
+.jigCacoin .dijitTabContainerTop-tabs div.dijitTabChecked { background-color: #cef; border-bottom-color: #cef; }
+.tundra .dijitBorderContainer-child.jigCacoin { border:none; /*border-color: #005;*/ }
+/*.tundra .dijitBorderContainer { background-color: #ffe; }*/
+/*.jigCacoin .list .item:hover, .jigCacoin table.list > tbody > tr:hover > td, table.jigList > tbody > tr:hover > td { background-color: #fdc; } too much */
+.jigCacoin .list .item.selected, .jigCacoin table.list > tbody > tr.selected > td, table.jigList > tbody > tr.selected > td { background-color: #f9f; }
+.jigCacoin .list .item, .jigCacoin table.list > tbody > tr > td, table.jigList > tbody > tr > td,
+ .jigCacoin.dijitTooltipDialog table.list > tbody > tr > td, .dijitTooltipDialog table.jigList > tbody > tr > td { background-color: #bdf; }
+/*.jigCacoin.about { background-color: #9cf; }*/
+/* .jigLayoutRootPane .dijitToasterClip { margin-left: 200px; } */
+/* .jigLayoutRootPane .dijitToasterContainer > .opacity { background-color: #ffa; opacity: 0.75; } */
+/* .jigLayoutRootPane .dijitToasterContainer { width: 320px; border-top: 0; border-width: 1px; background: transparent; } */
+
+
+/*
+ * Styles propres
+ ********/
+
+/* OpenLayers */
+.olHandlerBoxZoomBox { border: 2px solid red; position: absolute; background-color: white; opacity: 0.50; font-size: 1px; filter: alpha(opacity=50); }
+
+/* collection view */
+#toolbar div { float: left; width: 28px; height: 25px; background-repeat: no-repeat; margin: 0 3px; }
+#toolbar .olControlNavigationItemActive { background-image: url("/images/aire/tool_main_1.png")}
+#toolbar .olControlNavigationItemInactive { background-image: url("/images/aire/tool_main_0.png")}
+#toolbar .olControlWMSGetFeatureInfoItemActive { background-image: url("/images/aire/tool_info_1.png")}
+#toolbar .olControlWMSGetFeatureInfoItemInactive { background-image: url("/images/aire/tool_info_0.png")}
+#toolbar .olControlZoomBoxItemActive { background-image: url("/images/aire/tool_zoom_1.png")}
+#toolbar .olControlZoomBoxItemInactive { background-image: url("/images/aire/tool_zoom_0.png")}
+#toolbar .olControlNavigationHistoryPreviousItemActive { background-image: url("/images/aire/tool_back_1.png")}
+#toolbar .olControlNavigationHistoryPreviousItemInactive { background-image: url("/images/aire/tool_back_0.png")}
+#toolbar .olControlZoomToMaxExtentItemActive { background-image: url("/images/aire/tool_global_1.png")}
+#toolbar .olControlZoomToMaxExtentItemInactive { background-image: url("/images/aire/tool_global_1.png")}
+#toolbar .olControlNavigationHistoryNextItemActive { background-image: url("/images/aire/tool_next_1.png")}
+#toolbar .olControlNavigationHistoryNextItemInactive { background-image: url("/images/aire/tool_next_0.png")}
+#toolbar .aiControlSaveItemActive { background-image: url("/images/aire/tool_save_1.png")}
+#toolbar .aiControlSaveItemInactive { background-image: url("/images/aire/tool_save_1.png")}
+#toolbar .aiControlPrintItemActive { background-image: url("/images/aire/tool_print_1.png")}
+#toolbar .aiControlPrintItemInactive { background-image: url("/images/aire/tool_print_1.png")}
+#toolbar .aiControlDataItemActive { background-image: url("/images/aire/tool_print_1.png")}
+#toolbar .aiControlDataItemInactive { background-image: url("/images/aire/tool_print_1.png")}
+#toolbar .aiControlHelpItemActive { background-image: url("/images/aire/tool_help_1.png")}
+#toolbar .aiControlHelpItemInactive { background-image: url("/images/aire/tool_help_1.png")}
+#toolbar .olControlpmLegendItemActive { background-image: url("/images/aire/tool_legend_1.png")}
+#toolbar .olControlpmLegendItemInactive { background-image: url("/images/aire/tool_legend_0.png")}
+#toolbar .aiControlHomeItemActive { background-image: url("/images/aire/accueil.png")}
+#toolbar .aiControlHomeItemInactive { background-image: url("/images/aire/accueil.png")}
+#scale { float: right; }
+.olControlScaleLineTop { border-width: 1px; border-color: white; border-left-style: solid; border-right-style: solid; border-bottom-style: solid; text-align: center; font-size: 10px; margin: 8px 5px 0 0; color: white; background-color: transparent; }
+
+.reprs .area .dijitAccordionTitle { background: url("/images/aire/dash.png") repeat-x scroll 0 6px transparent; color: #1A86C4; border-top: none; }
+.reprs .area .dijitAccordionTitle .dijitAccordionText { background: white; padding: 3px; }
+.reprs .area .dijitAccordionContainer-dijitContentPane { padding: 5px; }
+.reprs .area .dijitAccordionContainer-dijitContentPane .dijitButtonNode { background: #cdf; border-radius: 5px; -moz-border-radius: 5px; border: none; margin: 3px; }
+.reprs .area .dijitAccordionContainer-dijitContentPane .mapEnabled .dijitButtonNode { background: #fdc; }
+/* look du menu admin */
+.aireAdminLibrary.dijitContainer { background-color: #fff; }
+.aireAdminLibrary .jigAutogrid { border-spacing: 15px; }
+.aireAdminLibrary .jigAutogrid > tbody > tr > span { width: 130px; height: 80px; }
+.aireAdminLibrary .jigAutogrid .dijitButtonText { font-size: 1.3em;  }
+
+/* "print" screen */
+.print h1.m { font-size: 18px; font-weight: bold; font-variant: small-caps;  margin: 0 auto 10px auto; text-align: center; }
+.print #map img { border: 1px solid #ccc; }
+.print textarea { border: 1px solid #ccc; width: 100%; height: 100px; margin-top: 10px; }
+.print #notice { width: 580px; padding: 10px; background: #fdd; font-size: 12px; margin-top: 20px;}
+.print #source-copy > p { font-size: 12px; margin: 5px 0 5px 0; }
+.print { background: white; font-size: 12px; margin: 0px; padding: 10px; color: #333; font-family: verdana;/*sans-serif;*/ }
+.print #main { width: 600px; margin: 20px auto 0 auto; }
+.print #map {  position: relative; }
+.print #scale { float: right; margin-top: 10px; border: 1px solid black; border-top: none; font-size: 10px; text-align: center; }
+.ploomapLegendContainer { position: absolute; top: 1px; right: 1px; padding: 5px; border-left: 1px solid #ccc; border-bottom: 1px solid #ccc; width: 156px; font-size: 10px; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='/images/blanc_04.png'); z-index: 4200; }
+.ploomapLegendContainer[id] { background-image: url(/images/blanc_04.png); }

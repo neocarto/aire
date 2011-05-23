@@ -1,0 +1,20 @@
+
+#main { width: 600px; margin: 20px auto 0 auto; }
+#map {  position: relative; }
+#legend { position: absolute; top: 0; right: 0; padding: 5px;
+          border-left: 1px solid #ccc; border-bottom: 1px solid #ccc;
+          font-size: 10px;
+          filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='/images/blanc_04.png'); }
+#legend[id] { background-image: url(/images/blanc_04.png); }
+#scale { /*position: absolute; bottom: 10px; right: 10px;*/
+         float: right; margin-top: 10px;
+         border: 1px solid black; border-top: none;
+         font-size: 10px; text-align: center; }
+#source-copy > p { font-size: 12px; margin: 5px 0 5px 0; }
+h1 { font-size: 18px; font-weight: bold; font-variant: small-caps;
+     margin: 0 auto 10px auto; text-align: center; }
+img { border: 1px solid #ccc; }
+textarea { border: 1px solid #ccc; width: 100%; height: 100px; margin-top: 10px; }
+#notice { width: 580px; padding: 10px; background: #fdd; font-size: 12px;
+          margin-top: 20px;}
+

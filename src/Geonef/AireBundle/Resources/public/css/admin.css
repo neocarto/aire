@@ -1,0 +1,115 @@
+/**
+ * Elements generaux
+ */
+
+body {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  font-family: Arial, Verdana, sans-serif;
+  font-size: 11px;
+  background-color: #fff;
+}
+ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,html,p,blockquote,fieldset,input
+{ margin: 0; padding: 0; }
+p { margin-bottom: 10px; }
+ul { margin-left: 20px; margin-bottom: 10px; list-style-type: square; }
+a img,:link img,:visited img { border: none; }
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+table { }
+table td { padding: 3px; vertical-align: top; }
+table thead { font-weight: bold; background-color: #9f9; }
+h1 { margin: 15px 0 15px 0; font-size: 18px;
+     width: 90%; border-bottom: 2px solid; font-variant: small-caps; }
+h2 {  margin-top: 15px; }
+input, select, textarea { border: 1px solid black; font-style: italic; }
+input { padding-left: 3px; padding-right: 0px; }
+
+
+/**
+ * Widgets
+ */
+
+/* toggle (+/-) */
+.toggle { background: url(/images/toggle.png); }
+.collapsed { background-position: 0px 9px; }
+.toggle img { border: 0px none; width: 9px; height: 9px; }
+
+table.grid { border-collapse: collapse; }
+table.grid > tbody > tr > td { border: 1px solid; }
+tr.form > td > select { width: 100%; height: 100%; }
+tr.odd { background-color: #cfc; }
+tr.even { background-color: #efe; }
+
+
+ul.cat { margin: 10px; padding: 10px; border: 1px solid; }
+ul.cat > li { margin-left: 0px; margin-bottom: 30px; list-style-type: none; }
+ul.cat li > span { /*font-weight: bold;*/ }
+ul.cat > li.empty { font-style: italic; list-style-type: none; }
+ul.cat > li > ul > li { margin-left: 30px; list-style-type: none; }
+ul.cat .cathandle { cursor: move; font-weight: bold; }
+ul.cat .handle { cursor: move; font-weight: bold; }
+
+a.backlink { margin-bottom: 20px; }
+
+.left { text-align: left; }
+.right { text-align: right; }
+.center { text-align: center; }
+.lf { float: left; }
+.rf { float: right; }
+.nopad { padding: 0; }
+
+
+#focus { font-style: normal; }
+
+/* pmBuilderStyle* templates */
+
+.ivl_title > td { border: 2px solid black; font-weight: bold; }
+.ivl_conf > td { border: 1px solid black; border-top: none; }
+.symbolDef { border: 1px solid; margin-bottom: 10px; }
+.symbolDef tr.title > td { border-bottom: 1px solid; }
+table.mapset > tbody > tr > td { max-width: 200px; }
+
+/* menus deroulants CSS */
+ul.makeMenu {
+  display: inline;
+  margin: 0px;
+  padding: 0px;
+}
+
+ul.makeMenu > li {
+  display: inline;
+}
+
+ul.makeMenu ul {
+  list-style-type: square;
+  width: 150px;
+  border: 1px solid #000;
+  padding-left: 5px;
+}
+ul.makeMenu li {
+  list-style-type: none;
+  margin: 0px;
+  position: relative;
+  cursor: pointer;
+}
+ul.makeMenu li > ul {
+  display: none;
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  border: 1px solid;
+  background: white;
+  z-index: 2;
+  padding: 5px;
+  margin: 0px;
+}
+
+ul.makeMenu li:hover > ul {
+  display: block;
+}
+
+/*ul.makeMenu li:hover { background: #111; color: #4e2; }
+ul.makeMenu li:hover > a { color: #4e2; text-decoration: none; }
+*/
