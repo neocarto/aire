@@ -1,6 +1,6 @@
 [submodule "vendor/cartapatate"]
 	path = vendor/cartapatate
-	url = /var/lib/git/package/cartapatate.git
+	url = git.geonef.fr:/var/lib/git/package/cartapatate.git
 [submodule "vendor/doctrine-common"]
 	path = vendor/doctrine-common
 	url = git://github.com/doctrine/common.git
@@ -21,16 +21,16 @@
 	url = git://github.com/fabpot/Twig.git
 [submodule "vendor/zig"]
 	path = vendor/zig
-	url = /var/lib/git/package/zig.git
+	url = git.geonef.fr:/var/lib/git/package/zig.git
 [submodule "vendor/jig"]
 	path = vendor/jig
-	url = /var/lib/git/package/jig.git
+	url = git.geonef.fr:/var/lib/git/package/jig.git
 [submodule "vendor/ploomap-server"]
 	path = vendor/ploomap-server
-	url = /var/lib/git/package/ploomap-server.git
+	url = git.geonef.fr:/var/lib/git/package/ploomap-server.git
 [submodule "vendor/ploomap-client"]
 	path = vendor/ploomap-client
-	url = /var/lib/git/package/ploomap-client.git
+	url = git.geonef.fr:/var/lib/git/package/ploomap-client.git
 [submodule "vendor/monolog"]
 	path = vendor/monolog
 	url = git://github.com/Seldaek/monolog.git
