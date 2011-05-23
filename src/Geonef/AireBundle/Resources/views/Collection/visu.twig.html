@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>AIRE - {{ collection.title }}</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/js/aire/css/application.css"/>
+    <script src="/x/dojo/dojo.js" type="text/javascript"></script>
+    <script src="/js/openlayers/build/OpenLayers.js" type="text/javascript"></script>
+    <script src="/js/aire/start/collection.js"
+            type="text/javascript"></script>
+    <script type="text/javascript">
+      window.aireCollection = {{ collection_json|raw }};
+    </script>
+  </head>
+  <body class="tundra layoutNormal">
+    <table id="screen">
+      <tbody><tr>
+        <td class="collections">
+          <h1 class="s">Thèmes</h1>
+          <div class="area">
+          {% for category in categories %}
+            <h2>{{ category.title }}</h2>
+            <ul>
+              {% for icoll in category.collections %}
+                <li>
+                  {% if icoll.id == collection.uuid %}<b>{{ icoll.title }}</b>
+                  {% else %}<a href="/collection/{{ icoll.id }}">{{ icoll.title }}</a>
+                  {% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+          {% endfor %}
+          <!--div dojoType="ploomap.tool.Layers" mapWidget="map"></div-->
+          </div>
+          <div class="commentSmall">
+            {{ collection.comment }}
+          </div>
+          <div class="bottom">
+            Voir le commentaire
+          </div>
+        </td>
+        <td class="comment">
+          <h1 class="s">Comment!</h1>
+          <div class="area">
+            {{ collection.comment }}
+          </div>
+          <div class="bottom">
+            Bottom!
+          </div>
+        </td>
+        <td class="map">
+          <h1 class="s">{{ collection.title }}</h1>
+          <div dojoType="aire.Map" id="map" class="area"></div>
+          <div class="bottom">
+            <div id="scale"></div>
+            <div id="toolbar"></div>
+          </div>
+        </td>
+        <td class="help">
+          <h1 class="s">Help!</h1>
+          <div class="area">
+            ZZZZZZZZ
+          </div>
+          <div class="bottom">
+            Bottom!
+          </div>
+        </td>
+        <td class="reprs">
+          <h1 class="s">Représentations</h1>
+          <div class="area">
+            <div dojoType="dijit.layout.AccordionContainer"
+                 region="right" doLayout="true" class=""
+                 style="width:220px;">
+              {% for reprName, repr in maps %}
+              <div dojoType="dijit.layout.ContentPane" title="Cartes {{ reprName }}">
+                {% for level, map in repr %}
+                <button dojoType="aire.button.ShowMap" mapWidget="map"
+                        level="{{ level }}" map="{{ map.id }}"></button>
+                {% endfor %}
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="bottom">
+            Bottom!
+          </div>
+        </td>
+      </tr></tbody>
+    </table>
+  </body>
+</html>

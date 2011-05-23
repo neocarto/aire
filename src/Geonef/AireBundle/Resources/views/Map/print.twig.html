@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>AIRE - {{ map.title }}</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/js/aire/css/application.css"/>
+    <script src="/x/dojo/dojo.js" type="text/javascript"></script>
+    <script src="/js/openlayers/build/OpenLayers.js" type="text/javascript"></script>
+    <script src="/js/aire/start/print.js"
+            type="text/javascript"></script>
+  </head>
+  <body class="tundra print"><div id="main">
+    <h1 class="m">Population, 2007</h1>
+    <div id="map"
+      ><div id="legend" dojoType="ploomap.legend.Container"
+            widgetClass="{{ legend.widgetClass }}"
+            widgetValue="{{ legend.value | json_encode }}"
+            resolution="{{ resolution }}"></div
+      ><img alt="Carte" src="{{mapUrl}}" /></div>
+    <div id="source-copy">
+      <div id="scale" style="width: 100px;">500 km</div>
+      <p id="source">{{ map.source }}</p>
+      <p id="copyright">{{ map.copyright }}</p>
+    </div>
+    <textarea></textarea>
+
+    <div id="notice">
+      Attention : pour que toutes les couleurs de la légende apparaissent à l'impression, il est nécessaire d'activer une option spécifique :   <ul>
+        <li>Sur <b>Firefox</b> : Fichier -&gt; Mise en page -&gt; Imprimer l'arrière-plan</li>
+        <li>Sur <b>Internet Explorer</b> : Outils -&gt; Options Internet -&gt; Avancé -&gt; Impression &gt; Imprimer les couleurs et images d'arrière plan</li>
+      </ul>
+    </div>
+  </div></body>
+</html>

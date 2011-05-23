@@ -13,7 +13,7 @@ class AppKernel extends Kernel
   public function __construct($environment, $debug)
   {
     parent::__construct($environment, $debug);
-    $this->name = 'catapatate';
+    $this->name = 'aire';
   }
 
   public function registerRootDir()
@@ -37,6 +37,7 @@ class AppKernel extends Kernel
             new Geonef\PgLinkBundle\GeonefPgLinkBundle(),
             new Geonef\PloomapBundle\GeonefPloomapBundle(),
             new Geonef\SandboxBundle\GeonefSandboxBundle(),
+            new Geonef\AireBundle\GeonefAireBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
