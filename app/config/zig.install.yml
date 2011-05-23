@@ -4,7 +4,8 @@ geonef_zig:
     #manager_class: hehe
     public_dir: %kernel.cache_dir%/public
     public_mappings:
-      - { location: '', directory: '../src/Geonef/SandboxBundle/Resources/public' }
+      - { location: '', directory: '../src/Geonef/AireBundle/Resources/public' }
+      #- { location: 'lib', directory: '../src/Geonef/AireBundle/Resources/public/js' }
       - { location: '', directory: '../vendor/cartapatate' }
       - { location: 'lib', directory: '../vendor/ploomap-client/src' }
       - { location: 'lib', directory: '../vendor/jig/src' }
@@ -30,6 +31,7 @@ geonef_zig:
           #- { ns: ploomap, path: %kernel.cache_dir%/public/lib/ploomap }
           - { ns: cartapatate, path: %kernel.cache_dir%/public/lib/cartapatate }
           - { ns: geonef, path: %kernel.cache_dir%/public/lib/geonef }
+          - { ns: aire, path: %kernel.cache_dir%/public/js/aire }
           - { ns: package, path: %kernel.cache_dir%/public/lib/package }
         layers:
           -

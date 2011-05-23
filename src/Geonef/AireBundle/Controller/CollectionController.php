@@ -1,14 +1,14 @@
 <?php
 
-namespace AireBundle\Controller;
+namespace Geonef\AireBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Ploomap\Bundle\PloomapBundle\Document\MapCollection\MultiRepr as MapCollectionMultiRepr;
-use Ploomap\Util\Geo;
+use Geonef\PloomapBundle\Document\MapCollection\MultiRepr as MapCollectionMultiRepr;
+use Geonef\Ploomap\Util\Geo;
 
 class CollectionController extends Controller
 {
-  const DOC_PREFIX = 'Ploomap\Bundle\PloomapBundle\Document\\';
+  const DOC_PREFIX = 'Geonef\PloomapBundle\Document\\';
 
   /**
    * Main action of application - screen of one collection

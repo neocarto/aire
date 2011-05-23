@@ -1,8 +1,8 @@
 <?php
 
-namespace AireBundle\View;
+namespace Geonef\AireBundle\View;
 
-use \Zig\View\Document\XHtml;
+use Geonef\Zig\View\Document\XHtml;
 
 class MapSet extends XHtml
 {

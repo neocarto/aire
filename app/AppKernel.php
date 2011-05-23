@@ -36,7 +36,6 @@ class AppKernel extends Kernel
             new Geonef\ZigBundle\GeonefZigBundle(),
             new Geonef\PgLinkBundle\GeonefPgLinkBundle(),
             new Geonef\PloomapBundle\GeonefPloomapBundle(),
-            new Geonef\SandboxBundle\GeonefSandboxBundle(),
             new Geonef\AireBundle\GeonefAireBundle(),
         );
 

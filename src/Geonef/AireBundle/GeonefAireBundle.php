@@ -1,10 +1,10 @@
 <?php
 
-namespace AireBundle;
+namespace Geonef\AireBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class AireBundle extends Bundle
+class GeonefAireBundle extends Bundle
 {
   /*public function boot(ContainerInterface $container)
   {
