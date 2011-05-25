@@ -30,7 +30,7 @@ dojo.provide('aire.start.print');
 
    var start = function() {
      dojo['require']('package.print');
-     //jig.workspace.initialize({ data: workspaceData });
+     //geonef.jig.workspace.initialize({ data: workspaceData });
      dojo.parser.parse();
    };
 

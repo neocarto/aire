@@ -30,7 +30,7 @@ dojo.provide('aire.start.collection');
 
    var start = function() {
      dojo['require']('package.set');
-     jig.workspace.initialize({ data: workspaceData });
+     geonef.jig.workspace.initialize({ data: workspaceData });
      dojo.parser.parse();
      // var rootC = dijit.byId('rootContainer');
      // console.log('init', this, rootC);
@@ -48,7 +48,7 @@ dojo.provide('aire.start.collection');
        }
        //map.showMap(window.mapSet.startMap);
      }
-     // var workspace = jig.workspace.loadWidget('root');
+     // var workspace = geonef.jig.workspace.loadWidget('root');
      // workspace.placeOnWindow();
      // workspace.startup();
      // dojo.style('wait', 'display', 'none');

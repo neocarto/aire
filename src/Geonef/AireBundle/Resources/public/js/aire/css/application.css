@@ -6,13 +6,13 @@
 
 
 /* Dojo - tundra theme */
-@import url("../../../js/dijit/themes/tundra/tundra.css");
+@import url("../../../lib/dijit/themes/tundra/tundra.css");
 
 /* Jig JS library */
-@import url("../../../js/jig/css/jig.css");
+@import url("../../../lib/geonef/jig/style/jig.css");
 
 /* Ploomap JS library */
-@import url("../../../js/ploomap/css/ploomap.css");
+@import url("../../../lib/geonef/ploomap/style/ploomap.css");
 
 /*
  * Application

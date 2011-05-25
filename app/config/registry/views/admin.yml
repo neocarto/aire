@@ -1,11 +1,11 @@
 #############################################################
 ##
-##  PHP view of CARTAPATATE admin screen
+##  PHP view of AIRE admin screen
 ##
 #############################################################
 
 class: Geonef\Zig\View\Document\Workspace
-title: Admin-Catapatate
+title: AIRE - Admin
 
 #############################################################
 ## HEADER
@@ -16,22 +16,22 @@ packageStyles: false
 scripts:
   dojo: /x/dojo/dojo.js
   #openlayers: /js/openlayers/build/OpenLayers.js
-  application: /x/admin.js
+  workspace: /x/admin.js
 
 scriptAffectations:
   window\.workspaceKey: home
   window\.startPackage: package.admin
 
 css:
- tundra: /x/dijit/themes/tundra/tundra.css
- app: /x/catapatate/style/application.css
+ #tundra: /x/dijit/themes/tundra/tundra.css
+ app: /x/aire/css/application.css
 
 
 #############################################################
 ## BODY
 
 bodyAttributes:
-  class: patate tundra
+  class: aire tundra
 
 
 bodyInnerHtml:
@@ -45,13 +45,16 @@ bodyInnerHtml:
     attributes:
       id: wait
     content:
+      title:
+        tag: h1
+        content: "Atlas Interactif des Régions Européennes"
       sub:
         tag: div
         content: "Chargement de l'interface d'administration..."
 
 widgets:
   root:
-    _class: jig.layout.RootPane
+    _class: geonef.jig.layout.RootPane
     state:
       children:
         - tabContainer
@@ -60,7 +63,7 @@ widgets:
         #positionDirection: br-left
         positionDirection: bl-up
   mainContainer:
-    _class: jig.layout.BorderContainer
+    _class: geonef.jig.layout.BorderContainer
     state:
       design: sidebar
       children:
@@ -69,39 +72,149 @@ widgets:
         - adminLibrarySide
       paneSize: 250
   tabContainer:
-    _class: jig.layout.TabContainer
+    _class: geonef.jig.layout.TabContainer
     state:
       children:
         - adminLibrary
       appearTarget: add
       neverEmpty: adminLibrary
   adminLibrary:
-    _class: cartapatate.admin.Library
+    _class: aire.admin.Library
     #state:
     #  appearTarget: bottom
   adminLibrarySide:
-    _class: cartapatate.admin.Library
+    _class: aire.admin.Library
     state:
       gridNbColumns: 1
   about:
-    _class: catapatate.info.About
+    _class: aire.info.About
 
 
 settings:
   devWidgets:
-    - catapatate.info.About
-    - ploomap.list.OgrDataSource
-    - ploomap.list.OgrLayer
-    - ploomap.list.MapCategory
-    - ploomap.list.MapCollection
-    - ploomap.list.Map
-    - jig.test.Api
+    - aire.info.About
+    - geonef.ploomap.list.OgrDataSource
+    - geonef.ploomap.list.OgrLayer
+    - geonef.jig.test.Api
+    - geonef.ploomap.list.MapCategory
+    - geonef.ploomap.list.MapCollection
+    - geonef.ploomap.list.Map
   adminWidgets:
-    - ploomap.list.OgrDataSource
-    - ploomap.list.OgrLayer
-    - ploomap.list.MapCategory
-    - ploomap.list.MapCollection
-    - ploomap.list.Map
-    - ploomap.list.ColorFamily
-    - jig.list.File
-    - jig.data.list.PgLinkView
+    - geonef.ploomap.list.OgrDataSource
+    - geonef.ploomap.list.OgrLayer
+    - geonef.jig.list.File
+    - geonef.ploomap.list.MapCategory
+    - geonef.ploomap.list.MapCollection
+    - geonef.ploomap.list.Map
+    - geonef.ploomap.list.ColorFamily
+    - geonef.ploomap.data.list.GdalDataset
+    - { title: "phpPgAdmin", value: "/phpPgAdmin", icon: '/images/icons/admin_sources.png' }
+
+
+# #############################################################
+# ##
+# ##  PHP view of CARTAPATATE admin screen
+# ##
+# #############################################################
+
+# class: Geonef\Zig\View\Document\Workspace
+# title: Admin-Catapatate
+
+# #############################################################
+# ## HEADER
+
+# packageScripts: false
+# packageStyles: false
+
+# scripts:
+#   dojo: /x/dojo/dojo.js
+#   #openlayers: /js/openlayers/build/OpenLayers.js
+#   application: /x/admin.js
+
+# scriptAffectations:
+#   window\.workspaceKey: home
+#   window\.startPackage: package.admin
+
+# css:
+#  tundra: /x/dijit/themes/tundra/tundra.css
+#  app: /x/catapatate/style/application.css
+
+
+# #############################################################
+# ## BODY
+
+# bodyAttributes:
+#   class: patate tundra
+
+
+# bodyInnerHtml:
+#   app:
+#     tag: div
+#     attributes:
+#       id: app
+#     content: ""
+#   wait:
+#     tag: div
+#     attributes:
+#       id: wait
+#     content:
+#       sub:
+#         tag: div
+#         content: "Chargement de l'interface d'administration..."
+
+# widgets:
+#   root:
+#     _class: jig.layout.RootPane
+#     state:
+#       children:
+#         - tabContainer
+#         #- mainContainer
+#       toaster:
+#         #positionDirection: br-left
+#         positionDirection: bl-up
+#   mainContainer:
+#     _class: jig.layout.BorderContainer
+#     state:
+#       design: sidebar
+#       children:
+#         - tabContainer
+#         #- about
+#         - adminLibrarySide
+#       paneSize: 250
+#   tabContainer:
+#     _class: jig.layout.TabContainer
+#     state:
+#       children:
+#         - adminLibrary
+#       appearTarget: add
+#       neverEmpty: adminLibrary
+#   adminLibrary:
+#     _class: cartapatate.admin.Library
+#     #state:
+#     #  appearTarget: bottom
+#   adminLibrarySide:
+#     _class: cartapatate.admin.Library
+#     state:
+#       gridNbColumns: 1
+#   about:
+#     _class: catapatate.info.About
+
+
+# settings:
+#   devWidgets:
+#     - catapatate.info.About
+#     - ploomap.list.OgrDataSource
+#     - ploomap.list.OgrLayer
+#     - ploomap.list.MapCategory
+#     - ploomap.list.MapCollection
+#     - ploomap.list.Map
+#     - jig.test.Api
+#   adminWidgets:
+#     - ploomap.list.OgrDataSource
+#     - ploomap.list.OgrLayer
+#     - ploomap.list.MapCategory
+#     - ploomap.list.MapCollection
+#     - ploomap.list.Map
+#     - ploomap.list.ColorFamily
+#     - jig.list.File
+#     - jig.data.list.PgLinkView

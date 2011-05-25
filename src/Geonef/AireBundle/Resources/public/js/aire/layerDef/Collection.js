@@ -3,12 +3,12 @@
 dojo.provide('aire.layerDef.Collection');
 
 // parents
-dojo.require('ploomap.layerDef.Base');
+dojo.require('geonef.ploomap.layerDef.Base');
 
 /**
  * Register collections maps as layers
  */
-dojo.declare('aire.layerDef.Collection', [ ploomap.layerDef.Base ],
+dojo.declare('aire.layerDef.Collection', [ geonef.ploomap.layerDef.Base ],
 {
 
   registerLayers: function() {
@@ -18,9 +18,9 @@ dojo.declare('aire.layerDef.Collection', [ ploomap.layerDef.Base ],
 
   registerAireCollectionLayers: function() {
     var layersDefs = [];
-    jig.forEach(window.aireCollection.maps,
+    geonef.jig.forEach(window.aireCollection.maps,
       function(levels, repr) {
-        jig.forEach(levels,
+        geonef.jig.forEach(levels,
           function(def, level) {
             var code = repr+'/'+level;
             layersDefs.push(

@@ -7,7 +7,7 @@
 dojo.provide('aire.OpenLayers.Control.AireToolbar');
 
 // used in code
-dojo.require('ploomap.OpenLayers.Control.WMSGetFeatureInfo');
+dojo.require('geonef.ploomap.OpenLayers.Control.WMSGetFeatureInfo');
 
 /**
  * Class: OpenLayers.Control.AireToolbar

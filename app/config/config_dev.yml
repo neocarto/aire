@@ -12,12 +12,20 @@ framework:
 monolog:
     handlers:
         main:
+            type:         fingers_crossed
+            action_level: error
+            handler:      nested
+        nested:
             type:  stream
             path:  %kernel.logs_dir%/%kernel.environment%.log
             level: debug
-        firephp:
-            type:  firephp
-            level: info
+        # main:
+        #     type:  stream
+        #     path:  %kernel.logs_dir%/%kernel.environment%.log
+        #     level: debug
+        # firephp:
+        #     type:  firephp
+        #     level: info
 
 # assetic:
 #     use_controller: true

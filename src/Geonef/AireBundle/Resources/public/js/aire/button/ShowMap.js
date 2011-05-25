@@ -1,9 +1,9 @@
 dojo.provide('aire.button.ShowMap');
 
 // parents
-dojo.require('jig.button.Action');
+dojo.require('geonef.jig.button.Action');
 
-dojo.declare('aire.button.ShowMap', [ jig.button.Action ],
+dojo.declare('aire.button.ShowMap', [ geonef.jig.button.Action ],
 {
   mapWidget: '',
 

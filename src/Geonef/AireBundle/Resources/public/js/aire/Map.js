@@ -2,14 +2,14 @@
 dojo.provide('aire.Map');
 
 // parents
-dojo.require('ploomap.map.Classical');
+dojo.require('geonef.ploomap.map.Classical');
 
 // used in code
-dojo.require('ploomap.OpenLayers.Control.Panel');
-dojo.require('ploomap.OpenLayers.Control.Navigation');
-dojo.require('ploomap.legend.Container');
+dojo.require('geonef.ploomap.OpenLayers.Control.Panel');
+dojo.require('geonef.ploomap.OpenLayers.Control.Navigation');
+dojo.require('geonef.ploomap.legend.Container');
 
-dojo.declare('aire.Map', [ ploomap.map.Classical ],
+dojo.declare('aire.Map', [ geonef.ploomap.map.Classical ],
 {
   layersDefsClass: 'aire.layerDef.Collection',
 
@@ -28,10 +28,10 @@ dojo.declare('aire.Map', [ ploomap.map.Classical ],
   },
 
   controls: [
-    'ploomap.OpenLayers.Control.Navigation',
+    'geonef.ploomap.OpenLayers.Control.Navigation',
     'OpenLayers.Control.KeyboardDefaults',
-    'ploomap.OpenLayers.Control.PanZoomBar',
-    'ploomap.OpenLayers.Control.TileLoadSpinner',
+    'geonef.ploomap.OpenLayers.Control.PanZoomBar',
+    'geonef.ploomap.OpenLayers.Control.TileLoadSpinner',
     // { 'class': 'OpenLayers.Control.ZoomPanel',
     //   options: { div: 'toolbar' }}
     { 'class': 'aire.OpenLayers.Control.AireToolbar',
@@ -86,7 +86,7 @@ dojo.declare('aire.Map', [ ploomap.map.Classical ],
   },
 
   buildLegendContainer: function() {
-    this.legendContainer = new ploomap.legend.Container();
+    this.legendContainer = new geonef.ploomap.legend.Container();
     this.legendContainer.placeAt(this.domNode);
     this.legendContainer.startup();
     this.subscribe('ploomap/map/changebaselayer', this.updateLegend);
