@@ -36,7 +36,7 @@ class MapController extends Controller
     }
     $url = $map->getWmsMapUrl($this->container, $params);
     return $this->render
-       ('AireBundle:Map:print.twig.html',
+       ('GeonefAireBundle:Map:print.twig.html',
         array('map' => $map,
                  'mapUrl' => $url,
                  'legend' => $map->getLegendData($this->container),

@@ -22,7 +22,7 @@ class CollectionController extends Controller
     $maps = $this->getMaps($coll);
     $collData = array('maps' => $maps,
                       'startMap' => $coll->startMap);
-    return $this->render('AireBundle:Collection:visu.twig.html',
+    return $this->render('GeonefAireBundle:Collection:visu.twig.html',
                          array('categories' => $categories,
                                'collection' => $coll,
                                'collection_json' => json_encode($collData),

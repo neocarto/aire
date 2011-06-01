@@ -17,3 +17,19 @@ admin:
      _controller: "GeonefZigBundle:ViewClass:render"
      path: "views.admin"
 
+collection:
+  pattern: /collection/{id}
+  defaults: { _controller: "GeonefAireBundle:Collection:visu" }
+
+csvFeatures:
+  pattern: /map/{id}/csvFeatures
+  defaults: { _controller: "GeonefPloomapBundle:Map:csvFeatures" }
+
+svgExport:
+  pattern: /map/{id}/svgExport
+  defaults: { _controller: "GeonefPloomapBundle:Map:svgExport" }
+
+print:
+  pattern: /map/{id}/print
+  defaults: { _controller: "GeonefAireBundle:Map:print" }
+

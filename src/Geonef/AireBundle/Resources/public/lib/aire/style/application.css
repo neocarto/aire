@@ -6,19 +6,20 @@
 
 
 /* Dojo - tundra theme */
-@import url("../../../lib/dijit/themes/tundra/tundra.css");
+/*@import url("../../../lib/dijit/themes/tundra/tundra.css");*/
+@import url("../../dijit/themes/tundra/tundra.css");
 
 /* Jig JS library */
-@import url("../../../lib/geonef/jig/style/jig.css");
+@import url("../../geonef/jig/style/jig.css");
 
 /* Ploomap JS library */
-@import url("../../../lib/geonef/ploomap/style/ploomap.css");
+@import url("../../geonef/ploomap/style/ploomap.css");
 
 /*
  * Application
  *********/
 
-body { font-size: 0.8em; font-family: Verdana,sans-serif; background-color: white; overflow: auto; }
+/*body { font-size: 0.8em; font-family: Verdana,sans-serif; background-color: white; overflow: auto; }*/
 /*h1 { font-size: 1.2em; font-variant: small-caps; margin: 0 0 15px 0; }*/
 h2 { font-size: 1.1em; font-weight: bold; margin: 10px 5px 5px 5px; }
 a, .link {  color: #0e7aa5; text-decoration: none; }

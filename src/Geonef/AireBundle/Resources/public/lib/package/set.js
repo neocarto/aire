@@ -1,7 +1,7 @@
 
 dojo.provide('package.set');
 
-dojo.require('jig.workspace');
+dojo.require('geonef.jig.workspace');
 dojo.require('dojo.parser');
 
 // UI

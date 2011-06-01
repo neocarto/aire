@@ -4,10 +4,10 @@
     <title>AIRE - {{ collection.title }}</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="/js/aire/css/application.css"/>
+    <link rel="stylesheet" type="text/css" href="/lib/aire/style/application.css"/>
     <script src="/x/dojo/dojo.js" type="text/javascript"></script>
-    <script src="/js/openlayers/build/OpenLayers.js" type="text/javascript"></script>
-    <script src="/js/aire/start/collection.js"
+    <script src="/lib/openlayers/build/OpenLayers.js" type="text/javascript"></script>
+    <script src="/lib/aire/start/collection.js"
             type="text/javascript"></script>
     <script type="text/javascript">
       window.aireCollection = {{ collection_json|raw }};
@@ -31,7 +31,7 @@
               {% endfor %}
             </ul>
           {% endfor %}
-          <!--div dojoType="ploomap.tool.Layers" mapWidget="map"></div-->
+          <!--div dojoType="geonef.ploomap.tool.Layers" mapWidget="map"></div-->
           </div>
           <div class="commentSmall">
             {{ collection.comment }}

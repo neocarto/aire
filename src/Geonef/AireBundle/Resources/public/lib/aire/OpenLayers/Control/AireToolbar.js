@@ -54,7 +54,7 @@ aire.OpenLayers.Control.AireToolbar =
           {
 	    title: __("Activer le mode navigation"),
             zoomWheelEnabled: false }),
-	new ploomap.OpenLayers.Control.WMSGetFeatureInfo(),
+	new geonef.ploomap.OpenLayers.Control.WMSGetFeatureInfo(),
 	nav.previous,
 	new OpenLayers.Control.ZoomToMaxExtent(
           {

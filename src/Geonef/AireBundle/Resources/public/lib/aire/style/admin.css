@@ -2,15 +2,18 @@
 /**
  ** Style propre à l'application AIRE
  **
+ ** Updated on 2011-05-26
+ ** Is it useful? ->NO
+ ** Is application.css used for admin as well? ->YES
  */
 
 
 /* Style commun à la plateforme cartapatate */
 /*@import url("../../../css/cartapatate.css");*/
 
-@import url("../../../js/dijit/themes/tundra/tundra.css");
-@import url("../../../js/jig/css/jig.css");
-@import url("../../../js/ploomap/css/ploomap.css");
+@import url("../../dijit/themes/tundra/tundra.css");
+@import url("../../jig/css/jig.css");
+@import url("../../ploomap/css/ploomap.css");
 
 
 /*

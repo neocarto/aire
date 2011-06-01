@@ -13,13 +13,12 @@ dojo.provide('aire.start.collection');
    };
 
    var init = function() {
-      dojo.registerModulePath('dojo', '/js/dojo');
-      dojo.registerModulePath('dijit', '/js/dijit');
-      dojo.registerModulePath('dojox', '/js/dojox');
-      dojo.registerModulePath('jig', '/js/jig');
-      dojo.registerModulePath('ploomap', '/js/ploomap');
-      dojo.registerModulePath('aire', '/js/aire');
-      dojo.registerModulePath('package', '/js/package');
+      dojo.registerModulePath('dojo', '/lib/dojo');
+      dojo.registerModulePath('dijit', '/lib/dijit');
+      dojo.registerModulePath('dojox', '/lib/dojox');
+      dojo.registerModulePath('geonef', '/lib/geonef');
+      dojo.registerModulePath('aire', '/lib/aire');
+      dojo.registerModulePath('package', '/lib/package');
    };
 
    // var onResize = function() {

@@ -16,7 +16,7 @@ packageStyles: false
 scripts:
   dojo: /x/dojo/dojo.js
   #openlayers: /js/openlayers/build/OpenLayers.js
-  workspace: /x/admin.js
+  application: /x/admin.js
 
 scriptAffectations:
   window\.workspaceKey: home
@@ -24,7 +24,7 @@ scriptAffectations:
 
 css:
  #tundra: /x/dijit/themes/tundra/tundra.css
- app: /x/aire/css/application.css
+ app: /x/aire/style/application.css
 
 
 #############################################################
