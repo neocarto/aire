@@ -4,16 +4,16 @@
     <title>AIRE - {{ map.title }}</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="/js/aire/css/application.css"/>
+    <link rel="stylesheet" type="text/css" href="/lib/aire/style/print.css"/>
     <script src="/x/dojo/dojo.js" type="text/javascript"></script>
-    <script src="/js/openlayers/build/OpenLayers.js" type="text/javascript"></script>
-    <script src="/js/aire/start/print.js"
+    <script src="/lib/openlayers/build/OpenLayers.js" type="text/javascript"></script>
+    <script src="/lib/aire/start/print.js"
             type="text/javascript"></script>
   </head>
   <body class="tundra print"><div id="main">
     <h1 class="m">Population, 2007</h1>
     <div id="map"
-      ><div id="legend" dojoType="ploomap.legend.Container"
+      ><div id="legend" dojoType="geonef.ploomap.legend.Container"
             widgetClass="{{ legend.widgetClass }}"
             widgetValue="{{ legend.value | json_encode }}"
             resolution="{{ resolution }}"></div

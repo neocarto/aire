@@ -85,7 +85,7 @@ class CollectionController extends Controller
     foreach ($mapTypes as $repr => $unitScales) {
       foreach ($unitScales as $unitScale) {
         $map = $coll->getMap($this->container, $repr, $unitScale, false);
-        if (!$map->isPublished()) {
+        if (!$map || !$map->isPublished()) {
           continue;
         }
         $msMap = $map->build($this->container);

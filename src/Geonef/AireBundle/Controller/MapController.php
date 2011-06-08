@@ -44,6 +44,12 @@ class MapController extends Controller
               'extent' => $extent));
   }
 
+  public function svgExportAction($id)
+  {
+    $map = $this->getMap($id);
+
+  }
+
   protected function getMap($id)
   {
     $dm = $this->container->get('doctrine.odm.mongodb.documentManager');
