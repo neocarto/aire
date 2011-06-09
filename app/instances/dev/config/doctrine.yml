@@ -1,0 +1,41 @@
+# doctrine.dbal:
+#   default_connection: default
+#   connections:
+#     default:
+#       driver: PDOPgSql  # PDOSqlite, PDOMySql, PDOMsSql, PDOOracle, PDOPgSql, OCI8
+#       dbname: cartapatate_hurepoix
+#       user: cartapatate
+#       password: pFWxLvY58
+#       a:
+#         a1: sde
+#         a2: zedfzre
+
+# doctrine.orm:
+#   default_entity_manager: default
+#   metadata_driver: annotation           # xml, yml, annotation
+#   cache_driver: apc                     # array, apc, memcache, xcache
+#   entity_managers:
+#     default:
+#       connection: default
+
+doctrine_mongodb:
+  #server: mongodb://localhost:27017
+  connections:
+    default:
+      server: mongodb://localhost:27017
+  default_database: "%kernel.name%_dev"
+  #default_document_manager: default
+  # auto_generate_proxy_classes: true
+  # auto_generate_hydrator_classes: true
+  # metadata_cache_driver: array
+  # mappings:
+  #   PloomapBundle: ~
+  #   ZigBundle: ~
+  #   PgLinkBundle: ~
+  document_managers:
+    default:
+      metadata_cache_driver: array
+      mappings:
+        GeonefPloomapBundle: ~
+        GeonefZigBundle: ~
+        GeonefPgLinkBundle: ~

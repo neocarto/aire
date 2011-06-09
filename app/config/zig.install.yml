@@ -31,12 +31,12 @@ geonef_zig:
           #- { ns: ploomap, path: %kernel.cache_dir%/public/lib/ploomap }
           - { ns: cartapatate, path: %kernel.cache_dir%/public/lib/cartapatate }
           - { ns: geonef, path: %kernel.cache_dir%/public/lib/geonef }
-          - { ns: aire, path: %kernel.cache_dir%/public/js/aire }
+          - { ns: aire, path: %kernel.cache_dir%/public/lib/aire }
           - { ns: package, path: %kernel.cache_dir%/public/lib/package }
         layers:
           -
-            name: ../application.js
+            name: ../admin.js
             copyrightFile: '../vendor/ploomap-client/src/geonef/ploomap/copyright.txt'
             dependencies:
               - cartapatate.start.loadWorkspace
-              - package.application
+              - package.admin
