@@ -1,88 +1,21 @@
 
 /**
- ** Style propre à l'application AIRE
+ ** Ecran d'administration (interface admin)
  **
- ** Updated on 2011-05-26
- ** Is it useful? ->NO
- ** Is application.css used for admin as well? ->YES
  */
 
+@import url("common.css");
 
-/* Style commun à la plateforme cartapatate */
-/*@import url("../../../css/cartapatate.css");*/
-
-@import url("../../dijit/themes/tundra/tundra.css");
-@import url("../../jig/css/jig.css");
-@import url("../../ploomap/css/ploomap.css");
-
-
-/*
- * Couleurs - dominante verte... (TODO)
- *********/
-
-body { background-color: #eee; }
-a, .link/*, .dijitButtonNode*/ { color: #606; }
-a:hover, .link:hover { color: #500; }
-.jigButtonArea .dijitButtonHover .dijitButtonNode,
- .jigButtonArea .dijitDropDownButtonHover .dijitButtonNode,
- .jigButtonArea .dijitToggleButtonHover .dijitButtonNode { background: #fc3; }
-.jigLayoutRootPane { opacity: 0; }
-.jigLayoutRootPane .dijitSplitter .dijitSplitterThumb { background-color: #444; }
-.jigLayoutRootPane .dijitSplitterActive {  background-color: #fd5; }
-.jigCacoin, .jigCacoin .dijitContentPane { background-color: #fec; }
-.jigCacoin .dijitTabContainerTop-tabs div.dijitTabChecked { background-color: #fec; border-bottom-color: #fec; }
-.tundra .dijitBorderContainer-child.jigCacoin { border-color: #ccc; border-radius: 3px; -moz-border-radius: 3px; }
-.tundra .dijitBorderContainer { background-color: #ffe; }
-.jigCacoin .list .item:hover, .jigCacoin table.list > tbody > tr:hover > td,
-  table.jigList > tbody > tr:hover > td { background-color: #fdc; }
-.jigCacoin .list .item.selected, .jigCacoin table.list > tbody > tr.selected > td,
-  table.jigList > tbody > tr.selected > td { background-color: #fc9; }
-.jigCacoin .list .item, .jigCacoin table.list > tbody > tr > td,
-  table.jigList > tbody > tr > td { background-color: #fec; }
-.jigCacoin.dijitTooltipDialog table.list > tbody > tr > td { background-color: #feb; }
-.jigLayoutRootPane .dijitToasterClip { margin-left: 200px; }
-.jigLayoutRootPane .dijitToasterContainer > .opacity { background-color: #ffa; opacity: 0.75; }
-.jigLayoutRootPane .dijitToasterContainer { width: 320px; border-top: 0; border-width: 1px; background: transparent; }
-* > .opacity { background-color: #fc9; border-color: #fc0; }
-.jigLayoutSwitch .rightLayoutSwitcher { background-color: #fc9; }
-.ploomapControlSexyZoomBar .rightLabels .dijitRuleLabelContainer { background-color: #fdb; }
-.ploomapControlSexyZoomBar .rightLabels .dijitRuleLabelContainer:hover { background-color: #fc9; }
-.jigLayoutSwitch .opaque { background-color: #fdb; }
-
-.jigList > table > tbody > tr.odd { background-color: #fffccf; }
-.jigList > table > tbody > tr.even { background-color: #ffe9a2; }
-
-/* a, .link { color: #530; } */
-/* a:hover, .link:hover { color: #500; } */
-/* .jigButtonArea .dijitButtonHover .dijitButtonNode, */
-/*  .jigButtonArea .dijitDropDownButtonHover .dijitButtonNode, */
-/*  .jigButtonArea .dijitToggleButtonHover .dijitButtonNode { background: #fc3; } */
-/* .jigLayoutRootPane .dijitSplitter .dijitSplitterThumb { background-color: #444; } */
-/* .jigLayoutRootPane .dijitSplitterActive {  background-color: #fd5; } */
-/* .jigCacoin, .jigCacoin .dijitContentPane { background-color: #def; } */
-/* .jigCacoin .dijitTabContainerTop-tabs div.dijitTabChecked { background-color: #cef; border-bottom-color: #cef; } */
-/* .tundra .dijitBorderContainer-child.jigCacoin { border:none; /\*border-color: #005;*\/ } */
-/* .tundra .dijitBorderContainer { background-color: #ffe; } */
-/* /\*.jigCacoin .list .item:hover, .jigCacoin table.list > tbody > tr:hover > td, table.jigList > tbody > tr:hover > td { background-color: #fdc; } too much *\/ */
-/* .jigCacoin .list .item.selected, .jigCacoin table.list > tbody > tr.selected > td, table.jigList > tbody > tr.selected > td { background-color: #f9f; } */
-/* .jigCacoin .list .item, .jigCacoin table.list > tbody > tr > td, table.jigList > tbody > tr > td, */
-/*  .jigCacoin.dijitTooltipDialog table.list > tbody > tr > td, .dijitTooltipDialog table.jigList > tbody > tr > td { background-color: #bdf; } */
-/* /\*.jigCacoin.about { background-color: #9cf; }*\/ */
-/* .olControlScaleLineTop {  background-color: #9cf; } */
-/* .jigLayoutRootPane .dijitToasterClip { margin-left: 200px; } */
-/* .jigLayoutRootPane .dijitToasterContainer > .opacity { background-color: #ffa; opacity: 0.75; } */
-/* .jigLayoutRootPane .dijitToasterContainer { width: 320px; border-top: 0; border-width: 1px; background: transparent; } */
+/* /\* look du menu admin *\/ */
+/* .aireAdminLibrary.dijitContainer { background-color: #fff; } */
+/* .aireAdminLibrary .jigAutogrid { border-spacing: 15px; } */
+/* .aireAdminLibrary .jigAutogrid > tbody > tr > span { width: 130px; height: 80px; } */
+/* .aireAdminLibrary .jigAutogrid .dijitButtonText { font-size: 1.3em;  } */
 
 
-/*
- * Styles propres
- ********/
-
-/*.dijitTooltipContainer .dijitTabContainer > .dijitTabPaneWrapper { background-color: #eee; }*/
-.dijitTabContainer > .dijitTabPaneWrapper { background-color: #eee; }
-.dijitTabContainer > .dijitTabPaneWrapper > div { background-color: #fec; }
-.dijitTabContainer > .dijitTabPaneWrapper > .jigList > table { /*background-color: #fec;*/ border-top: none; }
-/*.dijitTabContainer > .dijitTabPaneWrapper > .aireAdminLibrary { background-color: #fec; }*/
-.aireAdminLibrary .jigAutogrid { border-spacing: 15px; }
-.aireAdminLibrary .jigAutogrid > tbody > tr > span { width: 130px; height: 80px; }
-.aireAdminLibrary .jigAutogrid .dijitButtonText { font-size: 1.3em;  }
+/* needed? */
+.jigCacoin .dijitTabContainerTop-tabs div.dijitTabChecked { background-color: #cef; border-bottom-color: #cef; }
+.tundra .dijitBorderContainer-child.jigCacoin { border:none; }
+.jigCacoin .list .item.selected, .jigCacoin table.list > tbody > tr.selected > td, table.jigList > tbody > tr.selected > td { background-color: #f9f; }
+.jigCacoin .list .item, .jigCacoin table.list > tbody > tr > td, table.jigList > tbody > tr > td,
+ .jigCacoin.dijitTooltipDialog table.list > tbody > tr > td, .dijitTooltipDialog table.jigList > tbody > tr > td { background-color: #bdf; }

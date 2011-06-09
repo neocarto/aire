@@ -7,7 +7,7 @@ scripts.start1: /lib/cartapatate/start.js
 scripts.start2: /lib/cartapatate/start/loadWorkspace.js
 #scripts.openLayers: /js/openlayers/lib/OpenLayers.js
 
-css.app: /lib/aire/style/application.css
+css.app: /lib/aire/style/admin.css
 
 scriptAffectations.window\.devMode: true
 

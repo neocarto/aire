@@ -1,0 +1,25 @@
+
+/**
+ ** Style propre à l'application AIRE
+ **
+ */
+
+
+/* Dojo - tundra theme */
+/*@import url("../../../lib/dijit/themes/tundra/tundra.css");*/
+@import url("../../dijit/themes/tundra/tundra.css");
+
+/* Jig JS library */
+@import url("../../geonef/jig/style/jig.css");
+
+/* Ploomap JS library */
+@import url("../../geonef/ploomap/style/ploomap.css");
+
+/*
+ * Application
+ *********/
+
+body { font-family: Verdana; }
+h2 { font-size: 1.1em; font-weight: bold; margin: 10px 5px 5px 5px; }
+a, .link {  color: #0e7aa5; text-decoration: none; }
+a:hover, .link:hover { text-decoration: underline; }
