@@ -24,7 +24,7 @@ scriptAffectations:
 
 css:
  #tundra: /x/dijit/themes/tundra/tundra.css
- app: /x/aire/style/application.css
+ app: /x/aire/style/admin.css
 
 
 #############################################################

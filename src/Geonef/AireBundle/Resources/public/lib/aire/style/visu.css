@@ -1,30 +1,10 @@
 
 /**
- ** Style propre à l'application AIRE
+ ** Ecran de visualisation d'une collection (interface publique))
  **
  */
 
-
-/* Dojo - tundra theme */
-/*@import url("../../../lib/dijit/themes/tundra/tundra.css");*/
-@import url("../../dijit/themes/tundra/tundra.css");
-
-/* Jig JS library */
-@import url("../../geonef/jig/style/jig.css");
-
-/* Ploomap JS library */
-@import url("../../geonef/ploomap/style/ploomap.css");
-
-/*
- * Application
- *********/
-
-body { font-family: Verdana; }
-/*body { font-size: 0.8em; font-family: Verdana,sans-serif; background-color: white; overflow: auto; }*/
-/*h1 { font-size: 1.2em; font-variant: small-caps; margin: 0 0 15px 0; }*/
-h2 { font-size: 1.1em; font-weight: bold; margin: 10px 5px 5px 5px; }
-a, .link {  color: #0e7aa5; text-decoration: none; }
-a:hover, .link:hover { text-decoration: underline; }
+@import url("common.css");
 
 table#screen { border-spacing: 3px; margin: 3px auto; }
 table#screen td { }
@@ -50,51 +30,6 @@ body.layoutNormal table#screen td.help { display: none; }
 body.layoutComment table#screen td.collections { display: none; }
 body.layoutComment table#screen td.reprs { display: none; }
 body.layoutComment table#screen td.help { display: none; }
-
-/* p { /\*text-align: justify;*\/ } */
-/* #main { margin: 0 auto; width: 1000px; height: 573px; } */
-/* /\* home *\/ */
-/* #themes, #presentation { background-color: #d8e6ff; padding: 5px; /\*overflow: auto;*\/ } */
-/* #themes { float: left; width: 450px;  } */
-/* .themes h2 {  background: url("/images/aire/br-arrow.png") no-repeat 0 3px; padding-left: 16px; } */
-/* .themes ul {  list-style-type: square; } */
-/* div#presentation { margin-left: 468px; } */
-/* /\* set *\/ */
-/* /\*#main.set { height: 100%; }*\/ */
-/* .themes {  } */
-/* .center {  } */
-/* .repr {  } */
-
-/*body, .tundra .dijitSplitterV, .tundra .dijitGutterV { background: #eee; }*/
-
-/*
- * Couleurs
- *********/
-
-/*a, .link { color: #530; }
-a:hover, .link:hover { color: #500; }*/
-/*.jigButtonArea .dijitButtonHover .dijitButtonNode,
- .jigButtonArea .dijitDropDownButtonHover .dijitButtonNode,
- .jigButtonArea .dijitToggleButtonHover .dijitButtonNode { background: #fc3; }
-.jigLayoutRootPane .dijitSplitter .dijitSplitterThumb { background-color: #444; }*/
-/*.jigLayoutRootPane .dijitSplitterActive {  background-color: #fd5; }*/
-/*.jigCacoin, .jigCacoin .dijitContentPane { background-color: #def; }*/
-.jigCacoin .dijitTabContainerTop-tabs div.dijitTabChecked { background-color: #cef; border-bottom-color: #cef; }
-.tundra .dijitBorderContainer-child.jigCacoin { border:none; /*border-color: #005;*/ }
-/*.tundra .dijitBorderContainer { background-color: #ffe; }*/
-/*.jigCacoin .list .item:hover, .jigCacoin table.list > tbody > tr:hover > td, table.jigList > tbody > tr:hover > td { background-color: #fdc; } too much */
-.jigCacoin .list .item.selected, .jigCacoin table.list > tbody > tr.selected > td, table.jigList > tbody > tr.selected > td { background-color: #f9f; }
-.jigCacoin .list .item, .jigCacoin table.list > tbody > tr > td, table.jigList > tbody > tr > td,
- .jigCacoin.dijitTooltipDialog table.list > tbody > tr > td, .dijitTooltipDialog table.jigList > tbody > tr > td { background-color: #bdf; }
-/*.jigCacoin.about { background-color: #9cf; }*/
-/* .jigLayoutRootPane .dijitToasterClip { margin-left: 200px; } */
-/* .jigLayoutRootPane .dijitToasterContainer > .opacity { background-color: #ffa; opacity: 0.75; } */
-/* .jigLayoutRootPane .dijitToasterContainer { width: 320px; border-top: 0; border-width: 1px; background: transparent; } */
-
-
-/*
- * Styles propres
- ********/
 
 /* OpenLayers */
 .olHandlerBoxZoomBox { border: 2px solid red; position: absolute; background-color: white; opacity: 0.50; font-size: 1px; filter: alpha(opacity=50); }
@@ -133,9 +68,3 @@ a:hover, .link:hover { color: #500; }*/
 .reprs .area .dijitAccordionContainer-dijitContentPane { padding: 5px; }
 .reprs .area .dijitAccordionContainer-dijitContentPane .dijitButtonNode { background: #cdf; border-radius: 5px; -moz-border-radius: 5px; border: none; margin: 3px; }
 .reprs .area .dijitAccordionContainer-dijitContentPane .mapEnabled .dijitButtonNode { background: #fdc; }
-/* look du menu admin */
-.aireAdminLibrary.dijitContainer { background-color: #fff; }
-.aireAdminLibrary .jigAutogrid { border-spacing: 15px; }
-.aireAdminLibrary .jigAutogrid > tbody > tr > span { width: 130px; height: 80px; }
-.aireAdminLibrary .jigAutogrid .dijitButtonText { font-size: 1.3em;  }
-
