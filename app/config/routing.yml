@@ -25,9 +25,9 @@ csvFeatures:
   pattern: /map/{id}/csvFeatures
   defaults: { _controller: "GeonefPloomapBundle:Map:csvFeatures" }
 
-svgExport:
-  pattern: /map/{id}/svgExport
-  defaults: { _controller: "GeonefPloomapBundle:Map:svgExport" }
+svg:
+  pattern: /map/{id}/svg
+  defaults: { _controller: "GeonefPloomapBundle:Map:svg" }
 
 print:
   pattern: /map/{id}/print

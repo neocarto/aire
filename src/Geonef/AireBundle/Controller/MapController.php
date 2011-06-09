@@ -35,6 +35,7 @@ class MapController extends Controller
       $params['BBOX'] = $extent;
     }
     $url = $map->getWmsMapUrl($this->container, $params);
+
     return $this->render
        ('GeonefAireBundle:Map:print.twig.html',
         array('map' => $map,
@@ -42,12 +43,6 @@ class MapController extends Controller
                  'legend' => $map->getLegendData($this->container),
                  'resolution' => 8855,
               'extent' => $extent));
-  }
-
-  public function svgExportAction($id)
-  {
-    $map = $this->getMap($id);
-
   }
 
   protected function getMap($id)
@@ -61,6 +56,7 @@ class MapController extends Controller
     if (!$map->isPublished()) {
       throw new \Exception("map's publishing is not enabled for ".$id);
     }
+
     return $map;
   }
 
