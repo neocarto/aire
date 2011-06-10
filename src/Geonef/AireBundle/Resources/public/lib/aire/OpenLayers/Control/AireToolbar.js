@@ -94,7 +94,8 @@ aire.OpenLayers.Control.AireToolbar =
   },
 
   exportSvg: function() {
-
+    var mapId = this.map.baseLayer.name;
+    window.open('/map/'+mapId+'/svg', mapId+'-svg');
   },
 
   exportPrint: function() {

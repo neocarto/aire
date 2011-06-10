@@ -12,5 +12,4 @@
 .print #main { width: 600px; margin: 20px auto 0 auto; }
 .print #map {  position: relative; }
 .print #scale { float: right; margin-top: 10px; border: 1px solid black; border-top: none; font-size: 10px; text-align: center; }
-.ploomapLegendContainer { position: absolute; top: 1px; right: 1px; padding: 5px; border-left: 1px solid #ccc; border-bottom: 1px solid #ccc; width: 156px; font-size: 10px; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='/images/blanc_04.png'); z-index: 4200; }
-.ploomapLegendContainer[id] { background-image: url(/images/blanc_04.png); }
+/*.ploomapLegend h1 {  }*/
