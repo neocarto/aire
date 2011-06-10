@@ -44,3 +44,9 @@ geonef_zig:
             dependencies:
               - package.collection
               - aire.start.collection
+          -
+            name: ../print.js
+            copyrightFile: '../vendor/cartapatate/lib/cartapatate/copyright.txt'
+            dependencies:
+              - package.print
+              - aire.start.print
