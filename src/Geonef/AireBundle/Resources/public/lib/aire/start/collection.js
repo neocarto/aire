@@ -6,7 +6,7 @@ dojo.provide('aire.start.collection');
  */
 (function() {
 
-   var deps = ['OpenLayers'];
+   var deps = [];
 
    var workspaceData = {
      widgets: {}

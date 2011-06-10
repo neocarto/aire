@@ -1,6 +1,11 @@
 
 dojo.provide('package.set');
 
+// third-party
+dojo.require('package.proj4js');
+dojo.require('package.openlayers');
+
+// workspace
 dojo.require('geonef.jig.workspace');
 dojo.require('dojo.parser');
 
