@@ -25,10 +25,6 @@ csvFeatures:
   pattern: /map/{id}/csvFeatures
   defaults: { _controller: "GeonefPloomapBundle:Map:csvFeatures" }
 
-svg:
-  pattern: /map/{id}/svg
-  defaults: { _controller: "GeonefPloomapBundle:Map:svg" }
-
 print:
   pattern: /map/{id}/print
   defaults: { _controller: "GeonefAireBundle:Map:print" }
