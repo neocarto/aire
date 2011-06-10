@@ -40,3 +40,8 @@ geonef_zig:
             dependencies:
               - cartapatate.start.loadWorkspace
               - package.admin
+          -
+            name: ../collection.js
+            copyrightFile: '../vendor/ploomap-client/src/geonef/ploomap/copyright.txt'
+            dependencies:
+              - package.collection
