@@ -56,6 +56,8 @@ dojo.require('geonef.ploomap.list.edition.mapCollection.FreeCollection');
 dojo.require('geonef.ploomap.list.edition.ogrDataSource.Generic');
 dojo.require('geonef.ploomap.list.edition.ogrDataSource.PostgreSql');
 dojo.require('geonef.ploomap.list.edition.ogrDataSource.File');
+dojo.require('geonef.jig.data.list.Template');
+dojo.require('geonef.ploomap.data.edition.template.SvgMap');
 
 // input types
 dojo.require('geonef.jig.input.Color');
