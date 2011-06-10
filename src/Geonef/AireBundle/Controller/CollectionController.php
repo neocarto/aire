@@ -22,15 +22,14 @@ class CollectionController extends Controller
     $maps = $this->getMaps($coll);
     $collData = array('maps' => $maps,
                       'startMap' => $coll->startMap);
-    $libDir = $this->container->getParameter('kernel.environment') == 'dev' ? 'lib' : 'x';
+    $env = $this->container->getParameter('kernel.environment');
 
     return $this->render('GeonefAireBundle:Collection:visu.twig.html',
                          array('categories' => $categories,
                                'collection' => $coll,
                                'collection_json' => json_encode($collData),
                                'maps' => $maps,
-                               'libDir' => $libDir,
-                               'rep' => 'zzz'
+                               'env' => $env,
                                ));
   }
 

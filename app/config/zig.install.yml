@@ -27,8 +27,6 @@ geonef_zig:
           - { ns: dojo, path: %kernel.cache_dir%/public/lib/dojo }
           - { ns: dijit, path: %kernel.cache_dir%/public/lib/dijit }
           - { ns: dojox, path: %kernel.cache_dir%/public/lib/dojox }
-          #- { ns: jig, path: %kernel.cache_dir%/public/lib/jig }
-          #- { ns: ploomap, path: %kernel.cache_dir%/public/lib/ploomap }
           - { ns: cartapatate, path: %kernel.cache_dir%/public/lib/cartapatate }
           - { ns: geonef, path: %kernel.cache_dir%/public/lib/geonef }
           - { ns: aire, path: %kernel.cache_dir%/public/lib/aire }
@@ -36,12 +34,13 @@ geonef_zig:
         layers:
           -
             name: ../admin.js
-            copyrightFile: '../vendor/ploomap-client/src/geonef/ploomap/copyright.txt'
+            copyrightFile: '../vendor/cartapatate/lib/cartapatate/copyright.txt'
             dependencies:
               - cartapatate.start.loadWorkspace
               - package.admin
           -
             name: ../collection.js
-            copyrightFile: '../vendor/ploomap-client/src/geonef/ploomap/copyright.txt'
+            copyrightFile: '../vendor/cartapatate/lib/cartapatate/copyright.txt'
             dependencies:
               - package.collection
+              - aire.start.collection

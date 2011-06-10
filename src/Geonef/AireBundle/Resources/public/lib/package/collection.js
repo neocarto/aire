@@ -1,5 +1,5 @@
 
-dojo.provide('package.set');
+dojo.provide('package.collection');
 
 // third-party
 dojo.require('package.proj4js');

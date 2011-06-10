@@ -28,7 +28,7 @@ dojo.provide('aire.start.collection');
    // };
 
    var start = function() {
-     dojo['require']('package.set');
+     dojo['require']('package.collection');
      geonef.jig.workspace.initialize({ data: workspaceData });
      dojo.parser.parse();
      // var rootC = dijit.byId('rootContainer');
