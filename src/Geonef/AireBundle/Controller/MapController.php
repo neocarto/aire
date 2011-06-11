@@ -35,14 +35,17 @@ class MapController extends Controller
       $params['BBOX'] = $extent;
     }
     $url = $map->getWmsMapUrl($this->container, $params);
+    $env = $this->container->getParameter('kernel.environment');
 
     return $this->render
        ('GeonefAireBundle:Map:print.twig.html',
         array('map' => $map,
-                 'mapUrl' => $url,
-                 'legend' => $map->getLegendData($this->container),
-                 'resolution' => 8855,
-              'extent' => $extent));
+              'mapUrl' => $url,
+              'legend' => $map->getLegendData($this->container),
+              'resolution' => 8855,
+              'extent' => $extent,
+              'env' => $env,
+              ));
   }
 
   protected function getMap($id)

@@ -2,3 +2,5 @@ dev.log
 prod.log
 apache.access.log
 apache.error.log
+mapserver.log
+rewrite.log

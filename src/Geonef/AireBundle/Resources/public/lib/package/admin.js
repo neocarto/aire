@@ -36,9 +36,7 @@ dojo.require('geonef.ploomap.list.tool.map.View');
 dojo.require('geonef.ploomap.list.tool.map.DataView');
 dojo.require('geonef.ploomap.list.tool.map.Legend');
 dojo.require('geonef.ploomap.list.tool.map.Services');
-dojo.require('geonef.ploomap.legend.Simple');
-dojo.require('geonef.ploomap.legend.CircleIntervals');
-dojo.require('geonef.ploomap.legend.RatioDisc');
+dojo.require('geonef.ploomap.legend.package');
 
 // Document modules
 dojo.require('geonef.ploomap.list.edition.map.Stock');

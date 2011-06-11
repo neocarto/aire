@@ -4,11 +4,17 @@
     <title>AIRE - {{ map.title }}</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    {% if env == "dev" %}
     <link rel="stylesheet" type="text/css" href="/lib/aire/style/print.css"/>
+    {% else %}
+    <link rel="stylesheet" type="text/css" href="/x/aire/style/print.css"/>
+    {% endif %}
     <script src="/x/dojo/dojo.js" type="text/javascript"></script>
-    <script src="/lib/openlayers/build/OpenLayers.js" type="text/javascript"></script>
-    <script src="/lib/aire/start/print.js"
-            type="text/javascript"></script>
+    {% if env == "dev" %}
+    <script src="/lib/aire/start/print.js" type="text/javascript"></script>
+    {% else %}
+    <script src="/x/print.js" type="text/javascript"></script>
+    {% endif %}
   </head>
   <body class="tundra print"><div id="main">
     <h1 class="m">Population, 2007</h1>
