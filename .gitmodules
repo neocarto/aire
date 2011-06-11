@@ -31,3 +31,6 @@
 [submodule "vendor/monolog"]
 	path = vendor/monolog
 	url = git://github.com/Seldaek/monolog.git
+[submodule "vendor/ploomap-client"]
+	path = vendor/ploomap-client
+	url = git.geonef.fr:/var/lib/git/package/ploomap-client.git
