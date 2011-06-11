@@ -7,6 +7,7 @@ use Symfony\Component\Config\Loader\LoaderInterface;
 
 class AppKernel extends Kernel
 {
+  const APP_VERSION = '0.3.0';
   /**
    * Overloaded, only to provide an app name
    */
@@ -49,6 +50,7 @@ class AppKernel extends Kernel
 
   public function registerContainerConfiguration(LoaderInterface $loader)
   {
+    //$this->container->setParameter('app.version', static::APP_VERSION);
     $loader->load(__DIR__.'/config/config_'.$this->getEnvironment().'.yml');
   }
 
