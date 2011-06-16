@@ -3,6 +3,7 @@
 namespace Geonef\AireBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Geonef\PloomapBundle\Document\MapCategory;
 use Geonef\PloomapBundle\Document\MapCollection\MultiRepr as MapCollectionMultiRepr;
 use Geonef\PloomapBundle\Document\MapCollection\SingleRepr as MapCollectionSingleRepr;
 use Geonef\Ploomap\Util\Geo;
@@ -19,7 +20,7 @@ class CollectionController extends Controller
    */
   public function visuAction($id)
   {
-    $categories = $this->getCategories();
+    $categories = MapCategory::getCategories($this->container);
     $coll = $this->getCollection($id);
     $maps = $this->getMaps($coll);
     $collData = array('maps' => $maps,
@@ -36,62 +37,6 @@ class CollectionController extends Controller
   }
 
   /**
-   * Home
-   *
-   */
-  public function homeVisuAction()
-  {
-    $categories = $this->getCategories();
-    $coll = $this->getHomeCollection();
-    $maps = $this->getHomeMaps($coll);
-    $collData = array('maps' => $maps,
-                      'startMap' => $maps[0]->getId());
-    $env = $this->container->getParameter('kernel.environment');
-
-    return $this->render('GeonefAireBundle:Collection:visu.twig.html',
-                         array('categories' => $categories,
-                               'collection' => $coll,
-                               'collection_json' => json_encode($collData),
-                               'maps' => $maps,
-                               'env' => $env,
-                               ));
-  }
-
-  /**
-   * Fetch published categories from MongoDB and their map collections
-   *
-   * @return array
-   */
-  protected function getCategories()
-  {
-    $dm = $this->container->get('doctrine.odm.mongodb.documentManager');
-    $qCats = $dm
-      ->createQueryBuilder(self::DOC_PREFIX.'MapCategory')
-      ->field('published')->equals(true)
-      ->sort('title', 'asc');
-    $cats = $qCats->getQuery()->execute();
-    $categories = array();
-    foreach ($cats as $cat) {
-      $qColls = $dm
-        ->createQueryBuilder(self::DOC_PREFIX.'MapCollection')
-        ->field('category.$id')->equals(new \MongoId($cat->getId()))
-        ->field('published')->equals(true)
-        ->sort('title', 'asc');
-      $it = $qColls->getQuery()->execute();
-      $colls = array();
-      foreach ($it as $coll) {
-        $colls[] = array('id' => $coll->getId(),
-                         'title' => $coll->getTitle());
-      }
-      $categories[] =
-        array('id' => $cat->getId(),
-              'title' => $cat->getTitle(),
-              'collections' => $colls);
-    }
-    return $categories;
-  }
-
-  /**
    * @return Geonef\PloomapBundle\Document\MapCollection
    */
   protected function getCollection($id)
@@ -105,26 +50,6 @@ class CollectionController extends Controller
       throw new \Exception("collection's publishing is not enabled for ".$id);
     }
     return $coll;
-  }
-
-  /**
-   * @return Geonef\PloomapBundle\Document\MapCollection\SingleRepr
-   */
-  protected function getHomeCollection()
-  {
-    $dm = $this->container->get('doctrine.odm.mongodb.documentManager');
-    $query = $dm->getRepository(static::COLLECTION_CLASS.'\SingleRepr')->createQueryBuilder();
-    $it = $query->field('published')->equals(true)->getQuery()->execute();
-    if ($it->count() == 0) {
-      throw new \Exception("aucune collection SingleRepr publiée");
-      //throw new \Exception("cannot find a 'published' SigleRepr MapCollection doc for home map");
-    }
-    return $it->getSingleResult();
-  }
-
-  protected function getHomeMaps(MapCollectionSingleRepr $coll)
-  {
-    return array($coll->autoGetMap($this->container));
   }
 
   protected function getMaps(MapCollectionMultiRepr $coll)
@@ -156,5 +81,25 @@ class CollectionController extends Controller
     }
     return $maps;
   }
+
+  /* /\** */
+  /*  * @return Geonef\PloomapBundle\Document\MapCollection\SingleRepr */
+  /*  *\/ */
+  /* protected function getHomeCollection() */
+  /* { */
+  /*   $dm = $this->container->get('doctrine.odm.mongodb.documentManager'); */
+  /*   $query = $dm->getRepository(static::COLLECTION_CLASS.'\SingleRepr')->createQueryBuilder(); */
+  /*   $it = $query->field('published')->equals(true)->getQuery()->execute(); */
+  /*   if ($it->count() == 0) { */
+  /*     throw new \Exception("aucune collection SingleRepr publiée"); */
+  /*     //throw new \Exception("cannot find a 'published' SigleRepr MapCollection doc for home map"); */
+  /*   } */
+  /*   return $it->getSingleResult(); */
+  /* } */
+
+  /* protected function getHomeMaps(MapCollectionSingleRepr $coll) */
+  /* { */
+  /*   return array($coll->autoGetMap($this->container)); */
+  /* } */
 
 }

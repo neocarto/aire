@@ -1,0 +1,11 @@
+
+/**
+ ** Homepage
+ **
+ */
+
+@import url("visu.css");
+
+table#screen .collections { width: 469px; }
+table#screen .homeContent {  width: 543px; }
+table#screen .collections .area { height: 483px; }
