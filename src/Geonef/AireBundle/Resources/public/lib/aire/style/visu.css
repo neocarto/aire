@@ -18,7 +18,7 @@ table#screen .map { width: 543px; }
 table#screen .comment { width: 469px; }
 table#screen .reprs { width: 232px; }
 table#screen .collections h1, table#screen .comment h1 { background: url("/images/aire/corners.png") no-repeat scroll 0 0 #3360A8; }
-table#screen .collections .area { height: 403px; }
+table#screen .collections .area { height: 403px; overflow: auto; }
 table#screen .collections .commentSmall { height: 69px; border: 1px solid #ccc; margin: 3px 0; padding: 3px; }
 /*table#screen .collections .bottom { height: 76px; }*/
 table#screen .collections .bottom, table#screen .comment .bottom { background: url("/images/aire/corners.png") no-repeat scroll left -42px #3360A8; }
