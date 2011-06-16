@@ -7,9 +7,7 @@ ploomap:
 
 homepage:
   pattern: /
-  defaults:
-    _controller: "GeonefZigBundle:ViewClass:render"
-    path: "views.workspace"
+  defaults: { _controller: "GeonefAireBundle:Collection:homeVisu" }
 
 admin:
   pattern: /admin
