@@ -1,14 +1,1 @@
-title: "Admin-Catapatate[DEV]"
-
-# uncomment this to get non-schrinked dojo
-#scripts.dojo: /js/dojo/dojo.js
-scripts.application: null
-scripts.start1: /js/cartapatate/start.js
-scripts.start2: /js/cartapatate/start/loadWorkspace.js
-#scripts.openLayers: /js/openlayers/lib/OpenLayers.js
-
-css.app: /js/catapatate/css/application.css
-
-scriptAffectations.window\.devMode: true
-
-bodyAttributes.class: patate tundra dev
+title: "Admin-AIRE [PROD]"
