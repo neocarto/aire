@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>AIRE</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    {% if env == "dev" %}
+    <link rel="stylesheet" type="text/css" href="/lib/aire/style/home.css"/>
+    {% else %}
+    <link rel="stylesheet" type="text/css" href="/x/aire/style/home.css"/>
+    {% endif %}
+  </head>
+  <body class="tundra layoutNormal">
+    <table id="screen">
+      <tbody><tr>
+        <td class="collections">
+          <h1 class="s">Thèmes</h1>
+          <div class="area">
+          {% for category in categories %}
+            <h2>{{ category.title }}</h2>
+            <ul>
+              {% for icoll in category.collections %}
+                <li><a href="/collection/{{ icoll.id }}">{{ icoll.title }}</a></li>
+              {% endfor %}
+            </ul>
+          {% endfor %}
+          </div>
+        </td>
+        <td class="homeContent">
+          <h1 class="s">AIRE</h1>
+          <div class="area">
+            {% autoescape false %}
+            {{ content }}
+            {% endautoescape %}
+          </div>
+        </td>
+      </tr></tbody>
+    </table>
+  </body>
+</html>

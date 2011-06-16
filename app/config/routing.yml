@@ -5,9 +5,9 @@ zig:
 ploomap:
   resource: "@GeonefPloomapBundle/Resources/config/routing.yml"
 
-homepage:
+home:
   pattern: /
-  defaults: { _controller: "GeonefAireBundle:Collection:homeVisu" }
+  defaults: { _controller: "GeonefAireBundle:Home:home" }
 
 admin:
   pattern: /admin
