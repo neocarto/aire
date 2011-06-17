@@ -26,6 +26,8 @@ class CollectionController extends Controller
     $collData = array('maps' => $maps,
                       'startMap' => $coll->startMap);
     $env = $this->container->getParameter('kernel.environment');
+    $this->container->get('doctrine.odm.mongodb.documentManager')
+      ->flush();
 
     return $this->render('GeonefAireBundle:Collection:visu.twig.html',
                          array('categories' => $categories,

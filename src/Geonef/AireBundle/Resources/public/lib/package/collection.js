@@ -13,6 +13,7 @@ dojo.require('dojo.parser');
 dojo.require('dijit.layout.BorderContainer');
 dojo.require('dijit.layout.AccordionContainer');
 dojo.require('dijit.layout.ContentPane');
+dojo.require('dijit.TitlePane');
 dojo.require('aire.Map');
 dojo.require('aire.button.ShowMap');
 dojo.require('geonef.ploomap.legend.package');

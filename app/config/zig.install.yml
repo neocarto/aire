@@ -39,6 +39,12 @@ geonef_zig:
               - cartapatate.start.loadWorkspace
               - package.admin
           -
+            name: ../home.js
+            copyrightFile: '../vendor/cartapatate/lib/cartapatate/copyright.txt'
+            dependencies:
+              - package.home
+              - aire.start.home
+          -
             name: ../collection.js
             copyrightFile: '../vendor/cartapatate/lib/cartapatate/copyright.txt'
             dependencies:

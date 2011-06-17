@@ -31,10 +31,16 @@ dojo.provide('aire.start.collection');
      dojo['require']('package.collection');
      geonef.jig.workspace.initialize({ data: workspaceData });
      dojo.parser.parse();
-     // var rootC = dijit.byId('rootContainer');
-     // console.log('init', this, rootC);
-     // rootC.connect(window, 'onresize', onResize);
-     // onResize();
+     dojo.connect(dojo.byId('showComment'), 'onclick', window,
+                  function() {
+                    dojo.removeClass(dojo.body(), 'layoutNormal');
+                    dojo.addClass(dojo.body(), 'layoutComment');
+                  });
+     dojo.connect(dojo.byId('hideComment'), 'onclick', window,
+                  function() {
+                    dojo.removeClass(dojo.body(), 'layoutComment');
+                    dojo.addClass(dojo.body(), 'layoutNormal');
+                  });
      if (window.aireCollection.startMap) {
        var startMap = window.aireCollection.startMap;
        var mapW = dijit.byId('map');

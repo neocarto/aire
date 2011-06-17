@@ -26,23 +26,24 @@
           <h1 class="s">Thèmes</h1>
           <div class="area">
           {% for category in categories %}
-            <h2>{{ category.title }}</h2>
-            <ul>
-              {% for icoll in category.collections %}
+            <div dojoType="dijit.TitlePane" title="{{ category.title }}" open="{% if category.id == collection.category.uuid %}true{% else %}false{% endif %}">
+              <ul>
+                {% for icoll in category.collections %}
                 <li>
                   {% if icoll.id == collection.uuid %}<b>{{ icoll.title }}</b>
                   {% else %}<a href="/collection/{{ icoll.id }}">{{ icoll.title }}</a>
                   {% endif %}
                 </li>
-              {% endfor %}
-            </ul>
+                {% endfor %}
+              </ul>
+            </div>
           {% endfor %}
           <!--div dojoType="geonef.ploomap.tool.Layers" mapWidget="map"></div-->
           </div>
           <div class="commentSmall">
             {{ collection.comment }}
           </div>
-          <div class="bottom">
+          <div class="bottom" id="showComment">
             Voir le commentaire
           </div>
         </td>
@@ -51,8 +52,8 @@
           <div class="area">
             {{ collection.comment }}
           </div>
-          <div class="bottom">
-            Bottom!
+          <div class="bottom" id="hideComment">
+            Cacher le commentaire
           </div>
         </td>
         <td class="map">
