@@ -26,10 +26,11 @@ table#screen .comment { width: 469px; }
 table#screen .reprs { width: 232px; }
 table#screen .collections h1, table#screen .comment h1 { background: url("/images/aire/corners.png") no-repeat scroll 0 0 #3360A8; }
 table#screen .collections .area { height: 403px; overflow: auto; color: #218BBF; }
-table#screen .collections .area .dijitTitlePane { font-weight: bold; /*font-size: 1.2em;*/ }
-table#screen .collections .area .dijitTitlePaneTitle { border: none; background: none; }
+table#screen .collections .area .dijitTitlePane {  }
+table#screen .collections .area .dijitTitlePaneTitle { font-weight: bold; /*font-size: 1.2em;*/ border: none; background: none; }
 table#screen .collections .area .dijitTitlePaneContentOuter { border: none; }
 table#screen .collections .area ul { list-style-type: square; margin: 0; padding: 0 0 0 25px; }
+table#screen .collections .area ul b { color: #000; }
 table#screen .collections .commentSmall { height: 69px; border: 1px solid #ccc; margin: 3px 0; padding: 3px; }
 /*table#screen .collections .bottom { height: 76px; }*/
 table#screen .collections .bottom, table#screen .comment .bottom { background: url("/images/aire/corners.png") no-repeat scroll left -42px #3360A8; cursor: pointer; padding-top: 8px; height: 21px; /* 26px-8px */ }
