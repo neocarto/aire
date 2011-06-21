@@ -36,7 +36,7 @@ table#screen .collections .commentSmall { height: 69px; border: 1px solid #ccc; 
 table#screen .collections .bottom, table#screen .comment .bottom { background: url("/images/aire/corners.png") no-repeat scroll left -42px #3360A8; cursor: pointer; padding-top: 8px; height: 21px; /* 26px-8px */ }
 table#screen .reprs h1, table#screen .homeContent h1, body.layoutComment table#screen .map h1 { background: url("/images/aire/corners.png") no-repeat scroll right -74px #3360A8; }
 body.layoutComment table#screen .map .ploomapLegend h1 { background: none; } /* fix side-effect of last rule */
-body.layoutComment table#screen .map .bottom { background: url("/images/aire/corners.png") no-repeat scroll right -111px #3360A8; }
+body.layoutComment table#screen .map .bottom, table#screen .homeContent .bottom { background: url("/images/aire/corners.png") no-repeat scroll right -111px #3360A8; }
 
 body.layoutNormal table#screen td.comment { display: none; }
 body.layoutNormal table#screen td.help { display: none; }
