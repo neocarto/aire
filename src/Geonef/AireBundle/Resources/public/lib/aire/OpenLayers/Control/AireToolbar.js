@@ -43,13 +43,15 @@ aire.OpenLayers.Control.AireToolbar =
     var nav = new OpenLayers.Control.NavigationHistory();
     this.map.addControl(nav);
     var __ = function(s) { return s; };
+    var self = this;
+    var legendButton;
     var controls =
       [
 	new OpenLayers.Control.Button(
           {
 	    displayClass: "aiControlHome",
 	    title: __("Revenir à l'accueil"),
-	    trigger: function() { window.location.reload();} }),
+	    trigger: function() { window.location = '/';} }),
 	new OpenLayers.Control.Navigation(
           {
 	    title: __("Activer le mode navigation"),
@@ -67,53 +69,43 @@ aire.OpenLayers.Control.AireToolbar =
           {
 	    displayClass: "aiControlSave",
 	    title: __("Exporter la carte en SVG"),
-	    trigger: dojo.hitch(this, this.exportSvg) }),
+	    trigger: aire.app.exportSvg }),
 	new OpenLayers.Control.Button(
           {
 	    displayClass: "aiControlPrint",
 	    title: __("Afficher la carte en mode impression"),
-	    trigger: dojo.hitch(this, this.exportPrint) }),
+	    trigger: aire.app.exportPrint }),
 	new OpenLayers.Control.Button(
           {
-	    displayClass: "aiControlTab",
+	    displayClass: "aiControlData",
 	    title: __("Récupérer les données"),
-	    trigger: dojo.hitch(this, this.exportData) }),
+	    trigger: aire.app.exportData }),
 	new OpenLayers.Control.Button(
           {
 	    displayClass: "aiControlHelp",
 	    title: __("Afficher l'aide"),
-	    trigger: dojo.hitch(this, this.showHelp) }),
-	// new OpenLayers.Control.pmLegend(
-        //   {
-	//     title: __("Afficher ou masquer la légende"),
-	//     active: true })
+	    trigger: aire.app.showHelp }),
+	legendButton = new OpenLayers.Control.Button(
+          {
+	    displayClass: "aiControlLegend",
+            type: OpenLayers.Control.TYPE_TOGGLE,
+            activate: function() {
+              var state = OpenLayers.Control.Button.prototype.activate.call(this, arguments);
+              aire.app.updateLegend(true);
+              return state;
+            },
+            deactivate: function() {
+              var state = OpenLayers.Control.Button.prototype.deactivate.call(this, arguments);
+              aire.app.updateLegend(false);
+              return state;
+            },
+	    title: __("Afficher ou masquer la légende"),
+	    active: true })
       ];
     this.defaultControl = controls[1];
     //console.log('adding controls', this, controls);
     this.addControls(controls);
-  },
-
-  exportSvg: function() {
-    var mapId = this.map.baseLayer.name;
-    window.open('/map/'+mapId+'/svg', mapId+'-svg');
-  },
-
-  exportPrint: function() {
-    var mapId = this.map.baseLayer.name;
-    var qs = '';
-    if (this.map.getZoom() !== 0) {
-      qs = '?extent='+this.map.getExtent().toBBOX();
-    }
-    window.open('/map/'+mapId+'/print'+qs, mapId+'-print');
-  },
-
-  exportData: function() {
-    var mapId = this.map.baseLayer.name;
-    var qs = '';
-    //if (this.map.getZoom() !== 0) {
-    //  qs = '?extent='+this.map.getExtent().toBBOX();
-    //}
-    window.open('/map/'+mapId+'/csvFeatures'+qs, mapId+'-data');
+    legendButton.activate();
   }
 
 });

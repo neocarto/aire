@@ -12,17 +12,20 @@
  * 3 columns in repr view (body.layoutNormal)
  *
  * 2 columns in comment view (body.layoutComment)
+ * 2 columns in help view (body.layoutHelp)
  */
 table#screen { border-spacing: 3px; margin: 3px auto; }
 table#screen td { }
 table#screen h1.s { height: 22px; padding: 5px; text-align: center; font-size: 1.2em; font-variant: small-caps; margin: 0; background-color: #3360A8; color: #fff; }
-table#screen div.area { height: 483px; margin: 3px 0; border: 1px solid #ccc; }
+table#screen div.area { height: /*480*/483px; margin: 3px 0; border: 1px solid #ccc; }
 table#screen div.bottom { height: 26px; padding: 3px; background-color: #3360A8; color: #fff; text-align: center; }
 
 table#screen .reprs .dijitAccordionContainer { width: 100%; height: 100%; }
 table#screen .collections { width: 232px; }
-table#screen .map { width: 543px; }
+table#screen .map { width: 541px; }
+table#screen .map .ploomapMap { background: #fff; }
 table#screen .comment { width: 469px; }
+table#screen .help { width: 541px; }
 table#screen .reprs { width: 232px; }
 table#screen .collections h1, table#screen .comment h1 { background: url("/images/aire/corners.png") no-repeat scroll 0 0 #3360A8; }
 table#screen .collections .area { height: 403px; overflow: auto; color: #218BBF; }
@@ -33,16 +36,22 @@ table#screen .collections .area ul { list-style-type: square; margin: 0; padding
 table#screen .collections .area ul b { color: #000; }
 table#screen .collections .commentSmall { height: 69px; border: 1px solid #ccc; margin: 3px 0; padding: 3px; }
 /*table#screen .collections .bottom { height: 76px; }*/
-table#screen .collections .bottom, table#screen .comment .bottom { background: url("/images/aire/corners.png") no-repeat scroll left -42px #3360A8; cursor: pointer; padding-top: 8px; height: 21px; /* 26px-8px */ }
-table#screen .reprs h1, table#screen .homeContent h1, body.layoutComment table#screen .map h1 { background: url("/images/aire/corners.png") no-repeat scroll right -74px #3360A8; }
+table#screen .help .area iframe { width: 100%; height: 100%; border: none; }
+table#screen .collections .bottom, table#screen .comment .bottom, table#screen .help .bottom { cursor: pointer; padding-top: 8px; height: 21px; /* 26px-8px */ }
+table#screen .collections .bottom, table#screen .comment .bottom { background: url("/images/aire/corners.png") no-repeat scroll left -42px #3360A8; }
+table#screen .reprs h1, table#screen .homeContent h1, body.layoutComment table#screen .map h1/*, table#screen .help h1*/ { background: url("/images/aire/corners.png") no-repeat scroll right -74px #3360A8; }
 body.layoutComment table#screen .map .ploomapLegend h1 { background: none; } /* fix side-effect of last rule */
-body.layoutComment table#screen .map .bottom, table#screen .homeContent .bottom { background: url("/images/aire/corners.png") no-repeat scroll right -111px #3360A8; }
+body.layoutComment table#screen .map .bottom/*, body.layoutHelp table#screen .help .bottom*/, table#screen .homeContent .bottom { background: url("/images/aire/corners.png") no-repeat scroll right -111px #3360A8; }
 
 body.layoutNormal table#screen td.comment { display: none; }
 body.layoutNormal table#screen td.help { display: none; }
 body.layoutComment table#screen td.collections { display: none; }
 body.layoutComment table#screen td.reprs { display: none; }
 body.layoutComment table#screen td.help { display: none; }
+/*body.layoutHelp table#screen td.collections { display: none; }*/
+body.layoutHelp table#screen td.comment { display: none; }
+body.layoutHelp table#screen td.map { display: none; }
+/*body.layoutHelp table#screen td.reprs { display: none; }*/
 
 /* OpenLayers */
 .olHandlerBoxZoomBox { border: 2px solid red; position: absolute; background-color: white; opacity: 0.50; font-size: 1px; filter: alpha(opacity=50); }
@@ -65,12 +74,12 @@ body.layoutComment table#screen td.help { display: none; }
 #toolbar .aiControlSaveItemInactive { background-image: url("/images/aire/tool_save_1.png")}
 #toolbar .aiControlPrintItemActive { background-image: url("/images/aire/tool_print_1.png")}
 #toolbar .aiControlPrintItemInactive { background-image: url("/images/aire/tool_print_1.png")}
-#toolbar .aiControlDataItemActive { background-image: url("/images/aire/tool_print_1.png")}
-#toolbar .aiControlDataItemInactive { background-image: url("/images/aire/tool_print_1.png")}
+#toolbar .aiControlDataItemActive { background-image: url("/images/aire/tool_data_1.png")}
+#toolbar .aiControlDataItemInactive { background-image: url("/images/aire/tool_data_1.png")}
 #toolbar .aiControlHelpItemActive { background-image: url("/images/aire/tool_help_1.png")}
 #toolbar .aiControlHelpItemInactive { background-image: url("/images/aire/tool_help_1.png")}
-#toolbar .olControlpmLegendItemActive { background-image: url("/images/aire/tool_legend_1.png")}
-#toolbar .olControlpmLegendItemInactive { background-image: url("/images/aire/tool_legend_0.png")}
+#toolbar .aiControlLegendItemActive { background-image: url("/images/aire/tool_legend_1.png")}
+#toolbar .aiControlLegendItemInactive { background-image: url("/images/aire/tool_legend_0.png")}
 #toolbar .aiControlHomeItemActive { background-image: url("/images/aire/accueil.png")}
 #toolbar .aiControlHomeItemInactive { background-image: url("/images/aire/accueil.png")}
 #scale { float: right; }

@@ -8,6 +8,7 @@ dojo.require('package.openlayers');
 // workspace
 dojo.require('geonef.jig.workspace');
 dojo.require('dojo.parser');
+dojo.require('aire.app');
 
 // UI
 dojo.require('dijit.layout.BorderContainer');

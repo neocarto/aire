@@ -31,32 +31,8 @@ dojo.provide('aire.start.collection');
      dojo['require']('package.collection');
      geonef.jig.workspace.initialize({ data: workspaceData });
      dojo.parser.parse();
-     dojo.connect(dojo.byId('showComment'), 'onclick', window,
-                  function() {
-                    dojo.removeClass(dojo.body(), 'layoutNormal');
-                    dojo.addClass(dojo.body(), 'layoutComment');
-                  });
-     dojo.connect(dojo.byId('hideComment'), 'onclick', window,
-                  function() {
-                    dojo.removeClass(dojo.body(), 'layoutComment');
-                    dojo.addClass(dojo.body(), 'layoutNormal');
-                  });
-     if (window.aireCollection.startMap) {
-       var startMap = window.aireCollection.startMap;
-       var mapW = dijit.byId('map');
-       var def = mapW.layersDefs.layers.filter(function(d) {
-                   return d.code === startMap; })[0];
-       if (def) {
-         mapW.layersDefs.addLayerToMap(def.name);
-       } else {
-         alert("Carte initiale non définie : "+startMap);
-       }
-       //map.showMap(window.mapSet.startMap);
-     }
-     // var workspace = geonef.jig.workspace.loadWidget('root');
-     // workspace.placeOnWindow();
-     // workspace.startup();
-     // dojo.style('wait', 'display', 'none');
+     aire.app.init();
+     aire.app.start();
    };
 
    var attempt = function() {
