@@ -24,7 +24,9 @@ class CollectionController extends Controller
     $coll = $this->getCollection($id);
     $maps = $this->getMaps($coll);
     $collData = array('maps' => $maps,
-                      'startMap' => $coll->startMap);
+                      'startMap' => $coll->startMap,
+                      'zoomBarX' => $coll->zoomBarX,
+                      'zoomBarY' => $coll->zoomBarY);
     $env = $this->container->getParameter('kernel.environment');
     $this->container->get('doctrine.odm.mongodb.documentManager')
       ->flush();

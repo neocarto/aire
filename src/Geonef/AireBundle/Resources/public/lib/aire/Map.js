@@ -77,6 +77,12 @@ dojo.declare('aire.Map', [ geonef.ploomap.map.Classical ],
 
   postMixInProperties: function() {
     this.inherited(arguments);
+    if (window.aireCollection.zoomBarX > 0) {
+      OpenLayers.Control.PanZoom.X = window.aireCollection.zoomBarX;
+    }
+    if (window.aireCollection.zoomBarY > 0) {
+      OpenLayers.Control.PanZoom.Y = window.aireCollection.zoomBarY;
+    }
     this.asyncInit.deferCall(this, ['_setMapAttr']);
   },
 
