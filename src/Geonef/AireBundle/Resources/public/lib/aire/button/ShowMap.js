@@ -53,8 +53,24 @@ dojo.declare('aire.button.ShowMap', [ geonef.jig.button.Action ],
 
   _setLevelAttr: function(level) {
     this.level = level;
-    this.attr('label', level);
+    this.attr('label', this.translateLevel(level));
   },
+
+  translateLevel: function(level) {
+    var obj = {
+      nuts0: '0',
+      nuts1: '1',
+      nuts2: '2',
+      nuts23: '2/3',
+      nuts3: '3',
+      '50km': '50',
+      '100km': '100',
+      '200km': '200',
+      '300km': '300',
+    };
+    return obj[level] || level;
+  },
+
 
   onClick: function() {
     //console.log('this.mapId', this, this.map);

@@ -84,11 +84,17 @@
                  region="right" doLayout="true" class=""
                  style="width:220px;">
               {% for reprName, repr in maps %}
-              <div dojoType="dijit.layout.ContentPane" title="Cartes {{ reprName }}">
+              <div dojoType="dijit.layout.ContentPane" title="{{ reprLabels[reprName] }}">
+                <h2>{{ reprTitles[reprName] }}</h2>
                 {% for level, map in repr %}
                 <button dojoType="aire.button.ShowMap" mapWidget="map"
                         level="{{ level }}" map="{{ map.id }}"></button>
-                {% endfor %}
+                {% endfor %}<br/>
+                <p class="reprSummary">
+                  <img src="/images/aire/repr/{{ reprName }}.png"
+                       alt="{{ reprName }}"/>
+                  {{ reprSummary[reprName] }}
+                </p>
               </div>
               {% endfor %}
             </div>
