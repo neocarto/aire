@@ -18,7 +18,7 @@ aire.app = {
   },
 
   setComment: function(state) {
-    aire.app.setLayout('layoutComment');
+    aire.app.setLayout(state ? 'layoutComment' : 'layoutNormal');
   },
 
   exportSvg: function() {
@@ -49,9 +49,28 @@ aire.app = {
                'display', state ? '' : 'none');
   },
 
+  showLayer: function(code) {
+    console.log('showLayer', this, arguments);
+    var def = aire.app.map.layersDefs.layers.filter(
+      function(d) { return d.code === code; })[0];
+    if (def) {
+      aire.app.map.layersDefs.addLayerToMap(def.name);
+    } else {
+      alert("Carte non définie (pour cette collection) : "+code);
+    }
+  },
+
+  setCenter: function() {
+    console.log('setCenter', this, arguments);
+    aire.app.map.map.setCenter.apply(aire.app.map.map, arguments);
+  },
+
   init: function() {
     aire.app.layout = 'layoutNormal';
     aire.app.map = dijit.byId('map');
+    dojo.query('#screen > tbody > tr > td.collections > .commentSmall')
+        .connect('onclick', window,
+                 dojo.hitch(aire.app, aire.app.setComment, true));
     dojo.connect(dojo.byId('showComment'), 'onclick', window,
                  dojo.hitch(aire.app, aire.app.setComment, true));
     dojo.connect(dojo.byId('hideComment'), 'onclick', window,

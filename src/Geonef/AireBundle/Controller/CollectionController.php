@@ -30,10 +30,11 @@ class CollectionController extends Controller
     $env = $this->container->getParameter('kernel.environment');
     $this->container->get('doctrine.odm.mongodb.documentManager')
       ->flush();
-
+    $comment = $this->processComment($coll);
     return $this->render('GeonefAireBundle:Collection:visu.twig.html',
                          array('categories' => $categories,
                                'collection' => $coll,
+                               'comment' => $comment,
                                'collection_json' => json_encode($collData),
                                'maps' => $maps,
                                'env' => $env,
@@ -84,6 +85,64 @@ class CollectionController extends Controller
       }
     }
     return $maps;
+  }
+
+  protected function processComment(MapCollectionMultiRepr $coll)
+  {
+    return $this->_substitComment($coll->comment);
+  }
+
+  protected function _substitComment($str)
+  {
+    $start = strpos($str, '{');
+    if ($start !== false) {
+      $end = strpos($str, '}', $start);
+      if ($end !== false) {
+        $c = substr($str, $start + 1, $end - $start - 1);
+        $subst = $this->_processSubstitComment(explode(':', $c));
+        if ($subst !== null) {
+          $str = substr($str, 0, $start) . $subst
+            . $this->_substitComment(substr($str, $end + 1));
+        }
+      }
+    }
+    return $str;
+  }
+
+  protected function _processSubstitComment($cmd)
+  {
+    $t = '';
+    if ($cmd[0] == 'move' && isset($cmd[1])) {
+      $code = strtr($cmd[1], array('_' => '/',
+                                   'stockandratio' => 'stockRatio',
+                                   'disc' => 'ratioDisc',
+                                   'carroyage' => 'ratioGrid',
+                                   'smooth' => 'potential',
+                                   'c40' => '50km',
+                                   'c80' => '100km',
+                                   'c160' => '200km',
+                                   'c320' => '300km',
+                                   'p40' => '50km',
+                                   'p80' => '100km',
+                                   'p160' => '200km',
+                                   'p320' => '300km',
+                                   ));
+      $onclick = 'aire.app.showLayer(\''.$code.'\');';
+      if (isset($cmd[3])) /* avec coordonnes */ {
+        $lonlat = 'new OpenLayers.LonLat('.$cmd[2].','.$cmd[3].')';
+        if (isset($cmd[4])) /* avec zoom */ {
+          $onclick .= 'aire.app.setCenter('.$lonlat.', '.$cmd[4].');';
+        } else {
+          $onclick .= 'aire.app.setCenter('.$lonlat.');';
+        }
+      }
+      $onclick .= 'return false;';
+      $t = '<a href="#" onclick="'.$onclick.'" class="moveAction">';
+    }
+    if ($cmd[0] == '/move') {
+      $t = '</a>';
+    }
+    return $t;
   }
 
   /* /\** */

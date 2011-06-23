@@ -41,16 +41,20 @@
           <!--div dojoType="geonef.ploomap.tool.Layers" mapWidget="map"></div-->
           </div>
           <div class="commentSmall">
-            {{ collection.comment }}
+            {% autoescape false %}
+            {{ comment }}
+            {% endautoescape %}
           </div>
           <div class="bottom" id="showComment">
             Voir le commentaire
           </div>
         </td>
         <td class="comment">
-          <h1 class="s">Comment!</h1>
+          <h1 class="s">Commentaire</h1>
           <div class="area">
-            {{ collection.comment }}
+            {% autoescape false %}
+            {{ comment }}
+            {% endautoescape %}
           </div>
           <div class="bottom" id="hideComment">
             Cacher le commentaire
