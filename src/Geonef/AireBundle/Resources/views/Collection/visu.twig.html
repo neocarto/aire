@@ -71,7 +71,7 @@
         <td class="help">
           <h1 class="s">Help!</h1>
           <div class="area">
-            <iframe src="/data/help.html"></iframe>
+            <iframe id="helpFrame" src="/data/help/"></iframe>
           </div>
           <div class="bottom" id="hideHelp">
             Revenir à la carte
@@ -94,13 +94,23 @@
                   <img src="/images/aire/repr/{{ reprName }}.png"
                        alt="{{ reprName }}"/>
                   {{ reprSummary[reprName] }}
+                  <span class="help"
+                        onclick="aire.app.showHelp('representations.php#{{ reprName }}') && undefined">[EN SAVOIR PLUS]</span>
                 </p>
               </div>
               {% endfor %}
             </div>
           </div>
           <div class="bottom">
-            Bottom!
+            <a href="http://www.ums-riate.fr/" target="_blank"
+               ><img src="/images/aire/logo.gif" alt="UMS RIATE - Carto"/></a>
+            <div dojoType="geonef.ploomap.tool.OverviewMap"
+                 mapWidget="map" copyLayer="__base__" showOptionButton="false"
+                 layerOptions="{maxResolution:35420,minScale:null,maxScale:null,minResolution:null,resolutions:null,scales:null}"
+                 __mapOptions="{maxResolution:'auto',minScale:null,maxScale:null,minResolution:null,resolutions:null,scales:null,resolution:null}"
+                 maxResolution="35420"
+                 delta="4"
+                 class="overview"></div>
           </div>
         </td>
       </tr></tbody>

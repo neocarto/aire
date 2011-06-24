@@ -22,6 +22,7 @@ dojo.require('geonef.ploomap.OpenLayers.Control.PanZoomBar');
 dojo.require('geonef.ploomap.OpenLayers.Control.TileLoadSpinner');
 dojo.require('geonef.ploomap.OpenLayers.Control.WMSGetFeatureInfo');
 dojo.require('aire.OpenLayers.Control.AireToolbar');
+dojo.require('geonef.ploomap.tool.OverviewMap');
 
 //
 dojo.require('aire.layerDef.Collection');

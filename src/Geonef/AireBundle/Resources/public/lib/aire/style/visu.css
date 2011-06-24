@@ -20,14 +20,19 @@ table#screen h1.s { height: 22px; padding: 5px; text-align: center; font-size: 1
 table#screen div.area { height: /*480*/483px; margin: 3px 0; border: 1px solid #ccc; }
 table#screen div.bottom { height: 26px; padding: 3px; background-color: #3360A8; color: #fff; text-align: center; }
 
+table#screen .reprs { width: 232px; }
 table#screen .reprs .dijitAccordionContainer { width: 100%; height: 100%; background: #CFE7F3; }
+table#screen .reprs .area { height: 412px; }
+table#screen .reprs .bottom { background: transparent; }
+table#screen .reprs .bottom img { float: right; margin: 0; }
+table#screen .reprs .bottom .overview { width: 113px; height: 100px; }
+
 table#screen .collections { width: 232px; }
 table#screen .map { width: 541px; }
 table#screen .map .ploomapMap { background: #fff; }
 table#screen .comment { width: 469px; }
 table#screen .comment .area { overflow: auto; padding: 5px; }
 table#screen .help { width: 541px; }
-table#screen .reprs { width: 232px; }
 table#screen .collections h1, table#screen .comment h1 { background: url("/images/aire/corners.png") no-repeat scroll 0 0 #3360A8; }
 table#screen .collections .area { height: 403px; overflow: auto; color: #218BBF; }
 table#screen .collections .area .dijitTitlePane {  }
@@ -100,3 +105,5 @@ body.layoutHelp table#screen td.map { display: none; }
 .reprs .area .dijitAccordionContainer-dijitContentPane .mapEnabled .dijitButtonNode { background: #f18216; color: #fff; }
 .reprs .area h2 { font-size: 1em; margin: 0 0 5px 0; }
 .reprs .area p.reprSummary img { float: left; margin: 0 5px 2px 0; }
+.reprs .area p.reprSummary span.help { color: #F18216; font-weight: bold; cursor: pointer; }
+.reprs .area p.reprSummary span.help:hover { text-decoration: underline; }

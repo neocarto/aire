@@ -99,14 +99,14 @@ dojo.declare('aire.Map', [ geonef.ploomap.map.Classical ],
   },
 
   updateLegend: function() {
-    console.log('updateLegend', this, arguments,
-                this.map.baseLayer, this.map.baseLayer.legendData);
+    //console.log('updateLegend', this, arguments,
+    //            this.map.baseLayer, this.map.baseLayer.legendData);
     this.legendContainer.setupMap(this.map.baseLayer.legendData);
   },
 
   onZoomChange: function(newZoom) {
     this.inherited(arguments);
-    console.log('resolution', this, arguments, this.map.getResolution());
+    //console.log('resolution', this, arguments, this.map.getResolution());
     this.legendContainer.attr('resolution', this.map.getResolution());
   },
 

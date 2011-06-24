@@ -12,8 +12,14 @@ aire.app = {
     dojo.addClass(dojo.body(), aire.app.layout);
   },
 
-  showHelp: function(state) {
+  showHelp: function(path) {
     console.log('showHelp', arguments);
+    if (path === true) {
+      path = '';
+    }
+    if (dojo.isString(path)) {
+      dojo.byId('helpFrame').src = '/data/help/'+path;
+    }
     aire.app.setLayout('layoutHelp');
   },
 

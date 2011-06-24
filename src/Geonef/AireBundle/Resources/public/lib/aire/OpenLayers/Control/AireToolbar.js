@@ -24,7 +24,6 @@ aire.OpenLayers.Control.AireToolbar =
   },
 
   draw: function() {
-    console.log('draw', this, arguments);
     var div = OpenLayers.Control.Panel.prototype.draw.apply(this, arguments);
     if (!this._controlsDefined) {
       this.defineControls();
@@ -33,7 +32,6 @@ aire.OpenLayers.Control.AireToolbar =
   },
 
   activate: function() {
-    console.log('activate', this, arguments);
     return OpenLayers.Control.Panel.prototype.activate.apply(this, arguments);
   },
 
