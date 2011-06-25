@@ -20,8 +20,8 @@ framework:
     auto_start:     true
     #escaping: htmlspecialchars
     #renderers:
-  #translator:
-  #  fallback:
+  translator:
+    fallback: fr
 
 
 # Twig Configuration

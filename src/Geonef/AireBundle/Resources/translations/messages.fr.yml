@@ -1,0 +1,37 @@
+
+visu:
+  themes: Thèmes
+  comment:
+    title: Commentaire
+    show: Voir le commentaire
+    hide: Cacher le commentaire
+  repr:
+    title: Représentations
+    readMore: EN SAVOIR PLUS
+    reprTitles:
+      stock: "Choisissez le niveau territorial (NUTS)"
+      ratio: "Choisissez le niveau territorial (NUTS)"
+      stockRatio: "Choisissez le niveau territorial (NUTS)"
+      ratioDisc: "Choisissez le niveau territorial (NUTS)"
+      cartogram: "Choisissez le niveau territorial (NUTS)"
+      ratioGrid: "Choisissez la résolution spatiale (en km)"
+      potential: "Choisissez la généralisation spatiale (en km)"
+    reprLabels:
+      stock: Stock
+      ratio: Ratio
+      stockRatio: "Stock & Ratio"
+      ratioDisc: Discontinuités
+      cartogram: Anamorphoses
+      ratioGrid: Carroyages
+      potential: Potentiels
+    reprDescriptions:
+      stock: "Les cartes de stock permettent de représenter des données de nature quantitative brute ou absolue par un symbole proportionnel."
+      ratio: "Les données de ratio  sont des données quantitatives calculées à partir de données brutes dont ont fait le rapport. Leur représentation graphique forme des cartes choroplèthes."
+      stockRatio: "Ce type de représentation permet de marier, sur une même carte, la représentation des données brutes et des données de rapport."
+      ratioDisc: "La visualisation de lignes de discontinuités permet de mettre en exergue les ruptures spatiales des phénomènes socio-économiques étudiés."
+      cartogram: "La représentation par anamorphoses permet de déformer les unités territoriales en fonction de la valeur de la donnée brute étudiée."
+      ratioGrid: "La carte carroyéé est un moyen de s'affranchir de l'arbitraire et de l'irrégularité d'un découpage administratif en mettant en évidence les grandes tendances de répartition spatiale."
+      potential: "La carte lissée (par la méthode des potentiels) permet de visualiser les phénomènes spatiaux de façon continue, en s'affranchissment completement du maillage territorial sous jacent."
+  help:
+    title: Aide
+    hide: Revenir à la carte
