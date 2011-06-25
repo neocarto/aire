@@ -1,0 +1,38 @@
+
+
+visu:
+  themes: Themes
+  comment:
+    title: Comment
+    show: View comment
+    hide: Hide comment
+  repr:
+    title: Representations
+    readMore: READ MORE
+    reprTitles:
+      stock: "Choose the territory level (NUTS)"
+      ratio: "Choose the territory level (NUTS)"
+      stockRatio: "Choose the territory level (NUTS)"
+      ratioDisc: "Choose the territory level (NUTS)"
+      cartogram: "Choose the territory level (NUTS)"
+      ratioGrid: "Choose the spatial resolution (in km)"
+      potential: "Choose the spatial generalisation (in km)"
+    reprLabels:
+      stock: Stock map
+      ratio: Ratio map
+      stockRatio: "Stock + Ratio map"
+      ratioDisc: Discontinuity map
+      cartogram: Anamorphosis
+      ratioGrid: Grid
+      potential: Smoothing
+    reprDescriptions:
+      stock: "Les cartes de stock permettent de représenter des données de nature quantitative brute ou absolue par un symbole proportionnel."
+      ratio: "Les données de ratio  sont des données quantitatives calculées à partir de données brutes dont ont fait le rapport. Leur représentation graphique forme des cartes choroplèthes."
+      stockRatio: "Ce type de représentation permet de marier, sur une même carte, la représentation des données brutes et des données de rapport."
+      ratioDisc: "La visualisation de lignes de discontinuités permet de mettre en exergue les ruptures spatiales des phénomènes socio-économiques étudiés."
+      cartogram: "La représentation par anamorphoses permet de déformer les unités territoriales en fonction de la valeur de la donnée brute étudiée."
+      ratioGrid: "La carte carroyéé est un moyen de s'affranchir de l'arbitraire et de l'irrégularité d'un découpage administratif en mettant en évidence les grandes tendances de répartition spatiale."
+      potential: "La carte lissée (par la méthode des potentiels) permet de visualiser les phénomènes spatiaux de façon continue, en s'affranchissment completement du maillage territorial sous jacent."
+  help:
+    title: Help
+    hide: Back to the map

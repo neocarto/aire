@@ -107,3 +107,7 @@ body.layoutHelp table#screen td.map { display: none; }
 .reprs .area p.reprSummary img { float: left; margin: 0 5px 2px 0; }
 .reprs .area p.reprSummary span.help { color: #F18216; font-weight: bold; cursor: pointer; }
 .reprs .area p.reprSummary span.help:hover { text-decoration: underline; }
+
+
+/* overloads */
+.ploomapToolOverviewMap .olControlOverviewMapExtentRectangle { border-color: #f18216; background: #f18216; opacity: 0.85; }

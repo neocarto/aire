@@ -98,6 +98,9 @@ aire.app = {
          alert("Carte initiale non définie : "+startMap);
        }
        //map.showMap(window.mapSet.startMap);
+       if (window.location.hash === '#comment') {
+         window.setTimeout(dojo.hitch(null, aire.app.setComment, true), 50);
+       }
      }
 
   },

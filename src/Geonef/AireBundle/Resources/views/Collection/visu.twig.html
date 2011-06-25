@@ -23,15 +23,25 @@
     <table id="screen">
       <tbody><tr>
         <td class="collections">
-          <h1 class="s">Thèmes</h1>
+          <h1 class="s">{{"visu.themes"|trans}}</h1>
           <div class="area">
           {% for category in categories %}
             <div dojoType="dijit.TitlePane" title="{{ category.title }}" open="{% if category.id == collection.category.uuid %}true{% else %}false{% endif %}">
               <ul>
                 {% for icoll in category.collections %}
                 <li>
-                  {% if icoll.id == collection.uuid %}<b>{{ icoll.title }}</b>
-                  {% else %}<a href="/collection/{{ icoll.id }}">{{ icoll.title }}</a>
+                  {% if icoll.id == collection.uuid
+                  %}<b>{{ icoll.title }}</b>
+                    {% if icoll.hasComment %}
+                    <a href="javascript:aire.app.setComment(true) && undefined"><img
+                    src="/images/aire/bulle.png"/></a>
+                    {% endif %}
+                  {% else %}
+                  <a href="/collection/{{ icoll.id }}">{{ icoll.title }}</a>
+                    {% if icoll.hasComment %}
+                    <a href="/collection/{{ icoll.id }}#comment"><img
+                    src="/images/aire/bulle.png"/></a>
+                    {% endif %}
                   {% endif %}
                 </li>
                 {% endfor %}
@@ -46,18 +56,18 @@
             {% endautoescape %}
           </div>
           <div class="bottom" id="showComment">
-            Voir le commentaire
+            {{"visu.comment.show"|trans}}
           </div>
         </td>
         <td class="comment">
-          <h1 class="s">Commentaire</h1>
+          <h1 class="s">{{"visu.comment.title"|trans}}</h1>
           <div class="area">
             {% autoescape false %}
             {{ comment }}
             {% endautoescape %}
           </div>
           <div class="bottom" id="hideComment">
-            Cacher le commentaire
+            {{"visu.comment.hide"|trans}}
           </div>
         </td>
         <td class="map">
@@ -69,23 +79,23 @@
           </div>
         </td>
         <td class="help">
-          <h1 class="s">Help!</h1>
+          <h1 class="s">{{"visu.help.title"|trans}}</h1>
           <div class="area">
             <iframe id="helpFrame" src="/data/help/"></iframe>
           </div>
           <div class="bottom" id="hideHelp">
-            Revenir à la carte
+            {{"visu.help.hide"|trans}}
           </div>
         </td>
         <td class="reprs">
-          <h1 class="s">Représentations</h1>
+          <h1 class="s">{{"visu.repr.title"|trans}}</h1>
           <div class="area">
             <div dojoType="dijit.layout.AccordionContainer"
                  region="right" doLayout="true" class=""
                  style="width:220px;">
               {% for reprName, repr in maps %}
-              <div dojoType="dijit.layout.ContentPane" title="{{ reprLabels[reprName] }}">
-                <h2>{{ reprTitles[reprName] }}</h2>
+              <div dojoType="dijit.layout.ContentPane" title="{{ ("visu.repr.reprLabels."~reprName)|trans }}">
+                <h2>{{ ("visu.repr.reprTitles."~reprName)|trans }}</h2>
                 {% for level, map in repr %}
                 <button dojoType="aire.button.ShowMap" mapWidget="map"
                         level="{{ level }}" map="{{ map.id }}"></button>
@@ -93,9 +103,9 @@
                 <p class="reprSummary">
                   <img src="/images/aire/repr/{{ reprName }}.png"
                        alt="{{ reprName }}"/>
-                  {{ reprSummary[reprName] }}
+                  {{ ("visu.repr.reprDescriptions."~reprName)|trans }}
                   <span class="help"
-                        onclick="aire.app.showHelp('representations.php#{{ reprName }}') && undefined">[EN SAVOIR PLUS]</span>
+                        onclick="aire.app.showHelp('representations.php#{{ reprName }}') && undefined">[{{"visu.repr.readMore"|trans}}]</span>
                 </p>
               </div>
               {% endfor %}
@@ -106,10 +116,11 @@
                ><img src="/images/aire/logo.gif" alt="UMS RIATE - Carto"/></a>
             <div dojoType="geonef.ploomap.tool.OverviewMap"
                  mapWidget="map" copyLayer="__base__" showOptionButton="false"
-                 layerOptions="{maxResolution:35420,minScale:null,maxScale:null,minResolution:null,resolutions:null,scales:null}"
+                 __layerOptions="{maxResolution:35420,minScale:null,maxScale:null,minResolution:null,resolutions:null,scales:null}"
                  __mapOptions="{maxResolution:'auto',minScale:null,maxScale:null,minResolution:null,resolutions:null,scales:null,resolution:null}"
-                 maxResolution="35420"
-                 delta="4"
+                 __maxResolution="auto"
+                 autoPan="true"
+                 delta="10"
                  class="overview"></div>
           </div>
         </td>

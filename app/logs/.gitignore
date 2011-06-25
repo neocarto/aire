@@ -4,3 +4,4 @@ apache.access.log
 apache.error.log
 mapserver.log
 rewrite.log
+map/
