@@ -33,8 +33,7 @@
                   {% if icoll.id == collection.uuid
                   %}<b>{{ icoll.title }}</b>
                     {% if icoll.hasComment %}
-                    <a href="javascript:aire.app.setComment(true) && undefined"><img
-                    src="/images/aire/bulle.png"/></a>
+                    <a href="#comment"><img src="/images/aire/bulle.png"/></a>
                     {% endif %}
                   {% else %}
                   <a href="/collection/{{ icoll.id }}">{{ icoll.title }}</a>
@@ -55,8 +54,8 @@
             {{ comment }}
             {% endautoescape %}
           </div>
-          <div class="bottom" id="showComment">
-            {{"visu.comment.show"|trans}}
+          <div class="bottom">
+            <a href="#comment">{{"visu.comment.show"|trans}}</a>
           </div>
         </td>
         <td class="comment">
@@ -66,8 +65,8 @@
             {{ comment }}
             {% endautoescape %}
           </div>
-          <div class="bottom" id="hideComment">
-            {{"visu.comment.hide"|trans}}
+          <div class="bottom">
+            <a href="#map">{{"visu.comment.hide"|trans}}</a>
           </div>
         </td>
         <td class="map">
@@ -83,8 +82,8 @@
           <div class="area">
             <iframe id="helpFrame" src="/data/help/"></iframe>
           </div>
-          <div class="bottom" id="hideHelp">
-            {{"visu.help.hide"|trans}}
+          <div class="bottom">
+            <a href="#map">{{"visu.help.hide"|trans}}</a>
           </div>
         </td>
         <td class="reprs">

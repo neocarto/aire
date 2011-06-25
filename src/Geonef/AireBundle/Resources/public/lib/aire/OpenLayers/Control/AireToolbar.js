@@ -82,7 +82,7 @@ aire.OpenLayers.Control.AireToolbar =
           {
 	    displayClass: "aiControlHelp",
 	    title: __("Afficher l'aide"),
-	    trigger: aire.app.showHelp }),
+	    trigger: function() { dojo.hash('help/'); } }),
 	legendButton = new OpenLayers.Control.Button(
           {
 	    displayClass: "aiControlLegend",

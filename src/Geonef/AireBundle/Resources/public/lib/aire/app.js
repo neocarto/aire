@@ -1,6 +1,8 @@
 
 dojo.provide('aire.app');
 
+dojo.require('dojo.hash');
+
 /*
  * Provide app management & global AIRE actions
  */
@@ -18,9 +20,10 @@ aire.app = {
       path = '';
     }
     if (dojo.isString(path)) {
-      dojo.byId('helpFrame').src = '/data/help/'+path;
+      this.helpFrame.src = '/data/help/'+path;
     }
     aire.app.setLayout('layoutHelp');
+    //dojo.hash(dojo.isString(path) ? 'help/'+path : 'help');
   },
 
   setComment: function(state) {
@@ -75,15 +78,16 @@ aire.app = {
     aire.app.layout = 'layoutNormal';
     aire.app.map = dijit.byId('map');
     dojo.query('#screen > tbody > tr > td.collections > .commentSmall')
-        .connect('onclick', window,
-                 dojo.hitch(aire.app, aire.app.setComment, true));
-    dojo.connect(dojo.byId('showComment'), 'onclick', window,
-                 dojo.hitch(aire.app, aire.app.setComment, true));
-    dojo.connect(dojo.byId('hideComment'), 'onclick', window,
-                 dojo.hitch(aire.app, aire.app.setComment, false));
-    dojo.connect(dojo.byId('hideHelp'), 'onclick', window,
-                 dojo.hitch(aire.app, aire.app.showHelp, false));
-
+        .connect('onclick', null, dojo.hitch(null, dojo.hash, 'comment'));
+    this.helpFrame = dojo.byId('helpFrame');
+    dojo.connect(this.helpFrame, 'onload', this.helpFrame,
+                 function() {
+                   //var path =  this.src.replace(/https?:\/\/[^/]+\/data\/help\//, '');
+                   var path =  this.contentWindow.location.pathname
+                     .replace(/\/data\/help\//, '');
+                   console.log('onload!', this, arguments, path);
+                   dojo.hash('help/'+path);
+                 });
   },
 
   start: function() {
@@ -98,12 +102,43 @@ aire.app = {
          alert("Carte initiale non définie : "+startMap);
        }
        //map.showMap(window.mapSet.startMap);
-       if (window.location.hash === '#comment') {
-         window.setTimeout(dojo.hitch(null, aire.app.setComment, true), 50);
+       var hash = dojo.hash();
+       if (hash) {
+         aire.app.onHashChange(hash);
        }
+       dojo.subscribe("/dojo/hashchange", null, aire.app.onHashChange);
      }
-
   },
 
+  onHashChange: function(hash) {
+    console.log('onHashChange', this, arguments);
+    var handlers = {
+      comment: function() {
+        aire.app.setComment(true);
+      },
+      map: function() {
+        aire.app.setLayout('layoutNormal');
+      },
+      help: function(p) {
+        if (p.length > 0) {
+          var path = p.join('/');
+          aire.app.showHelp(path);
+        } else {
+          aire.app.showHelp();
+        }
+      }
+    };
+
+    if (hash === '') {
+      hash = 'map';
+    }
+    var p = hash.split('/');
+    var name = p.shift();
+    if (!handlers[name]) {
+      console.warn("hash not handled:", hash);
+      return;
+    }
+    handlers[name](p);
+  }
 
 };
