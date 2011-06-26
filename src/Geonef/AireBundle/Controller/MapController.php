@@ -16,10 +16,9 @@ class MapController extends Controller
    * Print export screen
    *
    * @extra:Routes({
-   *   @extra:Route("/print", defaults={}),
-   *   @extra:Route("/print/{extent}", name="map_export_print")
+   *   @extra:Route("/{id}/print/")
    * })
-   * @extra:Template()
+   * @   extra:Template()
    */
   public function printAction($id)
   {

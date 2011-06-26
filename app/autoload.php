@@ -9,6 +9,8 @@ $loader = new UniversalClassLoader();
 $loader->registerNamespaces(array(
   'Symfony'     => $__lib_dir.'/symfony/src',
   'Symfony\\Bundle\\DoctrineMongoDBBundle' => $__lib_dir.'/bundles',
+  'Sensio'    => $__lib_dir.'/bundles',
+  'Funkiton' => $__lib_dir.'/bundles',
   'Doctrine\\Common'    => $__lib_dir.'/doctrine-common/lib',
   'Doctrine\\DBAL'    => $__lib_dir.'/doctrine-dbal/lib',
   'Doctrine\\ORM'    => $__lib_dir.'/doctrine-orm/lib',

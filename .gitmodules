@@ -34,3 +34,9 @@
 [submodule "vendor/ploomap-client"]
 	path = vendor/ploomap-client
 	url = git.geonef.fr:/var/lib/git/package/ploomap-client.git
+[submodule "vendor/bundles/Sensio/Bundle/FrameworkExtraBundle"]
+	path = vendor/bundles/Sensio/Bundle/FrameworkExtraBundle
+	url = git://github.com/sensio/SensioFrameworkExtraBundle.git
+[submodule "vendor/bundles/Funkiton/InjectorBundle"]
+	path = vendor/bundles/Funkiton/InjectorBundle
+	url = git://github.com/Funkiton/InjectorBundle.git

@@ -30,14 +30,24 @@ class AppKernel extends Kernel
             new Symfony\Bundle\TwigBundle\TwigBundle(),
             new Symfony\Bundle\MonologBundle\MonologBundle(),
             new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
+            new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             //new Symfony\Bundle\DoctrineBundle\DoctrineBundle(),
             new Symfony\Bundle\DoctrineMongoDBBundle\DoctrineMongoDBBundle(),
             //new Symfony\Bundle\AsseticBundle\AsseticBundle(),
-            //new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
+            new Funkiton\InjectorBundle\FunkitonInjectorBundle(),
+
             new Geonef\ZigBundle\GeonefZigBundle(),
             new Geonef\PgLinkBundle\GeonefPgLinkBundle(),
             new Geonef\PloomapBundle\GeonefPloomapBundle(),
             new Geonef\AireBundle\GeonefAireBundle(),
+
+            // interesting:
+            // http://symfony2bundles.org/steves/MongoAdminBundle
+            // http://symfony2bundles.org/Bazinga/ExposeRoutingBundle
+            // http://symfony2bundles.org/moreweb/ImagineBundle
+            // http://symfony2bundles.org/schmittjoh/CommandBundle (generate License & Exception for PHP classes)
+            // http://symfony2bundles.org/schmittjoh/SecurityExtraBundle
+            //
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
