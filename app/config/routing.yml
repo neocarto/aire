@@ -8,6 +8,9 @@ ploomap:
 home:
   pattern: /
   defaults: { _controller: "GeonefAireBundle:Home:home" }
+home_i18n:
+  pattern: /{_locale}
+  defaults: { _controller: "GeonefAireBundle:Home:home" }
 
 admin:
   pattern: /admin
@@ -15,15 +18,25 @@ admin:
      _controller: "GeonefZigBundle:ViewClass:render"
      path: "views.admin"
 
-collection:
-  pattern: /collection/{id}
-  defaults: { _controller: "GeonefAireBundle:Collection:visu" }
+admin_i18n:
+  pattern: /admin/{_locale}
+  defaults:
+     _controller: "GeonefZigBundle:ViewClass:render"
+     path: "views.admin"
 
-csvFeatures:
-  pattern: /map/{id}/csvFeatures
-  defaults: { _controller: "GeonefPloomapBundle:Map:csvFeatures" }
+# collection:
+#   pattern: /collection/{id}
+#   defaults: { _controller: "GeonefAireBundle:Collection:visu" }
 
-print:
-  pattern: /map/{id}/print
-  defaults: { _controller: "GeonefAireBundle:Map:print" }
+# csvFeatures:
+#   pattern: /map/{id}/csvFeatures
+#   defaults: { _controller: "GeonefPloomapBundle:Map:csvFeatures" }
 
+# print:
+#   pattern: /map/{id}/print
+#   defaults: { _controller: "GeonefAireBundle:Map:print" }
+
+aire_controllers:
+  resource: "@GeonefAireBundle/Controller"
+  prefix:   /
+  type:     annotation

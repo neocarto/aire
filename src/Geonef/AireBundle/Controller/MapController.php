@@ -6,6 +6,15 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Geonef\PloomapBundle\Document\MapCollection\MultiRepr as MapCollectionMultiRepr;
 use Geonef\Ploomap\Util\Geo;
 
+use Funkiton\InjectorBundle\Annotation\Inject;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+
+/**
+ *
+ * @Route("/map")
+ * @Inject("doctrine.odm.mongodb.documentManager", name="dm")
+ */
 class MapController extends Controller
 {
   const DOC_PREFIX = 'Geonef\PloomapBundle\Document\\';
@@ -15,10 +24,9 @@ class MapController extends Controller
   /**
    * Print export screen
    *
-   * @extra:Routes({
-   *   @extra:Route("/{id}/print/")
-   * })
-   * @   extra:Template()
+   * @Route("/{id}/print", name="aire_map_print")
+   * @Route("/{id}/print/{_locale}", name="aire_map_print_i18n")
+   * @Template("GeonefAireBundle:Map:print.twig.html")
    */
   public function printAction($id)
   {
@@ -36,22 +44,18 @@ class MapController extends Controller
     $url = $map->getWmsMapUrl($this->container, $params);
     $env = $this->container->getParameter('kernel.environment');
 
-    return $this->render
-       ('GeonefAireBundle:Map:print.twig.html',
-        array('map' => $map,
-              'mapUrl' => $url,
-              'legend' => $map->getLegendData($this->container),
-              'resolution' => 8855,
-              'extent' => $extent,
-              'env' => $env,
-              ));
+    return array('map' => $map,
+                 'mapUrl' => $url,
+                 'legend' => $map->getLegendData($this->container),
+                 'resolution' => 8855,
+                 'extent' => $extent,
+                 'env' => $env);
   }
 
   protected function getMap($id)
   {
-    $dm = $this->container->get('doctrine.odm.mongodb.documentManager');
     $class = self::DOC_PREFIX.'Map';
-    $map = $dm->find($class, $id);
+    $map = $this->dm->find($class, $id);
     if (!$map) {
       throw new \Exception('document not found in class '.$class.': '.$id);
     }

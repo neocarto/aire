@@ -8,6 +8,16 @@ use Geonef\PloomapBundle\Document\MapCollection\MultiRepr as MapCollectionMultiR
 use Geonef\PloomapBundle\Document\MapCollection\SingleRepr as MapCollectionSingleRepr;
 use Geonef\Ploomap\Util\Geo;
 
+use Funkiton\InjectorBundle\Annotation\Inject;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+
+/**
+ *
+ * @Route("/collection")
+ * @Inject("doctrine.odm.mongodb.documentManager", name="dm")
+ * @Inject("session", name="session")
+ */
 class CollectionController extends Controller
 {
   const DOC_PREFIX = 'Geonef\PloomapBundle\Document\\';
@@ -15,6 +25,10 @@ class CollectionController extends Controller
 
   /**
    * Main action of application - screen of one collection
+   *
+   * @Route("/{id}", name="aire_collection_visu")
+   * @Route("/{id}/{_locale}", name="aire_collection_visu_i18n")
+   * @Template("GeonefAireBundle:Collection:visu.twig.html")
    *
    * @param $id string  ID of collection to show
    */
@@ -31,14 +45,13 @@ class CollectionController extends Controller
     $this->container->get('doctrine.odm.mongodb.documentManager')
       ->flush();
     $comment = $this->processComment($coll);
-    return $this->render('GeonefAireBundle:Collection:visu.twig.html',
-                         array('categories' => $categories,
-                               'collection' => $coll,
-                               'comment' => $comment,
-                               'collection_json' => json_encode($collData),
-                               'maps' => $maps,
-                               'env' => $env,
-                               ));
+    return array('categories' => $categories,
+                 'collection' => $coll,
+                 'comment' => $comment,
+                 'collection_json' => json_encode($collData),
+                 'maps' => $maps,
+                 'locale' => $this->session->getLocale(),
+                 'env' => $env);
   }
 
   /**
@@ -46,8 +59,7 @@ class CollectionController extends Controller
    */
   protected function getCollection($id)
   {
-    $dm = $this->container->get('doctrine.odm.mongodb.documentManager');
-    $coll = $dm->find(static::COLLECTION_CLASS, $id);
+    $coll = $this->dm->find(static::COLLECTION_CLASS, $id);
     if (!$coll) {
       throw new \Exception('document not found in class '.static::COLLECTION_CLASS.': '.$id);
     }
@@ -144,25 +156,5 @@ class CollectionController extends Controller
     }
     return $t;
   }
-
-  /* /\** */
-  /*  * @return Geonef\PloomapBundle\Document\MapCollection\SingleRepr */
-  /*  *\/ */
-  /* protected function getHomeCollection() */
-  /* { */
-  /*   $dm = $this->container->get('doctrine.odm.mongodb.documentManager'); */
-  /*   $query = $dm->getRepository(static::COLLECTION_CLASS.'\SingleRepr')->createQueryBuilder(); */
-  /*   $it = $query->field('published')->equals(true)->getQuery()->execute(); */
-  /*   if ($it->count() == 0) { */
-  /*     throw new \Exception("aucune collection SingleRepr publiée"); */
-  /*     //throw new \Exception("cannot find a 'published' SigleRepr MapCollection doc for home map"); */
-  /*   } */
-  /*   return $it->getSingleResult(); */
-  /* } */
-
-  /* protected function getHomeMaps(MapCollectionSingleRepr $coll) */
-  /* { */
-  /*   return array($coll->autoGetMap($this->container)); */
-  /* } */
 
 }

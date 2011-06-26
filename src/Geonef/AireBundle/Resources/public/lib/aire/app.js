@@ -32,7 +32,7 @@ aire.app = {
 
   exportSvg: function() {
     var mapId = aire.app.map.map.baseLayer.name;
-    window.open('/map/'+mapId+'/svg', mapId+'-svg');
+    window.open('/map/'+mapId+'/svg/'+aire.app.locale, mapId+'-svg');
   },
 
   exportPrint: function() {
@@ -41,7 +41,8 @@ aire.app = {
     if (aire.app.map.map.getZoom() !== 0) {
       qs = '?extent='+aire.app.map.map.getExtent().toBBOX();
     }
-    window.open('/map/'+mapId+'/print'+qs, mapId+'-print');
+    window.open('/map/'+mapId+'/print/'+aire.app.locale+qs,
+                mapId+'-print');
   },
 
   exportData: function() {
@@ -50,7 +51,8 @@ aire.app = {
     //if (aire.app.map.map.getZoom() !== 0) {
     //  qs = '?extent='+aire.app.map.map.getExtent().toBBOX();
     //}
-    window.open('/map/'+mapId+'/csvFeatures'+qs, mapId+'-data');
+    window.open('/map/'+mapId+'/csvFeatures/'+aire.app.locale+qs,
+                mapId+'-data');
   },
 
   updateLegend: function(state) {
@@ -75,6 +77,7 @@ aire.app = {
   },
 
   init: function() {
+    aire.app.locale = dojo.body().getAttribute('lang');
     aire.app.layout = 'layoutNormal';
     aire.app.map = dijit.byId('map');
     dojo.query('#screen > tbody > tr > td.collections > .commentSmall')

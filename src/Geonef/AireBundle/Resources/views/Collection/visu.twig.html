@@ -19,7 +19,7 @@
       window.aireCollection = {{ collection_json|raw }};
     </script>
   </head>
-  <body class="tundra layoutNormal">
+  <body class="tundra layoutNormal" lang="{{ locale }}">
     <table id="screen">
       <tbody><tr>
         <td class="collections">
@@ -36,9 +36,9 @@
                     <a href="#comment"><img src="/images/aire/bulle.png"/></a>
                     {% endif %}
                   {% else %}
-                  <a href="/collection/{{ icoll.id }}">{{ icoll.title }}</a>
+                  <a href="{{ path('aire_collection_visu_i18n', { 'id': icoll.id }) }}">{{ icoll.title }}</a>
                     {% if icoll.hasComment %}
-                    <a href="/collection/{{ icoll.id }}#comment"><img
+                    <a href="{{ path('aire_collection_visu_i18n', { 'id': icoll.id }) }}#comment"><img
                     src="/images/aire/bulle.png"/></a>
                     {% endif %}
                   {% endif %}
