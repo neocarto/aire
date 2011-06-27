@@ -11,6 +11,8 @@ $loader->registerNamespaces(array(
   'Symfony\\Bundle\\DoctrineMongoDBBundle' => $__lib_dir.'/bundles',
   'Sensio'    => $__lib_dir.'/bundles',
   'Funkiton' => $__lib_dir.'/bundles',
+  'Stof'  => $__lib_dir.'/bundles',
+  'Gedmo' => $__lib_dir.'/gedmo-doctrine-extensions/lib',
   'Doctrine\\Common'    => $__lib_dir.'/doctrine-common/lib',
   'Doctrine\\DBAL'    => $__lib_dir.'/doctrine-dbal/lib',
   'Doctrine\\ORM'    => $__lib_dir.'/doctrine-orm/lib',

@@ -5,18 +5,18 @@ zig:
 ploomap:
   resource: "@GeonefPloomapBundle/Resources/config/routing.yml"
 
+admin:
+  pattern: /admin
+  defaults:
+     _controller: "GeonefZigBundle:ViewClass:render"
+     path: "views.admin"
+
 home:
   pattern: /
   defaults: { _controller: "GeonefAireBundle:Home:home" }
 home_i18n:
   pattern: /{_locale}
   defaults: { _controller: "GeonefAireBundle:Home:home" }
-
-admin:
-  pattern: /admin
-  defaults:
-     _controller: "GeonefZigBundle:ViewClass:render"
-     path: "views.admin"
 
 admin_i18n:
   pattern: /admin/{_locale}

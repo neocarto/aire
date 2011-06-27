@@ -81,7 +81,7 @@ aire.app = {
     aire.app.layout = 'layoutNormal';
     aire.app.map = dijit.byId('map');
     dojo.query('#screen > tbody > tr > td.collections > .commentSmall')
-        .connect('onclick', null, dojo.hitch(null, dojo.hash, 'comment'));
+        .connect('onclick', null, dojo.partial(dojo.hash, 'comment'));
     this.helpFrame = dojo.byId('helpFrame');
     dojo.connect(this.helpFrame, 'onload', this.helpFrame,
                  function() {

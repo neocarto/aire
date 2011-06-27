@@ -35,3 +35,7 @@ visu:
   help:
     title: Aide
     hide: Revenir à la carte
+
+geonef.ploomap:
+  legend:
+    average: Moyenne

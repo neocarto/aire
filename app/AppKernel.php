@@ -36,6 +36,9 @@ class AppKernel extends Kernel
             new Symfony\Bundle\DoctrineMongoDBBundle\DoctrineMongoDBBundle(),
             //new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Funkiton\InjectorBundle\FunkitonInjectorBundle(),
+            // https://github.com/l3pp4rd/DoctrineExtensions/blob/master/doc/translatable.md
+            // https://github.com/stof/DoctrineExtensionsBundle/blob/master/Resources/doc/index.rst
+            new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
 
             new Geonef\ZigBundle\GeonefZigBundle(),
             new Geonef\PgLinkBundle\GeonefPgLinkBundle(),

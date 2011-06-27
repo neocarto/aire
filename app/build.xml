@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="aire" default="dist">
+
+  <taskdef name="symfony" classname="phing.tasks.SymfonyTask" />
+
+    <target name="test">
+      <symfony command="list" args=""  />
+    </target>
+
+    <target name="pub">
+      <symfony command="zig:install:update-public" args=""  />
+    </target>
+
+    <target name="public">
+      <symfony command="zig:install:update-public" args="--init=true"  />
+    </target>
+
+    <target name="build-ol" depends="public">
+      <symfony command="zig:install:build-openlayers" args=""  />
+    </target>
+
+    <target name="build" depends="build-ol">
+      <symfony command="zig:install:run-shrinksafe" args=""  />
+    </target>
+
+</project>

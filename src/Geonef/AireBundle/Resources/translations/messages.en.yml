@@ -36,3 +36,7 @@ visu:
   help:
     title: Help
     hide: Back to the map
+
+geonef.ploomap:
+  legend:
+    average: Average

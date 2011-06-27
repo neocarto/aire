@@ -14,6 +14,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
  *
  * @Route("/map")
  * @Inject("doctrine.odm.mongodb.documentManager", name="dm")
+ * @Inject("session")
  */
 class MapController extends Controller
 {
@@ -49,6 +50,7 @@ class MapController extends Controller
                  'legend' => $map->getLegendData($this->container),
                  'resolution' => 8855,
                  'extent' => $extent,
+                 'locale' => $this->session->getLocale(),
                  'env' => $env);
   }
 

@@ -1,4 +1,29 @@
 geonef_zig:
+  app:
+    lib_dir_path: %kernel.cache_dir%/public/lib
+    lib_web_path: /lib
+    clients:
+      aire_visu:
+        copyright: blablabla
+        modules:
+          - package.collection
+          - aire.start.collection
+        css:
+          - { module: aire, path: style/visu.css }
+
+    modulePaths:
+      geonef: %kernel.cache_dir%/public/lib
+      #geonef: %kernel.root_dir%/../vendor/ploomap-client/src
+
+    supportedLocales: [ en, fr ]
+
+    localizationModules:
+      - dojo
+      - dijit
+      - geonef.jig
+      - geonef.ploomap
+      #- aire
+
   install:
     # all paths are relative to the parameter 'kernel.root_dir'
     #manager_class: hehe
@@ -32,27 +57,27 @@ geonef_zig:
           - { ns: aire, path: %kernel.cache_dir%/public/lib/aire }
           - { ns: package, path: %kernel.cache_dir%/public/lib/package }
         layers:
-          -
-            name: ../admin.js
-            copyrightFile: '../vendor/cartapatate/lib/cartapatate/copyright.txt'
-            dependencies:
-              - cartapatate.start.loadWorkspace
-              - package.admin
-          -
-            name: ../home.js
-            copyrightFile: '../vendor/cartapatate/lib/cartapatate/copyright.txt'
-            dependencies:
-              - package.home
-              - aire.start.home
-          -
-            name: ../collection.js
-            copyrightFile: '../vendor/cartapatate/lib/cartapatate/copyright.txt'
-            dependencies:
-              - package.collection
-              - aire.start.collection
+          # -
+          #   name: ../admin.js
+          #   copyrightFile: '../vendor/cartapatate/lib/cartapatate/copyright.txt'
+          #   dependencies:
+          #     - cartapatate.start.loadWorkspace
+          #     - package.admin
+          # -
+          #   name: ../home.js
+          #   copyrightFile: '../vendor/cartapatate/lib/cartapatate/copyright.txt'
+          #   dependencies:
+          #     - package.home
+          #     - aire.start.home
+          # -
+          #   name: ../collection.js
+          #   copyrightFile: '../vendor/cartapatate/lib/cartapatate/copyright.txt'
+          #   dependencies:
+          #     - package.collection
+          #     - aire.start.collection
           -
             name: ../print.js
             copyrightFile: '../vendor/cartapatate/lib/cartapatate/copyright.txt'
             dependencies:
               - package.print
-              - aire.start.print
+              #- aire.start.print
