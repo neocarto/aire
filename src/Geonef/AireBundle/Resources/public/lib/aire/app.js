@@ -59,8 +59,10 @@ aire.app = {
   },
 
   updateLegend: function(state) {
-    dojo.style(aire.app.map.legendContainer.domNode,
-               'display', state ? '' : 'none');
+    if (aire.app.map) {
+      dojo.style(aire.app.map.legendContainer.domNode,
+                 'display', state ? '' : 'none');
+    }
   },
 
   showLayer: function(code) {
