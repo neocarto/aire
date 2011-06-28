@@ -25,7 +25,7 @@
       <symfony command="zig:install:update-public" args="--init=true"  />
     </target>
 
-    <target name="translations">
+    <target name="trans">
       <symfony command="zig:app:sync-translations" args=""  />
     </target>
 
@@ -33,8 +33,11 @@
       <symfony command="zig:install:build-openlayers" args=""  />
     </target>
 
-    <target name="build" depends="clear,build-ol,translations">
+    <target name="client">
       <symfony command="zig:install:run-shrinksafe" args=""  />
+    </target>
+
+    <target name="build" depends="clear,public,ol,trans,client">
     </target>
 
 </project>
