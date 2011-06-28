@@ -37,6 +37,23 @@ visu:
     title: Help
     hide: Back to the map
 
+print:
+  warning:
+    paragraph: "Attention : pour que toutes les couleurs de la légende apparaissent à l'impression, il est nécessaire d'activer une option spécifique :"
+    firefox: "Sur <b>Firefox</b> : Fichier -&gt; Mise en page -&gt; Imprimer l'arrière-plan"
+    ie: "Sur <b>Internet Explorer</b> : Outils -&gt; Options Internet -&gt; Avancé -&gt; Impression &gt; Imprimer les couleurs et images d'arrière plan"
+
 geonef.ploomap:
   legend:
     average: Average
+    nodata: No data
+    disc:
+      title: Discontinuité relative
+      nullDisc: Undetermined
+
+aire:
+  app:
+    undefinedStartMap: Start map is not defined
+    undefinedMap: Undefined map (for this collection)
+
+

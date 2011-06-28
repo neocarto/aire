@@ -8,6 +8,15 @@
       <symfony command="list" args=""  />
     </target>
 
+    <target name="clear">
+      <symfony command="cache:clear" args=""  />
+    </target>
+
+    <target name="doctrine">
+      <symfony command="doctrine:mongodb:generate:hydrators" args=""  />
+      <symfony command="doctrine:mongodb:generate:proxies" args=""  />
+    </target>
+
     <target name="pub">
       <symfony command="zig:install:update-public" args=""  />
     </target>
@@ -16,11 +25,15 @@
       <symfony command="zig:install:update-public" args="--init=true"  />
     </target>
 
-    <target name="build-ol" depends="public">
+    <target name="translations">
+      <symfony command="zig:app:sync-translations" args=""  />
+    </target>
+
+    <target name="ol">
       <symfony command="zig:install:build-openlayers" args=""  />
     </target>
 
-    <target name="build" depends="build-ol">
+    <target name="build" depends="clear,build-ol,translations">
       <symfony command="zig:install:run-shrinksafe" args=""  />
     </target>
 

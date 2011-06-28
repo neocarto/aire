@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="/x/aire/style/print.css"/>
     {% endif %}
     <script type="text/javascript">
-      var dojoConfig = { locale: '{{ locale }}' };
+      var djConfig = { locale: '{{ locale }}' };
     </script>
     <script src="/x/dojo/dojo.js" type="text/javascript"></script>
     {% if env == "dev" %}
@@ -35,10 +35,13 @@
     <textarea></textarea>
 
     <div id="notice">
-      Attention : pour que toutes les couleurs de la légende apparaissent à l'impression, il est nécessaire d'activer une option spécifique :   <ul>
-        <li>Sur <b>Firefox</b> : Fichier -&gt; Mise en page -&gt; Imprimer l'arrière-plan</li>
-        <li>Sur <b>Internet Explorer</b> : Outils -&gt; Options Internet -&gt; Avancé -&gt; Impression &gt; Imprimer les couleurs et images d'arrière plan</li>
+      {% autoescape false %}
+      {{ "print.warning.paragraph"|trans }}
+      <ul>
+        <li>{{ "print.warning.firefox"|trans }}</li>
+        <li>{{ "print.warning.ie"|trans }}</li>
       </ul>
+      {% endautoescape %}
     </div>
   </div></body>
 </html>

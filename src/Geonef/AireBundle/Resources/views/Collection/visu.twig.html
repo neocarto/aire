@@ -9,6 +9,9 @@
     {% else %}
     <link rel="stylesheet" type="text/css" href="/x/aire/style/visu.css"/>
     {% endif %}
+    <script type="text/javascript">
+      var djConfig = { locale: '{{ locale }}' };
+    </script>
     <script src="/x/dojo/dojo.js" type="text/javascript"></script>
     {% if env == "dev" %}
     <script src="/lib/aire/start/collection.js" type="text/javascript"></script>

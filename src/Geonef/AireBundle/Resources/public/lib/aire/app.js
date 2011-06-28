@@ -2,6 +2,9 @@
 dojo.provide('aire.app');
 
 dojo.require('dojo.hash');
+dojo.require('dojo.i18n');
+dojo.requireLocalization('aire', 'app');
+
 
 /*
  * Provide app management & global AIRE actions
@@ -67,7 +70,7 @@ aire.app = {
     if (def) {
       aire.app.map.layersDefs.addLayerToMap(def.name);
     } else {
-      alert("Carte non définie (pour cette collection) : "+code);
+      alert(aire.app.i18n.undefinedStartMap+': '+code);
     }
   },
 
@@ -77,6 +80,7 @@ aire.app = {
   },
 
   init: function() {
+    aire.app.i18n = dojo.i18n.getLocalization('aire', 'app');
     aire.app.locale = dojo.body().getAttribute('lang');
     aire.app.layout = 'layoutNormal';
     aire.app.map = dijit.byId('map');
@@ -102,14 +106,14 @@ aire.app = {
        if (def) {
          mapW.layersDefs.addLayerToMap(def.name);
        } else {
-         alert("Carte initiale non définie : "+startMap);
+         alert(aire.app.i18n.undefinedStartMap+" : "+startMap);
        }
        //map.showMap(window.mapSet.startMap);
        var hash = dojo.hash();
        if (hash) {
          aire.app.onHashChange(hash);
        }
-       dojo.subscribe("/dojo/hashchange", null, aire.app.onHashChange);
+       dojo.subscribe('/dojo/hashchange', null, aire.app.onHashChange);
      }
   },
 

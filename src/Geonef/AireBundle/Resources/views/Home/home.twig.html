@@ -9,6 +9,9 @@
     {% else %}
     <link rel="stylesheet" type="text/css" href="/x/aire/style/home.css"/>
     {% endif %}
+    <script type="text/javascript">
+      var djConfig = { locale: '{{ locale }}' };
+    </script>
     <script src="/x/dojo/dojo.js" type="text/javascript"></script>
     {% if env == "dev" %}
     <script src="/lib/aire/start/home.js" type="text/javascript"></script>
@@ -16,7 +19,7 @@
     <script src="/x/home.js" type="text/javascript"></script>
     {% endif %}
   </head>
-  <body class="tundra layoutNormal">
+  <body class="tundra layoutNormal" lang="{{ locale }}">
     <table id="screen">
       <tbody><tr>
         <td class="collections">

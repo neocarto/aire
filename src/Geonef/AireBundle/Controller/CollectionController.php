@@ -16,7 +16,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
  *
  * @Route("/collection")
  * @Inject("doctrine.odm.mongodb.documentManager", name="dm")
- * @Inject("session", name="session")
+ * @Inject("session")
  */
 class CollectionController extends Controller
 {

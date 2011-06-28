@@ -7,7 +7,12 @@ use Geonef\PloomapBundle\Document\MapCategory;
 use Geonef\Zig\Util\FileSystem;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use Funkiton\InjectorBundle\Annotation\Inject;
 
+/**
+ *
+ * @Inject("session")
+ */
 class HomeController extends Controller
 {
 
@@ -27,6 +32,7 @@ class HomeController extends Controller
       "fichier non trouvé : ".$path;
     return array('categories' => $categories,
                  'content' => $content,
+                 'locale' => $this->session->getLocale(),
                  'env' => $env);
   }
 

@@ -13,6 +13,7 @@ geonef_zig:
 
     modulePaths:
       geonef: %kernel.cache_dir%/public/lib
+      aire: %kernel.cache_dir%/public/lib
       #geonef: %kernel.root_dir%/../vendor/ploomap-client/src
 
     supportedLocales: [ en, fr ]
@@ -22,7 +23,7 @@ geonef_zig:
       - dijit
       - geonef.jig
       - geonef.ploomap
-      #- aire
+      - aire
 
   install:
     # all paths are relative to the parameter 'kernel.root_dir'
