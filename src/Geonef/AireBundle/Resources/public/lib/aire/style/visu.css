@@ -14,7 +14,7 @@
  * 2 columns in comment view (body.layoutComment)
  * 2 columns in help view (body.layoutHelp)
  */
-table#screen { border-spacing: 3px; margin: 3px auto; }
+table#screen { border-spacing: 1px; margin: 3px auto; }
 table#screen td { }
 table#screen h1.s { height: 22px; padding: 5px; text-align: center; font-size: 1.2em; font-variant: small-caps; margin: 0; background-color: #3360A8; color: #fff; }
 table#screen div.area { height: /*480*/483px; margin: 3px 0; border: 1px solid #ccc; }
@@ -28,11 +28,10 @@ table#screen .reprs .bottom img { float: right; margin: 0; }
 table#screen .reprs .bottom .overview { width: 113px; height: 100px; }
 
 table#screen .collections { width: 232px; }
-table#screen .map { width: 541px; }
+table#screen .map, table#screen .help { width: 546px; }
 table#screen .map .ploomapMap { background: #fff; }
 table#screen .comment { width: 469px; }
 table#screen .comment .area { overflow: auto; padding: 5px; height: 473px /*483-10*/; }
-table#screen .help { width: 541px; }
 table#screen .collections h1, table#screen .comment h1 { background: url("/images/aire/corners.png") no-repeat scroll 0 0 #3360A8; }
 table#screen .collections .area { height: 403px; overflow: auto; color: #218BBF; }
 table#screen .collections .area .dijitTitlePane {  }
