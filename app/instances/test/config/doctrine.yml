@@ -36,6 +36,16 @@ doctrine_mongodb:
     default:
       metadata_cache_driver: array
       mappings:
+        StofDoctrineExtensionsBundle: ~
         GeonefPloomapBundle: ~
         GeonefZigBundle: ~
         GeonefPgLinkBundle: ~
+
+
+stof_doctrine_extensions:
+    default_locale: fr
+    translation_fallback: false
+    #orm:
+    #    default: ~
+    mongodb:
+        default: ~
