@@ -94,8 +94,10 @@ aire.app = {
                    //var path =  this.src.replace(/https?:\/\/[^/]+\/data\/help\//, '');
                    var path =  this.contentWindow.location.pathname
                      .replace(/\/data\/help\//, '');
-                   console.log('onload!', this, arguments, path);
-                   dojo.hash('help/'+path);
+                   //console.log('onload!', this, arguments, path);
+                   if (path) {
+                     dojo.hash('help/'+path);
+                   }
                  });
   },
 

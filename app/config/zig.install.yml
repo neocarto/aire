@@ -60,24 +60,28 @@ geonef_zig:
         layers:
           -
             name: ../admin.js
+            resourceName: package.admin
             copyrightFile: '../vendor/cartapatate/lib/cartapatate/copyright.txt'
             dependencies:
               - cartapatate.start.loadWorkspace
               - package.admin
           -
             name: ../home.js
+            resourceName: package.home
             copyrightFile: '../vendor/cartapatate/lib/cartapatate/copyright.txt'
             dependencies:
               - package.home
               - aire.start.home
           -
             name: ../collection.js
+            resourceName: package.collection
             copyrightFile: '../vendor/cartapatate/lib/cartapatate/copyright.txt'
             dependencies:
               - package.collection
               - aire.start.collection
           -
             name: ../print.js
+            resourceName: package.print
             copyrightFile: '../vendor/cartapatate/lib/cartapatate/copyright.txt'
             dependencies:
               - package.print
