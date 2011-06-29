@@ -43,7 +43,7 @@ table#screen .collections .commentSmall { height: 69px; border: 1px solid #ccc; 
 table#screen .collections .commentSmall:hover { color: #1A86C4; }
 table#screen .bottom a { color: #fff; }
 /*table#screen .collections .bottom { height: 76px; }*/
-table#screen .help .area iframe { width: 100%; height: 100%; border: none; }
+table#screen .area iframe { width: 100%; height: 100%; border: none; }
 table#screen .collections .bottom, table#screen .comment .bottom, table#screen .help .bottom { cursor: pointer; padding-top: 8px; height: 21px; /* 26px-8px */ }
 table#screen .collections .bottom, table#screen .comment .bottom { background: url("/images/aire/corners.png") no-repeat scroll left -42px #3360A8; }
 table#screen .reprs h1, table#screen .homeContent h1, body.layoutComment table#screen .map h1/*, table#screen .help h1*/ { background: url("/images/aire/corners.png") no-repeat scroll right -74px #3360A8; }

@@ -47,9 +47,10 @@
         <td class="homeContent">
           <h1 class="s"></h1>
           <div class="area">
-            {% autoescape false %}
-            {{ content }}
-            {% endautoescape %}
+            <iframe id="contentFrame" src="/data/home/index.{{locale}}.php"></iframe>
+            <!-- % autoescape false % -->
+            <!-- { content } -->
+            <!-- % endautoescape % -->
           </div>
           <div class="bottom"></div>
         </td>

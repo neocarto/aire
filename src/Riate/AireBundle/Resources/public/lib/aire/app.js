@@ -9,7 +9,7 @@ dojo.requireLocalization('aire', 'app');
 /*
  * Provide app management & global AIRE actions
  */
-aire.app = {
+dojo.mixin(aire.app, {
 
   setLayout: function(layout) {
     dojo.removeClass(dojo.body(), aire.app.layout);
@@ -17,12 +17,15 @@ aire.app = {
     dojo.addClass(dojo.body(), aire.app.layout);
   },
 
-  showHelp: function(path) {
+  showHelp: function(path, fromHashChange_) {
     console.log('showHelp', arguments);
     if (path === true) {
       path = '';
     }
     if (dojo.isString(path)) {
+      if (path === '') {
+        path = 'index.'+aire.app.locale+'.php';
+      }
       this.helpFrame.src = '/data/help/'+path;
     }
     aire.app.setLayout('layoutHelp');
@@ -89,36 +92,42 @@ aire.app = {
     dojo.query('#screen > tbody > tr > td.collections > .commentSmall')
         .connect('onclick', null, dojo.partial(dojo.hash, 'comment'));
     this.helpFrame = dojo.byId('helpFrame');
-    dojo.connect(this.helpFrame, 'onload', this.helpFrame,
-                 function() {
-                   //var path =  this.src.replace(/https?:\/\/[^/]+\/data\/help\//, '');
-                   var path =  this.contentWindow.location.pathname
-                     .replace(/\/data\/help\//, '');
-                   //console.log('onload!', this, arguments, path);
-                   if (path) {
-                     dojo.hash('help/'+path);
-                   }
-                 });
+    dojo.connect(this.helpFrame, 'onload', null, dojo.
+                 hitch(null, aire.app.onFrameLoad, this.helpFrame));
   },
 
   start: function() {
-     if (window.aireCollection.startMap) {
-       var startMap = window.aireCollection.startMap;
-       var mapW = dijit.byId('map');
-       var def = mapW.layersDefs.layers.filter(function(d) {
-                   return d.code === startMap; })[0];
-       if (def) {
-         mapW.layersDefs.addLayerToMap(def.name);
-       } else {
-         alert(aire.app.i18n.undefinedStartMap+" : "+startMap);
-       }
-       //map.showMap(window.mapSet.startMap);
-       var hash = dojo.hash();
-       if (hash) {
-         aire.app.onHashChange(hash);
-       }
-       dojo.subscribe('/dojo/hashchange', null, aire.app.onHashChange);
-     }
+    if (window.aireCollection.startMap) {
+      var startMap = window.aireCollection.startMap;
+      var mapW = dijit.byId('map');
+      var def = mapW.layersDefs.layers.filter(function(d) {
+                                                return d.code === startMap; })[0];
+      if (def) {
+        mapW.layersDefs.addLayerToMap(def.name);
+      } else {
+        alert(aire.app.i18n.undefinedStartMap+" : "+startMap);
+      }
+      //map.showMap(window.mapSet.startMap);
+      var hash = dojo.hash();
+      if (hash) {
+        aire.app.onHashChange(hash);
+      }
+      dojo.subscribe('/dojo/hashchange', null, aire.app.onHashChange);
+    }
+  },
+
+  onFrameLoad: function(frame) {
+    //var path =  this.src.replace(/https?:\/\/[^/]+\/data\/help\//, '');
+    var path =  frame.contentWindow.location.pathname
+      .replace(/\/data\/help\//, '');
+    //console.log('onload!', this, arguments, path);
+    if (path) {
+      var hash = 'help/'+path;
+      if (dojo.hash() !== hash) {
+        console.log('current hash', dojo.hash(), 'different from', hash, 'setting..');
+        dojo.hash(hash);
+      }
+    }
   },
 
   onHashChange: function(hash) {
@@ -133,9 +142,9 @@ aire.app = {
       help: function(p) {
         if (p.length > 0) {
           var path = p.join('/');
-          aire.app.showHelp(path);
+          aire.app.showHelp(path, true);
         } else {
-          aire.app.showHelp();
+          aire.app.showHelp(null, true);
         }
       }
     };
@@ -152,4 +161,4 @@ aire.app = {
     handlers[name](p);
   }
 
-};
+});

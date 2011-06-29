@@ -20,6 +20,8 @@ dojo.provide('aire.start.home');
    var start = function() {
      dojo['require']('package.home');
      dojo.parser.parse();
+     aire.app.init();
+     aire.app.start();
    };
 
    var attempt = function() {
