@@ -34,7 +34,6 @@ css:
 bodyAttributes:
   class: aire tundra
 
-
 bodyInnerHtml:
   app:
     tag: div

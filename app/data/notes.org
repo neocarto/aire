@@ -1,0 +1,30 @@
+
+* Props Translatable
+** MapCollection
+   title
+*** Published
+    comment
+** MapCategory
+   title
+** Map
+   title
+*** Statistics
+    source
+    copyright
+*** Stock
+    stockLegendTitle
+    stockUnit
+*** Ratio
+    ratioLegendTitle
+    ratioUnit
+*** StockRatio
+    ratioLegendTitle
+    ratioUnit
+*** RatioDisc
+*** RatioGrid
+*** Cartogram
+    cartogramLegendText
+*** Potential
+    potentialLegendTitle
+    potentialUnit
+
