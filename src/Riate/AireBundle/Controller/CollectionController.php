@@ -1,6 +1,6 @@
 <?php
 
-namespace Geonef\AireBundle\Controller;
+namespace Riate\AireBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Geonef\PloomapBundle\Document\MapCategory;
@@ -28,7 +28,7 @@ class CollectionController extends Controller
    *
    * @Route("/{id}", name="aire_collection_visu")
    * @Route("/{id}/{_locale}", name="aire_collection_visu_i18n")
-   * @Template("GeonefAireBundle:Collection:visu.twig.html")
+   * @Template("RiateAireBundle:Collection:visu.twig.html")
    *
    * @param $id string  ID of collection to show
    */

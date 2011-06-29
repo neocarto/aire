@@ -1,6 +1,6 @@
 <?php
 
-namespace Geonef\AireBundle\Controller;
+namespace Riate\AireBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Geonef\PloomapBundle\Document\MapCollection\MultiRepr as MapCollectionMultiRepr;
@@ -27,7 +27,7 @@ class MapController extends Controller
    *
    * @Route("/{id}/print", name="aire_map_print")
    * @Route("/{id}/print/{_locale}", name="aire_map_print_i18n")
-   * @Template("GeonefAireBundle:Map:print.twig.html")
+   * @Template("RiateAireBundle:Map:print.twig.html")
    */
   public function printAction($id)
   {

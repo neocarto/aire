@@ -43,7 +43,7 @@ class AppKernel extends Kernel
             new Geonef\ZigBundle\GeonefZigBundle(),
             new Geonef\PgLinkBundle\GeonefPgLinkBundle(),
             new Geonef\PloomapBundle\GeonefPloomapBundle(),
-            new Geonef\AireBundle\GeonefAireBundle(),
+            new Riate\AireBundle\RiateAireBundle(),
 
             // interesting:
             // http://symfony2bundles.org/steves/MongoAdminBundle

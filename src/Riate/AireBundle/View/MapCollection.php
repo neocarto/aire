@@ -1,6 +1,6 @@
 <?php
 
-namespace Geonef\AireBundle\View;
+namespace Riate\AireBundle\View;
 
 use Geonef\Zig\View\Document\XHtml;
 

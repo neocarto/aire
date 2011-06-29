@@ -1,6 +1,6 @@
 <?php
 
-namespace Geonef\AireBundle\Controller;
+namespace Riate\AireBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Geonef\PloomapBundle\Document\MapCategory;
@@ -19,7 +19,7 @@ class HomeController extends Controller
   /**
    * Home page
    *
-   * @Template("GeonefAireBundle:Home:home.twig.html")
+   * @Template("RiateAireBundle:Home:home.twig.html")
    */
   public function homeAction()
   {
