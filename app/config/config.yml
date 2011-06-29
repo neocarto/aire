@@ -31,6 +31,8 @@ sensio_framework_extra: ~
 
 funkiton_injector: ~
 
+geonef_ploomap: ~
+
 # Assetic Configuration
 # assetic:
 #     debug:          %kernel.debug%

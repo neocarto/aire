@@ -59,6 +59,7 @@ dojo.declare('aire.layerDef.Collection', [ geonef.ploomap.layerDef.Base ],
                           units: 'm',
                           numZoomLevels: mapWidget.mapOptions.numZoomLevels,
                           transitionEffect: 'resize',
+                          singleTile: true,
                           legendData: def.legend
                         });
                     }
