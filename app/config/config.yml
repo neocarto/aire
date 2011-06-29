@@ -6,22 +6,20 @@ imports:
   - { resource: parameters.xml }
 
 framework:
+  # http://symfony.com/doc/current/reference/configuration/framework.html
   #name: catapatate
   secret: d3c5eb72-98cd-4db9-bfec-9395a65bc94a
   charset: UTF-8
-  #error_handler: null
   csrf_protection:
      enabled: true
   router: { resource: "%kernel.root_dir%/config/routing.yml" }
   validation: { enabled: true }
-  templating:    { engines: ['twig'] } #assets_version: SomeVersionScheme
+  templating:    { engines: ['twig'] }
   session:
-    default_locale: en_US
-    lifetime:       3600
+    default_locale: en
     auto_start:     true
-    #escaping: htmlspecialchars
-    #renderers:
   translator:
+    enabled: true
     fallback: fr
 
 # Twig Configuration

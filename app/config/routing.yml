@@ -1,5 +1,9 @@
-#catapatate:
-#  resource: CatapatateBundle/Resources/config/routing.yml
+#
+# Routage
+#
+# http://symfony.com/doc/current/book/routing.html
+#
+
 zig:
   resource: "@GeonefZigBundle/Resources/config/routing.yml"
 ploomap:
@@ -13,10 +17,10 @@ admin:
 
 home:
   pattern: /
-  defaults: { _controller: "GeonefAireBundle:Home:home" }
+  defaults: { _controller: "RiateAireBundle:Home:home" }
 home_i18n:
   pattern: /{_locale}
-  defaults: { _controller: "GeonefAireBundle:Home:home" }
+  defaults: { _controller: "RiateAireBundle:Home:home" }
 
 admin_i18n:
   pattern: /admin/{_locale}
@@ -24,19 +28,7 @@ admin_i18n:
      _controller: "GeonefZigBundle:ViewClass:render"
      path: "views.admin"
 
-# collection:
-#   pattern: /collection/{id}
-#   defaults: { _controller: "GeonefAireBundle:Collection:visu" }
-
-# csvFeatures:
-#   pattern: /map/{id}/csvFeatures
-#   defaults: { _controller: "GeonefPloomapBundle:Map:csvFeatures" }
-
-# print:
-#   pattern: /map/{id}/print
-#   defaults: { _controller: "GeonefAireBundle:Map:print" }
-
 aire_controllers:
-  resource: "@GeonefAireBundle/Controller"
+  resource: "@RiateAireBundle/Controller"
   prefix:   /
   type:     annotation

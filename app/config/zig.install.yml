@@ -30,8 +30,7 @@ geonef_zig:
     #manager_class: hehe
     public_dir: %kernel.cache_dir%/public
     public_mappings:
-      - { location: '', directory: '../src/Geonef/AireBundle/Resources/public' }
-      #- { location: 'lib', directory: '../src/Geonef/AireBundle/Resources/public/js' }
+      - { location: '', directory: '../src/Riate/AireBundle/Resources/public' }
       - { location: '', directory: '../vendor/cartapatate' }
       - { location: 'lib', directory: '../vendor/ploomap-client/src' }
       - { location: 'lib', directory: '../vendor/jig/src' }
