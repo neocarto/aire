@@ -7,7 +7,6 @@ use Symfony\Bundle\FrameworkBundle\Console\Application;
 use Symfony\Component\Console\Input\ArgvInput;
 
 $env = trim(file_get_contents(__DIR__.'/ENV'));
-//$env = 'dev';
 $kernel = new AppKernel($env, true);
 
 $application = new Application($kernel);
