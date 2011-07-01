@@ -14,14 +14,26 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 /**
  *
+ * Inject("doctrine.odm.mongodb.document_manager", name="dm")
+ * Inject("session")
  * @Route("/collection")
- * @Inject("doctrine.odm.mongodb.documentManager", name="dm")
- * @Inject("session")
  */
 class CollectionController extends Controller
 {
+
   const DOC_PREFIX = 'Geonef\PloomapBundle\Document\\';
+
   const COLLECTION_CLASS = 'Geonef\PloomapBundle\Document\MapCollection';
+
+  /**
+   * @Inject("session")
+   */
+  public $session;
+
+  /**
+   * @Inject("doctrine.odm.mongodb.document_manager")
+   */
+  public $dm;
 
   /**
    * Main action of application - screen of one collection
@@ -42,8 +54,7 @@ class CollectionController extends Controller
                       'zoomBarX' => $coll->zoomBarX,
                       'zoomBarY' => $coll->zoomBarY);
     $env = $this->container->getParameter('kernel.environment');
-    $this->container->get('doctrine.odm.mongodb.documentManager')
-      ->flush();
+    $this->dm->flush();
     $comment = $this->processComment($coll);
     return array('categories' => $categories,
                  'collection' => $coll,
@@ -79,7 +90,7 @@ class CollectionController extends Controller
         if (!$map || !$map->isPublished()) {
           continue;
         }
-        $msMap = $map->build($this->container);
+        //$msMap = $map->build($this->container);
         try {
           //$legend = null;
           $legend = $map->getLegendData($this->container);
@@ -89,9 +100,9 @@ class CollectionController extends Controller
         }
         $struct = array
           ('id' => $map->getId(),
-           'extent' => Geo::msRectToExtent($msMap->extent),
-           'projection' => strtoupper(Geo::getMsMapSrs($msMap)),
-           'layers' => $map->getLayerNames($this->container, $msMap, true),
+           'extent' => $map->getExtent($this->container),//Geo::msRectToExtent($msMap->extent),
+           'projection' => $map->getMapProjection($this->container),
+           'layers' => $map->getLayerNames($this->container, null, true),
            'legend' => $legend);
         $maps[$repr][$unitScale] = $struct; //json_encode($struct);
       }

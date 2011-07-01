@@ -28,3 +28,11 @@
     potentialLegendTitle
     potentialUnit
 
+
+* MongoDB commands to remove translatable text from regular collections
+  db.Map.update({}, { $unset: {stockLegendTitle:1, stockUnit:1,ratioLegendUnit:1,ratioUnit:1,cartogramLegendText:1, potentialLegendTitle:1, potentialUnit: 1, ratioLegendTitle: 1, ratioUnit:1, source:1, copyright:1, title:1, shortTitle: 1, unitLabel: 1 }}, false, true)
+  db.MapCategory.update({}, { $unset: { title: 1 }}, false, true)
+  db.MapCollection.update({}, { $unset: { title: 1, comment: 1 }}, false, true)
+  db.Template.update({}, { $unset: { content: 1 }}, false, true)
+
+
