@@ -119,7 +119,7 @@ class CollectionController extends Controller
            'projection' => $map->getMapProjection($this->container),
            'layers' => $map->getLayerNames($this->container, null, true),
            'legend' => $legend,
-           'svg' => $this->hasSvg($map));
+           'hasSvg' => $this->hasSvg($map));
         $maps[$repr][$unitScale] = $struct; //json_encode($struct);
       }
     }
