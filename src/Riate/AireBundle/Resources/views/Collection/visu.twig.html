@@ -22,7 +22,7 @@
       window.aireCollection = {{ collection_json|raw }};
     </script>
   </head>
-  <body class="tundra layoutNormal" lang="{{ locale }}">
+  <body class="tundra layoutNormal{% if not comment %} noComment{% endif %}" lang="{{ locale }}">
     <table id="screen">
       <tbody><tr>
         <td class="collections">
@@ -90,7 +90,7 @@
           </div>
         </td>
         <td class="reprs">
-          <h1 class="s">{{"visu.repr.title"|trans}}</h1>
+          <h1 class="s"><a href="#help/representations.php">{{"visu.repr.title"|trans}}</a></h1>
           <div class="area">
             <div dojoType="dijit.layout.AccordionContainer"
                  region="right" doLayout="true" class=""

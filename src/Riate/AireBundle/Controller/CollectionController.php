@@ -11,6 +11,7 @@ use Geonef\Ploomap\Util\Geo;
 use Funkiton\InjectorBundle\Annotation\Inject;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 
 /**
  *
@@ -41,23 +42,33 @@ class CollectionController extends Controller
    * @Route("/{id}", name="aire_collection_visu")
    * @Route("/{id}/{_locale}", name="aire_collection_visu_i18n")
    * @Template("RiateAireBundle:Collection:visu.twig.html")
-   *
-   * @param $id string  ID of collection to show
+   *  StaticCache(route="aire_collection_visu_i18n",
+   *              pattern="{route}/{_locale}/{id}.html",
+   *              dependencies={
+   *                { class="Document\MapCategory", properties={"title","published"} },
+   *                { class="Document\MapCollection", properties={"title","published"} },
+   *                { class="Document\MapCollection", properties={"comment"}, filter={"id"="id"} },
+   *                { class="Document\Map", filter={"collection"="id"} }
+   *              })
    */
-  public function visuAction($id)
+  public function visuAction(MapCollectionMultiRepr $collection)
   {
     $categories = MapCategory::getCategories($this->container);
-    $coll = $this->getCollection($id);
-    $maps = $this->getMaps($coll);
+    //$collection = $this->getCollection($id);
+    if (!$collection->isPublished()) {
+      throw new \Exception("collection's publishing is not enabled for "
+                           . $collection->getId());
+    }
+    $maps = $this->getMaps($collection);
     $collData = array('maps' => $maps,
-                      'startMap' => $coll->startMap,
-                      'zoomBarX' => $coll->zoomBarX,
-                      'zoomBarY' => $coll->zoomBarY);
+                      'startMap' => $collection->startMap,
+                      'zoomBarX' => $collection->zoomBarX,
+                      'zoomBarY' => $collection->zoomBarY);
     $env = $this->container->getParameter('kernel.environment');
     $this->dm->flush();
-    $comment = $this->processComment($coll);
+    $comment = $this->processComment($collection);
     return array('categories' => $categories,
-                 'collection' => $coll,
+                 'collection' => $collection,
                  'comment' => $comment,
                  'collection_json' => json_encode($collData),
                  'maps' => $maps,
@@ -68,17 +79,17 @@ class CollectionController extends Controller
   /**
    * @return Geonef\PloomapBundle\Document\MapCollection
    */
-  protected function getCollection($id)
-  {
-    $coll = $this->dm->find(static::COLLECTION_CLASS, $id);
-    if (!$coll) {
-      throw new \Exception('document not found in class '.static::COLLECTION_CLASS.': '.$id);
-    }
-    if (!$coll->isPublished()) {
-      throw new \Exception("collection's publishing is not enabled for ".$id);
-    }
-    return $coll;
-  }
+  /* protected function getCollection($id) */
+  /* { */
+  /*   $coll = $this->dm->find(static::COLLECTION_CLASS, $id); */
+  /*   if (!$coll) { */
+  /*     throw new \Exception('document not found in class '.static::COLLECTION_CLASS.': '.$id); */
+  /*   } */
+  /*   if (!$coll->isPublished()) { */
+  /*     throw new \Exception("collection's publishing is not enabled for ".$id); */
+  /*   } */
+  /*   return $coll; */
+  /* } */
 
   protected function getMaps(MapCollectionMultiRepr $coll)
   {
@@ -112,6 +123,9 @@ class CollectionController extends Controller
 
   protected function processComment(MapCollectionMultiRepr $coll)
   {
+    if (!$coll->hasComment()) {
+      return null;
+    }
     return $this->_substitComment($coll->comment);
   }
 

@@ -14,6 +14,11 @@ admin:
   defaults:
      _controller: "GeonefZigBundle:ViewClass:render"
      path: "views.admin"
+admin_i18n:
+  pattern: /admin/{_locale}
+  defaults:
+     _controller: "GeonefZigBundle:ViewClass:render"
+     path: "views.admin"
 
 home:
   pattern: /
@@ -21,12 +26,6 @@ home:
 home_i18n:
   pattern: /{_locale}
   defaults: { _controller: "RiateAireBundle:Home:home" }
-
-admin_i18n:
-  pattern: /admin/{_locale}
-  defaults:
-     _controller: "GeonefZigBundle:ViewClass:render"
-     path: "views.admin"
 
 aire_controllers:
   resource: "@RiateAireBundle/Controller"

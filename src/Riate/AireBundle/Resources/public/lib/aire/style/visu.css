@@ -34,6 +34,7 @@ table#screen .comment { width: 469px; }
 table#screen .comment .area { overflow: auto; padding: 5px; height: 473px /*483-10*/; }
 table#screen .collections h1, table#screen .comment h1 { background: url("/images/aire/corners.png") no-repeat scroll 0 0 #3360A8; }
 table#screen .collections .area { height: 403px; overflow: auto; color: #218BBF; }
+.noComment table#screen .collections .area { height: 483px /* 403-80 */; }
 table#screen .collections .area .dijitTitlePane {  }
 table#screen .collections .area .dijitTitlePaneTitle { font-weight: bold; /*font-size: 1.2em;*/ border: none; background: none; }
 table#screen .collections .area .dijitTitlePaneContentOuter { border: none; }
@@ -41,11 +42,13 @@ table#screen .collections .area ul { list-style-type: square; margin: 0; padding
 table#screen .collections .area ul b { color: #000; }
 table#screen .collections .commentSmall { height: 69px; border: 1px solid #ccc; margin: 3px 0; padding: 3px; overflow: hidden; cursor: pointer; }
 table#screen .collections .commentSmall:hover { color: #1A86C4; }
+.noComment table#screen .collections .commentSmall { display: none; }
 table#screen .bottom a { color: #fff; }
 /*table#screen .collections .bottom { height: 76px; }*/
 table#screen .area iframe { width: 100%; height: 100%; border: none; }
 table#screen .collections .bottom, table#screen .comment .bottom, table#screen .help .bottom { cursor: pointer; padding-top: 8px; height: 21px; /* 26px-8px */ }
 table#screen .collections .bottom, table#screen .comment .bottom { background: url("/images/aire/corners.png") no-repeat scroll left -42px #3360A8; }
+.noComment table#screen .collections .bottom a {  display: none; }
 table#screen .reprs h1, table#screen .homeContent h1, body.layoutComment table#screen .map h1/*, table#screen .help h1*/ { background: url("/images/aire/corners.png") no-repeat scroll right -74px #3360A8; }
 body.layoutComment table#screen .map .ploomapLegend h1 { background: none; } /* fix side-effect of last rule */
 body.layoutComment table#screen .map .bottom/*, body.layoutHelp table#screen .help .bottom*/, table#screen .homeContent .bottom { background: url("/images/aire/corners.png") no-repeat scroll right -111px #3360A8; }
@@ -110,4 +113,4 @@ body.layoutHelp table#screen td.map { display: none; }
 
 
 /* overloads */
-.ploomapToolOverviewMap .olControlOverviewMapExtentRectangle { border-color: #f18216; background: #f18216; opacity: 0.85; }
+.ploomapToolOverviewMap .olControlOverviewMapExtentRectangle { border-color: #840; background: #f18216; opacity: 0.5; }

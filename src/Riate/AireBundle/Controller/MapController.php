@@ -3,6 +3,7 @@
 namespace Riate\AireBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Geonef\PloomapBundle\Document\Map;
 use Geonef\PloomapBundle\Document\MapCollection\MultiRepr as MapCollectionMultiRepr;
 use Geonef\Ploomap\Util\Geo;
 
@@ -28,10 +29,18 @@ class MapController extends Controller
    * @Route("/{id}/print", name="aire_map_print")
    * @Route("/{id}/print/{_locale}", name="aire_map_print_i18n")
    * @Template("RiateAireBundle:Map:print.twig.html")
+   *  StaticCache(route="aire_map_print_i18n",
+   *              file="{route}/{_locale}/{id}.html",
+   *              deps={
+   *                Dependency("Document\Map", Filter("id"))
+   *              })
    */
-  public function printAction($id)
+  public function printAction(Map $map)
   {
-    $map = $this->getMap($id);
+    //$map = $this->getMap($id);
+    if (!$map->isPublished()) {
+      throw new \Exception("map's publishing is not enabled for ".$id);
+    }
     $request = $this->get('request');
     $extent = $request->query->get('extent');
     // if (preg_match('/^-?[0-9]+,-?[0-9]+,-?[0-9]+,-?[0-9]+/', $extent)) {
@@ -54,18 +63,18 @@ class MapController extends Controller
                  'env' => $env);
   }
 
-  protected function getMap($id)
-  {
-    $class = self::DOC_PREFIX.'Map';
-    $map = $this->dm->find($class, $id);
-    if (!$map) {
-      throw new \Exception('document not found in class '.$class.': '.$id);
-    }
-    if (!$map->isPublished()) {
-      throw new \Exception("map's publishing is not enabled for ".$id);
-    }
+  /* protected function getMap($id) */
+  /* { */
+  /*   $class = self::DOC_PREFIX.'Map'; */
+  /*   $map = $this->dm->find($class, $id); */
+  /*   if (!$map) { */
+  /*     throw new \Exception('document not found in class '.$class.': '.$id); */
+  /*   } */
+  /*   if (!$map->isPublished()) { */
+  /*     throw new \Exception("map's publishing is not enabled for ".$id); */
+  /*   } */
 
-    return $map;
-  }
+  /*   return $map; */
+  /* } */
 
 }

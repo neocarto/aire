@@ -3,6 +3,7 @@ imports:
   - { resource: doctrine.yml }
   - { resource: zig.install.yml }
   - { resource: pglink.yml }
+  - { resource: cache.yml }
   - { resource: parameters.xml }
 
 framework:

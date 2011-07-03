@@ -37,3 +37,7 @@ $loader->register();
 
 // for Zend Framework & SwiftMailer
 /* set_include_path($__lib_dir.'/zend/library'.PATH_SEPARATOR/\*.$__lib_dir.'/vendor/swiftmailer/lib'.PATH_SEPARATOR*\/.get_include_path()); */
+
+// Doctrine annotation reader
+\Doctrine\Common\Annotations\AnnotationRegistry::registerAutoloadNamespaces($loader->getNamespaces());
+
