@@ -3,22 +3,22 @@
 	url = git.geonef.fr:/var/lib/git/package/cartapatate.git
 [submodule "vendor/doctrine-common"]
 	path = vendor/doctrine-common
-	url = git://github.com/doctrine/common.git
+	url = git.geonef.fr:/var/lib/git/github/doctrine-common.git
 [submodule "vendor/doctrine-mongodb"]
 	path = vendor/doctrine-mongodb
-	url = git://github.com/doctrine/mongodb.git
+	url = git.geonef.fr:/var/lib/git/github/doctrine-mongodb.git
 [submodule "vendor/doctrine-mongodb-odm"]
 	path = vendor/doctrine-mongodb-odm
-	url = git://github.com/doctrine/mongodb-odm.git
+	url = git.geonef.fr:/var/lib/git/github/doctrine-mongodb-odm.git
 [submodule "vendor/bundles/Symfony/Bundle/DoctrineMongoDBBundle"]
 	path = vendor/bundles/Symfony/Bundle/DoctrineMongoDBBundle
-	url = git://github.com/symfony/DoctrineMongoDBBundle.git
+	url = git.geonef.fr:/var/lib/git/github/doctrine-mongodb-bundle.git
 [submodule "vendor/symfony"]
 	path = vendor/symfony
-	url = git://github.com/symfony/symfony.git
+	url = git.geonef.fr:/var/lib/git/github/symfony.git
 [submodule "vendor/twig"]
 	path = vendor/twig
-	url = git://github.com/fabpot/Twig.git
+	url = git.geonef.fr:/var/lib/git/github/twig.git
 [submodule "vendor/zig"]
 	path = vendor/zig
 	url = git.geonef.fr:/var/lib/git/package/zig.git
@@ -30,19 +30,19 @@
 	url = git.geonef.fr:/var/lib/git/package/ploomap-server.git
 [submodule "vendor/monolog"]
 	path = vendor/monolog
-	url = git://github.com/Seldaek/monolog.git
+	url = git.geonef.fr:/var/lib/git/github/monolog.git
 [submodule "vendor/ploomap-client"]
 	path = vendor/ploomap-client
 	url = git.geonef.fr:/var/lib/git/package/ploomap-client.git
 [submodule "vendor/bundles/Sensio/Bundle/FrameworkExtraBundle"]
 	path = vendor/bundles/Sensio/Bundle/FrameworkExtraBundle
-	url = git://github.com/sensio/SensioFrameworkExtraBundle.git
+	url = framework-extra-bundle.git
 [submodule "vendor/bundles/Funkiton/InjectorBundle"]
 	path = vendor/bundles/Funkiton/InjectorBundle
-	url = git://github.com/Funkiton/InjectorBundle.git
+	url = funkiton-injector-bundle.git
 [submodule "vendor/gedmo-doctrine-extensions"]
 	path = vendor/gedmo-doctrine-extensions
-	url = git://github.com/l3pp4rd/DoctrineExtensions.git
+	url = doctrine-extensions.git
 [submodule "vendor/bundles/Stof/DoctrineExtensionsBundle"]
 	path = vendor/bundles/Stof/DoctrineExtensionsBundle
-	url = git://github.com/stof/DoctrineExtensionsBundle.git
+	url = doctrine-extensions-bundle.git
