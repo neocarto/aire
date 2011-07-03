@@ -119,11 +119,23 @@ class CollectionController extends Controller
            'projection' => $map->getMapProjection($this->container),
            'layers' => $map->getLayerNames($this->container, null, true),
            'legend' => $legend,
-           'svg' => $map->svgTemplate);
+           'svg' => $this->hasSvg($map));
         $maps[$repr][$unitScale] = $struct; //json_encode($struct);
       }
     }
     return $maps;
+  }
+
+  protected function hasSvg($map)
+  {
+    if ($map->svgTemplate) {
+      try {
+        $valid = $map->svgTemplate->getPropValidity($this->container);
+        return $valid['valid'];
+      }
+      catch (\Exception $e) {}
+    }
+    return false;
   }
 
   protected function processComment(MapCollectionMultiRepr $coll)

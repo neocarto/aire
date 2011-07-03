@@ -43,6 +43,7 @@ aire.OpenLayers.Control.AireToolbar =
     var __ = function(s) { return s; };
     var self = this;
     var legendButton;
+    var svgButton;
     var controls =
       [
 	new OpenLayers.Control.Button(
@@ -63,7 +64,7 @@ aire.OpenLayers.Control.AireToolbar =
 	new OpenLayers.Control.ZoomBox(
           {
 	    title: __("Activer le mode zoom en rectangle") }),
-	new OpenLayers.Control.Button(
+	svgButton = new OpenLayers.Control.Button(
           {
 	    displayClass: "aiControlSave",
 	    title: __("Exporter la carte en SVG"),
@@ -100,10 +101,21 @@ aire.OpenLayers.Control.AireToolbar =
 	    title: __("Afficher ou masquer la légende"),
 	    active: true })
       ];
+
+    this.svgButton = svgButton;
     this.defaultControl = controls[1];
     //console.log('adding controls', this, controls);
     this.addControls(controls);
     legendButton.activate();
-  }
+
+    dojo.subscribe('ploomap/map/changebaselayer', this, this.onBaseLayerChange);
+    this.onBaseLayerChange();
+  },
+
+  onBaseLayerChange: function() {
+    console.log('baselayerchange', this, arguments, this.map && this.map.baseLayer && this.map.baseLayer.hasSvg, this.svgButton);
+    dojo.style(this.svgButton.panel_div, 'display', this.map.baseLayer.hasSvg ? '' : 'none');
+  },
+
 
 });

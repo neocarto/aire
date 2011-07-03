@@ -72,6 +72,9 @@ dojo.mixin(aire.app, {
     console.log('showLayer', this, arguments);
     var def = aire.app.map.layersDefs.layers.filter(
       function(d) { return d.code === code; })[0];
+    if (!def) {
+      def = aire.app.map.layersDefs.layers[0];
+    }
     if (def) {
       aire.app.map.layersDefs.addLayerToMap(def.name);
     } else {
