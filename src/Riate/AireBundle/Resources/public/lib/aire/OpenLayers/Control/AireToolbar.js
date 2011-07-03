@@ -49,7 +49,7 @@ aire.OpenLayers.Control.AireToolbar =
           {
 	    displayClass: "aiControlHome",
 	    title: __("Revenir à l'accueil"),
-	    trigger: function() { window.location = '/';} }),
+	    trigger: function() { window.location = '/'+aire.app.locale;} }),
 	new OpenLayers.Control.Navigation(
           {
 	    title: __("Activer le mode navigation"),
