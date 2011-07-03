@@ -101,6 +101,10 @@ class CollectionController extends Controller
         if (!$map || !$map->isPublished()) {
           continue;
         }
+        $validity = $map->getPropValidity($this->container);
+        if (!$validity['valid']) {
+          continue;
+        }
         //$msMap = $map->build($this->container);
         try {
           //$legend = null;

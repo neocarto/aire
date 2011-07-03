@@ -26,7 +26,7 @@
           <h1 class="s">{{"visu.themes"|trans}}</h1>
           <div class="area">
           {% for category in categories %}
-            <div dojoType="dijit.TitlePane" title="{{ category.title }}">
+            <div dojoType="dijit.TitlePane" title="{{ category.title }}" open="false">
               <!--h2>{{ category.title }}</h2-->
               <ul>
                 {% for icoll in category.collections %}

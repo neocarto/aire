@@ -76,6 +76,7 @@ dojo.declare('aire.button.ShowMap', [ geonef.jig.button.Action ],
     //console.log('this.mapId', this, this.map);
     //this.mapWidget.showMap(this.map);
     this.mapWidget.layersDefs.addLayerToMap(this.map);
+    dojo.hash('#map');
   }
 
 });

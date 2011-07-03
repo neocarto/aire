@@ -107,7 +107,7 @@
                        alt="{{ reprName }}"/>
                   {{ ("visu.repr.reprDescriptions."~reprName)|trans }}
                   <span class="help"
-                        onclick="aire.app.showHelp('representations.php#{{ reprName }}') && undefined">[{{"visu.repr.readMore"|trans}}]</span>
+                        onclick="aire.app.showHelp('representations.{{locale}}.php#{{ reprName }}') && undefined">[{{"visu.repr.readMore"|trans}}]</span>
                 </p>
               </div>
               {% endfor %}
