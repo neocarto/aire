@@ -1,0 +1,36 @@
+
+geonef_zig:
+
+  static_cache:
+    routes:
+
+      home_i18n:
+        cachePattern: "{_route}/{_locale}.html"
+        dependencies:
+          - { class: Geonef\PloomapBundle\Document\MapCategory, properties: [title], filter: {locale: _locale} }
+          - { class: Geonef\PloomapBundle\Document\MapCategory, properties: [published] }
+          - { class: Geonef\PloomapBundle\Document\MapCollection, properties: [title], filter: {locale: _locale} }
+          - { class: Geonef\PloomapBundle\Document\MapCollection, properties: [published] }
+
+      aire_collection_visu_i18n:
+        cachePattern: "{_route}/{_locale}/{id}.html"
+        dependencies:
+          - { class: Geonef\PloomapBundle\Document\MapCategory, properties: [title], filter: {locale: _locale} }
+          - { class: Geonef\PloomapBundle\Document\MapCategory, properties: [published] }
+          - { class: Geonef\PloomapBundle\Document\MapCollection, properties: [title], filter: {locale: _locale} }
+          - { class: Geonef\PloomapBundle\Document\MapCollection, properties: [published] }
+          - { class: Geonef\PloomapBundle\Document\MapCollection, properties: [comment], filter: {uuid: id, locale: _locale}}
+          - { class: Geonef\PloomapBundle\Document\Map, properties: [*], filter: {mapCollection: id}}
+
+      geonef_ploomap_map_svg_i18n:
+        cachePattern: "{_route}/{_locale}/{id}.svg"
+        dependencies:
+          - { class: Geonef\PloomapBundle\Document\Map, filter: {uuid: id} }
+
+      geonef_ploomap_map_csvfeatures_i18n:
+        cachePattern: "{_route}/{_locale}/{id}.csv"
+        dependencies:
+          - { class: Geonef\PloomapBundle\Document\Map, filter: {uuid: id} }
+
+      admin_i18n:
+        cachePattern: "{_route}/{_locale}.html"
