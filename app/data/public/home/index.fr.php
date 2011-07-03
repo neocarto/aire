@@ -1,4 +1,1 @@
-
-Ceci est le fichier : <b><?php echo __FILE__ ?></b>
-<br>
-Lien : <a href="test.fr.php">test.fr.php</a>
+<img src="/data/img/home_fr.png" width="740px"></img>
