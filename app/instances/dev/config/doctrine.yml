@@ -44,7 +44,25 @@ doctrine_mongodb:
 stof_doctrine_extensions:
     default_locale: fr
     translation_fallback: false
-    #orm:
-    #    default: ~
+    # orm:
+    #     #default: ~
+    #     translatable: false
+    #     timestampable: false
+    #     sluggable: false
+    #     tree: false
+    #     loggable: false
     mongodb:
-        default: ~
+      default:
+        translatable: true
+        timestampable: false
+        sluggable: false
+        tree: false
+        loggable: false
+    # class:
+    #   translatable: Stof\DoctrineExtensionsBundle\Listener\TranslationListener
+    #   timestampable: Gedmo\Timestampable\TimestampableListener
+    #   sluggable: Gedmo\Sluggable\SluggableListener
+    #   tree: Gedmo\Tree\TreeListener
+    #   loggable: Stof\DoctrineExtensionsBundle\Listener\LoggableListener
+
+

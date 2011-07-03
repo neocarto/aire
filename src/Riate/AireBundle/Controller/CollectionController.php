@@ -118,7 +118,8 @@ class CollectionController extends Controller
            'extent' => $map->getExtent($this->container),//Geo::msRectToExtent($msMap->extent),
            'projection' => $map->getMapProjection($this->container),
            'layers' => $map->getLayerNames($this->container, null, true),
-           'legend' => $legend);
+           'legend' => $legend,
+           'svg' => $map->svgTemplate);
         $maps[$repr][$unitScale] = $struct; //json_encode($struct);
       }
     }

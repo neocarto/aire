@@ -30,6 +30,12 @@ class AppKernel extends Kernel
             new Symfony\Bundle\TwigBundle\TwigBundle(),
             new Symfony\Bundle\MonologBundle\MonologBundle(),
             new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
+
+            new Geonef\ZigBundle\GeonefZigBundle(),
+            new Geonef\PgLinkBundle\GeonefPgLinkBundle(),
+            new Geonef\PloomapBundle\GeonefPloomapBundle(),
+            new Riate\AireBundle\RiateAireBundle(),
+
             // http://symfony.com/doc/2.0/bundles/SensioFrameworkExtraBundle/index.html
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             //new Symfony\Bundle\DoctrineBundle\DoctrineBundle(),
@@ -39,11 +45,6 @@ class AppKernel extends Kernel
             // https://github.com/l3pp4rd/DoctrineExtensions/blob/master/doc/translatable.md
             // https://github.com/stof/DoctrineExtensionsBundle/blob/master/Resources/doc/index.rst
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
-
-            new Geonef\ZigBundle\GeonefZigBundle(),
-            new Geonef\PgLinkBundle\GeonefPgLinkBundle(),
-            new Geonef\PloomapBundle\GeonefPloomapBundle(),
-            new Riate\AireBundle\RiateAireBundle(),
 
             // interesting:
             // http://symfony2bundles.org/steves/MongoAdminBundle
