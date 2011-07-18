@@ -39,7 +39,6 @@ class CollectionController extends Controller
   /**
    * Main action of application - screen of one collection
    *
-   * @Route("/{id}", name="aire_collection_visu")
    * @Route("/{id}/{_locale}", name="aire_collection_visu_i18n")
    * @Template("RiateAireBundle:Collection:visu.twig.html")
    *  StaticCache(route="aire_collection_visu_i18n",

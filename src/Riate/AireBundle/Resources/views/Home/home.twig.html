@@ -31,11 +31,10 @@
               <ul>
                 {% for icoll in category.collections %}
                 <li>
-                  <a href="{{ path('aire_collection_visu_i18n', { 'id': icoll.id }) }}">{{ icoll.title }}</a>
                   {% if icoll.hasComment %}
-                  <a href="{{ path('aire_collection_visu_i18n', { 'id': icoll.id }) }}#comment"><img
-                  src="/images/aire/bulle.png"/></a>
+                    <div class="bulle"><a href="{{ path('aire_collection_visu_i18n', { 'id': icoll.id }) }}#comment">&nbsp;&nbsp;&nbsp;</a></div>
                   {% endif %}
+                  <a href="{{ path('aire_collection_visu_i18n', { 'id': icoll.id }) }}">{{ icoll.title }}</a>
                 </li>
                 {% endfor %}
               </ul>

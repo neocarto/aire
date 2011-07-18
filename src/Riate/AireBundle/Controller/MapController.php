@@ -26,7 +26,6 @@ class MapController extends Controller
   /**
    * Print export screen
    *
-   * @Route("/{id}/print", name="aire_map_print")
    * @Route("/{id}/print/{_locale}", name="aire_map_print_i18n")
    * @Template("RiateAireBundle:Map:print.twig.html")
    *  StaticCache(route="aire_map_print_i18n",

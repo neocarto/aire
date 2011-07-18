@@ -33,17 +33,16 @@
               <ul>
                 {% for icoll in category.collections %}
                 <li>
-                  {% if icoll.id == collection.uuid
-                  %}<b>{{ icoll.title }}</b>
+                  {% if icoll.id == collection.uuid %}
                     {% if icoll.hasComment %}
-                    <a href="#comment"><img src="/images/aire/bulle.png"/></a>
+                    <div class="bulle"><a href="#comment">&nbsp;</a></div>
                     {% endif %}
+                    <b>{{ icoll.title }}</b>
                   {% else %}
-                  <a href="{{ path('aire_collection_visu_i18n', { 'id': icoll.id }) }}">{{ icoll.title }}</a>
                     {% if icoll.hasComment %}
-                    <a href="{{ path('aire_collection_visu_i18n', { 'id': icoll.id }) }}#comment"><img
-                    src="/images/aire/bulle.png"/></a>
+                      <div class="bulle"><a href="{{ path('aire_collection_visu_i18n', { 'id': icoll.id }) }}#comment">&nbsp;&nbsp;&nbsp;</a></div>
                     {% endif %}
+                    <a href="{{ path('aire_collection_visu_i18n', { 'id': icoll.id }) }}">{{ icoll.title }}</a>
                   {% endif %}
                 </li>
                 {% endfor %}

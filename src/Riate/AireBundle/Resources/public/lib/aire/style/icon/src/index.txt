@@ -1,0 +1,18 @@
+corners - unchanged
+tool_back
+
+bulle - 0,201 16x14
+home - 11,74 25x25
+zoom-minus - 0,148 18x18
+zoom-plus - 18,148 18x18
+back_0 37,0 25x25
+back_1 62,0 25x25
+data_1 37,25
+data_2 62,25
+37,50
+
+
+on/off: 37 ; 62
+série :0 25 50 75 100 125 150 175 ...
+dash grey 0,274 1x13
+dash 1,274 1x13

@@ -35,13 +35,16 @@ table#screen .map .ploomapMap { background: #fff; }
 table#screen .comment { width: 469px; }
 table#screen .comment .area { overflow: auto; padding: 5px; height: 473px /*483-10*/; }
 table#screen .collections h1, table#screen .comment h1 { background: url("/images/aire/corners.png") no-repeat scroll 0 0 #3360A8; }
-table#screen .collections .area { height: 403px; overflow: auto; color: #218BBF; }
+table#screen .collections .area { height: 403px; overflow: auto; color: #096888/*#218BBF*/; }
 .noComment table#screen .collections .area { height: 483px /* 403-80 */; }
 table#screen .collections .area .dijitTitlePane {  }
 table#screen .collections .area .dijitTitlePaneTitle { font-weight: bold; /*font-size: 1.2em;*/ border: none; background: none; }
 table#screen .collections .area .dijitTitlePaneContentOuter { border: none; }
 table#screen .collections .area ul { list-style-type: square; margin: 0; padding: 0 0 0 25px; }
 table#screen .collections .area ul b { color: #000; }
+table#screen .collections .area ul li { margin-bottom: 5px; }
+table#screen .collections .area ul li:hover { background: #CFE7F3; }
+table#screen .collections .area ul li .bulle { float: right; width: 16px; height: 14px; background: url("icon/sprite.png") 0 -201px; }
 table#screen .collections .commentSmall { height: 69px; border: 1px solid #ccc; margin: 3px 0; padding: 3px; overflow: hidden; cursor: pointer; }
 table#screen .collections .commentSmall:hover { color: #1A86C4; }
 .noComment table#screen .collections .commentSmall { display: none; }
@@ -69,8 +72,33 @@ body.layoutHelp table#screen td.map { display: none; }
 .olHandlerBoxZoomBox { border: 2px solid red; position: absolute; background-color: white; opacity: 0.50; font-size: 1px; filter: alpha(opacity=50); }
 
 /* collection view */
-#toolbar div { float: left; width: 28px; height: 25px; background-repeat: no-repeat; margin: 0 3px; }
-#toolbar .olControlNavigationItemActive { background-image: url("/images/aire/tool_main_1.png")}
+#toolbar div { float: left; width: 25px; height: 25px; background: url("icon/sprite.png") 0 -250px no-repeat; margin: 0 4px; }
+#toolbar .olControlNavigationItemActive { background-position: -62px -150px; )}
+#toolbar .olControlNavigationItemInactive { background-position: -37px -150px; )}
+#toolbar .olControlWMSGetFeatureInfoItemActive { background-position: -62px -100px; }
+#toolbar .olControlWMSGetFeatureInfoItemInactive { background-position: -37px -100px;  )}
+#toolbar .olControlZoomBoxItemActive { background-position: -62px -250px; }
+#toolbar .olControlZoomBoxItemInactive { background-position: -37px -250px; }
+#toolbar .olControlNavigationHistoryPreviousItemActive { background-position: -62px 0; }
+#toolbar .olControlNavigationHistoryPreviousItemInactive { background-position: -37px 0;}
+/*#toolbar .olControlZoomToMaxExtentItemActive { background-position: -37px -50px; }*/
+#toolbar .olControlZoomToMaxExtentItemInactive { background-position: -62px -50px; }
+#toolbar .olControlNavigationHistoryNextItemActive { background-position: -62px -175px; }
+#toolbar .olControlNavigationHistoryNextItemInactive { background-position: -37px -175px; }
+/*#toolbar .aiControlSaveItemActive { background-position: -37px -225px; }*/
+#toolbar .aiControlSaveItemInactive { background-position: -62px -225px; }
+/*#toolbar .aiControlPrintItemActive { background-position: -37px -200px; }*/
+#toolbar .aiControlPrintItemInactive { background-position: -62px -200px; }
+#toolbar .aiControlDataItemInactive:hover { background-position: -62px -25px; }
+#toolbar .aiControlDataItemInactive { background-position: -37px -25px; }
+/*#toolbar .aiControlHelpItemActive { background-position: -37px -75px; }*/
+#toolbar .aiControlHelpItemInactive { background-position: -62px -75px; }
+#toolbar .aiControlLegendItemActive { background-position: -62px -125px; )}
+#toolbar .aiControlLegendItemInactive { background-position: -37px -125px; )}
+/*#toolbar .aiControlHomeItemActive { background-position: -11px -174px; }*/
+#toolbar .aiControlHomeItemInactive { background-position: -11px -174px; }
+
+/*#toolbar .olControlNavigationItemActive { background-image: url("/images/aire/tool_main_1.png")}
 #toolbar .olControlNavigationItemInactive { background-image: url("/images/aire/tool_main_0.png")}
 #toolbar .olControlWMSGetFeatureInfoItemActive { background-image: url("/images/aire/tool_info_1.png")}
 #toolbar .olControlWMSGetFeatureInfoItemInactive { background-image: url("/images/aire/tool_info_0.png")}
@@ -94,15 +122,16 @@ body.layoutHelp table#screen td.map { display: none; }
 #toolbar .aiControlLegendItemInactive { background-image: url("/images/aire/tool_legend_0.png")}
 #toolbar .aiControlHomeItemActive { background-image: url("/images/aire/accueil.png")}
 #toolbar .aiControlHomeItemInactive { background-image: url("/images/aire/accueil.png")}
+*/
 #scale { float: right; }
 .olControlScaleLineTop { border-width: 1px; border-color: white; border-left-style: solid; border-right-style: solid; border-bottom-style: solid; text-align: center; font-size: 10px; margin: 8px 5px 0 0; color: white; background-color: transparent; }
 
 .reprs .area .dijitAccordionInnerContainer { ; /*border: 1px solid #c7c7c9;*/ margin: 3px; padding: 2px; /*color: #9fa0a2;*/ }
-.reprs .area .dijitAccordionTitle { background: url("/images/aire/dash_grey.png") repeat-x scroll 0 6px #ececee; color: #a0a1a3; border: 1px solid #c7c7c9;  }
+.reprs .area .dijitAccordionTitle { background: url("icon/sprite_dash.png") repeat-x scroll 0 -3px #ececee; color: #a0a1a3; border: 1px solid #c7c7c9;  }
 .reprs .area .dijitAccordionTitle .dijitAccordionText { background: #ececee; padding: 3px; }
 /* selected repr */
 .reprs .area .dijitAccordionInnerContainerSelected {  background: transparent;  }
-.reprs .area .dijitAccordionInnerContainerSelected .dijitAccordionTitle { background: url("/images/aire/dash.png") repeat-x scroll 0 6px transparent; color: #096888; border-color: #CFE7F3; }
+.reprs .area .dijitAccordionInnerContainerSelected .dijitAccordionTitle { background-color: #CFE7F3; background-position: 0 12px; color: #096888; border-color: #CFE7F3; }
 .reprs .area .dijitAccordionInnerContainerSelected .dijitAccordionTitle .dijitAccordionText { background: #CFE7F3; padding: 3px; }
 /* content & map buttons */
 .reprs .area .dijitAccordionContainer-dijitContentPane { padding: 5px; }

@@ -12,8 +12,8 @@ ploomap:
 admin:
   pattern: /admin
   defaults:
-     _controller: "GeonefZigBundle:ViewClass:render"
-     path: "views.admin"
+     _controller: "GeonefZigBundle:Translation:redirectLocale"
+     targetRoute: "admin_i18n"
 admin_i18n:
   pattern: /admin/{_locale}
   defaults:
@@ -22,12 +22,47 @@ admin_i18n:
 
 home:
   pattern: /
-  defaults: { _controller: "RiateAireBundle:Home:home" }
+  defaults:
+     _controller: "GeonefZigBundle:Translation:redirectLocale"
+     targetRoute: "home_i18n"
 home_i18n:
   pattern: /{_locale}
   defaults: { _controller: "RiateAireBundle:Home:home" }
+
 
 aire_controllers:
   resource: "@RiateAireBundle/Controller"
   prefix:   /
   type:     annotation
+
+aire_collection_visu:
+  pattern: /collection/{id}
+  defaults:
+    _controller: "GeonefZigBundle:Translation:redirectLocale"
+    targetRoute: "aire_collection_visu_i18n"
+
+aire_map_print:
+  pattern: /{id}/print
+  defaults:
+    _controller: "GeonefZigBundle:Translation:redirectLocale"
+    targetRoute: "aire_map_print_i18n"
+
+geonef_ploomap_map_csvfeatures:
+  pattern: /{id}/csvFeatures
+  defaults:
+    _controller: "GeonefZigBundle:Translation:redirectLocale"
+    targetRoute: "geonef_ploomap_map_csvfeatures_i18n"
+
+geonef_ploomap_map_svg:
+  pattern: /{id}/svg
+  defaults:
+    _controller: "GeonefZigBundle:Translation:redirectLocale"
+    targetRoute: "geonef_ploomap_map_svg_i18n"
+
+geonef_ploomap_map_sld:
+  pattern: /{id}/sld/{layer}
+  defaults:
+    _controller: "GeonefZigBundle:Translation:redirectLocale"
+    targetRoute: "geonef_ploomap_map_sld_i18n"
+
+

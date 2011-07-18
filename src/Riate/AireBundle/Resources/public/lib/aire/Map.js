@@ -31,7 +31,7 @@ dojo.declare('aire.Map', [ geonef.ploomap.map.Classical ],
     'geonef.ploomap.OpenLayers.Control.Navigation',
     'OpenLayers.Control.KeyboardDefaults',
     'geonef.ploomap.OpenLayers.Control.PanZoomBar',
-    'geonef.ploomap.OpenLayers.Control.TileLoadSpinner',
+    //'geonef.ploomap.OpenLayers.Control.TileLoadSpinner',
     // { 'class': 'OpenLayers.Control.ZoomPanel',
     //   options: { div: 'toolbar' }}
     { 'class': 'aire.OpenLayers.Control.AireToolbar',
