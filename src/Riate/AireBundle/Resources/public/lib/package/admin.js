@@ -36,6 +36,7 @@ dojo.require('geonef.ploomap.list.tool.map.View');
 dojo.require('geonef.ploomap.list.tool.map.DataView');
 dojo.require('geonef.ploomap.list.tool.map.Legend');
 dojo.require('geonef.ploomap.list.tool.map.Services');
+dojo.require('geonef.ploomap.list.tool.mapCollection.Detail');
 dojo.require('geonef.ploomap.legend.package');
 
 // Document modules
@@ -45,6 +46,7 @@ dojo.require('geonef.ploomap.list.edition.map.StockRatio');
 dojo.require('geonef.ploomap.list.edition.map.RatioDisc');
 dojo.require('geonef.ploomap.list.edition.map.RatioGrid');
 dojo.require('geonef.ploomap.list.edition.map.Cartogram');
+dojo.require('geonef.ploomap.list.edition.map.Potential');
 dojo.require('geonef.ploomap.list.edition.map.LayerList');
 dojo.require('geonef.ploomap.list.edition.map.layer.OgrVector');
 dojo.require('geonef.ploomap.list.edition.map.layer.Mark');

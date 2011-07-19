@@ -2,6 +2,9 @@
 geonef_zig:
 
   static_cache:
+
+    enabled: true
+
     routes:
 
       home_i18n:
