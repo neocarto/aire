@@ -42,7 +42,7 @@ doctrine_mongodb:
         GeonefPgLinkBundle: ~
 
 stof_doctrine_extensions:
-    default_locale: fr
+    #default_locale: fr
     translation_fallback: false
     # orm:
     #     #default: ~

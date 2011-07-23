@@ -34,8 +34,8 @@ geonef_zig:
 
       geonef_ploomap_map_csvfeatures_i18n:
         cachePattern: "{_route}/{_locale}/{id}.csv"
-        dependencies:
-          - { class: Geonef\PloomapBundle\Document\Map, filter: {uuid: id} }
+        clearingEvents:
+          - { event: model.geonefPloomap.map.onMapChange, filter: {uuid: id}}
 
       admin_i18n:
         cachePattern: "{_route}/{_locale}.html"
