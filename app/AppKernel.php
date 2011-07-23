@@ -41,12 +41,14 @@ class AppKernel extends Kernel
             //new Symfony\Bundle\DoctrineBundle\DoctrineBundle(),
             new Symfony\Bundle\DoctrineMongoDBBundle\DoctrineMongoDBBundle(),
             //new Symfony\Bundle\AsseticBundle\AsseticBundle(),
-            new Funkiton\InjectorBundle\FunkitonInjectorBundle(),
+            new Funkiton\InjectorBundle\FunkitonInjectorBundle(), // to remove
+            new JMS\DiExtraBundle\JMSDiExtraBundle($this),
             // https://github.com/l3pp4rd/DoctrineExtensions/blob/master/doc/translatable.md
             // https://github.com/stof/DoctrineExtensionsBundle/blob/master/Resources/doc/index.rst
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
 
             // interesting:
+            // http://symfony2bundles.org/ninethousand/NineThousandJobqueueBundle
             // http://symfony2bundles.org/steves/MongoAdminBundle
             // http://symfony2bundles.org/Bazinga/ExposeRoutingBundle
             // http://symfony2bundles.org/moreweb/ImagineBundle

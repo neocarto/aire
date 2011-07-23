@@ -46,3 +46,9 @@
 [submodule "vendor/bundles/Stof/DoctrineExtensionsBundle"]
 	path = vendor/bundles/Stof/DoctrineExtensionsBundle
 	url = doctrine-extensions-bundle.git
+[submodule "vendor/bundles/JMS/DiExtraBundle"]
+	path = vendor/bundles/JMS/DiExtraBundle
+	url = git.geonef.fr:/var/lib/git/github/jms-di-extra-bundle.git
+[submodule "vendor/metadata"]
+	path = vendor/metadata
+	url = git.geonef.fr:/var/lib/git/github/metadata.git

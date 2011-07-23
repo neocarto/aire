@@ -45,7 +45,6 @@ geonef_ploomap: ~
 #         # yui_css:
 #         #     jar: %kernel.root_dir%/java/yuicompressor-2.4.2.jar
 
-
 #zig: ~
 
 # swiftmailer: ~
@@ -54,3 +53,11 @@ geonef_ploomap: ~
     # username:  %mailer_user%
     # password:  %mailer_password%
 
+
+jms_di_extra:
+  locations:
+    all_bundles: false
+    bundles: [GeonefPloomapBundle,GeonefZigBundle]
+    directories:
+      - %kernel.root_dir%/../vendor/ploomap-server/src
+      - %kernel.root_dir%/../vendor/zig/src
