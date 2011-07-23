@@ -44,7 +44,17 @@ doctrine_mongodb:
 stof_doctrine_extensions:
     default_locale: fr
     translation_fallback: false
-    #orm:
-    #    default: ~
+    # orm:
+    #     #default: ~
+    #     translatable: false
+    #     timestampable: false
+    #     sluggable: false
+    #     tree: false
+    #     loggable: false
     mongodb:
-        default: ~
+      default:
+        translatable: true
+        timestampable: false
+        sluggable: false
+        tree: false
+        loggable: false
