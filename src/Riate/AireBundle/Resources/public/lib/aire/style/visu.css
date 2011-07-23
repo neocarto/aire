@@ -19,7 +19,7 @@ table#screen td { }
 table#screen h1.s { height: 22px; padding: 5px; text-align: center; font-size: 1.2em; font-variant: small-caps; margin: 0; background-color: #3360A8; color: #fff; }
 table#screen h1.s a { color: #fff; }
 table#screen h1.s a:hover { color: #F18216; text-decoration: none; }
-table#screen div.area { height: /*480*/483px; margin: 3px 0; border: 1px solid #ccc; }
+table#screen div.area { height: /*480*/483px; margin: 3px 0; border: 1px solid #ccc; overflow: auto; }
 table#screen div.bottom { height: 26px; padding: 3px; background-color: #3360A8; color: #fff; text-align: center; }
 
 table#screen .reprs { width: 232px; }

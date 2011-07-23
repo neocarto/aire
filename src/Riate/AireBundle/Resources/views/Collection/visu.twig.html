@@ -106,7 +106,7 @@
                        alt="{{ reprName }}"/>
                   {{ ("visu.repr.reprDescriptions."~reprName)|trans }}
                   <span class="help"
-                        onclick="aire.app.showHelp('representations.{{locale}}.php#{{ reprName }}') && undefined">[{{"visu.repr.readMore"|trans}}]</span>
+                        onclick="aire.app.showHelp('index.{{locale}}.php?tab=1#{{ reprName }}') && undefined">[{{"visu.repr.readMore"|trans}}]</span>
                 </p>
               </div>
               {% endfor %}
@@ -117,9 +117,6 @@
                ><img src="/images/aire/logo.gif" alt="UMS RIATE - Carto"/></a>
             <div dojoType="geonef.ploomap.tool.OverviewMap"
                  mapWidget="map" copyLayer="__base__" showOptionButton="false"
-                 __layerOptions="{maxResolution:35420,minScale:null,maxScale:null,minResolution:null,resolutions:null,scales:null}"
-                 __mapOptions="{maxResolution:'auto',minScale:null,maxScale:null,minResolution:null,resolutions:null,scales:null,resolution:null}"
-                 __maxResolution="auto"
                  autoPan="true"
                  delta="10"
                  class="overview"></div>

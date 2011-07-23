@@ -55,7 +55,9 @@ aire.OpenLayers.Control.AireToolbar =
           {
 	    title: __("Activer le mode navigation"),
             zoomWheelEnabled: false }),
-	new geonef.ploomap.OpenLayers.Control.WMSGetFeatureInfo(),
+	new geonef.ploomap.OpenLayers.Control.WMSGetFeatureInfo(
+          {queryLayers:['ratioDisc', 'ratioPolygons', 'stockSymbol',
+                        'potential', 'ratioNullPolygons']}),
 	nav.previous,
 	new OpenLayers.Control.ZoomToMaxExtent(
           {
@@ -113,7 +115,7 @@ aire.OpenLayers.Control.AireToolbar =
   },
 
   onBaseLayerChange: function() {
-    console.log('baselayerchange', this, arguments, this.map && this.map.baseLayer && this.map.baseLayer.hasSvg, this.svgButton);
+    //console.log('baselayerchange', this, arguments, this.map && this.map.baseLayer && this.map.baseLayer.hasSvg, this.svgButton);
     dojo.style(this.svgButton.panel_div, 'display', this.map.baseLayer.hasSvg ? '' : 'none');
   },
 
