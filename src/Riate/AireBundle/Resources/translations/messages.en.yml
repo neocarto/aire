@@ -50,7 +50,9 @@ geonef.ploomap:
     disc:
       title: Discontinuité relative
       nullDisc: Undetermined
-      popupExpl: sur une échelle de ${minWidth} à ${maxWidth}
+      popupExpl: on a scale from ${minWidth} to ${maxWidth}
+      weak: Weak
+      strong: Strong
 
 aire:
   app:

@@ -50,6 +50,8 @@ geonef.ploomap:
       title: Discontinuité relative
       nullDisc: Indéterminée
       popupExpl: sur une échelle de ${minWidth} à ${maxWidth}
+      weak: Faible
+      strong: Forte
 
 aire:
   app:

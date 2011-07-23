@@ -29,3 +29,7 @@ monolog:
 
 # assetic:
 #     use_controller: true
+
+geonef_zig:
+  static_cache:
+    enabled: false
