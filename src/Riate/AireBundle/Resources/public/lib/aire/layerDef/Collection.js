@@ -29,7 +29,7 @@ dojo.declare('aire.layerDef.Collection', [ geonef.ploomap.layerDef.Base ],
               var resX = (def.extent[2] - def.extent[0]) / box.w;
               var resY = (def.extent[3] - def.extent[1]) / box.h;
               var res = Math.max(resX, resY);
-              console.log('w', box.w, 'h', box.h, 'resX', resX, 'resY', resY, 'res', res);
+              //console.log('w', box.w, 'h', box.h, 'resX', resX, 'resY', resY, 'res', res);
               return 'auto';
             };
             var extent =  new OpenLayers.Bounds.fromArray(def.extent);

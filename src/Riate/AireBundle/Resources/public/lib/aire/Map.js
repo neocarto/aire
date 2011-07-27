@@ -22,10 +22,7 @@ dojo.declare('aire.Map', [ geonef.ploomap.map.Classical ],
     maxResolution: 'auto'//8855
   },
 
-  buttons: {
-    tools: false,
-    location: false
-  },
+  buildOverViewMap: false,
 
   controls: [
     'geonef.ploomap.OpenLayers.Control.Navigation',
