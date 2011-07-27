@@ -27,9 +27,10 @@ class AppKernel extends Kernel
         $bundles = array(
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
+            new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
             new Symfony\Bundle\MonologBundle\MonologBundle(),
-            new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
 
             new Geonef\ZigBundle\GeonefZigBundle(),
             new Geonef\PgLinkBundle\GeonefPgLinkBundle(),

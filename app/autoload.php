@@ -13,6 +13,7 @@ $loader->registerNamespaces(array(
   'Funkiton' => $__lib_dir.'/bundles',
   'Stof'  => $__lib_dir.'/bundles',
   'JMS'  => $__lib_dir.'/bundles',
+  'FOS'  => $__lib_dir.'/bundles',
   'Gedmo' => $__lib_dir.'/gedmo-doctrine-extensions/lib',
   'Doctrine\\Common'    => $__lib_dir.'/doctrine-common/lib',
   'Doctrine\\DBAL'    => $__lib_dir.'/doctrine-dbal/lib',

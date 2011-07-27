@@ -52,3 +52,6 @@
 [submodule "vendor/metadata"]
 	path = vendor/metadata
 	url = git.geonef.fr:/var/lib/git/github/metadata.git
+[submodule "vendor/bundles/FOS/UserBundle"]
+	path = vendor/bundles/FOS/UserBundle
+	url = git://github.com/FriendsOfSymfony/FOSUserBundle.git
