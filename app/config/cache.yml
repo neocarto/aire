@@ -21,7 +21,7 @@ geonef_zig:
           - { class: Geonef\PloomapBundle\Document\MapCategory, properties: [title], filter: {locale: _locale} }
           - { class: Geonef\PloomapBundle\Document\MapCategory, properties: [published, position] }
           - { class: Geonef\PloomapBundle\Document\MapCollection, properties: [title], filter: {locale: _locale} }
-          - { class: Geonef\PloomapBundle\Document\MapCollection, properties: [published, position] }
+          - { class: Geonef\PloomapBundle\Document\MapCollection, properties: [published, position, zoomBarX, zoomBarY] }
           - { class: Geonef\PloomapBundle\Document\MapCollection, properties: [comment], filter: {uuid: id, locale: _locale}}
         clearingEvents:
           - { event: model.geonefPloomap.map.onMapChange, filter: {mapCollection: id}}
