@@ -12,7 +12,7 @@
 <div id="contain">
 
 	<div id="left">
-	<img src="img/home_en.png" width="543px" height="483px"></img>
+	<img src="img/home_en.png" width="542px" height="483px"></img>
 	</div>
 
 <div id="right">
@@ -24,7 +24,7 @@
 	</span>
 <hr/><br/>
 	<a href="http://prod.v2.aire.ums-riate.fr/fr#content/index.fr.php" target="_top"><img src="img/fr.png" width="15px"></img> Français</a><br/>
-	<img src="img/en.png" width="15px"></img><b> English <-<b/><br/>
+	<img src="img/en.png" width="15px"></img><b> English &larr;<b/><br/>
 	
 	</div>
 

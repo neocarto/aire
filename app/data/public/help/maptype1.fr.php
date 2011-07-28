@@ -1,6 +1,6 @@
 ﻿<html>
   <head>
-    <title>Aide</title>
+    <title>Représentations</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	</head>
@@ -13,7 +13,7 @@
 <?php
 // -------------------------------------------------------------------------------------------------
 $langue = 'fr';
-$page='help.php';
+$page='maptype1.php';
 include('inc/'.$page.'');
 // -------------------------------------------------------------------------------------------------
 

@@ -1,6 +1,6 @@
 ﻿<html>
   <head>
-    <title>Aide</title>
+    <title>Ressources</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	</head>
@@ -12,8 +12,8 @@
   
 <?php
 // -------------------------------------------------------------------------------------------------
-$langue = 'fr';
-$page='help.php';
+$langue = 'en';
+$page='ressources.php';
 include('inc/'.$page.'');
 // -------------------------------------------------------------------------------------------------
 

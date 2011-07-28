@@ -1,0 +1,90 @@
+body {
+    font-family: verdana;
+    font-size: 11px;
+    margin: 0px;
+    padding: 0px;
+	background-color:F7F7F9;
+	color: #4B4B4D;
+}
+
+a:link
+{
+color: #2f38de; text-decoration: none;
+}
+a:visited
+{
+color: #2f38de; text-decoration: none;
+}
+a:hover
+{
+color: #2f38de;
+text-decoration: overline underline;
+background: #CCCCFF;
+}
+a:active
+{
+color: #2f38de;
+text-decoration: none;
+}
+
+#contain{
+	position:absolute;
+	top: 0px;
+	left: 0px;
+	width:98%;
+	text-align:center;
+
+	}
+
+#navigation { 
+	margin-left:-30px;
+	width:100%;
+	position:absolute;
+	top: 30px;
+	left: 0px;	
+	text-align:center;
+	}
+
+#title { 
+	width:100%;
+	position:absolute;
+	top: 10px;
+	left: 10px;	
+    font-size: 18px;
+	font-weight:bold;
+	color: #3460A6;
+	text-align:center;
+    }	
+
+#content { 
+	position:absolute;
+	top: 60px;
+	left: 10px;	
+    text-align: justify ; 
+    }
+	
+	
+#navigation li { 
+	margin-right:0px;
+	display: inline ; 
+    color: #fff ; 
+    background: #3460A6 ; 
+    }
+
+#navigation li a { 
+    margin:0px;
+	padding: 0px 10px ; 
+    background: #3460A6 ; 
+    color: #fff ; 
+    border: 1px solid #0B326B ; 
+    font: 1em "Trebuchet MS",Arial,sans-serif ; 
+    text-decoration: none ; 
+    }
+	
+#navigation li a:hover, #navigation li a:focus { 
+    background: #7E95C7 ; 
+    text-decoration: none ; 
+    }
+#navigation li a:active { 
+    background: #7E95C7 ; 
+}	

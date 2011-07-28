@@ -12,7 +12,7 @@
 <div id="contain">
 
 	<div id="left">
-	<img src="img/home_fr.png" width="543px" height="483px"></img>
+	<img src="img/home_fr.png" width="542px" height="483px"></img>
 	</div>
 
 <div id="right">
@@ -23,7 +23,7 @@
 	<br/>Pour accéder à l'ensemble des représentations, <b>cliquez à gauche sur une thématique puis sur une carte précise de votre choix</b>.
 	</span>
 <hr/><br/>
-	<img src="img/fr.png" width="15px"></img><b> Français <-<b/><br/>
+	<img src="img/fr.png" width="15px"></img><b> Français &larr;<b/><br/>
 	<a href="http://prod.v2.aire.ums-riate.fr/en#content/index.en.php" target="_top"><img src="img/en.png" width="15px"></img> English</a><br/>
 
 	</div>
