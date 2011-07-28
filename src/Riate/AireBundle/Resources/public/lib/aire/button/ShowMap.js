@@ -40,6 +40,9 @@ dojo.declare('aire.button.ShowMap', [ geonef.jig.button.Action ],
     if (enabled !== this._checked) {
       (enabled ? dojo.addClass : dojo.removeClass)(this.domNode, 'mapEnabled');
       if (enabled) {
+        dojo.query('#screen .map > h1')[0].innerHTML = mapWidget.map.baseLayer.title;
+        mapWidget.sourceNode.innerHTML = mapWidget.map.baseLayer.source;
+        mapWidget.copyrightNode.innerHTML = mapWidget.map.baseLayer.copyright;
         var pane = dijit.getEnclosingWidget(this.domNode.parentNode);
         var accordeon = dijit.getEnclosingWidget(
           dijit.getEnclosingWidget(pane.domNode.parentNode).domNode.parentNode);

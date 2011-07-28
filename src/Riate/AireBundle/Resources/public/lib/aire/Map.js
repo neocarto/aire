@@ -86,12 +86,12 @@ dojo.declare('aire.Map', [ geonef.ploomap.map.Classical ],
   buildRendering: function() {
     this.inherited(arguments);
     this.buildLegendContainer();
+    this.buildSourceContainer();
   },
 
   buildLegendContainer: function() {
     this.legendContainer = new geonef.ploomap.legend.Container();
-    this.legendContainer.placeAt(this.domNode);
-    this.legendContainer.startup();
+    this.legendContainer.placeAt(this.domNode).startup();
     this.subscribe('ploomap/map/changebaselayer', this.updateLegend);
   },
 
@@ -99,6 +99,15 @@ dojo.declare('aire.Map', [ geonef.ploomap.map.Classical ],
     //console.log('updateLegend', this, arguments,
     //            this.map.baseLayer, this.map.baseLayer.legendData);
     this.legendContainer.setupMap(this.map.baseLayer.legendData);
+  },
+
+  buildSourceContainer: function() {
+    geonef.jig.makeDOM(
+      [['div', { 'class':'sourcecop', _insert: this.domNode },
+        [['div',{ 'class':'opacity' }],
+         ['div',{ 'class':'source', attachPoint:'sourceNode'},'Z1'],
+         ['div',{ 'class': 'copyright', attachPoint:'copyrightNode'},'Z2']]]], this);
+    console.log('sourceNode', this, this.sourceNode, this.copyrightNode);
   },
 
   onZoomChange: function(newZoom) {

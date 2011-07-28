@@ -1,5 +1,3 @@
-
-
 visu:
   themes: Themes
   comment:
@@ -26,37 +24,36 @@ visu:
       ratioGrid: Grid
       potential: Smoothing
     reprDescriptions:
-      stock: "Les cartes de stock permettent de représenter des données de nature quantitative brute ou absolue par un symbole proportionnel."
-      ratio: "Les données de ratio  sont des données quantitatives calculées à partir de données brutes dont ont fait le rapport. Leur représentation graphique forme des cartes choroplèthes."
-      stockRatio: "Ce type de représentation permet de marier, sur une même carte, la représentation des données brutes et des données de rapport."
-      ratioDisc: "La visualisation de lignes de discontinuités permet de mettre en exergue les ruptures spatiales des phénomènes socio-économiques étudiés."
-      cartogram: "La représentation par anamorphoses permet de déformer les unités territoriales en fonction de la valeur de la donnée brute étudiée."
-      ratioGrid: "La carte carroyéé est un moyen de s'affranchir de l'arbitraire et de l'irrégularité d'un découpage administratif en mettant en évidence les grandes tendances de répartition spatiale."
-      potential: "La carte lissée (par la méthode des potentiels) permet de visualiser les phénomènes spatiaux de façon continue, en s'affranchissment completement du maillage territorial sous jacent."
+      stock: "The stock map is used to represent quantitative raw or absolute data through a proportional symbol."
+      ratio: "The ratio data are quantitative data calculated from raw data which made the report. Their shape forms choropleth maps."
+      stockRatio: "This type of representation gives on the same map the representation of raw data and data which made the report."
+      ratioDisc: "The display of discontinuities’ lines can highlight the failures of the spatial socio-economic phenomena studied."
+      cartogram: "Representation by anamorphosis can distort the territorial units according to the value of the raw data being studied."
+      ratioGrid: "The gridded map is a way to get rid of the arbitrary and irregular administrative division and to highlight the major trends in spatial distribution."
+      potential: "The smoothed map (using the method of potential) allows to visualize spatial phenomena on a continuous basis, by freeing completely the underlying territorial network."
   help:
     title: Help
     hide: Back to the map
 
 print:
   warning:
-    paragraph: "Attention : pour que toutes les couleurs de la légende apparaissent à l'impression, il est nécessaire d'activer une option spécifique :"
-    firefox: "Sur <b>Firefox</b> : Fichier -&gt; Mise en page -&gt; Imprimer l'arrière-plan"
-    ie: "Sur <b>Internet Explorer</b> : Outils -&gt; Options Internet -&gt; Avancé -&gt; Impression &gt; Imprimer les couleurs et images d'arrière plan"
+    paragraph: "Caution: for printing all colors of the legend, it is necessary to activate a specific option:"
+    firefox: "On <b>Firefox</b> : File-&gt; Layout -&gt; Print the background"
+    ie: "On <b>Internet Explorer</b> : Tools-&gt; Internet options -&gt; Advanced-&gt; Print&gt; Print the colors and background images"
 
 geonef.ploomap:
   legend:
     average: Average
     nodata: No data
+    circle:
+      overSize: "Proportional circles too big : ${size} pixels (max: ${maxSize})"
     disc:
-      title: Discontinuité relative
+      title: Relative discontinuity
       nullDisc: Undetermined
-      popupExpl: on a scale from ${minWidth} to ${maxWidth}
-      weak: Weak
-      strong: Strong
+      popupExpl: scale from ${minWidth} to ${maxWidth}
 
 aire:
   app:
     undefinedStartMap: Start map is not defined
     undefinedMap: Undefined map (for this collection)
-
 

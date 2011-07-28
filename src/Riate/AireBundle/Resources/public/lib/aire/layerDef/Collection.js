@@ -60,8 +60,11 @@ dojo.declare('aire.layerDef.Collection', [ geonef.ploomap.layerDef.Base ],
                           numZoomLevels: mapWidget.mapOptions.numZoomLevels,
                           transitionEffect: 'resize',
                           singleTile: true,
+                          title: def.title,
                           legendData: def.legend,
-                          hasSvg: def.hasSvg
+                          hasSvg: def.hasSvg,
+                          source: def.source,
+                          copyright: def.copyright
                         });
                     }
                   }

@@ -46,6 +46,8 @@ geonef.ploomap:
   legend:
     average: Moyenne
     nodata: Absence de données
+    circle:
+      overSize: "Cercles proportionnels trop larges : ${size} pixels (max : ${maxSize})"
     disc:
       title: Discontinuité relative
       nullDisc: Indéterminée

@@ -100,6 +100,7 @@ dojo.mixin(aire.app, {
   },
 
   start: function() {
+    dojo.query('td.reprs > .area').style('overflow', 'hidden');
     if (window.aireCollection.startMap) {
       var startMap = window.aireCollection.startMap;
       var mapW = dijit.byId('map');

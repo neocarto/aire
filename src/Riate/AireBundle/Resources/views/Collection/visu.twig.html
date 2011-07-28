@@ -89,11 +89,10 @@
           </div>
         </td>
         <td class="reprs">
-          <h1 class="s"><a href="#help/representations.php">{{"visu.repr.title"|trans}}</a></h1>
+          <h1 class="s"><a href="#help/maptype.{{ locale }}.php">{{"visu.repr.title"|trans}}</a></h1>
           <div class="area">
             <div dojoType="dijit.layout.AccordionContainer"
-                 region="right" doLayout="true" class=""
-                 style="width:220px;">
+                 doLayout="true" style="width:226px;">
               {% for reprName, repr in maps %}
               <div dojoType="dijit.layout.ContentPane" title="{{ ("visu.repr.reprLabels."~reprName)|trans }}">
                 <h2>{{ ("visu.repr.reprTitles."~reprName)|trans }}</h2>
@@ -106,7 +105,7 @@
                        alt="{{ reprName }}"/>
                   {{ ("visu.repr.reprDescriptions."~reprName)|trans }}
                   <span class="help"
-                        onclick="aire.app.showHelp('index.{{locale}}.php?tab=1#{{ reprName }}') && undefined">[{{"visu.repr.readMore"|trans}}]</span>
+                        onclick="aire.app.showHelp('maptype_{{ reprName }}.{{locale}}.php') && undefined">[{{"visu.repr.readMore"|trans}}]</span>
                 </p>
               </div>
               {% endfor %}

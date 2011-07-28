@@ -114,11 +114,14 @@ class CollectionController extends Controller
         }
         $struct = array
           ('id' => $map->getId(),
+           'title' => $map->getTitle(),
            'extent' => $map->getExtent($this->container),//Geo::msRectToExtent($msMap->extent),
            'projection' => $map->getMapProjection($this->container),
            'layers' => $map->getLayerNames($this->container, null, true),
            'legend' => $legend,
-           'hasSvg' => $this->hasSvg($map));
+           'hasSvg' => $this->hasSvg($map),
+           'source' => $map->getSource(),
+           'copyright' => $map->getCopyright());
         $maps[$repr][$unitScale] = $struct; //json_encode($struct);
       }
     }

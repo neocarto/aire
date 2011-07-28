@@ -22,10 +22,10 @@ table#screen h1.s a:hover { color: #F18216; text-decoration: none; }
 table#screen div.area { height: /*480*/483px; margin: 3px 0; border: 1px solid #ccc; overflow: auto; }
 table#screen div.bottom { height: 26px; padding: 3px; background-color: #3360A8; color: #fff; text-align: center; }
 
-table#screen .reprs { width: 232px; }
-table#screen .reprs .dijitAccordionContainer { width: 100%; height: 100%; background: #CFE7F3; }
+table#screen .reprs { /*width: 232px;*/ }
+table#screen .reprs .dijitAccordionContainer { width: 100%; height: 100%; background: #CFE7F3; border: none; }
 table#screen .reprs .area { height: 412px; }
-table#screen .reprs .bottom { background: transparent; }
+table#screen .reprs .bottom { background: transparent; padding: 0; }
 table#screen .reprs .bottom img { float: right; margin: 0; }
 table#screen .reprs .bottom .overview { width: 113px; height: 100px; }
 
@@ -50,7 +50,7 @@ table#screen .collections .commentSmall:hover { color: #1A86C4; }
 .noComment table#screen .collections .commentSmall { display: none; }
 table#screen .bottom a { color: #fff; }
 /*table#screen .collections .bottom { height: 76px; }*/
-table#screen .area iframe { width: 100%; height: 100%; border: none; }
+table#screen .area iframe { width: 100%; height: 480px; border: none; }
 table#screen .collections .bottom, table#screen .comment .bottom, table#screen .help .bottom { cursor: pointer; padding-top: 8px; height: 21px; /* 26px-8px */ }
 table#screen .collections .bottom, table#screen .comment .bottom { background: url("/images/aire/corners.png") no-repeat scroll left -42px #3360A8; }
 .noComment table#screen .collections .bottom a {  display: none; }
@@ -125,6 +125,9 @@ body.layoutHelp table#screen td.map { display: none; }
 */
 #scale { float: right; }
 .olControlScaleLineTop { border-width: 1px; border-color: white; border-left-style: solid; border-right-style: solid; border-bottom-style: solid; text-align: center; font-size: 10px; margin: 8px 5px 0 0; color: white; background-color: transparent; }
+
+.ploomapMap .sourcecop { position: absolute; left: 5px; bottom: 5px; font-size: 10px; font-size: italic; z-index: 4200; padding: 3px; }
+.ploomapMap .sourcecop .copyright { bottom: 5px; font-weight: bold; }
 
 .reprs .area .dijitAccordionInnerContainer { ; /*border: 1px solid #c7c7c9;*/ margin: 3px; padding: 2px; /*color: #9fa0a2;*/ }
 .reprs .area .dijitAccordionTitle { background: url("icon/sprite_dash.png") repeat-x scroll 0 -3px #ececee; color: #a0a1a3; border: 1px solid #c7c7c9;  }
