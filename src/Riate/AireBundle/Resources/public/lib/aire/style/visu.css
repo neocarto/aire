@@ -126,7 +126,8 @@ body.layoutHelp table#screen td.map { display: none; }
 #scale { float: right; }
 .olControlScaleLineTop { border-width: 1px; border-color: white; border-left-style: solid; border-right-style: solid; border-bottom-style: solid; text-align: center; font-size: 10px; margin: 8px 5px 0 0; color: white; background-color: transparent; }
 
-.ploomapMap .sourcecop { position: absolute; left: 5px; bottom: 5px; font-size: 10px; font-size: italic; z-index: 4200; padding: 3px; }
+.ploomapMap .sourcecop { position: absolute; left: 5px; bottom: 5px; font-size: 0.75em; font-size: italic; z-index: 4200; padding: 3px; color: #333; }
+.ploomapMap .sourcecop > .opacity { background-color: #fff; border: none; }
 .ploomapMap .sourcecop .copyright { bottom: 5px; font-weight: bold; }
 
 .reprs .area .dijitAccordionInnerContainer { ; /*border: 1px solid #c7c7c9;*/ margin: 3px; padding: 2px; /*color: #9fa0a2;*/ }
@@ -148,3 +149,4 @@ body.layoutHelp table#screen td.map { display: none; }
 
 /* overloads */
 .ploomapToolOverviewMap .olControlOverviewMapExtentRectangle { border-color: #840; background: #f18216; opacity: 0.5; }
+.ploomapMap .olFramedCloudPopupContent { font-size: 0.8em; padding: 0; }

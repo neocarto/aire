@@ -8,6 +8,7 @@ dojo.provide('aire.OpenLayers.Control.AireToolbar');
 
 // used in code
 dojo.require('geonef.ploomap.OpenLayers.Control.WMSGetFeatureInfo');
+dojo.require('aire.OpenLayers.Popup');
 
 /**
  * Class: OpenLayers.Control.AireToolbar
@@ -57,7 +58,8 @@ aire.OpenLayers.Control.AireToolbar =
             zoomWheelEnabled: false }),
 	new geonef.ploomap.OpenLayers.Control.WMSGetFeatureInfo(
           {queryLayers:['ratioDisc', 'ratioPolygons', 'stockSymbol',
-                        'potential', 'ratioNullPolygons']}),
+                        'potential', 'ratioNullPolygons'],
+           PopupClass: aire.OpenLayers.Popup }),
 	nav.previous,
 	new OpenLayers.Control.ZoomToMaxExtent(
           {
