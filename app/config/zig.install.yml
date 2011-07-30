@@ -1,5 +1,6 @@
 geonef_zig:
   app:
+    public_dir: %kernel.cache_dir%/public
     lib_dir_path: %kernel.cache_dir%/public/lib
     lib_web_path: /lib
     clients:
