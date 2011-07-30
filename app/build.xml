@@ -37,7 +37,14 @@
       <symfony command="zig:install:run-shrinksafe" args=""  />
     </target>
 
+    <target name="clean-public">
+      <symfony command="zig:app:clean-public" args=""  />
+    </target>
+
     <target name="build" depends="clear,public,ol,trans,client">
+    </target>
+
+    <target name="build-prod" depends="build,clean-public">
     </target>
 
 </project>

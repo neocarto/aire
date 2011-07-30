@@ -25,6 +25,32 @@ geonef_zig:
       - geonef.ploomap
       - aire
 
+    publicPaths:
+      - ^index\.php$
+      # js
+      - ^x/workspace\.js$
+      - ^x/nls/
+      - ^x/aire/style/visu\.css
+      - ^x/dojo/dojo\.js$
+      - ^x/collection\.js$
+      - ^x/home\.js$
+      - ^x/print\.js$
+      - ^x/admin\.js$
+      - ^x/dojox/gfx/
+      # style
+      - ^favicon\.ico$
+      - ^data/
+      - ^image/
+      - ^images/
+      - ^x/dojo/resources/blank\.gif$
+      - ^x/dijit/themes/tundra/images/
+      - ^x/geonef/[^/]+/style/icon/
+      - ^x/cartapatate/style/icon/
+      - ^lib/cartapatate/style/icon/
+      - ^lib/geonef/ploomap/style/marker/
+      - ^x/.*/sld/[^/]+\.xml$
+      - ^images/aire/
+
   install:
     # all paths are relative to the parameter 'kernel.root_dir'
     #manager_class: hehe
