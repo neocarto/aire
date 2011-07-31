@@ -32,6 +32,9 @@ geonef_zig:
       - ^x/workspace\.js$
       - ^x/nls/
       - ^x/aire/style/visu\.css
+      - ^x/aire/style/home\.css
+      - ^x/aire/style/admin\.css
+      - ^x/aire/style/print\.css
       - ^x/dojo/dojo\.js$
       - ^x/collection\.js$
       - ^x/home\.js$
