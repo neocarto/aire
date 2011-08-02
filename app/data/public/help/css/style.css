@@ -7,6 +7,24 @@ body {
 	color: #4B4B4D;
 }
 
+table {
+border:none;
+width: 100%;
+font-family: verdana;
+font-size: 11px;
+margin: 0px;
+padding: 0px;
+background-color:F7F7F9;
+color: #4B4B4D;
+text-align:left;
+}
+
+.txt {
+font-size: 11px;
+color: #4B4B4D;
+font-weight:normal;
+}
+
 a:link
 {
 color: #2f38de; text-decoration: none;

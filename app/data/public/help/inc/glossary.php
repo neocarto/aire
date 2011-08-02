@@ -28,13 +28,26 @@ $content_fr .= "<p>Zanin C. & Trémélo M.L., 2003. Savoir faire une carte. Beli
 
 // ANGLAIS
 $title_en ='Glossary';
-$content_en = '(not available yet)';
-
-
-
-
-
-
-
-
-
+$content_en ='<h2>Absolute value</h2><p>Also called “discrete absolute value” and valid for point locations, lines or areas. It does allow showing numbers of the phenomena. </p>';
+$content_en .='<h2>Anamorphosis or cartogram</h2><p>A cartogram is an abstracted and simplified map which the base is not true to geographic scale. In the most common forms, the areas of features are drawn according to a value, such as population or GDP. </p>';
+$content_en .='<h2>Classification</h2><p>Classification is needed to enhance the data. It’s the operation of arranging the data before displaying them. It’s the way of grouping data based on one or more similar characteristics or values. This operation is essential in order to simplify the image and improve the possibilities for a communication of the information. Some conditions are required for good classification: the number of classes must be limited by the number that the human eye can recognize (not more than 7 classes), and differences within classes should be minimized and differences between classes maximized. A variety of techniques (mathematical or graphical) can be used to choose an appropriate series of categories. </p>';
+$content_en .='<h2>Dot map</h2><p>They are a special case of proportional symbol maps, as they represent point data through symbols that each denote the same quantity, and that have been located in the location where the phenomena occurs.  </p>';
+$content_en .='<h2>European grid</h2><p>Cf. NUTS</p>';
+$content_en .='<h2>Gaussian function</h2><p>In one dimension, the Gaussian function is the probability density function of the normal distribution, sometimes also called the frequency curve.  In two dimensions, the circular Gaussian function is the distribution function for uncorrelated variates X and Y having a bivariate normal distribution and equal standard deviation. <br/>This function is used for AIRE for the smoothing maps. At any point in space, the calculated potential value takes in account all the others points near it, and less and less with distance in a gradual manner. </p>';
+$content_en .='<h2>Generalization</h2><p>A basic cartographic procedure that reduces the amount of information presented in order to crate clearer communication. Because maps are drawn smaller than reality, they must be generalized. The processes involved in generalization are selection, simplification, classification, and symbolization. </p>';
+$content_en .='<h2>GREAT</h2><p>Generalized Representation for European Areas and Territories GREAT is a base map adapted to thematic mapping of European regions. It has been designed by UMS RIATE. It is available for several dates according to territorial division’s evolution in Europe (1980, 1988, 1995, 1999, 2003, 2006 and 2010). Free for non commercial use. </p>';
+$content_en .='<h2>Interval scale</h2><p>This scale provides information about differences in value between ranks. Attributes values are different, can be ordered and the distance between individual measurement can be determined (respective zero-points of this measurement scale have been selected at random, e.g. temperature)</p>';
+$content_en .='<h2>Linear symbol</h2><p>A line used to represent geographic phenomena that are linear in nature.</p>';
+$content_en .='<h2>Nominal scale</h2><p>Attribute values are different in nature. One aspect isn’t more important than another (e.g. industries)</p>';
+$content_en .='<h2>NUTS</h2><p>The NUTS nomenclature (Nomenclature of Territorial Units for Statistics) is a geocode standard for referencing the subdivisions of countries for statistical purposes. The standard is developed and regulated by the European Union, and thus only covers the member states of the EU in detail. The Nomenclature of Territorial Units for Statistics is instrumental in European Union\'s Structural Fund delivery mechanisms.The actual NUTS, named, NUTS 2006, is operational from 2008 January 1rst. They subdivide the European Union in 97 regions at NUTS1 level, 274 regions at NUTS2 level and 1303 regions at NUTS3 level. </p>';
+$content_en .='<h2>Ordinal scale</h2><p>Classifies and rank data without specifying numerical values. Attribute values are different from each other; but there is one single way to order them (e.g. small, medium, and large).</p>';
+$content_en .='<h2>Projection</h2><p>A systematic arrangement of all or a part of the earth’s grid on a plane. The projection of Europe is usually the ETRS-LAEA projection. </p>';
+$content_en .='<h2>Proportional symbol map</h2><p>Discrete absolute values can be represented by proportional symbols. The point, line or area covered by these symbols must be proportional to the values they have to represent. </p>';
+$content_en .='<h2>Ratio scale</h2><p>Classifies and gives differences between values using a scale that starts at absolute zero. Attribute values are different, and can be ordered (e.g. income per capita).</p>';
+$content_en .='<h2>Scale</h2><p>The ratio of the distances on a map, to the actual distances they represent.</p>';
+$content_en .='<h2>Semiotics</h2><p>The theory of signs and symbols. Also called “cartographic grammar”, which designates cartographic rules and guidelines to produce maps to communicate geospatial information. It’s based on the nature of the data and the communication objectives to make the map as effective as possible. </p>';
+$content_en .='<h2>Smoothing</h2><p>It’s a generalization process that eliminates some details of complex linear features. </p>';
+$content_en .='<h2>SVG (Scalable Vector Graphics) language</h2><p>Graphic format that use the XLM language (eXtensible Markup Language) to describe 2D graphic objects. The SVG format allows managing 3 types of graphic elements: vector format elements (curves, lines, polygons, etc.), texts, and rater images. A SVG image is not composed with pixels but with geometric images. AIRE offers the possibility to save maps in SVG format</p>';
+$content_en .='<h2>Symbolization</h2><p>The process of designing or selecting symbols for a map. Graphic representation method. Graphical construction representing data, image, or phenomenon. </p>';
+$content_en .='<h2>Thematic map</h2><p>Thematic maps represent the distribution of one particular phenomenon. The base map used for a thematic map is often a topographic map or the most relevant elements from topographic maps. The base map serves only as a framework to locate the phenomenon being mapped. </p>';
+$content_en .='<h2>Graphic variables or symbols</h2><p>Graphic characteristics symbols in order to perceive differences between data in numbers, or order, or distance, or quality All the differences between symbols can be summarized as being cases of six graphic variables: differences in size (symbol); differences in lightness or (colors) value (of the symbols); differences in (symbol) grain or texture; differences in color hue (of the symbols); differences in orientation (of the symbols) and differences in (symbol) shape. In order to use the graphic variables in a proper and effective way, we need to relate them to the perception characteristics.<br/><img src="images/tab_vv.png"></img> </p>';
