@@ -68,4 +68,4 @@ dojo.require('geonef.ploomap.input.MsStyle');
 dojo.require('geonef.ploomap.input.document.OgrLayer');
 dojo.require('geonef.ploomap.input.OgrLayerField');
 dojo.require('dijit.form.SimpleTextarea');
-
+dojo.require('dojox.widget.ColorPicker');
