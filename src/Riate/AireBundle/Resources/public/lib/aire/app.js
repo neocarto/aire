@@ -18,7 +18,7 @@ dojo.mixin(aire.app, {
   },
 
   showHelp: function(path, fromHashChange_) {
-    console.log('showHelp', arguments);
+    //console.log('showHelp', arguments);
     if (path === true) {
       path = '';
     }
@@ -69,7 +69,7 @@ dojo.mixin(aire.app, {
   },
 
   showLayer: function(code) {
-    console.log('showLayer', this, arguments);
+    //console.log('showLayer', this, arguments);
     var def = aire.app.map.layersDefs.layers.filter(
       function(d) { return d.code === code; })[0];
     if (!def) {
@@ -83,7 +83,6 @@ dojo.mixin(aire.app, {
   },
 
   setCenter: function() {
-    console.log('setCenter', this, arguments);
     aire.app.map.map.setCenter.apply(aire.app.map.map, arguments);
   },
 
@@ -135,7 +134,7 @@ dojo.mixin(aire.app, {
   },
 
   onHashChange: function(hash) {
-    console.log('onHashChange', this, arguments);
+    //console.log('onHashChange', this, arguments);
     var handlers = {
       comment: function() {
         aire.app.setComment(true);
