@@ -31,10 +31,6 @@ geonef_zig:
       # js
       - ^x/workspace\.js$
       - ^x/nls/
-      - ^x/aire/style/visu\.css
-      - ^x/aire/style/home\.css
-      - ^x/aire/style/admin\.css
-      - ^x/aire/style/print\.css
       - ^x/dojo/dojo\.js$
       - ^x/collection\.js$
       - ^x/home\.js$
@@ -46,6 +42,11 @@ geonef_zig:
       - ^data/
       - ^image/
       - ^images/
+      - ^x/aire/style/visu\.css
+      - ^x/aire/style/home\.css
+      - ^x/aire/style/admin\.css
+      - ^x/aire/style/print\.css
+      - ^x/aire/style/icon/
       - ^x/dojo/resources/blank\.gif$
       - ^x/dijit/themes/tundra/images/
       - ^x/geonef/[^/]+/style/icon/

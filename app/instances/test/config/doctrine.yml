@@ -34,6 +34,7 @@ doctrine_mongodb:
   #   PgLinkBundle: ~
   document_managers:
     default:
+      connection: default
       metadata_cache_driver: array
       mappings:
         StofDoctrineExtensionsBundle: ~
@@ -43,9 +44,15 @@ doctrine_mongodb:
 
 
 stof_doctrine_extensions:
-    default_locale: fr
+    default_locale: zz
     translation_fallback: false
     #orm:
     #    default: ~
     mongodb:
-        default: ~
+      default:
+        translatable: true
+        timestampable: false
+        sluggable: false
+        tree: false
+        loggable: false
+        sortable: false
