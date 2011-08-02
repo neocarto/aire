@@ -106,6 +106,7 @@ dojo.declare('aire.Map', [ geonef.ploomap.map.Classical ],
       [['div', { 'class':'sourcecop', _insert: this.domNode },
         [['div',{ 'class':'opacity' }],
          ['div',{ 'class':'source', attachPoint:'sourceNode'},'Z1'],
+         ['span', {}, '&nbsp;-&nbsp;'],
          ['div',{ 'class': 'copyright', attachPoint:'copyrightNode'},'Z2']]]], this);
     console.log('sourceNode', this, this.sourceNode, this.copyrightNode);
   },

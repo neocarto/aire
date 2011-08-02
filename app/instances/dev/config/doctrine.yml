@@ -34,6 +34,7 @@ doctrine_mongodb:
   #   PgLinkBundle: ~
   document_managers:
     default:
+      connection: default
       metadata_cache_driver: array
       mappings:
         StofDoctrineExtensionsBundle: ~
@@ -42,7 +43,7 @@ doctrine_mongodb:
         GeonefPgLinkBundle: ~
 
 stof_doctrine_extensions:
-    #default_locale: fr
+    default_locale: zz
     translation_fallback: false
     # orm:
     #     #default: ~
@@ -58,6 +59,7 @@ stof_doctrine_extensions:
         sluggable: false
         tree: false
         loggable: false
+        sortable: false
     # class:
     #   translatable: Stof\DoctrineExtensionsBundle\Listener\TranslationListener
     #   timestampable: Gedmo\Timestampable\TimestampableListener

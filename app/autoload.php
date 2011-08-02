@@ -1,11 +1,22 @@
 <?php
 
-$__lib_dir = __DIR__.'/../vendor';
-require_once $__lib_dir.'/symfony/src/Symfony/Component/ClassLoader/UniversalClassLoader.php';
+//////////////////////////////////////////////////////////////////////
+// INIT
 
 use Symfony\Component\ClassLoader\UniversalClassLoader;
+use Doctrine\Common\Annotations\AnnotationRegistry;
+
+$__lib_dir = __DIR__.'/../vendor';
+$__swift_dir = '/usr/share/php';
+require_once $__lib_dir.'/symfony/src/Symfony/Component/ClassLoader/UniversalClassLoader.php';
 
 $loader = new UniversalClassLoader();
+
+
+
+//////////////////////////////////////////////////////////////////////
+// NAMESPACES & PREFIXES
+
 $loader->registerNamespaces(array(
   'Symfony'     => $__lib_dir.'/symfony/src',
   'Symfony\\Bundle\\DoctrineMongoDBBundle' => $__lib_dir.'/bundles',
@@ -30,17 +41,44 @@ $loader->registerNamespaces(array(
   'Riate\\AireBundle' => $__lib_dir.'/../src',
   //'Zend' => '/usr/src/zf2/library',
 ));
-$loader->registerPrefixes
-(array(
+$loader->registerPrefixes(array(
        'Twig_' => $__lib_dir.'/twig/lib',
-       'Swift_' => '/usr/share/php',
+       'Swift_' => $__swift_dir,
        //'Zend_'  => $__lib_dir.'/cartapatate/zend/library',
        ));
+// intl
+if (!function_exists('intl_get_error_code')) {
+    require_once __DIR__.'/../vendor/symfony/src/Symfony/Component/Locale/Resources/stubs/functions.php';
+
+    $loader->registerPrefixFallbacks(array(__DIR__.'/../vendor/symfony/src/Symfony/Component/Locale/Resources/stubs'));
+}
+$loader->registerNamespaceFallbacks(array(
+    __DIR__.'/../src',
+));
 $loader->register();
+
+//////////////////////////////////////////////////////////////////////
+// DOCTRINE ANNOTATIONS READER
+
+AnnotationRegistry::registerLoader(function($class) use ($loader) {
+    $loader->loadClass($class);
+    return class_exists($class, false);
+});
+AnnotationRegistry::registerFile(__DIR__.'/../vendor/doctrine-mongodb-odm/lib/Doctrine/ODM/MongoDB/Mapping/Annotations/DoctrineAnnotations.php');
+//AnnotationRegistry::registerFile(__DIR__.'/../vendor/doctrine-orm/lib/Doctrine/ORM/Mapping/Driver/DoctrineAnnotations.php');
+
+// Doctrine annotation reader (old  way, duplicate loaded)
+//\Doctrine\Common\Annotations\AnnotationRegistry::registerAutoloadNamespaces($loader->getNamespaces());
+
+
+//////////////////////////////////////////////////////////////////////
+// OTHER
+
+// Swiftmailer needs a special autoloader to allow
+// the lazy loading of the init file (which is expensive)
+require_once $__swift_dir.'/Swift.php';
+Swift::registerAutoload($__swift_dir.'/swift_init.php');
 
 // for Zend Framework & SwiftMailer
 /* set_include_path($__lib_dir.'/zend/library'.PATH_SEPARATOR/\*.$__lib_dir.'/vendor/swiftmailer/lib'.PATH_SEPARATOR*\/.get_include_path()); */
-
-// Doctrine annotation reader
-\Doctrine\Common\Annotations\AnnotationRegistry::registerAutoloadNamespaces($loader->getNamespaces());
 
