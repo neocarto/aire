@@ -11,7 +11,7 @@ $content_fr .=$MenuMapType_fr;
 
 // ANGLAIS
 $title_en ='Map types';
-$content_en = '<h2>Stock + Ratio map</h2>';
+$content_en = '<h2>Raw and Ratio data map</h2>';
 $content_en .='<p><img src="images/schema_stock_and_ratio.jpg"/></p>';
-$content_en .= '(not available)';
+$content_en .= '<p>This kind of representation enables to establish a match between raw and relationship data on a single map. Thus, the user will view a given phenomenon expressed in both raw and relationship data on the same map. In this atlas, we chose to show the relationship not only on the region area but also inside the figure where absolute values (stock) are represented. The advantage of this method is that it confers variable/relative weight to absolute values (stock) based on the value of the relationship data without hindering the reading of other data on the map. </p>';
 $content_en .=$MenuMapType_en;

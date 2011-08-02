@@ -11,7 +11,7 @@ $content_fr .=$MenuMapType_fr;
 
 // ANGLAIS
 $title_en ='Map types';
-$content_en = '<h2>Grid</h2>';
+$content_en = '<h2>Grid choropleth map</h2>';
 $content_en .='<p><img src="images/schema_grid.jpg"/></p>';
-$content_en .= '(not available)';
+$content_en .= '<p>The cartographic representation mostly relies on an administrative meshing which is a spatial filter of the geographical information. This filter deforms all the more the message conveyed by the map as the meshing is heterogeneous. This is the case in Europe where, for example, at the level NUTS3, the smallest administrative unit has a surface of 13km2 while the biggest has a surface of 98249km2 (3300km2 on average). The grid-cell method is an option to try to overcome the arbitrariness and irregularity of administrative division. It highlights the main trends in the data spatial distribution, cutting the territory into "equal and marked squares». The data is distributed over a regular grid in a given projection system, displayed on the map. The data obtained by tile is discretized and then displayed on the grid in areas of color. The principle adopted here is to set in the grid, for each tile, stocks which are associated with the administrative division, depending on the area covered by each tile (assigning values in proportion to the surface). Four grids with different resolutions are used in AIRE: 50 km, 100 km, 200 km and 300 km. These thresholds resolutions correspond to a spatial link between the level of nuts and grid size. </p>';
 $content_en .=$MenuMapType_en;
