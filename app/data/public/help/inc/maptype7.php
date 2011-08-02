@@ -11,7 +11,7 @@ $content_fr .=$MenuMapType_fr;
 
 // ANGLAIS
 $title_en ='Map types';
-$content_en = '<h2>Smoothing</h2>';
+$content_en = '<h2>Isopleths (or smoothing) map</h2>';
 $content_en .='<p><img src="images/schema_smooth.jpg"/></p>';
-$content_en .= '(not available)';
+$content_en .= '<p>Unlike choropleth maps, which represent the data set as discrete values only valid for specific areas, isoline maps are based on the assumption that the phenomenon to be represented has a continuous distribution. Many socio-economic phenomena are distributed spatially according to continuous logic, with no breaks at the borders, which appear as artificial cuts. If the observed phenomenon is a continuous underlying distribution, i.e. it takes values that are gradually different as one moves into the space around a given point, the purpose of the "smoothed” map is to visualize the phenomenon respecting its spatial organization. This method is called this “potential calculating method” or “smoothing method”. It allows the spatial representation of the phenomenon, regardless of the heterogeneity of the mesh and affecting at any point of the map, the value of the density of the phenomenon in the vicinity of this point. The calculation of this potential requires two parameters: a spatial interaction function and a scope. In AIRE, we use a Gaussian function which specifies that what is "close" in the calculation account over what is "far". By varying the scope of this feature (recovery / flattening of the Gaussian function), we obtain a more or less "generalized" representation. Four scopes are provided: 50, 100, 200, and 300 km. As distance measurement, we used the circle distance which takes into account the sphericity of the earth.</p>';
 $content_en .=$MenuMapType_en;

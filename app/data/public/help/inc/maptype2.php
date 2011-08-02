@@ -11,7 +11,7 @@ $content_fr .=$MenuMapType_fr;
 
 // ANGLAIS
 $title_en ='Map types';
-$content_en = '<h2>Ratio map</h2>';
+$content_en = '<h2>Ratio data map</h2>';
 $content_en .='<p><img src="images/schema_ratio.jpg"/></p>';
-$content_en .= '(not available)';
+$content_en .= '<p>Ratio data (rates or intensity) are quantitative data calculated from raw data from which relationships are derived or rates calculated. They represent the characteristics of observed variables but their sum does not have a particular meaning, e.g. population density is a relationship value but the sum of population densities is not a meaningful indicator. Meaningful representation such as comparing various regions of Europe can be made using these data. Representing data relationship on a map gives cartographers greater freedom as they can use a range of graphical methods and visual variables. The important concept here is that of flexibility as the cartographer can arrange data in a variety of ways and be more selective.  Ranking and selectivity concepts are reflected in changes in value data and colors associated with these values. Value in this case is a variation in intensity whose color changes from light to dark. Human eyes have an innate ability to automatically establish a relationship between spots on a map based on their coloration, rank and select between geographic spaces based on their light or dark shades. </p>';
 $content_en .=$MenuMapType_en;

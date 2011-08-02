@@ -11,7 +11,7 @@ $content_fr .=$MenuMapType_fr;
 
 // ANGLAIS
 $title_en ='Map types';
-$content_en = '<h2>Discontinuity map</h2>';
+$content_en = '<h2>Discontinuities map</h2>';
 $content_en .='<p><img src="images/schema_disc.jpg"/></p>';
-$content_en .= '(not available)';
+$content_en .= '<p>When combined with a choropleth representation (see ratio maps), the visualization of discontinuity lines focus on spatial ruptures of the socio-economic phenomena being observed. This is in line with Brunet and Dolphus (1990) expression “geographical space is fundamentally discontinuous”. In this atlas, discontinuities are expressed in relative terms: Maxima (ratio1, ratio2) / Minima (ratio1, ratio2). To express the scope of the discontinuity intensity, we choose to represent it by the “size” of a line, the change of thickness of it being proportional to the intensity of the discontinuity. This kind of representation focus, not on the homogenous zones, but rather on border lines indicating wide variations in the phenomenon represented on the map.  </p>';
 $content_en .=$MenuMapType_en;

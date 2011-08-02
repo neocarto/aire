@@ -11,7 +11,7 @@ $content_fr .=$MenuMapType_fr;
 
 // ANGLAIS
 $title_en ='Map types';
-$content_en = '<h2>Stock map</h2>';
+$content_en = '<h2>Raw data map</h2>';
 $content_en .='<p><img src="images/schema_stock.jpg"/></p>';
-$content_en .= '(not available)';
+$content_en .= '<p>Absolute value (stock) data maps enable representation of quantitative data which can be raw data or expressed in absolute terms.  A data is quantitative if it can be expressed in units that can be aggregated and their averages are meaningful. This data express concrete quantity, i.e, the sum of individual elements is meaningful; e.g. population size is an absolute value because the sum of a number of different population sizes is meaningful. This atlas was built using geographical data. Raw data from which the sets of data used to build the maps were extracted from Eurostat 2010 database for the European Union and ESPON 2010 database for Switzerland and Norway. Map representation of absolute value data (stock) must conform to strict graphic semiology rules. Irrespective of the kind of geographic information represented on a map (points, lines or areas), a graphic variable corresponding to gross quantity must be used to indicate the variation in distance between data. In other words, the only visual variable that can be used in this case is SIZE.  Size refers to change in area, length, height or volume of an object. Size is the only concept enabling to establish proportions related to weight of objects that are the subject of analysis. It enables to analyze raw data and derive percentages and rates.</p>';
 $content_en .=$MenuMapType_en;
