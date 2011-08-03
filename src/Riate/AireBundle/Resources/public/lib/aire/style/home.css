@@ -10,3 +10,5 @@ table#screen .collections { /*width: 469px;*/ }
 table#screen .collections .area { height: 483px; }
 table#screen .homeContent {  width: 780px; /*543px;*/ }
 table#screen .homeContent .area { overflow: auto; }
+table#screen .homeContent .bottom { text-align: right; padding-right: 20px; font-size: 15px; font-weight: bold; }
+table#screen .homeContent .bottom a { line-height: 23px; }
