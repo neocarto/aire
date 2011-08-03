@@ -24,7 +24,7 @@ Beyond a simple consultation tool, the atlas allows an acces to multiple represe
 </p>
 
 <p class="corps2">
-To reach all representations, click on a theme then on a precise map.
+To reach all representations, click on a theme then choose a specific phenomenon.
 </p>
 
 <table><tr>

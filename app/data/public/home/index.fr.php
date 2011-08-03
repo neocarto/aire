@@ -24,7 +24,7 @@ Au delà d'un simple outil de consultation, l'atlas permet d'avoir accès à de 
 </p>
 
 <p class="corps2">
-Pour accéder à l'ensemble des représentations, <b>cliquez à gauche sur une thématique puis sur une carte précise de votre choix</b>.
+Pour accéder à l'ensemble des représentations, <b>cliquez à gauche sur une thématique puis sur l'indicateur de votre choix.</b>.
 </p>
 
 <table><tr>
