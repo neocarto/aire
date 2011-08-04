@@ -28,7 +28,7 @@ home:
 home_i18n:
   pattern: /{_locale}
   defaults: { _controller: "RiateAireBundle:Home:home" }
-
+  requirements: { _locale: en|fr }
 
 aire_controllers:
   resource: "@RiateAireBundle/Controller"
