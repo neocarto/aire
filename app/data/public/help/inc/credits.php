@@ -39,13 +39,13 @@ $content_fr .= 'Ronan Ysebaert, Julie Bonneau et Henry Ciesielski</span></h4>';
 $title_en ='Credits';
 
 $content_en = '<h1>AIRE 2.0</h1>';
-$content_en .= '<p>Mise à jour : <b>30 juillet 2011</b></p>';
+$content_en .= '<p>Last update: <b>July 30th 2011</b></p>';
 $content_en .= '<br/>';
 
 $content_en .= '<table><tr><td width="200px">';
 $content_en .= '<h2>Christine Zanin</h2>';
 $content_en .= '</td><td>';
-$content_en .= '<b>Assistant- University Paris Diderot</b><br/>';
+$content_en .= '<b>Assistant professor- University Paris Diderot</b><br/>';
 $content_en .= 'UMR 8504 Géographie-cités / UMS 2414 RIATE<br/>';
 $content_en .= '<a href="mailto:christine.zanin@univ-paris-diderot.fr">christine.zanin@univ-paris-diderot.fr</a><br/>';
 $content_en .= '+33.1.57.27.65.08';
