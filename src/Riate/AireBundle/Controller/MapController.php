@@ -36,7 +36,6 @@ class MapController extends Controller
    */
   public function printAction(Map $map)
   {
-    //$map = $this->getMap($id);
     if (!$map->isPublished()) {
       throw new \Exception("map's publishing is not enabled for ".$id);
     }
@@ -50,7 +49,8 @@ class MapController extends Controller
     if ($extent) {
       $params['BBOX'] = $extent;
     }
-    $url = $map->getWmsMapUrl($this->container, $params);
+    //$map->getDisplay(array('resolutions' => array(8855)));
+    $url = $map->getWmsMapUrl($this->container, $params, true);
     $env = $this->container->getParameter('kernel.environment');
 
     return array('map' => $map,
@@ -61,19 +61,5 @@ class MapController extends Controller
                  'locale' => $this->session->getLocale(),
                  'env' => $env);
   }
-
-  /* protected function getMap($id) */
-  /* { */
-  /*   $class = self::DOC_PREFIX.'Map'; */
-  /*   $map = $this->dm->find($class, $id); */
-  /*   if (!$map) { */
-  /*     throw new \Exception('document not found in class '.$class.': '.$id); */
-  /*   } */
-  /*   if (!$map->isPublished()) { */
-  /*     throw new \Exception("map's publishing is not enabled for ".$id); */
-  /*   } */
-
-  /*   return $map; */
-  /* } */
 
 }
