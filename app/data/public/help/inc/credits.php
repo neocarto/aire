@@ -26,7 +26,7 @@ $content_fr .= '+33.1.57.27.65.32<br/>';
 $content_fr .= '</tr></table>';
 
 $content_fr .='<br/>';
-$content_fr .= '<h3><b><u>Développement</u> : Jean-François GIGAN <span class="txt">(';
+$content_fr .= '<h3><b><u>Développement</u> : Jean-François GIGAND <span class="txt">(';
 $content_fr .= '<a href="mailto:jf@geonef.fr">jf@geonef.fr</a>)</SPAN></h3>';
 
 $content_fr .= '<h4>Avec la participation de : <span class="txt"> ';
@@ -61,7 +61,7 @@ $content_en .= '<a href="mailto:nicolas.lambert@ums-riate.fr">nicolas.lambert@um
 $content_en .= '+33.1.57.27.65.32<br/>';
 $content_en .= '</tr></table>';
 $content_en .='<br/>';
-$content_en .= '<h3><b><u>Development</u> : Jean-François GIGAN <span class="txt">(';
+$content_en .= '<h3><b><u>Development</u> : Jean-François GIGAND <span class="txt">(';
 $content_en .= '<a href="mailto:jf@geonef.fr">jf@geonef.fr</a>)</SPAN></h3>';
 
 $content_en .= '<h4>Other contributions : <span class="txt"> ';

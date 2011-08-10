@@ -115,6 +115,7 @@ class CollectionController extends Controller
         $struct = array
           ('id' => $map->getId(),
            'title' => $map->getTitle(),
+           //'factory' => $display->getLayerFactoryStruct(),
            'extent' => $map->getExtent($this->container),//Geo::msRectToExtent($msMap->extent),
            'projection' => $map->getMapProjection($this->container),
            'layers' => $map->getLayerNames($this->container, null, true),

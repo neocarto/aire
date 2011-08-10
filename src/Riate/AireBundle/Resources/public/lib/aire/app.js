@@ -43,10 +43,14 @@ dojo.mixin(aire.app, {
 
   exportPrint: function() {
     var mapId = aire.app.map.map.baseLayer.name;
-    var qs = '';
-    if (aire.app.map.map.getZoom() !== 0) {
-      qs = '?extent='+aire.app.map.map.getExtent().toBBOX();
-    }
+    // var qs = '';
+    // if (aire.app.map.map.getZoom() !== 0) {
+    //   qs = '?extent='+aire.app.map.map.getExtent().toBBOX();
+    // }
+    var center = aire.app.map.map.getCenter();
+    var qs = '?loc='+center.toShortString().replace(/ /g, '')
+      +'&res='+aire.app.map.map.getResolution();
+    console.log('qs', qs);
     window.open('/map/'+mapId+'/print/'+aire.app.locale+qs,
                 mapId+'-print');
   },

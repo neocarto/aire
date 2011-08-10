@@ -19,7 +19,8 @@ dojo.declare('aire.Map', [ geonef.ploomap.map.Classical ],
     projection: null,
     maxExtent: null,
     numZoomLevels: 5,
-    maxResolution: 'auto'//8855
+    maxResolution: 'auto',
+    dragPanOptions: { enableKinetic: true }
   },
 
   buildOverViewMap: false,

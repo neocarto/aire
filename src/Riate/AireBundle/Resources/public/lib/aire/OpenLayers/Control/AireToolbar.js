@@ -119,7 +119,6 @@ aire.OpenLayers.Control.AireToolbar =
   onBaseLayerChange: function() {
     //console.log('baselayerchange', this, arguments, this.map && this.map.baseLayer && this.map.baseLayer.hasSvg, this.svgButton);
     dojo.style(this.svgButton.panel_div, 'display', this.map.baseLayer.hasSvg ? '' : 'none');
-  },
-
+  }
 
 });
