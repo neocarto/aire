@@ -6,6 +6,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Geonef\PloomapBundle\Document\MapCategory;
 use Geonef\PloomapBundle\Document\MapCollection\MultiRepr as MapCollectionMultiRepr;
 use Geonef\PloomapBundle\Document\MapCollection\SingleRepr as MapCollectionSingleRepr;
+use Riate\AireBundle\Display\AireMap;
+use Riate\AireBundle\Display\AireOverview;
 use Geonef\Ploomap\Util\Geo;
 
 use Funkiton\InjectorBundle\Annotation\Inject;
@@ -112,12 +114,13 @@ class CollectionController extends Controller
         catch (\Exception $e) {
           $legend = null;
         }
+        $mapDisplay = AireMap::getDisplay($this->container, $map);
+        $ovDisplay = AireOverview::getDisplay($this->container, $map);
         $struct = array
           ('id' => $map->getId(),
            'title' => $map->getTitle(),
-           //'factory' => $display->getLayerFactoryStruct(),
-           'extent' => $map->getExtent($this->container),//Geo::msRectToExtent($msMap->extent),
-           'projection' => $map->getMapProjection($this->container),
+           'factory' => $mapDisplay->getLayerFactoryStruct($this->container),
+           'overviewFactory' => $ovDisplay->getLayerFactoryStruct($this->container),
            'layers' => $map->getLayerNames($this->container, null, true),
            'legend' => $legend,
            'hasSvg' => $this->hasSvg($map),

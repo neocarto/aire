@@ -6,7 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Geonef\PloomapBundle\Document\Map;
 use Geonef\PloomapBundle\Document\MapCollection\MultiRepr as MapCollectionMultiRepr;
 use Geonef\Ploomap\Util\Geo;
-use Riate\AireBundle\AireDisplay;
+use Riate\AireBundle\Display\AireMap;
 
 use Funkiton\InjectorBundle\Annotation\Inject;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -55,10 +55,10 @@ class MapController extends Controller
     $loc = explode(',', $request->query->get('loc'));
     $res = $request->query->get('res');
     $params = array('lon' => $loc[0], 'lat' => $loc[1], 'resolution' => $res,
-                    'width' => AireDisplay::MAP_WIDTH,
-                    'height' => AireDisplay::MAP_HEIGHT,
+                    'width' => AireMap::MAP_WIDTH,
+                    'height' => AireMap::MAP_HEIGHT,
                     'format' => 'image/png');
-    $display = AireDisplay::getDisplay($this->container, $map);
+    $display = AireMap::getDisplay($this->container, $map);
     $url = $display->getImageUrl($this->container, $params);
     //$url = $map->getWmsMapUrl($this->container, $params, true);
     $this->dm->flush(); // if display was created

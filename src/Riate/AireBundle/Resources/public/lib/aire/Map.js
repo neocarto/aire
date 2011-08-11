@@ -15,18 +15,13 @@ dojo.declare('aire.Map', [ geonef.ploomap.map.Classical ],
 
   map: {},
 
-  mapOptions: {
-    projection: null,
-    maxExtent: null,
-    numZoomLevels: 5,
-    maxResolution: 'auto',
-    dragPanOptions: { enableKinetic: true }
-  },
+  mapOptions: {},
 
   buildOverViewMap: false,
 
   controls: [
-    'geonef.ploomap.OpenLayers.Control.Navigation',
+    { 'class': 'geonef.ploomap.OpenLayers.Control.Navigation',
+      options: { dragPanOptions: { enableKinetic: true } } },
     'OpenLayers.Control.KeyboardDefaults',
     'geonef.ploomap.OpenLayers.Control.PanZoomBar',
     //'geonef.ploomap.OpenLayers.Control.TileLoadSpinner',
@@ -97,8 +92,7 @@ dojo.declare('aire.Map', [ geonef.ploomap.map.Classical ],
   },
 
   updateLegend: function() {
-    //console.log('updateLegend', this, arguments,
-    //            this.map.baseLayer, this.map.baseLayer.legendData);
+    //console.log('updateLegend', this, arguments, this.map.baseLayer);
     this.legendContainer.setupMap(this.map.baseLayer.legendData);
   },
 
@@ -106,10 +100,9 @@ dojo.declare('aire.Map', [ geonef.ploomap.map.Classical ],
     geonef.jig.makeDOM(
       [['div', { 'class':'sourcecop', _insert: this.domNode },
         [['div',{ 'class':'opacity' }],
-         ['div',{ 'class':'source', attachPoint:'sourceNode'},'Z1'],
+         ['div',{ 'class':'source', attachPoint:'sourceNode'}],
          ['span', {}, '&nbsp;-&nbsp;'],
-         ['div',{ 'class': 'copyright', attachPoint:'copyrightNode'},'Z2']]]], this);
-    console.log('sourceNode', this, this.sourceNode, this.copyrightNode);
+         ['div',{ 'class': 'copyright', attachPoint:'copyrightNode'}]]]], this);
   },
 
   onZoomChange: function(newZoom) {

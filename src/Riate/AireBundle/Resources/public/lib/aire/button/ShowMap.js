@@ -36,7 +36,9 @@ dojo.declare('aire.button.ShowMap', [ geonef.jig.button.Action ],
    * it visible.
    */
   onBaseLayerChanged: function(mapWidget) {
+    //console.log('onBaseLayerChanged', this, arguments);
     var enabled = mapWidget.map.baseLayer.name === this.map;
+    //console.log('enabled', enabled, this._checked);
     if (enabled !== this._checked) {
       (enabled ? dojo.addClass : dojo.removeClass)(this.domNode, 'mapEnabled');
       if (enabled) {

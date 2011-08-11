@@ -32,7 +32,9 @@ sensio_framework_extra: ~
 
 funkiton_injector: ~
 
-geonef_ploomap: ~
+geonef_ploomap:
+  geocache:
+    local_wms_domain: aire.ums-riate.fr
 
 # Assetic Configuration
 # assetic:

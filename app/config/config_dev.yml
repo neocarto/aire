@@ -33,3 +33,7 @@ monolog:
 geonef_zig:
   static_cache:
     enabled: false
+
+geonef_ploomap:
+  geocache:
+    local_wms_domain: dev.aire.cartapatate.net

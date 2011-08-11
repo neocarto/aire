@@ -1,6 +1,6 @@
 <?php
 
-namespace Riate\AireBundle;
+namespace Riate\AireBundle\Display;
 
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Geonef\PloomapBundle\Document\Map;
@@ -10,7 +10,7 @@ use Geonef\PloomapBundle\Document\Display;
 /**
  * Provides the Display for necessary AIRE client maps
  */
-abstract class AireDisplay
+abstract class AireMap
 {
   /**
    * Width of map <div>, to compute maxResolution
@@ -23,9 +23,9 @@ abstract class AireDisplay
   const MAP_HEIGHT = 483;
 
   /**
-   * Number of zoom levels (AIRE 1.0 had 4, 2.0 has 5)
+   * Number of zoom levels
    */
-  const NUM_ZOOM_LEVELS = 5;
+  const NUM_ZOOM_LEVELS = 4;
 
 
   /**
