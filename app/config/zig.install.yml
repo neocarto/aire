@@ -37,7 +37,6 @@ geonef_zig:
       - ^x/print\.js$
       - ^x/admin\.js$
       - ^x/dojox/gfx/
-      - ^lib/require.js$
       # style
       - ^favicon\.ico$
       - ^data/
@@ -47,7 +46,6 @@ geonef_zig:
       - ^x/aire/style/home\.css
       - ^x/aire/style/admin\.css
       - ^x/aire/style/print\.css
-      - ^x/aire/style/common\.css
       - ^x/aire/style/icon/
       - ^images/aire/
       - ^x/dojo/resources/blank\.gif$
