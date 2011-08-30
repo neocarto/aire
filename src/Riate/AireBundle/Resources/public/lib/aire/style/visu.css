@@ -69,7 +69,7 @@ body.layoutHelp table#screen td.map { display: none; }
 /*body.layoutHelp table#screen td.reprs { display: none; }*/
 
 /* OpenLayers */
-.olHandlerBoxZoomBox { border: 2px solid red; position: absolute; background-color: white; opacity: 0.50; font-size: 1px; filter: alpha(opacity=50); }
+/* .olHandlerBoxZoomBox { border: 2px solid red; position: absolute; background-color: white; opacity: 0.50; font-size: 1px; filter: alpha(opacity=50); } */
 
 /* collection view */
 #toolbar div { float: left; width: 25px; height: 25px; background: url("icon/sprite.png") 0 -250px no-repeat; margin: 0 4px; }

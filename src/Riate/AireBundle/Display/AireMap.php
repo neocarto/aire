@@ -27,6 +27,8 @@ abstract class AireMap
    */
   const NUM_ZOOM_LEVELS = 4;
 
+  const TYPE = 'wms';
+  //const TYPE = 'tiled';
 
   /**
    * @return Display
@@ -36,7 +38,7 @@ abstract class AireMap
     $extent = $map->getExtent($container);
     $resolutions = static::getResolutions($extent);
     $srs = $map->getMapProjection($container);
-    $params = array('type' => 'tiled', 'srs' => $srs,
+    $params = array('type' => static::TYPE, 'srs' => $srs,
                     'resolutions' => $resolutions);
     $display = $map->getDisplay($container, $params);
 
