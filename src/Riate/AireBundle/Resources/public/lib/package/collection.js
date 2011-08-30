@@ -10,6 +10,9 @@ dojo.require('geonef.jig.workspace');
 dojo.require('dojo.parser');
 dojo.require('aire.app');
 
+// mapping
+dojo.require('geonef.ploomap.OpenLayers.Layers.WMS');
+
 // UI
 //dojo.require('dijit.layout.BorderContainer');
 dojo.require('dijit.layout.AccordionContainer');
