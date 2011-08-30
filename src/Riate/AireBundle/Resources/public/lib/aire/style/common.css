@@ -5,9 +5,6 @@
  */
 
 
-/* Style par défaut OpenLayers  */
-@import url("../../openlayers/theme/default/style.css");
-
 /* Dojo - tundra theme */
 /*@import url("../../../lib/dijit/themes/tundra/tundra.css");*/
 @import url("../../dijit/themes/tundra/tundra.css");
