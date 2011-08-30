@@ -94,7 +94,7 @@ geonef_zig:
             resourceName: package.admin
             copyrightFile: '../vendor/cartapatate/lib/cartapatate/copyright.txt'
             dependencies:
-              - cartapatate.start.loadWorkspace
+              - geonef.jig.start.loadWorkspace
               - package.admin
           -
             name: ../home.js
