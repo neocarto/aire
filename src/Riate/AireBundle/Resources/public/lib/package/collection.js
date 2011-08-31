@@ -11,7 +11,7 @@ dojo.require('dojo.parser');
 dojo.require('aire.app');
 
 // mapping
-dojo.require('geonef.ploomap.OpenLayers.Layers.WMS');
+dojo.require('geonef.ploomap.OpenLayers.Layer.WMS');
 
 // UI
 //dojo.require('dijit.layout.BorderContainer');

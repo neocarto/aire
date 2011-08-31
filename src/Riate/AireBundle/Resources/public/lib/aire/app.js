@@ -131,7 +131,7 @@ dojo.mixin(aire.app, {
     if (path) {
       var hash = 'help/'+path;
       if (dojo.hash() !== hash) {
-        console.log('current hash', dojo.hash(), 'different from', hash, 'setting..');
+        //console.log('current hash', dojo.hash(), 'different from', hash, 'setting..');
         dojo.hash(hash);
       }
     }
