@@ -14,10 +14,10 @@ packageScripts: false
 packageStyles: false
 
 scripts:
-  require: /lib/require.js
-  dojo: /x/dojo/dojo.js
+  #require: /lib/require.js
+  dojo: /xa/dojo/dojo.js
   #openlayers: /js/openlayers/build/OpenLayers.js
-  application: /x/admin.js
+  application: /xa/admin.js
 
 scriptAffectations:
   window\.workspaceKey: home
