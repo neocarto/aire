@@ -17,8 +17,6 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 
 /**
  *
- * Inject("doctrine.odm.mongodb.document_manager", name="dm")
- * Inject("session")
  * @Route("/collection")
  */
 class CollectionController extends Controller
