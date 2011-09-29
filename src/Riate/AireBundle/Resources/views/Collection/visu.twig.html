@@ -7,7 +7,7 @@
     {% if env == "dev" %}
     <link rel="stylesheet" type="text/css" href="/lib/aire/style/visu.css"/>
     {% else %}
-    <link rel="stylesheet" type="text/css" href="/x/aire/style/visu.css"/>
+    <link rel="stylesheet" type="text/css" href="/xa/aire/style/visu.css"/>
     {% endif %}
     <script type="text/javascript">
       var djConfig = { locale: '{{ locale }}' };
@@ -16,7 +16,7 @@
     {% if env == "dev" %}
     <script src="/lib/aire/start/collection.js" type="text/javascript"></script>
     {% else %}
-    <script src="/x/collection.js" type="text/javascript"></script>
+    <script src="/xa/collection.js" type="text/javascript"></script>
     {% endif %}
     <script type="text/javascript">
       window.aireCollection = {{ collection_json|raw }};

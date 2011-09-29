@@ -6,10 +6,10 @@
 .print h1.m { font-size: 18px; font-weight: bold; font-variant: small-caps;  margin: 0 auto 10px auto; text-align: center; }
 .print #map img { border: 1px solid #ccc; }
 .print textarea { border: 1px solid #ccc; width: 100%; height: 100px; margin-top: 10px; }
-.print #notice { width: 580px; padding: 10px; background: #fdd; font-size: 12px; margin-top: 20px;}
+.print #notice { padding: 10px; background: #fdd; font-size: 12px; margin-top: 20px;}
 .print #source-copy > p { font-size: 12px; margin: 5px 0 5px 0; }
 .print { background: white; font-size: 12px; margin: 0px; padding: 10px; color: #333; font-family: verdana;/*sans-serif;*/ }
-.print #main { width: 600px; margin: 20px auto 0 auto; }
+.print #main { /*width: 600px;*/ margin: 20px auto 0 auto; }
 .print #map {  position: relative; }
 .print #scale { float: right; margin-top: 10px; border: 1px solid black; border-top: none; font-size: 10px; text-align: center; }
 /*.ploomapLegend h1 {  }*/

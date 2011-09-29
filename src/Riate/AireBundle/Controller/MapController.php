@@ -70,6 +70,7 @@ class MapController extends Controller
                  'resolution' => $res,//8855,
                  //'extent' => $extent,
                  'locale' => $this->session->getLocale(),
+                 'width' => AireMap::MAP_WIDTH,
                  'env' => $env);
   }
 
