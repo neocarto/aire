@@ -20,7 +20,7 @@ dojo.require('geonef.jig.layout.TabContainer');
 dojo.require('geonef.ploomap.map.Classical');
 dojo.require('aire.admin.Library');
 
-// Admin tools
+// List modules
 dojo.require('aire.info.About');
 dojo.require('geonef.ploomap.list.OgrDataSource');
 dojo.require('geonef.ploomap.list.OgrLayer');
@@ -39,7 +39,7 @@ dojo.require('geonef.ploomap.list.tool.map.Services');
 dojo.require('geonef.ploomap.list.tool.mapCollection.Detail');
 dojo.require('geonef.ploomap.legend.package');
 
-// Document modules
+// Document edition modules
 dojo.require('geonef.ploomap.list.edition.map.Stock');
 dojo.require('geonef.ploomap.list.edition.map.Ratio');
 dojo.require('geonef.ploomap.list.edition.map.StockRatio');
@@ -53,9 +53,11 @@ dojo.require('geonef.ploomap.list.edition.map.layer.Mark');
 dojo.require('geonef.ploomap.list.edition.mapCollection.MultiRepr');
 dojo.require('geonef.ploomap.list.edition.mapCollection.SingleRepr');
 dojo.require('geonef.ploomap.list.edition.mapCollection.FreeCollection');
+dojo.require('geonef.ploomap.list.edition.MapCategory');
 dojo.require('geonef.ploomap.list.edition.ogrDataSource.Generic');
 dojo.require('geonef.ploomap.list.edition.ogrDataSource.PostgreSql');
 dojo.require('geonef.ploomap.list.edition.ogrDataSource.File');
+dojo.require('geonef.ploomap.list.edition.gdalDataset.Generic');
 dojo.require('geonef.jig.data.list.Template');
 dojo.require('geonef.ploomap.data.edition.template.SvgMap');
 
