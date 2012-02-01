@@ -57,7 +57,7 @@ dojo.require('geonef.ploomap.list.edition.MapCategory');
 dojo.require('geonef.ploomap.list.edition.ogrDataSource.Generic');
 dojo.require('geonef.ploomap.list.edition.ogrDataSource.PostgreSql');
 dojo.require('geonef.ploomap.list.edition.ogrDataSource.File');
-dojo.require('geonef.ploomap.list.edition.gdalDataset.Generic');
+dojo.require('geonef.ploomap.data.edition.gdalDataset.Generic');
 dojo.require('geonef.jig.data.list.Template');
 dojo.require('geonef.ploomap.data.edition.template.SvgMap');
 
