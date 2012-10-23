@@ -1,3 +1,0 @@
-<?xml version="1.0"?>
-<!--<!DOCTYPE metadata SYSTEM "http://www.esri.com/metadata/esriprof80.dtd">-->
-<metadata xml:lang="fr"><Esri><MetaID>{FCBC2B06-95AD-485B-B228-EEA2BE654DFB}</MetaID><CreaDate>20120120</CreaDate><CreaTime>16041800</CreaTime><SyncOnce>TRUE</SyncOnce><DataProperties><lineage><Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteField" Date="20120120" Time="160418">DeleteField Anam_EU34_NUTS0_Tot_lev_educ_Total OBJECTID;NAME;ZONING;DATA__LEVE;DATA__NUTS;TOT_LEV__4;SOURCE Anam_EU34_NUTS0_Tot_lev_educ_Total</Process></lineage></DataProperties></Esri></metadata>
