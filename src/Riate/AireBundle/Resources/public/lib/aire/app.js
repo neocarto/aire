@@ -38,7 +38,7 @@ dojo.mixin(aire.app, {
 
   exportSvg: function() {
     var mapId = aire.app.map.map.baseLayer.name;
-    window.open('/map/'+mapId+'/svg/'+aire.app.locale, mapId+'-svg');
+    window.open('/map/'+mapId+'/svg/'+aire.app.locale, mapId+'svg');
   },
 
   exportPrint: function() {
@@ -50,9 +50,9 @@ dojo.mixin(aire.app, {
     var center = aire.app.map.map.getCenter();
     var qs = '?loc='+center.toShortString().replace(/ /g, '')
       +'&res='+aire.app.map.map.getResolution();
-    console.log('qs', qs);
-    window.open('/map/'+mapId+'/print/'+aire.app.locale+qs,
-                mapId+'-print');
+    var url = '/map/'+mapId+'/print/'+aire.app.locale+qs;
+    var winId = mapId+'print';
+    window.open(url, winId);
   },
 
   exportData: function() {
@@ -62,7 +62,7 @@ dojo.mixin(aire.app, {
     //  qs = '?extent='+aire.app.map.map.getExtent().toBBOX();
     //}
     window.open('/map/'+mapId+'/csvFeatures/'+aire.app.locale+qs,
-                mapId+'-data');
+                mapId+'data');
   },
 
   updateLegend: function(state) {

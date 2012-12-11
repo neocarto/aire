@@ -3,7 +3,7 @@ imports:
 
 framework:
   router: { resource: "%kernel.root_dir%/config/routing_dev.yml" }
-  profiler: { only_exceptions: false }
+  #profiler: { only_exceptions: false }
 
 # web_profiler:
 #   toolbar: false
@@ -36,4 +36,5 @@ geonef_zig:
 
 geonef_ploomap:
   geocache:
-    local_wms_domain: dev.aire.cartapatate.net
+    local_wms_domain: test.v2.aire.ums-riate.fr
+
