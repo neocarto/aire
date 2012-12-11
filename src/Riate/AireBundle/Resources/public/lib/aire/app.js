@@ -18,7 +18,7 @@ dojo.mixin(aire.app, {
   },
 
   showHelp: function(path, fromHashChange_) {
-    //console.log('showHelp', arguments);
+    // console.log('showHelp', arguments);
     if (path === true) {
       path = '';
     }
@@ -127,8 +127,8 @@ dojo.mixin(aire.app, {
     //var path =  this.src.replace(/https?:\/\/[^/]+\/data\/help\//, '');
     var path =  frame.contentWindow.location.pathname
       .replace(/\/data\/help\//, '');
-    //console.log('onload!', this, arguments, path);
-    if (path) {
+    // console.log('onFrameLoad', frame, path);
+    if (path && path !== '/blank' /* workaround for IE9 */) {
       var hash = 'help/'+path;
       if (dojo.hash() !== hash) {
         //console.log('current hash', dojo.hash(), 'different from', hash, 'setting..');
@@ -138,7 +138,7 @@ dojo.mixin(aire.app, {
   },
 
   onHashChange: function(hash) {
-    //console.log('onHashChange', this, arguments);
+    // console.log('onHashChange', this, arguments);
     var handlers = {
       comment: function() {
         aire.app.setComment(true);

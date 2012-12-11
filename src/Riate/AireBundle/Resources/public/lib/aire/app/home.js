@@ -12,7 +12,7 @@ dojo.requireLocalization('aire', 'app');
 dojo.mixin(aire.app, {
 
   showContent: function(path) {
-    console.log('showContent', arguments);
+    // console.log('showContent', arguments);
     if (path === true) {
       path = '';
     }
@@ -30,7 +30,7 @@ dojo.mixin(aire.app, {
     aire.app.i18n = dojo.i18n.getLocalization('aire', 'app');
     aire.app.locale = dojo.body().getAttribute('lang');
     this.contentFrame = dojo.byId('contentFrame');
-    console.log('contentFrame', this, this.contentFrame);
+    // console.log('contentFrame', this, this.contentFrame);
     dojo.connect(this.contentFrame, 'onload', this.contentFrame,
                  function() {
                    //var path =  this.src.replace(/https?:\/\/[^/]+\/data\/content\//, '');
@@ -47,7 +47,7 @@ dojo.mixin(aire.app, {
   },
 
   onHashChange: function(hash) {
-    console.log('onHashChange', this, arguments);
+    // console.log('onHashChange', this, arguments);
     var handlers = {
       content: function(p) {
         if (p.length > 0) {
