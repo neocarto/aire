@@ -1,0 +1,18 @@
+<td colspan="${colspan}" class="margin center"
+	><span dojoAttachEvent="onclick:toggleSort" class="link sortCmd">&nbsp;</span
+	><div dojoType="dijit.form.DropDownButton" dojoAttachPoint="buttonNode"
+    	><span dojoAttachPoint="titleNode" class="title"></span
+    	><div dojoType="dijit.TooltipDialog">
+	        <label msgKey="filter">Filter ID</label> =
+	        <input dojoType="geonef.jig.input.TextBox"
+	        	   dojoAttachPoint="filterWidget"
+	        	   dojoAttachEvent="onChange:onFilterChange,onExecute:updateFilter"
+	        	   tooltipPosition="below">
+	        <button dojoType="geonef.jig.button.Action" type="submit"
+	        		dojoAttachEvent="onClick:updateFilter" msgKey="apply">Appliquer</button
+    	></div
+	></div
+	><div dojoAttachPoint="filterSummaryNode" style="display:none" class="filterSummary"
+		>ID = <span dojoAttachPoint="filterSummaryValueNode"></span
+			 ><span class="link" dojoAttachEvent="onclick:clearFilter">X</span></div
+></td>

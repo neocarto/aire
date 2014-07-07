@@ -1,0 +1,25 @@
+<div>
+  <table class="list">
+    <tbody>
+      <tr>
+        <td class="n">ID</td>
+        <td dojoAttachPoint="uuidNode"></td>
+      </tr>
+      <tr>
+        <td class="n">Name</td>
+        <td><input dojoType="dijit.form.TextBox" name="name"/></td>
+      </tr>
+      <tr>
+        <td class="n">Contenu MapFile</td>
+        <td style="max-height:300px;overflow:auto;"><input dojoType="dijit.form.Textarea" name="content"/></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <button dojoType="geonef.jig.button.Action"
+                  dojoAttachPoint="saveButton"
+                  dojoAttachEvent="onClick:saveValues">Enregistrer</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

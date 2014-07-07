@@ -1,0 +1,18 @@
+<tr>
+  <td dojoType="geonef.jig.list.header.generic.Selection"></td>
+
+  <td dojoType="geonef.jig.list.header.generic.Uuid"></td>
+
+  <td dojoType="geonef.jig.list.header.generic.Name" label="Titre"></td>
+
+  <td class="center">Couleurs</td>
+
+  <td dojoType="geonef.ploomap.list.header.colorFamily.Actions">
+    Titre&nbsp;<input dojoType="dijit.form.TextBox"
+                      dojoAttachPoint="createNewTitle"></input>
+    <button dojoType="geonef.jig.button.Action"
+            dojoAttachEvent="onClick:createNew"
+            label="Enregistrer"></button>
+  </td>
+
+</tr>

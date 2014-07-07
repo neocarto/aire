@@ -1,0 +1,65 @@
+/*********************************************
+ *
+ * Rules about widget functionalities
+ * implemented as mixins and common widget-related style
+ *
+ *********************************************/
+
+/* layout */
+.jigBorderContainer { padding: 0 !important; }
+
+
+/* cacoin */
+.jigCacoin h1 {  font-size: 14px; font-weight: bold; font-variant: small-caps; margin: 0 0 5px 0; }
+.jigCacoin h1.pad { padding: 5px; margin-bottom: 0; }
+.jigCacoin h2 {  font-size: 1em; font-weight: bold; margin: 2px 0 3px 0; }
+.jigCacoin h3 {  font-size: 0.8em; font-weight: bold; margin: 2px 0 3px 0; }
+.dijitTooltipDialog .jigCacoin > h1 {  font-size: 1em; }
+.jigCacoin.padding { padding: 5px; }
+.jigCacoin.padding > .dijitButton,
+  .jigCacoin.padding > .dijitDropDownButton {  position: relative; top: -5px; right: -5px; /*color: red;*/ }
+.jigCacoin .jigCacoinHelpButton { /*float: right;*/ padding-left: 10px; font-size: 14px; font-weight: bold; }
+.jigCacoin .jigCacoinHelpButton .dijitButtonNode { padding: 0; }
+
+
+/* options button */
+.optionsButton { position: absolute; z-index: 42000; top: 0; right: 0; }
+.optionsButton button .dijitButtonText { display: none; }
+.cacoinButton { z-index: 42000; position: absolute; top: 0; right: 0; }
+
+
+/* layout switch */
+body .jigLayoutSwitch .notSticky { display: none !important; }
+div.jigLayoutSwitch.stick .notSticky { display: block !important; }
+div.jigLayoutSwitch.stick table.notSticky { display: table !important; }
+div.jigLayoutSwitch.stick tr.notSticky { display: table-row !important; }
+div.jigLayoutSwitch.stick td.notSticky { display: table-cell !important; }
+.jigLayoutSwitch .leftLayoutSwitcher { display: none; position: absolute; left: 1px; top: 1px; background-color: #9cf; padding: 3px; }
+.jigLayoutSwitch .rightLayoutSwitcher { display: none; position: absolute; right: 1px; top: 1px; background-color: #9cf; padding: 3px; }
+.jigLayoutSwitch.stick .leftLayoutSwitcher,
+  .jigLayoutSwitch.stick .rightLayoutSwitcher { display: block; }
+
+
+/* auto-grid */
+.jigAutogrid tr > span { margin: 0; display: table-cell; }
+.jigAutogrid tr > span > span,
+  .jigAutogrid tr > span > span > span { width: 100%; height: 100%; }
+.jigAutogrid cols { display: none; }
+.jigInputMixedList > .jigList > tbody > tr > td { padding: 0; border-top: 1px solid #888; }
+.jigInputMixedList > .jigList > tbody > tr > td > * { margin: 0; }
+
+
+/* button area */
+.jigButtonArea .dijitButton .dijitButtonNode,
+ .jigButtonArea .dijitDropDownButton .dijitButtonNode,
+ .jigButtonArea .dijitToggleButton .dijitButtonNode { border-top: none; border-left: none; border-right: none; border-bottom: 2px solid #fff; background: none; }
+.jigButtonArea .dijitButtonHover .dijitButtonNode,
+ .jigButtonArea .dijitDropDownButtonHover .dijitButtonNode,
+ .jigButtonArea .dijitToggleButtonHover .dijitButtonNode { /*background: #ccc;*/ border-bottom-color: #0031DE; }
+
+
+/* widget processing (busy message) */
+.jigWidgetProcessing { position: absolute; top: 0; bottom: 0; left: 0; right: 0; }
+.jigWidgetProcessing > .bg { background: #fec; opacity: 0.7; position: absolute; top: 0; bottom: 0; left: 0; right: 0; }
+.jigWidgetProcessing > .content { position: absolute; top: 30%; left: 0; width: 100%; text-align: center; /*padding: 15px; border: 1px solid #d24f04; border-radius: 5px; -moz-border-radius: 5px; background: #fec; color: #d24f04;*/ }
+.jigWidgetProcessing > .content h1 { font-size: 1em; font-style: italic; }

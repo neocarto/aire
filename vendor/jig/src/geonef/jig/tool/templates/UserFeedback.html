@@ -1,0 +1,42 @@
+<div class="jigCacoin padding">
+  <p>
+    N'hésitez pas à nous faire part de votre retour sur l'utilisation
+    de ce portail cartographique. Il nous aidera à améliorer nos services.
+  </p>
+  <div dojoType="geonef.jig.input.Group"
+       dojoAttachPoint="groupInput">
+    <table class="list">
+      <tbody>
+        <tr dojoAttachPoint="nameNode">
+          <td class="n">Votre nom</td>
+          <td><input dojoType="dijit.form.TextBox" name="user"
+                     required="true" trim="true"/></td>
+        </tr>
+        <tr>
+          <td class="n">Message</td>
+          <td><textarea dojoType="dijit.form.Textarea" name="message"
+                        required="true" trim="true"
+                        __cols="20" __rows="5"></textarea></td>
+        </tr>
+        <tr>
+          <td class="n" colspan="2">
+            <button dojoType="geonef.jig.button.Action"
+                    dojoAttachPoint="sendButton"
+                    dojoAttachEvent="onClick:send">Envoyer</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <h2>Médias sociaux</h2>
+  <p>
+    Vous pouvez aussi donner votre avis ou poser des questions via les
+    canaux suivants :
+  </p>
+  <ul>
+    <li><a href="http://www.geonef.fr/blog" target="_blank">Blog Geonef</a></li>
+    <li><a href="http://twitter.com/Geogeonef" target="_blank">Compte twitter</a></li>
+    <li><a href="http://www.facebook.com/pages/Geonef/190393607674745"
+           target="_blank">Page Facebook</a></li>
+  </ul>
+</div>

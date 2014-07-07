@@ -1,0 +1,33 @@
+/**
+ ** LEGEND
+ **/
+
+
+/* common */
+.ploomapLegend { padding: 5px; font-size: 0.8em; width: 156px; }
+.ploomapLegend h1 { border: none; font-size: inherits; margin: 0 0 10px 0; font-weight: bold; font-size: 1.2em; font-variant: normal; }
+.ploomapLegend h1 .unit { font-style: italic; }
+.ploomapLegend .nodata { border: 1px solid; /*background: #fff;*/ height: 10px; padding-left: 20px; }
+.ploomapLegend .nodata,
+  .ploomapLegend .intervals .class .rect { border-color: #333; }
+
+/* container */
+.ploomapMap .ploomapLegendContainer { position: absolute; top: 1px; right: 1px; padding: 5px; border-left: 1px solid #ccc; border-bottom: 1px solid #ccc; width: 156px; font-size: 10px; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='/images/blanc_04.png'); z-index: 4200; }
+.ploomapMap .ploomapLegendContainer[id] { background-image: url(/images/blanc_04.png); }
+
+
+/* intervals (class colors) */
+.ploomapLegend .intervals {  padding-top: 6px; }
+.ploomapLegend .intervals .class { margin: 0 5px 1px 0; }
+.ploomapLegend .intervals .class .rect { border-left-style: solid; border-right-style: solid; border-bottom-style: solid; border-top-style: none; border-width: 1px; height: 10px; padding-left: 20px; }
+.ploomapLegend .intervals .class .rect.first { border-top-style: solid; }
+.ploomapLegend .intervals .class .number { position: relative; margin: 0 0 0 5px; bottom: 8px; }
+.ploomapLegend .intervals .maximum { margin: 0 5px 0 0; }
+.ploomapLegend .intervals .maximum span { position: relative; margin: 0 0 0 31px; bottom: 6px; }
+
+
+/* discontinuities */
+.ploomapLegendRatioDisc table.disc { cell-spacing: 10px; }
+.ploomapLegendRatioDisc table.disc td { text-align: center; width: 30px; font-style: italic; }
+.ploomapLegendRatioDisc .nullDisc { margin-top: 5px; }
+.ploomapLegendRatioDisc .nullDisc .line { margin: 0 5px 0 0; padding: 0 14px; position: relative; top: -6px; }

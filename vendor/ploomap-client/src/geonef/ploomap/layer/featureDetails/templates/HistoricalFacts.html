@@ -1,0 +1,40 @@
+<div>
+  <div dojoType="dijit.layout.TabContainer" dojoAttachPoint="tabContainer"
+       doLayout="true" tabStrip="true" useSlider="true" useMenu="true"
+       style="width:100%;height:280px;">
+    <div dojoType="dijit.layout.ContentPane" title="Informations">
+      <button dojoType="geonef.jig.button.Action" style="float:right"
+              dojoAttachEvent="onClick:close">Fermer cette bulle</button><br/>
+      <h1><span dojoAttachPoint="nameNode"></span><span dojoAttachPoint="dateNode"></span></h1>
+      <h1><span dojoAttachPoint="titleNode"></span></h1>
+      <p dojoAttachPoint="storyNode"></p>
+      <h2 dojoAttachPoint="actorsLabelNode">Personnages impliqués</h2>
+      <ul dojoAttachPoint="actorsNode"></ul>
+      <p dojoAttachPoint="urlNode">
+        <h2>En savoir plus</h2>
+        <a dojoAttachPoint="urlLinkNode" target="_blank"></a>
+      </p>
+    </div>
+    <div dojoType="dijit.layout.ContentPane" title="Image" dojoAttachPoint="imagePane">
+      <i dojoAttachPoint="imageEmptyNode">(aucune image pour cet évènement)</i>
+      <img src="" width="90%" dojoAttachPoint="imageNode"/>
+    </div>
+    <div dojoType="dijit.layout.ContentPane" title="Éditer"
+         dojoAttachPoint="editPane">
+      <div dojoType="geonef.jig.input.Group" dojoAttachPoint="attrGroup">
+        <table class="list"><tbody dojoAttachPoint="attrListNode">
+            <tr><td colspan="2">
+                <button dojoType="geonef.jig.button.Action"
+                        dojoAttachEvent="onClick:close">Fermer</button>
+                <button dojoType="geonef.jig.button.Action"
+                        dojoAttachEvent="onClick:revertAttrs">Restaurer</button>
+                <button dojoType="geonef.jig.button.Action"
+                        dojoAttachEvent="onClick:saveAttrs">Sauvegarder</button>
+                <button dojoType="geonef.jig.button.Action"
+                        dojoAttachEvent="onClick:deleteFeature">Supprimer</button>
+            </td></tr>
+        </tbody></table>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="jigCacoin jigToolDevExceptionDump padding">
+  <h1><span class="link" dojoAttachEvent="onclick:dump">Exception</span>&nbsp;-
+    code <span dojoAttachPoint="codeNode"></span>
+    (<span dojoAttachEvent="onclick:destroy">Fermer</span>)</h1>
+  <p dojoAttachPoint="messageNode" class="message"></p>
+  <h1>Context</h1>
+  <div dojoAttachPoint="contextNode" dojoAttachEvent="onclick:dumpContext" class="link">Dump</div>
+  <h1>Stack trace</h1>
+  <div dojoType="geonef.jig.input.List" readOnly="true"
+       childClass="geonef.jig.tool.dev._ExceptionDumpBtCall"
+       dojoAttachPoint="btCallList">
+  </div>
+</div>

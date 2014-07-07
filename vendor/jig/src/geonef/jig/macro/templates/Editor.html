@@ -1,0 +1,76 @@
+<div class="jigCacoin jigMacroEditor">
+  <!--h1 dojoAttachPoint="titleNode" class="pad">Éditeur de présentation</h1-->
+  <div dojoType="geonef.jig.input.Group" dojoAttachPoint="groupInput"
+       dojoAttachEvent="onChange:onValueChange">
+    <div dojoType="dijit.layout.TabContainer" dojoAttachPoint="tabContainer"
+         doLayout="true" tabStrip="true" useSlider="false" useMenu="false"
+         style="position:absolute;top:0;bottom:0;left:0;right:0;">
+
+      <div dojoType="dijit.layout.ContentPane" title="Actions"
+           dojoAttachPoint="actionsPane">
+        <span dojoType="dijit.form.DropDownButton" class="addButton">
+          <span>Ajouter une action</span>
+          <div dojoType="dijit.TooltipDialog">
+            <div dojoType="geonef.jig.macro.editor.ActionList"
+                 dojoAttachEvent="onAddAction:addAction"></div>
+          </div>
+        </span>
+        <div dojoType="geonef.jig.input.Group" arrayContainer="true" name="actions"
+             dojoAttachPoint="actionGroupInput">
+          <div class="list" dojoAttachPoint="actionListNode">
+          </div>
+        </div>
+      </div>
+
+      <div dojoType="dijit.layout.ContentPane" title="Présentation">
+        <table class="list"><tbody>
+            <tr>
+              <td class="n">Nom</td>
+              <td><input dojoType="dijit.form.TextBox" name="title"></input></td>
+          </tr>
+        </tbody></table>
+        <button dojoType="geonef.jig.button.Action"
+                dojoAttachEvent="onClick:actionDump"
+                label="Dump" class="devOnly"></button>
+        <button dojoType="geonef.jig.button.Action"
+                dojoAttachEvent="onClick:actionRun"
+                label="Lancer la présentation !"></button>
+        <br/>
+        <span dojoType="dijit.form.DropDownButton">
+          <span>Enregistrer</span>
+          <div dojoType="dijit.TooltipDialog" class="jigMacroEditorDialog" style="width:300px;">
+            <p>L'application n'enregistre pas elle-même.</p>
+            <p>Pour le faire, copier le bloc ci-dessous et enregistrez le quelque part.
+            Vous pourrez ensuite restaurer la présentation par la fonction <i>Charger</i>.</p>
+            <pre class="saveJson" dojoAttachPoint="saveJsonNode"></pre>
+          </div>
+        </span>
+        <span dojoType="dijit.form.DropDownButton">
+          <span>Charger</span>
+          <div dojoType="dijit.TooltipDialog" class="jigMacroEditorDialog" style="width:300px;">
+            <p>Il est possible de charger une présentation en collant ci-dessous
+              un bloc qui provient de la fonction <i>Enregistrer</i>.
+              Cliquer ensuite sur le bouton <i>Charger</i>.</p>
+            <textarea dojoType="dijit.form.SimpleTextarea"
+                      dojoAttachPoint="loadTextarea"
+                      style="width: 100%" ></textarea><br/>
+            <div style="text-align:right">
+              <button dojoType="geonef.jig.button.Action"
+                      dojoAttachEvent="onClick:actionLoad"
+                      label="Charger"></button>
+            </div>
+          </div>
+        </span>
+        <br/>
+        <button dojoType="geonef.jig.button.Action"
+                dojoAttachEvent="onClick:actionClear"
+                label="Effacer"></button><br/>
+        <button dojoType="geonef.jig.button.Action"
+                dojoAttachEvent="onClick:destroy"
+                label="Quitter"></button>
+      </div>
+
+    </div>
+  </div>
+</div>
+

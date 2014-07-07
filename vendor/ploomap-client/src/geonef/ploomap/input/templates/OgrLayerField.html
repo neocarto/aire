@@ -1,0 +1,21 @@
+<span class="ploomapInputOgrField">
+<span dojoType="dijit.form.DropDownButton" dojoAttachPoint="button">
+  <span>${nullLabel}</span>
+  <div dojoType="dijit.TooltipDialog" dojoAttachPoint="dialog">
+    <input dojoType="dijit.form.TextBox"
+           dojoAttachPoint="textBox"
+           dojoAttachEvent="onChange:onTextBoxChange"/>
+    <button dojoType="geonef.jig.button.Action"
+            dojoAttachEvent="onClick:updateList"
+            label="Récupérer la liste"></button>
+    <div style="width: 320px; max-height: 300px; overflow: auto;">
+      <table class="jigList">
+        <thead><tr>
+          <td>Nom</td><td>Type</td><td>taille</td><td>Précision</td><td>Justification</td>
+        </tr></thead>
+        <tbody dojoAttachPoint="fieldListNode"></tbody>
+      </table>
+    </div>
+  </div>
+</span>
+</span>

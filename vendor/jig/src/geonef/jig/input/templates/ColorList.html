@@ -1,0 +1,37 @@
+<div class="jigInputColorList">
+  <span dojoType="dijit.form.DropDownButton" dojoAttachPoint="button"
+        class="dropDownButton">
+    <span></span>
+    <div dojoType="dijit.TooltipDialog" style="width:320px;">
+      <div dojoAttachPoint="actionsNode">
+        <span>
+          <span>Nombre de couleurs</span>&nbsp;:
+          <input dojoType="dijit.form.NumberSpinner"
+                 dojoAttachPoint="countSpinner"
+                 value="0" smallDelta="1" largeDelta="5"
+                 constraints="{min:0,max:${maxCount},places:0}"></input>
+          <button dojoType="geonef.jig.button.Action"
+                  dojoAttachEvent="onClick:onCountSpinnerChange"
+                  label="Appliquer"></button>
+          <span dojoType="dijit.form.DropDownButton"
+                class="dropDownButton">
+            <span>Auto</span>
+            <div dojoType="dijit.TooltipDialog">
+              Générer couleurs de
+              <input dojoType="geonef.jig.input.Color"
+                     dojoAttachPoint="autoColorStart"/>
+              vers
+              <input dojoType="geonef.jig.input.Color"
+                     dojoAttachPoint="autoColorEnd"/>
+              <button dojoType="geonef.jig.button.Action"
+                      dojoAttachEvent="onClick:autoGenerate"
+                      label="OK"></button>
+            </div>
+          </span>
+        </span>
+      </div>
+      <div dojoAttachPoint="listNode">
+      </div>
+    </div>
+  </span>
+</div>

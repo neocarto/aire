@@ -1,0 +1,26 @@
+<tr>
+
+  <td dojoType="geonef.jig.list.header.generic.Selection"></td>
+
+  <td dojoType="geonef.jig.list.header.generic.Uuid"></td>
+
+  <td dojoType="geonef.jig.list.header.generic.Name"></td>
+
+  <td dojoType="geonef.jig.list.header.generic.Module"
+      apiModule="${queryApiModule}"></td>
+
+  <td dojoType="geonef.jig.list.header.generic.NumberField" class="center"
+      name="width" title="Largeur"></td>
+
+  <td dojoType="geonef.jig.list.header.generic.NumberField" class="center"
+      name="height" title="Hauteur"></td>
+
+  <td dojoType="geonef.ploomap.data.list.header.gdalDataset.Actions"
+      dojoAttachPoint="actionsField">
+    <div dojoType="geonef.jig.list.header.action.CreateModuleButtons"
+         classNamespace="geonef.ploomap.data.edition.gdalDataset"
+         saveNoticeChannel="${listWidget.refreshTopic}"
+         apiModule="${queryApiModule}"></div>
+  </td>
+
+</tr>

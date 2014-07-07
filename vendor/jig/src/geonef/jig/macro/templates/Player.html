@@ -1,0 +1,63 @@
+<div class="jigCacoin jigMacroPlayer">
+  <div dojoAttachPoint="messageNode"
+       class="message" style="display:none"></div>
+  <!--<button dojoType="dijit.form.ToggleButton"
+          dojoAttachPoint="playButton"
+          dojoAttachEvent="onChange:_setPlayingAttr"
+          iconClass="dijitCheckBoxIcon"
+          label="Lancer la macro"></button>
+  <button dojoType="geonef.jig.button.Action"
+          dojoAttachEvent="onClick:stopMacro"
+          label="Arrêter"></button>
+  <button dojoType="dijit.form.ToggleButton"
+          dojoAttachPoint="playButton"
+          dojoAttachEvent="onChange:_setEditorOpenAttr"
+          iconClass="dijitCheckBoxIcon"
+          label="Éditer"></button>
+  <div>
+    <span dojoAttachPoint="statusNode">STATUS</span>
+    <span dojoAttachPoint="infoNode">INFO</span>
+  </div>-->
+  <!--div dojoAttachPoint="containerNode">
+  </div-->
+  <!--div dojoType="geonef.jig.macro.action.TextRunnerHandler"
+       dojoAttachPoint="textRunnerHandler">
+  </div-->
+  <div class="buttons">
+    <button dojoType="geonef.jig.button.Action"
+            dojoAttachPoint="stopButton"
+            dojoAttachEvent="onClick:actionStop"
+            label="Quitter"></button>
+    <button dojoType="geonef.jig.button.Action"
+            dojoAttachPoint="stopButton"
+            dojoAttachEvent="onClick:replayMacro"
+            label="Rejouer" style="display:none"></button>
+    <button dojoType="geonef.jig.button.Action"
+            dojoAttachPoint="pauseButton"
+            dojoAttachEvent="onClick:pauseMacro"
+            label="Pause" style="display:none"></button>
+    <button dojoType="geonef.jig.button.Action"
+            dojoAttachPoint="resumeButton"
+            dojoAttachEvent="onClick:playMacro"
+            label="Reprendre" style="display:none"></button>
+    <button dojoType="geonef.jig.button.Action"
+            dojoAttachPoint="playButton"
+            dojoAttachEvent="onClick:playMacro"
+            label="Démarrer" style="display:none"></button>
+    <button dojoType="geonef.jig.button.Action"
+            dojoAttachPoint="nextButton"
+            dojoAttachEvent="onClick:nextButtonClick"
+            label="Continuer" style="display:none"></button>
+    <div dojoType="dijit.form.DropDownButton" class="nolabel" >
+      <span>props</span>
+      <div dojoType="dijit.TooltipDialog" class="jigMacroPlayerDropDownButton">
+        <button dojoType="geonef.jig.button.Action"
+                dojoAttachEvent="onClick:actionCreate"
+                label="Créer une présentation"></button>
+        <button dojoType="geonef.jig.button.Action"
+                dojoAttachEvent="onClick:actionEdit"
+                label="Éditer cette présentation"></button>
+      </div>
+    </div>
+  </div>
+</div>

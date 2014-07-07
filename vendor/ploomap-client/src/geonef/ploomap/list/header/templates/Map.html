@@ -1,0 +1,31 @@
+<tr>
+  <td dojoType="geonef.jig.list.header.generic.Selection"></td>
+
+  <td dojoType="geonef.jig.list.header.generic.Uuid"></td>
+
+  <td dojoType="geonef.jig.list.header.generic.Name" label="Titre court"></td>
+
+  <!--td dojoType="geonef.jig.list.header.generic.Validity"></td-->
+  <td class="center">Valide</td>
+
+  <td dojoType="geonef.jig.list.header.generic.SelectEntityFilter"
+      title="Série" name="mapCollection" labelProp="title"
+      apiModule="listQuery.mapCollection" inListTitle="true"
+      class="center"></td>
+
+  <td dojoType="geonef.jig.list.header.generic.Module"
+      apiModule="${queryApiModule}" locale="${listWidget.locale}"></td>
+
+  <td dojoType="geonef.jig.list.header.generic.StringField"
+      title="Niveau" name="level" class="center"></td>
+
+  <td class="center">Modif</td>
+
+  <td dojoType="geonef.ploomap.list.header.map.Actions">
+    <div dojoType="geonef.jig.list.header.action.CreateModuleButtons"
+         classNamespace="geonef.ploomap.list.edition.map"
+         saveNoticeChannel="${listWidget.refreshTopic}"
+         apiModule="${queryApiModule}"></div>
+  </td>
+
+</tr>

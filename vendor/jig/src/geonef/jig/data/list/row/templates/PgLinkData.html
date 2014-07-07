@@ -1,0 +1,23 @@
+<tr>
+
+  <td class="select">
+    <input type="checkbox" dojoType="dijit.form.CheckBox"
+	   dojoAttachPoint="selectCheckBoxNode"
+	   dojoAttachEvent="onChange:onSelectCheckBoxChange"/>
+  </td>
+
+  <td dojoAttachPoint="rowIdNode" class="center"></td>
+
+  <td dojoAttachPoint="actionNode" class="center"
+    ><button dojoType="geonef.jig.button.Action" class="notEditing"
+            dojoAttachEvent="onClick:enterEdition">Éditer</button
+    ><button dojoType="geonef.jig.button.Action" class="notEditing"
+            dojoAttachPoint="deleteButton"
+            dojoAttachEvent="onClick:deleteRow">Supprimer</button
+    ><button dojoType="geonef.jig.button.Action" class="editing"
+            dojoAttachEvent="onClick:commitEdition">Valider</button
+    ><button dojoType="geonef.jig.button.Action" class="editing"
+            dojoAttachEvent="onClick:cancelEdition">Annuler</button
+  ></td>
+
+</tr>

@@ -1,0 +1,33 @@
+<div class="item ploomapToolLayer">
+
+  <div dojoAttachPoint="iconNode" class="icon dojoDndHandle"></div>
+
+  <table dojoType="dijit.form.HorizontalSlider"
+         dojoAttachPoint="slider"
+         dojoAttachEvent="onChange:changeOpacity"
+         minimum="0" maximum="100" value="100"
+         discreteValues="20"
+         pageIncrement="20" showButtons="true"
+         intermediateChanges="true" slideDuration="500"
+         class="slider">
+  </table>
+
+  <div dojoAttachPoint="mainNode" class="sub">
+	<div dojoType="dijit.form.CheckBox"
+		 dojoAttachPoint="visibilityCheckBox"
+		 dojoAttachEvent="onChange:toggleVisibility"></div>
+
+    <!--div dojoType="dijit.form.DropDownButton"
+         dojoAttachPoint="button">
+      <div dojoType="dijit.TooltipDialog">
+        <div dojoType="${optClass}"
+             dojoAttachPoint="optWidget"
+             mapWidget="${layer.map.mapWidget.id}" layerWidget="${id}"></div>
+      </div>
+    </div-->
+    <span dojoType="geonef.jig.button.Link" class="label"
+          dojoAttachPoint="labelLink"
+          dojoAttachEvent="onClick:labelClick"></span>
+  </div>
+
+</div>

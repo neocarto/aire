@@ -1,0 +1,14 @@
+
+.jigButtonUserStatus .dijitButtonNode { background: #fff; font-weight: bold; padding: 2px; }
+.jigButtonUserStatusDialog .dijitTooltipContents { width: 300px; padding: 5px; }
+.jigButtonUserStatusDialog .info { margin-bottom: 10px; text-align: right; }
+.jigButtonUserStatusDialog .profileIcon { float: right; margin: 0 0 5px 5px; }
+.jigButtonUserStatusDialog .sessionLinks { margin-top: 10px; }
+
+.profileIcon img {
+                   border-radius: 5px;
+                   -moz-border-radius: 5px;
+                   -webkit-border-radius: 5px;
+                   }
+.profileIcon.link img { border: 1px solid #ccc; }
+.profileIcon.link:hover img { border-color: #0031de; }

@@ -1,0 +1,18 @@
+<div>
+  <h1><span dojoType="geonef.jig.input.Label" dojoAttachPoint="titleLabel"></span>
+    <span class="unitC" dojoAttachPoint="unitNode"></span></h1>
+  <div dojoAttachPoint="containerNode">
+  </div>
+  <div id="${id}_av" class="average">
+    <span msgKey="average"></span>&nbsp;:
+    <span dojoType="geonef.jig.input.Label" name="average"
+          filter="geonef.ploomap.legend.Abstract.prototype.formatNumber"
+          hideElementIfFalsy="${id}_av"></span>
+    <span class="unitC" dojoAttachPoint="unitNode2"></span>
+  </div>
+  <div class="hasNull" style="display:none; margin-top: 8px;">
+    <span class="nodata">&nbsp;</span>&nbsp;<span
+                 msgKey="nodata"></span>
+  </div>
+  <div dojoType="geonef.jig.input.Label" name="text" style="margin-top:8px"></div>
+</div>

@@ -1,0 +1,19 @@
+<span class="ploomapInputExtent">
+<span dojoType="dijit.form.DropDownButton" dojoAttachPoint="mainButton">
+    <span>${label}</span>
+    <div dojoType="dijit.TooltipDialog" class="jigCacoin jigButtonArea ploomapInputExtent">
+      <button dojoType="dijit.form.Button"
+              dojoAttachEvent="onClick:copyToClipboard"
+              __iconClass="dijitEditorIcon dijitEditorIconCopy">
+        <img src="${iconBaseUrl}/input_extent_copy.png"/><br/>
+        <span>Copier la région</span>
+      </button>
+      <button dojoType="dijit.form.Button"
+              dojoAttachPoint="zoomToCurrentButton"
+              dojoAttachEvent="onClick:zoomToCurrent">
+        <img src="${iconBaseUrl}/input_extent_zoomTo.png"/><br/>
+        <span>Zoomer dessus</span>
+      </button>
+    </div>
+</span>
+</span>

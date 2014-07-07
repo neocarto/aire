@@ -1,0 +1,14 @@
+<div class="jigCacoin">
+  <p>
+  </p>
+  <input dojoType="dijit.form.TextBox"
+         dojoAttachPoint="urlInput"/>
+  <button dojoType="geonef.jig.button.Action"
+          dojoAttachEvent="onClick:fetchCapabilities">req</button>
+  <div dojoAttachPoint="waitNode" class="wait" style="display:none">Requête en cours...</div>
+  <table class="jigList"><tbody dojoAttachPoint="listNode">
+  </tbody></table>
+  <button dojoType="geonef.jig.button.Action"
+          dojoAttachEvent="onClick:addLayer">Ajouter</button>
+
+</div>

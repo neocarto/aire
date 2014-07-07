@@ -1,0 +1,11 @@
+
+/**
+ ** Base style for Ploomap JS library
+ **
+ */
+
+@import url("map.css");
+@import url("tool.css");
+@import url("legend.css");
+@import url("popup.css");
+@import url("box.css");

@@ -1,0 +1,66 @@
+<tr>
+
+  <td class="select">
+    <input type="checkbox" dojoType="dijit.form.CheckBox"
+	   dojoAttachPoint="selectCheckBoxNode"
+	   dojoAttachEvent="onChange:onSelectCheckBoxChange"/>
+  </td>
+
+  <td dojoAttachPoint="uuidNode" class="center"></td>
+
+  <td >
+    <span dojoAttachPoint="nameNode" class="pad bold"></span>
+  </td>
+
+  <td class="center">
+    <span dojoType="geonef.jig.data.tool.generic.DocValidity"
+          dojoAttachPoint="validity"></span>
+  </td>
+
+  <td dojoAttachPoint="mapCollectionNode" class="center"></td>
+
+  <td dojoAttachPoint="moduleNode" class="center"></td>
+
+  <td dojoAttachPoint="levelNode" class="center"></td>
+
+  <td dojoAttachPoint="lastEditedAtNode" class="center"></td>
+
+  <td dojoAttachPoint="actionNode" class="center">
+    <div dojoType="dijit.form.DropDownButton" class="jigFirstButton"
+         dojoAttachPoint="infoButton">
+      <span>Info</span>
+      <div dojoType="dijit.TooltipDialog"
+         ><button dojoType="geonef.jig.button.TooltipWidget" class="jigFirstButton"
+                dojoAttachPoint="viewButton"
+                childWidgetClass="geonef.ploomap.list.tool.map.View"
+                childWidgetParams="{uuid:'${uuid}'}"
+                label="Aperçu"
+        ></button><button dojoType="geonef.jig.button.TooltipWidget"
+                dojoAttachPoint="legendButton"
+                childWidgetClass="geonef.ploomap.list.tool.map.Legend"
+                childWidgetParams="{uuid:'${uuid}'}"
+                label="Légende"
+        ></button><button dojoType="geonef.jig.button.TooltipWidget"
+                dojoAttachPoint="dataViewButton"
+                childWidgetClass="geonef.ploomap.list.tool.map.DataView"
+                childWidgetParams="{uuid:'${uuid}'}"
+                label="Données"
+        ></button><button dojoType="geonef.jig.button.TooltipWidget" class="jigLastButton"
+                dojoAttachPoint="servicesViewButton"
+                childWidgetClass="geonef.ploomap.list.tool.map.Services"
+                childWidgetParams="{uuid:'${uuid}'}"
+                label="Services"
+      ></button></div>
+    </div
+    ><button dojoType="geonef.jig.button.InstanciateAnchored" class="jigLastButton"
+            __dojoType="geonef.jig.button.TooltipWidget"
+            dojoAttachPoint="editButton"
+            __dropDownPosition="before,after"
+            childWidgetClass="geonef.ploomap.list.edition.map.${module}"
+            childWidgetParams="{uuid:'${uuid}',recordListRow:'${id}',locale:'${locale}'}"
+            __childWidgetStyle="width:'400px'"
+            anchor="auto"
+            label="Propriétés "></button>
+  </td>
+
+</tr>

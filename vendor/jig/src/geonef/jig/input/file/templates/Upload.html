@@ -1,0 +1,28 @@
+<div class="jigInputFileUpload">
+  <!-- <div class="uploadPrompt" dojoAttachPoint="promptNode" style="display:none"> -->
+  <!--   <button dojoType="dijit.form.Button" -->
+  <!--           dojoAttachEvent="onClick:onUploadButtonClick" -->
+  <!--           msgKey="buttonLabel">Choisir un fichier à envoyer</button> -->
+  <!-- </div> -->
+  <div dojoAttachPoint="uploadFormNode" class="uploadForm">
+    <div dojoType="geonef.jig.button.Action" class="open"
+         dojoAttachEvent="onClick:openFileChooser">${label}</div>
+    <form dojoAttachPoint="formNode"
+	  enctype="multipart/form-data" method="POST">
+      <input type="hidden" name="json" dojoAttachPoint="jsonInputNode"/>
+      <!--button dojoAttachPoint="uploadCancelButton"
+	      dojoAttachEvent="onClick:onUploadCancelButtonClick"
+	      dojoType="dijit.form.Button"
+	     msgKey="cancel">Annuler</button-->
+    </form>
+  </div>
+  <div dojoAttachPoint="waitNode" class="wait" style="display:none">
+    <div class="progressMessage"
+	 ><span msgKey="waitUpload">Envoi en cours...</span>
+    </div>
+    <div dojoType="dijit.ProgressBar" indeterminate="true"></div>
+    <button dojoType="dijit.form.Button" msgKey="cancelSending"
+	    dojoAttachEvent="onClick:onSendCancelButtonClick"
+            >Annuler le transfert</button>
+  </div>
+</div>

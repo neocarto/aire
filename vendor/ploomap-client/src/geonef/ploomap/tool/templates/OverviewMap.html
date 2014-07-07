@@ -1,0 +1,47 @@
+<div class="jigCacoin ploomapToolOverviewMap">
+  <div dojoType="dijit.form.DropDownButton"
+       dojoAttachPoint="optionButton"
+        class="options nolabel jigBorderTop jigBorderRight">
+    <div dojoType="dijit.TooltipDialog" class="jigCacoin" style="min-width: 250px;">
+      <table class="list"><tbody dojoAttachPoint="formNode">
+          <tr>
+            <td class="n">Couche</td>
+            <td>
+              <select dojoType="geonef.ploomap.input.Layer" name="layer"
+                      filter="geonef.ploomap.tool.OverviewMap.prototype.layerFilter"
+                      dojoAttachPoint="layerSelect"
+                      mapGetterWidget="${id}"></select>
+            </td>
+          </tr>
+          <tr>
+            <td class="n">Différence de zoom</td>
+            <td>
+              <input dojoType="dijit.form.NumberSpinner" name="delta"
+                     smallDelta="1" largeDelta="4"
+                     constraints="{min:0,max:21,places:0}"></input>
+
+            </td>
+          </tr>
+          <tr>
+            <td class="n">Suivre le glisser</td>
+            <td>
+              <select dojoType="dijit.form.Select" name="panAware">
+                <option value="true">Oui</option>
+                <option value="false">Non</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <div dojoType="geonef.jig.button.Action"
+                   dojoAttachEvent="onClick:minimize">Minimiser</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <button dojoType="geonef.jig.button.Action" class="maximize"
+          dojoAttachEvent="onClick:maximize">M</button>
+
+</div>

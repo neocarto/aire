@@ -1,0 +1,85 @@
+
+.jigList {}
+.jigList > table { border-collapse: collapse; border: 1px solid; width: 100%; }
+.jigList > table > thead { background: #fec; }
+.jigList > table > thead > tr > td { border: 1px solid; padding: 0; vertical-align: middle; border-color: #aaa; }
+.jigList > table > thead > tr > td.wait { /*font-size: 20px;*/ font-weight: bold; padding: 30px; text-align: center; vertical-align: middle; background: #ffccae; font-style: italic; }
+.jigList > table > thead > tr > td.filteredField { background: #fca; }
+.jigList > table > thead > tr > td { font-weight: bold; border-top: none; }
+.jigList > table > thead > tr > td.headInfo {}
+.jigList > table > thead > tr > td.headInfo .info { float: left; margin-left: 8px; vertical-align: middle; }
+.jigList > table > thead > tr > td.selection { width: 28px; }
+.jigList > table > tbody > tr.odd { background-color: #fffccf; /*#efe*/}
+.jigList > table > tbody > tr.even { background-color: #ffe9a2; /*#cfc*/}
+.jigList > table > tbody > tr.selectedRow { background: #ffa !important; }
+.jigList > table > tbody > tr.dirtyRow { background: #ebf; }
+.jigList > table > tbody > tr.dying { background: #ccc !important; }
+.jigList > table > tbody > tr > td { border: 1px solid #aaa; vertical-align: middle; height: 25px; padding: 0; }
+/*.jigList > table > tbody > tr td > div { padding-right: 10px; position: relative; }*/
+.jigList > table > tbody > tr > td.buttonRight > .dijitDropDownButton { float: right; }
+.jigList > table > * > tr > td.select { text-align: center; }
+.jigList > table > * > tr > td.select > .dijitCheckBox { margin: 0; }
+/*.jigList > table > tbody td { border-left: 1px solid; border-right: 1px solid; vertical-align: middle; height: 25px; }*/
+.jigList > table > tbody > tr .dijitComboBox { background: transparent; font-weight:bold; }
+.jigList > table > tbody > tr .dijitComboBox input { text-align: center; }
+.jigList > table > tbody > tr .validState { float: right; margin: 0 4px 0 8px; padding: 0 5px; border-radius: 3px; -moz-border-radius: 3px; }
+.jigList > table > tbody > tr .validState.valid { background-color: #0a0; }
+.jigList > table > tbody > tr .validState.invalid { background-color: #a00; }
+.jigList > table td.margin { padding: 3px 5px; }
+.jigList > table td.center { text-align: center; }
+.jigList > table td.bold { font-weight: bold; }
+.jigList > table > thead { height: 32px; }
+.jigList > table > thead > tr > td > span { margin: 0 3px; }
+.jigList > table > thead > tr > td .filterSummary { font-style: italic; margin: 3px 5px 0 10px; }
+.jigList > table > thead > tr > td .filterSummary .link { font-style: normal; font-weight: bold; border-left: 2px solid; border-right: 2px solid; padding: 0 2px; }
+.jigList > table > thead > tr > td .filterSummary .link:hover { background-color: #f00; }
+.jigList > table > thead > tr > td .sortCmd { background: url(icon/listSort.png) no-repeat 0 0; display: block; float:right; width: 16px; height: 16px; margin: 3px 3px 0 0; }
+.jigList > table > thead .unsorted .sortCmd { background-position: 0 0; }
+.jigList > table > thead .sortedAsc .sortCmd { background-position: 0 -16px; }
+.jigList > table > thead .sortedDesc .sortCmd { background-position: 0 -32px; }
+.jigList > table > thead .hoverAsc .sortCmd { background-position: 0 -64px !important; }
+.jigList > table > thead .hoverDesc .sortCmd { background-position: 0 -48px !important; }
+.jigListEditionProperties > table.jigList td { padding: 3px; }
+.jigListEditionProperties .jigDataToolGenericPropValidity { float: right; }
+.jigListEditionProperties > .checkStatus { padding: 3px; }
+.jigListEditionProperties > .checkStatus > .status { padding: 0 7px; }
+.jigListEditionProperties.valid > .checkStatus > .status { background-color: #0a0; }
+.jigListEditionProperties.invalid > .checkStatus > .status { background-color: #a00; }
+.jigListEditionProperties > .checkStatus > .msg { margin-left: 10px; font-weight: bold; }
+.jigListEditionProperties .listContainer .property > .n > .check { float: right; }
+.jigListEditionProperties .listContainer .property > .n > .check > .msg { font-style: italic; }
+.jigListEditionProperties .listContainer .property > .n > .check > .status { margin-left: 8px; padding: 0 7px; border-radius: 3px; -moz-border-radius: 3px; }
+.jigListEditionProperties .listContainer .property.valid > .n > .check > .msg { display: none; }
+.jigListEditionProperties .listContainer .property.valid > .n > .check > .status { background-color: #0a0; }
+.jigListEditionProperties .listContainer .property.invalid > .n > .check > .status { background-color: #a00; }
+.jigDataToolGenericPropValidity .stateIcon { width: 14px; height: 14px; border-radius: 3px; -moz-border-radius: 3px; }
+.jigDataToolGenericPropValidity .stateIcon { background-color: #aaa; }
+.jigDataToolGenericPropValidity.valid .stateIcon { background-color: #0a0; }
+.jigDataToolGenericPropValidity.invalid .stateIcon { background-color: #a00; }
+.jigDataToolGenericPropValidity .summary { display: none; }
+.jigDataToolGenericValidityTooltip p { margin: 10px; }
+.jigDataToolGenericValidityTooltip div.message { margin-left: 10px; }
+.jigDataToolGenericValidityTooltip .message { font-weight: bold; }
+.jigDataToolGenericValidityTooltip .detail { font-style: italic; padding-left: 15px; }
+.jigDataToolGenericValidityTooltip .prop { font-weight: bold; }
+.dijitTooltipContainer .jigListEditionProperties .listContainer { max-height: 400px; overflow: auto; }
+.jigListFilterEnum .values { max-height: 300px; overflow: auto; }
+.jigListFilterEnum .values > div { padding: 3px; margin: 0px; }
+.jigListFilterEnum .values > div > span { margin-left: 5px; }
+
+.jigList, .jigCacoin .list { width: 100%; padding: 0; margin: 0; }
+table.jigList, .jigCacoin table.list { width: 99%; /*background-color: #ddd;*/ border-collapse: collapse; }
+table.jigList thead td, .jigCacoin table.list thead td { font-weight: bold;  }
+table.jigList td.n, .jigCacoin table.list td.n { /*font-style: italic;*/ padding: 3px; }
+table.jigList td.n p, .jigCacoin table.list td.n p { font-size: 0.8em; font-style: italic; margin: 5px 0 0 0; }
+table.jigList td.n p i, .jigCacoin table.list td.n p i { font-style: normal; }
+.jigList .item, .jigCacoin .list .item { padding: 3px; margin: 0 0 5px 0; }
+
+
+/* PgLink */
+.pgLinkDataList tr.edition { background-color: #fc0; }
+.pgLinkDataList tr .editing { display: none; }
+.pgLinkDataList tr.edition .editing { display: inline; }
+.pgLinkDataList tr .notEditing {  }
+.pgLinkDataList tr.edition .notEditing { display: none; }
+

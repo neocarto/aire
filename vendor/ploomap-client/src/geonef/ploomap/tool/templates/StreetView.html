@@ -1,0 +1,39 @@
+<div class="jigCacoin ploomapToolStreetView">
+  <div class="panelContent">
+      <div dojoType="geonef.jig.button.Action" class="jigFirstButton"
+           dojoAttachEvent="onClick:updateGsvLocation">Centrer sur la carte</div
+      ><div dojoType="geonef.jig.button.Action" class="jigLastButton"
+           dojoAttachEvent="onClick:destroy">Quitter</div>
+  </div>
+  <div class="panelContent">
+    Position de la carte :
+    <select dojoType="dijit.form.Select"
+            dojoAttachPoint="layoutSelect"
+            dojoAttachEvent="onChange:onLayoutSelectChange">
+      <option value="whole">Coin</option>
+      <option value="left">Gauche</option>
+      <option value="right">Droite</option>
+      <option value="top">Haut</option>
+      <option value="bottom">Bas</option>
+    </select>
+  </div>
+  <p dojoAttachPoint="noViewNode" style="display:none""><b>Pas de vue pour cet emplacement !</b></p>
+  <h2>Informations</h2>
+  <p class="info">
+    Position : <span dojoAttachPoint="positionNode"></span><br/>
+    Azimut : <span dojoAttachPoint="azimutNode">0°</span>
+    Angle : <span dojoAttachPoint="pitchNode">0°</span>
+    Zoom : <span dojoAttachPoint="zoomNode">1</span><br/><br/>
+  </p>
+  <h2>Panorama</h2>
+  <p class="info">
+    <span dojoAttachPoint="addressNode"></span>
+    <ul dojoAttachPoint="linksNode" class="no">
+    </ul>
+  </p>
+  <h2>Visites notables</h2>
+  <p>
+    <span dojoType="geonef.jig.button.Link"
+          dojoAttachEvent="onClick:catas">Essai souterrain</span>
+  </p>
+</div>

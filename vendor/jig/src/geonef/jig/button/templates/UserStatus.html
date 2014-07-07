@@ -1,0 +1,35 @@
+<span class="jigButtonUserStatus jigButton">
+<span dojoType="dijit.form.DropDownButton"
+      dojoAttachPoint="button" class="">
+  <span>
+      <span class="profileIcon"><img src="${user.icon}"
+      alt="${user.username}" height="26"/></span>
+      <span>${user.username}</span>
+  </span>
+  <div dojoType="dijit.TooltipDialog"
+       class="jigButtonUserStatusDialog">
+    <div class="info">
+      <span class="profileIcon"><img src="${user.icon}" alt="${user.username}"/></span>
+      <div><!--Connecté en tant que : --><b><span dojoAttachPoint="usernameNode"></span></b></div>
+      <span dojoAttachPoint="emailNode"></span>
+    </div>
+    <p>
+      L'icône de profil est gérée via le service
+      <a href="http://fr.gravatar.com/" target="_blank">Gravatar</a>,
+      en référence à votre adresse mail.
+    </p>
+    <!-- <span dojoType="geonef.jig.button.Link">Préférences</span> -->
+    <!-- <span dojoType="geonef.jig.button.Link">Patrimoine</span> -->
+    <div dojoAttachPoint="linksNode">
+    </div>
+    <div class="sessionLinks">
+      <div dojoType="geonef.jig.button.Link"
+           dojoAttachEvent="onExecute:openFeedback">Envoyer un retour</div>
+      <div dojoType="geonef.jig.button.Link"
+           dojoAttachEvent="onExecute:openCredits">Crédits</div>
+      <div dojoType="geonef.jig.button.Link"
+           dojoAttachEvent="onExecute:logout">Déconnexion</div>
+    </div>
+  </div>
+</span>
+</span>

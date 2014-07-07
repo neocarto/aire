@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sld:StyledLayerDescriptor version="1.0.0"
+                           xmlns:sld="http://www.opengis.net/sld"
+                           xmlns:ogc="http://www.opengis.net/ogc"
+                           xmlns:gml="http://www.opengis.net/gml"
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                           xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.0.0/StyledLayerDescriptor.xsd">
+
+  <!-- Style par défaut des communes de France -->
+  <sld:NamedLayer>
+    <sld:Name>default</sld:Name>
+
+    <!-- Style unique (jusqu'aujourd'hui) -->
+    <sld:UserStyle>
+      <sld:Name>okapi1</sld:Name>
+      <sld:Title>Jeu de style d'Okapi</sld:Title>
+      <sld:IsDefault>1</sld:IsDefault>
+
+      <!-- Un seul FeatureTypeStyle pour tous (point, ligne, polygône) -->
+      <sld:FeatureTypeStyle>
+
+	<!-- Style ligne -->
+        <sld:Rule>
+          <sld:Name>typeAutre</sld:Name>
+          <sld:Title>title</sld:Title>
+          <sld:ElseFilter/>
+          <sld:PolygonSymbolizer>
+            <sld:Fill>
+              <sld:CssParameter name="fill">
+                <ogc:Literal>#ffa900</ogc:Literal>
+              </sld:CssParameter>
+              <sld:CssParameter name="fill-opacity">
+                <ogc:Literal>0.3</ogc:Literal>
+              </sld:CssParameter>
+            </sld:Fill>
+            <sld:Stroke>
+              <sld:CssParameter name="stroke">
+                <ogc:Literal>#ffa900</ogc:Literal>
+              </sld:CssParameter>
+              <sld:CssParameter name="stroke-opacity">
+                <ogc:Literal>1</ogc:Literal>
+
+              </sld:CssParameter>
+              <sld:CssParameter name="stroke-width">
+                <ogc:Literal>2</ogc:Literal>
+              </sld:CssParameter>
+              <sld:CssParameter name="stroke-dashoffset">
+                <ogc:Literal>0</ogc:Literal>
+              </sld:CssParameter>
+            </sld:Stroke>
+          </sld:PolygonSymbolizer>
+          <sld:LineSymbolizer>
+            <sld:Stroke>
+              <sld:CssParameter name="stroke">
+                <ogc:Literal>#ffa900</ogc:Literal>
+              </sld:CssParameter>
+              <sld:CssParameter name="stroke-linecap">
+                <ogc:Literal>butt</ogc:Literal>
+              </sld:CssParameter>
+              <sld:CssParameter name="stroke-linejoin">
+                <ogc:Literal>miter</ogc:Literal>
+              </sld:CssParameter>
+              <sld:CssParameter name="stroke-opacity">
+                <ogc:Literal>1</ogc:Literal>
+              </sld:CssParameter>
+              <sld:CssParameter name="stroke-width">
+                <ogc:Literal>4</ogc:Literal>
+              </sld:CssParameter>
+              <sld:CssParameter name="stroke-dashoffset">
+                <ogc:Literal>0</ogc:Literal>
+              </sld:CssParameter>
+            </sld:Stroke>
+          </sld:LineSymbolizer>
+        </sld:Rule>
+
+      </sld:FeatureTypeStyle>
+    </sld:UserStyle>
+  </sld:NamedLayer>
+
+
+  <!--
+     *************************************************************************
+    -->
+
+  <sld:NamedLayer>
+    <sld:Name>select</sld:Name>
+
+    <!-- Style unique (jusqu'aujourd'hui) -->
+    <sld:UserStyle>
+      <sld:Name>okapi1</sld:Name>
+      <sld:Title>Jeu de style d'Okapi</sld:Title>
+      <sld:IsDefault>1</sld:IsDefault>
+
+      <!-- Un seul FeatureTypeStyle pour tous (point, ligne, polygône) -->
+      <sld:FeatureTypeStyle>
+
+	<!-- Style par défaut -->
+        <sld:Rule>
+          <sld:Name>typeAutre</sld:Name>
+          <sld:Title>title</sld:Title>
+          <sld:ElseFilter/>
+          <sld:PolygonSymbolizer>
+            <sld:Fill>
+              <sld:CssParameter name="fill">
+                <ogc:Literal>#ffff00</ogc:Literal>
+              </sld:CssParameter>
+              <sld:CssParameter name="fill-opacity">
+                <ogc:Literal>0.3</ogc:Literal>
+              </sld:CssParameter>
+            </sld:Fill>
+            <sld:Stroke>
+              <sld:CssParameter name="stroke">
+                <ogc:Literal>#ffff00</ogc:Literal>
+              </sld:CssParameter>
+              <sld:CssParameter name="stroke-opacity">
+                <ogc:Literal>1</ogc:Literal>
+
+              </sld:CssParameter>
+              <sld:CssParameter name="stroke-width">
+                <ogc:Literal>2</ogc:Literal>
+              </sld:CssParameter>
+              <sld:CssParameter name="stroke-dashoffset">
+                <ogc:Literal>0</ogc:Literal>
+              </sld:CssParameter>
+            </sld:Stroke>
+          </sld:PolygonSymbolizer>
+          <sld:LineSymbolizer>
+            <sld:Stroke>
+              <sld:CssParameter name="stroke">
+                <ogc:Literal>#ffff00</ogc:Literal>
+              </sld:CssParameter>
+              <sld:CssParameter name="stroke-linecap">
+                <ogc:Literal>butt</ogc:Literal>
+              </sld:CssParameter>
+              <sld:CssParameter name="stroke-linejoin">
+                <ogc:Literal>miter</ogc:Literal>
+              </sld:CssParameter>
+              <sld:CssParameter name="stroke-opacity">
+                <ogc:Literal>1</ogc:Literal>
+              </sld:CssParameter>
+              <sld:CssParameter name="stroke-width">
+                <ogc:Literal>6</ogc:Literal>
+              </sld:CssParameter>
+              <sld:CssParameter name="stroke-dashoffset">
+                <ogc:Literal>0</ogc:Literal>
+              </sld:CssParameter>
+            </sld:Stroke>
+          </sld:LineSymbolizer>
+        </sld:Rule>
+
+      </sld:FeatureTypeStyle>
+    </sld:UserStyle>
+  </sld:NamedLayer>
+
+  <!--
+     *************************************************************************
+    -->
+
+  <sld:NamedLayer>
+    <sld:Name>hover</sld:Name>
+
+    <!-- Style unique (jusqu'aujourd'hui) -->
+    <sld:UserStyle>
+      <sld:Name>okapi1</sld:Name>
+      <sld:Title>Jeu de style d'Okapi</sld:Title>
+      <sld:IsDefault>1</sld:IsDefault>
+
+      <!-- Un seul FeatureTypeStyle pour tous (point, ligne, polygône) -->
+      <sld:FeatureTypeStyle>
+
+	<!-- Style par défaut -->
+        <sld:Rule>
+          <sld:Name>typeAutre</sld:Name>
+          <sld:Title>title</sld:Title>
+          <sld:ElseFilter/>
+          <sld:PolygonSymbolizer>
+            <sld:Fill>
+              <sld:CssParameter name="fill">
+                <ogc:Literal>#ffff00</ogc:Literal>
+              </sld:CssParameter>
+              <sld:CssParameter name="fill-opacity">
+                <ogc:Literal>0.3</ogc:Literal>
+              </sld:CssParameter>
+            </sld:Fill>
+            <sld:Stroke>
+              <sld:CssParameter name="stroke">
+                <ogc:Literal>#ffff00</ogc:Literal>
+              </sld:CssParameter>
+              <sld:CssParameter name="stroke-opacity">
+                <ogc:Literal>1</ogc:Literal>
+
+              </sld:CssParameter>
+              <sld:CssParameter name="stroke-width">
+                <ogc:Literal>2</ogc:Literal>
+              </sld:CssParameter>
+              <sld:CssParameter name="stroke-dashoffset">
+                <ogc:Literal>0</ogc:Literal>
+              </sld:CssParameter>
+            </sld:Stroke>
+          </sld:PolygonSymbolizer>
+          <sld:LineSymbolizer>
+            <sld:Stroke>
+              <sld:CssParameter name="stroke">
+                <ogc:Literal>#ffff00</ogc:Literal>
+              </sld:CssParameter>
+              <sld:CssParameter name="stroke-linecap">
+                <ogc:Literal>butt</ogc:Literal>
+              </sld:CssParameter>
+              <sld:CssParameter name="stroke-linejoin">
+                <ogc:Literal>miter</ogc:Literal>
+              </sld:CssParameter>
+              <sld:CssParameter name="stroke-opacity">
+                <ogc:Literal>1</ogc:Literal>
+              </sld:CssParameter>
+              <sld:CssParameter name="stroke-width">
+                <ogc:Literal>6</ogc:Literal>
+              </sld:CssParameter>
+              <sld:CssParameter name="stroke-dashoffset">
+                <ogc:Literal>0</ogc:Literal>
+              </sld:CssParameter>
+            </sld:Stroke>
+          </sld:LineSymbolizer>
+        </sld:Rule>
+
+      </sld:FeatureTypeStyle>
+    </sld:UserStyle>
+  </sld:NamedLayer>
+
+</sld:StyledLayerDescriptor>

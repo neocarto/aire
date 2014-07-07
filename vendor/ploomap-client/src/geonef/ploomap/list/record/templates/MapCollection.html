@@ -1,0 +1,58 @@
+<tr>
+
+  <td class="select">
+    <input type="checkbox" dojoType="dijit.form.CheckBox"
+	   dojoAttachPoint="selectCheckBoxNode"
+	   dojoAttachEvent="onChange:onSelectCheckBoxChange"/>
+  </td>
+
+  <td dojoAttachPoint="uuidNode" class="center"></td>
+
+  <td dojoAttachPoint="positionNode" class="center"></td>
+
+  <td dojoAttachPoint="titleNode" class="pad bold"></td>
+
+  <td dojoAttachPoint="categoryNode" class="center"></td>
+
+  <td dojoAttachPoint="moduleNode" class="center"></td>
+
+  <td class="center" dojoAttachPoint="publishedNode"></td>
+
+  <td class="center">
+    <span dojoAttachPoint="mapCountNode"></span>
+    <button dojoType="${listWidget.mapsButtonClass}"
+            dojoAttachPoint="showMapsButton"
+            anchor="auto"
+            childWidgetClass="geonef.ploomap.list.Map"
+            label="Cartes"></button>
+  </td>
+
+  <td dojoAttachPoint="actionNode" class="center"
+    ><button __dojoType="geonef.jig.button.InstanciateAnchored"
+            dojoType="geonef.jig.button.TooltipWidget" class="jigFirstButton"
+            dojoAttachPoint="editButton"
+            __dropDownPosition="before,after"
+            childWidgetClass="geonef.ploomap.list.edition.mapCollection.${module}"
+            childWidgetParams="{uuid:'${uuid}',recordListRow:'${id}',locale:'${locale}'}"
+            childWidgetStyle="{width:'400px'}"
+            anchor="auto"
+            label="Propriétés"></button
+    ><button dojoType="geonef.jig.button.InstanciateAnchored"
+            __dojoType="geonef.jig.button.TooltipWidget"
+            dojoAttachPoint="detailButton"
+            __dropDownPosition="before,after"
+            childWidgetClass="geonef.ploomap.list.tool.mapCollection.Detail"
+            childWidgetParams="{uuid:'${uuid}',recordListRow:'${id}',locale:'${locale}'}"
+            __childWidgetStyle="{width:'400px'}"
+            anchor="auto"
+            label="Détail"></button
+    ><button dojoType="geonef.jig.button.Submit" buttonClass="jigLastButton"
+             label="Visu" action="/collection/${uuid}/${locale}"></button
+    ><!--button dojoType="geonef.jig.button.InstanciateAnchored" class="jigLastButton"
+            dojoAttachPoint="detailButton"
+            childWidgetClass="geonef.ploomap.list.tool.mapCollection.Preview"
+            childWidgetParams="{uuid:'${uuid}'}"
+            anchor="auto" label="Aperçu"></button
+  --></td>
+
+</tr>

@@ -1,0 +1,55 @@
+<div class="jigCacoin ploomapToolMagnifier">
+  <table class="list"><tbody>
+      <tr>
+        <td class="n">Facteur</td>
+        <td>
+          <select dojoType="dijit.form.Select" name="factor">
+            <option value="-3">x 1/8</option>
+            <option value="-2">x 1/4</option>
+            <option value="-1">x 1/2</option>
+            <option value="0">x 1</option>
+            <option value="1">x 2</option>
+            <option value="2">x 4</option>
+            <option value="3">x 8</option>
+            <option value="4">x 16</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td class="n">Taille</td>
+        <td>
+          <input dojoType="dijit.form.NumberSpinner" name="size"
+                 smallDelta="20" largeDelta="100"
+                 intermediateChanges="true"
+                 constraints="{min:20,max:2000,places:0}"></input>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="n">Opacité</td>
+        <td>
+          <div dojoType="dijit.form.HorizontalSlider" name="opacity"
+               minimum="0" maximum="100" value="100"
+               discreteValues="10" pageIncrement="20" showButtons="true"
+               intermediateChanges="false" slideDuration="500"
+               style="height:30px; width: 90%;">
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="n">Couche</td>
+        <td>
+          <select dojoType="geonef.ploomap.input.Layer" name="layer"
+                  filter="geonef.ploomap.tool.Magnifier.prototype.layerFilter"
+                  dojoAttachPoint="layerSelect"
+                  mapGetterWidget="${id}"></select>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="n">
+          <button dojoType="geonef.jig.input.BooleanToggleButton"
+                  name="active" iconClass="dijitCheckBoxIcon">Actif</button>
+        </td>
+      </tr>
+  </tbody></table>
+</div>

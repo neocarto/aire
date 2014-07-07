@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sld:StyledLayerDescriptor
+    version="1.0.0"
+    xmlns:sld="http://www.opengis.net/sld"
+    xmlns:ogc="http://www.opengis.net/ogc"
+    xmlns:ploomap="http://geonef.fr/ns/sld-extensions"
+    xmlns:gml="http://www.opengis.net/gml"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.0.0/StyledLayerDescriptor.xsd">
+
+  <sld:NamedLayer>
+    <sld:Name>default</sld:Name>
+    <sld:UserStyle>
+      <sld:Name>okapi1</sld:Name>
+      <sld:Title>Jeu de style d'Okapi</sld:Title>
+      <sld:IsDefault>1</sld:IsDefault>
+
+      <sld:FeatureTypeStyle>
+
+        <sld:Rule>
+          <sld:Name>resultPoint</sld:Name>
+          <sld:Title>title</sld:Title>
+          <sld:Abstract>Abstract</sld:Abstract>
+          <sld:PointSymbolizer>
+            <sld:Graphic>
+              <sld:ExternalGraphic>
+                <sld:OnlineResource xlink:href="/lib/geonef/ploomap/style/marker/default_red.png" />
+                <sld:Format>image/png</sld:Format>
+              </sld:ExternalGraphic>
+              <sld:Opacity>1</sld:Opacity>
+              <ploomap:GraphicWidth>21</ploomap:GraphicWidth>
+              <ploomap:GraphicHeight>25</ploomap:GraphicHeight>
+              <ploomap:GraphicXOffset>-10</ploomap:GraphicXOffset>
+              <ploomap:GraphicYOffset>-25</ploomap:GraphicYOffset>
+            </sld:Graphic>
+          </sld:PointSymbolizer>
+        </sld:Rule>
+
+      </sld:FeatureTypeStyle>
+    </sld:UserStyle>
+  </sld:NamedLayer>
+
+  <sld:NamedLayer>
+    <sld:Name>hover</sld:Name>
+    <sld:UserStyle>
+      <sld:Name>okapi1</sld:Name>
+      <sld:Title>Jeu de style d'Okapi</sld:Title>
+      <sld:IsDefault>1</sld:IsDefault>
+
+      <sld:FeatureTypeStyle>
+
+        <sld:Rule>
+          <sld:Name>resultPoint</sld:Name>
+          <sld:Title>title</sld:Title>
+          <sld:Abstract>Abstract</sld:Abstract>
+          <sld:PointSymbolizer>
+            <sld:Graphic>
+              <sld:ExternalGraphic>
+                <sld:OnlineResource xlink:href="/lib/geonef/ploomap/style/marker/default_red_hover.png" />
+                <sld:Format>image/png</sld:Format>
+              </sld:ExternalGraphic>
+              <sld:Opacity>1</sld:Opacity>
+              <ploomap:GraphicWidth>21</ploomap:GraphicWidth>
+              <ploomap:GraphicHeight>25</ploomap:GraphicHeight>
+              <ploomap:GraphicXOffset>-10</ploomap:GraphicXOffset>
+              <ploomap:GraphicYOffset>-25</ploomap:GraphicYOffset>
+            </sld:Graphic>
+          </sld:PointSymbolizer>
+        </sld:Rule>
+
+      </sld:FeatureTypeStyle>
+    </sld:UserStyle>
+  </sld:NamedLayer>
+
+</sld:StyledLayerDescriptor>

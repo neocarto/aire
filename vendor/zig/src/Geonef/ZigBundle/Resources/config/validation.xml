@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping
+        http://symfony.com/schema/dic/services/constraint-mapping-1.0.xsd">
+
+    <class name="Geonef\ZigBundle\Document\User">
+      <property name="subscriptionCode">
+        <constraint name="Regex">
+            <option name="pattern">/^84824853257946415053$/</option>
+            <option name="message">Le code est incorrect. Patientez quelques semaines que ce application soit ouverte publiquement !</option>
+            <option name="groups">
+              <value>Registration</value>
+            </option>
+        </constraint>
+      </property>
+    </class>
+
+</constraint-mapping>

@@ -1,0 +1,23 @@
+<tr class="item dojoDndItem mapLayer">
+  <td class="dojoDndHandle grippy">&nbsp;&nbsp;</td>
+  <td><input dojoType="geonef.jig.input.BooleanCheckBox" name="visible"
+             disabled="true"/></td>
+  <td dojoAttachPoint="summaryNode" class="dojoDndHandle">
+    <i>(couche marqueur)</i></td>
+  <td>
+    <button dojoType="dijit.form.DropDownButton">
+      <span>Éditer</span>
+      <div dojoType="dijit.TooltipDialog"
+           dojoAttachPoint="formDialog">
+        <p style="max-width: 450px">
+          Cette couche ne sert qu'à indiquer la position où
+          seront insérées les couches déclarées dans les cartes
+          qui utilisent cette présente carte comme modèle.
+        </p>
+        <button dojoType="geonef.jig.button.Action"
+                dojoAttachEvent="onClick:deleteMark">Supprimer</button>
+      </div>
+    </button>
+  </td>
+
+</tr>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xsd:schema xmlns="http://www.zig-project.org/schema/dic/zig"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.zig-project.org/schema/dic/zig"
+    elementFormDefault="qualified">
+
+  <xsd:element name="install" type="install" />
+
+  <xsd:complexType name="install">
+    <xsd:attribute name="manager_class" type="xsd:string" />
+    <xsd:sequence>
+      <xsd:element name="public_mappings" type="public_mappings" minOccurs="1" maxOccurs="1" />
+    </xsd:sequence>
+    <xsd:sequence>
+      <xsd:element name="shrinksafe" type="shrinksafe" minOccurs="1" maxOccurs="1" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="public_mappings">
+    <xsd:sequence>
+      <xsd:element name="public_mapping" type="public_mapping" minOccurs="1" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="public_mapping">
+    <xsd:attribute name="location" type="xsd:string" use="required" />
+    <xsd:attribute name="directory" type="xsd:string" use="required" />
+  </xsd:complexType>
+
+  <xsd:complexType name="shrinksafe">
+    <xsd:attribute name="profile" type="xsd:string" use="required" />
+    <xsd:attribute name="buildscripts_dir" type="xsd:string" use="required" />
+    <xsd:attribute name="release_dir" type="xsd:string" use="required" />
+    <xsd:attribute name="release_name" type="xsd:string" use="required" />
+  </xsd:complexType>
+
+  <!------------------------------------>
+
+  <xsd:element name="api" type="api" />
+
+  <xsd:complexType name="api">
+  </xsd:complexType>
+
+  <!------------------------------------>
+
+  <xsd:element name="workspace" type="workspace" />
+
+  <xsd:complexType name="workspace">
+    <xsd:sequence>
+      <xsd:element name="workspaces" type="workspaces" minOccurs="0" maxOccurs="1" />
+    </xsd:sequence>
+    <xsd:attribute name="default_workspace" type="xsd:string" />
+  </xsd:complexType>
+
+  <xsd:complexType name="workspaces">
+    <xsd:sequence>
+      <xsd:element name="workspace" type="workspaceDef" minOccurs="1" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="workspaceDef">
+    <xsd:sequence>
+      <xsd:element name="scripts" type="scripts" minOccurs="0" maxOccurs="1" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="scripts">
+    <xsd:sequence>
+      <xsd:element name="script" type="string" minOccurs="0" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+
+
+</xsd:schema>

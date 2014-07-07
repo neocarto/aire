@@ -1,0 +1,35 @@
+<span class="ploomapInputMsMapExtent">
+<span dojoType="dijit.form.DropDownButton" dojoAttachPoint="button">
+  <div dojoType="dijit.TooltipDialog" dojoAttachPoint="dialog">
+    <table class="jigList"><tbody>
+        <tr><td colspan="2">
+            Étendue&nbsp;:
+            <button dojoType="geonef.jig.button.Action"
+                    dojoAttachPoint="computeButton"
+                    dojoAttachEvent="onClick:computeFromMap"
+                    label="Calculer pour la carte"></button>
+            <button dojoType="geonef.jig.button.Action"
+                    dojoAttachPoint="nullButton"
+                    dojoAttachEvent="onClick:setNull"
+                    label="NULL"></button>
+        </td></tr>
+        <tr>
+          <td class="n">minX</td>
+          <td><input dojoType="dijit.form.TextBox" name="minx"></input></td>
+        </tr>
+        <tr>
+          <td class="n">minY</td>
+          <td><input dojoType="dijit.form.TextBox" name="miny"></input></td>
+        </tr>
+        <tr>
+          <td class="n">maxX</td>
+          <td><input dojoType="dijit.form.TextBox" name="maxx"></input></td>
+        </tr>
+        <tr>
+          <td class="n">maxY</td>
+          <td><input dojoType="dijit.form.TextBox" name="maxy"></input></td>
+        </tr>
+    </tbody></table>
+  </div>
+</span>
+</span>

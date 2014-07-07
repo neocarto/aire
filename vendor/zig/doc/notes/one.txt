@@ -1,0 +1,135 @@
+
+* app:// filesystem
+
+
+* HTTP controller
+** dispatcher
+*** dispatcher param: context -> 
+*** interface
+* API dispatcher
+** dispatcher
+*** between dispatcher & controller : instanciation
+**** inflector
+*** between controller dispatcher & action method : 
+* Registry
+
+
+
+
+
+* IO
+** HTTP Controller
+*** output: content-type
+*** error: 404 not found, 500 exception ...
+*** input: parameters, stdin (POST)
+
+** CLI
+*** output: content-type
+*** error: excception
+*** input: parameters, stdin, terminal
+
+** JSON HTTP API
+*** output: JSON string
+*** error: JSON-encapsulated exception
+*** input: JSON structure
+
+** JSON CLI API
+
+
+
+# Init
+# handler script
+## check script interface (http/cli), set param
+## call Interface initializer
+###  (Zigx\ScriptInterface\Http ou Zigx\ScriptInterface\Cli)
+###  the specific class instanciates *\Request and *\Response (class interface)
+## apply routing (router class, ...)
+## invoke action level_1
+
+### C1: 
+###   handler Action\FrontEnd\Login	(implements Action)
+###   handler Action\Job\Install 		(implements Action)
+###    interprets 1st level request
+####   handler
+
+
+
+
+Objet important: Action
+		prend une request (set of parameters)
+		prend une response
+		matches des routes ?
+		handle la request directement ?
+
+
+Action:
+  construct($request, response)
+  execute()
+
+Exemples:
+	Action\Application (Request\Undefined, Response\Undefined)
+		appelle aux choix Http ou Cli
+		Action\Http
+			configure Request\Http et Response\Http
+				(interpretes parametres)
+			fait appel à son dispatcher
+		Action\Cli
+			configure Request\Cli et Response\Cli
+				(interpretes parametres)
+			fait appel à son dispatcher (le même?)
+
+
+Dispatcher:
+	Reçoit Request et Response
+	Lancer un rule matching sur les parametres Request
+		matching = ajout/modif de paramètres (~ rewrite)
+	Execute l'action associée
+
+routes:
+
+
+
+
+###   install request Handler\Http\Request
+###   install response Handler\Http\Response
+###   check HTTP info, apply filters, policies...
+###   invoke action (routing)
+####   handler Action\FrontEnd\Login	(implements Action)
+####   handler Action\Job\Install 		(implements Action)
+####    interprets 1st level request
+####   handler
+
+###  handler Handler\Script\Cli
+###   install request Handler\Cli\Request
+###   install response Handler\Cli\Response
+
+
+
+--------------------
+
+# Init
+# handler script
+## check script interface (http/cli), set param
+##  dispatch
+###  handler Handler\Script\Http
+###   install request Handler\Http\Request
+###   install response Handler\Http\Response
+###   check HTTP info, apply filters, policies...
+###   invoke action (routing)
+####   handler Action\FrontEnd\Login	(implements Action)
+####   handler Action\Job\Install 		(implements Action)
+####    interprets 1st level request
+####   handler
+
+###  handler Handler\Script\Cli
+###   install request Handler\Cli\Request
+###   install response Handler\Cli\Response
+
+# Check routes (stage=1)
+## 1 by default (profiles?) Zigx_Route_Script_Default
+## 	check interface (set new parameter)
+##  check routes
+###  HTTP: Zigx_Interface_Input_Http
+###  CLI: Zigx_Interface_Input_Cli
+# Check routes
+

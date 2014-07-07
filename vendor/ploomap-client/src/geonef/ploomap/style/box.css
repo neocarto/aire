@@ -1,0 +1,59 @@
+
+.ploomapBox { padding: 3px; min-width:90px;
+                   border-radius: /*20px*/5px;
+              -moz-border-radius: 5px;
+           -webkit-border-radius: 5px;
+                   box-shadow: 0 0 5px 3px rgba(244, 206, 131, 0.8) inset;
+              -moz-box-shadow: 0 0 5px 3px rgba(244, 206, 131, 0.8) inset;
+           -webkit-box-shadow: 0 0 5px 3px rgba(244, 206, 131, 0.8) inset;
+              cursor: pointer; }
+/* .highlighting .ploomapBox { display: none; } */
+.ploomapBox.hover { z-index: 1000 !important; }
+.ploomapBox .opacity { background: #ffa; border: 1px solid #845700;
+                            border-radius: /*20px*/5px;
+                       -moz-border-radius: 5px;
+                    -webkit-border-radius: 5px;
+                       }
+.ploomapBox.hover .opacity { background: #FFA521; border-color: #fff; opacity: 0.9; }
+.ploomapBox .title { text-align: center; /*font-style: italic;*/ }
+.ploomapBox .images { margin: -1px; }
+.ploomapBox .images img { width: 32px; height: 32px; margin: 1px;
+                               border-radius: 5px;
+                          -moz-border-radius: 5px;
+                       -webkit-border-radius: 5px; }
+.boxShadow {         border-radius: 5px;
+                -moz-border-radius: 5px;
+             -webkit-border-radius: 5px;
+                     box-shadow: /*bottom-right shadow*/ 20px 20px 10px -5px rgba(0, 0, 0, 0.7), /*top-left white*/-2px -2px 20px 2px #fff;
+                -moz-box-shadow: /*bottom-right shadow*/ 20px 20px 10px -5px rgba(0, 0, 0, 0.7), /*top-left white*/-2px -2px 20px 2px #fff;
+             -webkit-box-shadow: /*bottom-right shadow*/ 20px 20px 10px -5px rgba(0, 0, 0, 0.7), /*top-left white*/-2px -2px 20px 2px #fff; }
+/* .highlighting .boxShadow { display: none; } */
+
+/* .boxHighlight { z-index: 700; /\*border: 2px solid #000;*\/ */
+/*                          border-radius: 30px; */
+/* background: #fff; opacity: 0.4; */
+/*                 /\*    -moz-border-radius: 30px; *\/ */
+/*                 /\* -webkit-border-radius: 30px; /\\*outline: 2000px solid rgba(255,255,255,0.8);*\\/ *\/ */
+/*                          box-shadow: 0 0 10px 10px rgba(255,255,255,0.8) inset/\*, 0 0 0 2000px rgba(255,255,255,0.8)*\/; */
+/*                 /\* -webkit-box-shadow: 0 0 10px 10px rgba(255,255,255,0.8) inset, 0 0 0 2000px rgba(255,255,255,0.8);  *\/ */
+/*                 /\* white shadow out (a bit heavy)): *\/ */
+/*                 /\* box-shadow: 0 0 10px 10px rgba(255,255,255,0.8) inset, 0 0 0 2000px rgba(255,255,255,0.8); *\/ */
+/* } */
+
+.ploomapBoxSide { position: absolute; /*bottom: 35px;*/ /*border-radius: 10px;*/ z-index: 2042; padding: 5px; overflow: auto; max-height: 80%; /*box-shadow: 0 0 10px 2px #000;*/ }
+/* .ploomapBoxSide .opacity { border-radius: 10px; box-shadow: 0 0 10px 2px #000; } */
+.ploomapBoxSide.left { left: 10px; bottom: 10px/*80px*/; }
+.ploomapBoxSide.right { right: 10px; /*bottom*/top: 10px; }
+.ploomapBoxSide.persistant { /*border: 1px solid #fa0;*/ }
+.ploomapBoxSide.persistant .opacity { opacity: 0.8; }
+
+.ploomapOverBox, .ploomapOverBox .opacity {
+                   border-radius: 5px;
+              -moz-border-radius: 5px;
+           -webkit-border-radius: 5px;
+           }
+.ploomapOverBox {
+                   box-shadow: 0 0 10px 2px #000;
+              -moz-box-shadow: 0 0 10px 2px #000;
+           -webkit-box-shadow: 0 0 10px 2px #000;
+ }

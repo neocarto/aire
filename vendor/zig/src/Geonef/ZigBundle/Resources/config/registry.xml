@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.symfony-project.org/schema/dic/services http://www.symfony-project.org/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="zig.registry.class">Geonef\Zig\Registry\Registry</parameter>
+        <parameter key="zig.registry.loader.class">Geonef\Zig\Registry\Loader\YamlDir</parameter>
+        <parameter key="zig.registry.path">config/registry</parameter>
+    </parameters>
+
+    <services>
+        <service id="zig.registry" class="%zig.registry.class%">
+            <argument type="service" id="zig.registry.loader" />
+        </service>
+
+        <service id="zig.registry.loader" class="%zig.registry.loader.class%">
+            <argument>%kernel.root_dir%/%zig.registry.path%</argument>
+        </service>
+    </services>
+</container>

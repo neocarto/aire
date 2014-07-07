@@ -1,0 +1,42 @@
+<div>
+
+<div style="padding: 8px;">
+
+	<div>
+	  Départ :
+		<div dojoType="geonef.ploomap.input.Location"
+			 dojoAttachPoint="startInput"></div>
+	</div>
+	<div>
+	  Arrivée :
+		<div dojoType="geonef.ploomap.input.Location"
+			 dojoAttachPoint="endInput"></div>
+	</div>
+	<div>
+		Mode :
+		<select dojoAttachPoint="travelModeSelect">
+			<option value="car">Voiture</option>
+			<option value="walk">Marche</option>
+		</select>
+	</div>
+	<div>
+		<input type="checkbox" dojoAttachPoint="avoidHighwaysInput"
+				value="true"/>
+		Éviter les autoroutes
+	</div>
+	<div>
+	</div>
+<!--
+	<a href="#" dojoAttachPoint="link">Itinéraire</a>
+	<div>Résultat ci-dessous :</div>
+	 -->
+
+	<div dojoAttachPoint="summaryNode" style="border-top: 1px dashed">
+	</div>
+
+	<div dojoAttachPoint="testNode">
+	</div>
+
+</div>
+
+</div>

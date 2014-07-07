@@ -1,0 +1,42 @@
+<div class="ploomapMacroActionMapEditor">
+  <button dojoType="dijit.form.DropDownButton" class="nolabel"
+          dojoAttachPoint="dropDownButton">
+    <span>props</span>
+    <div dojoType="dijit.TooltipDialog" dojoAttachPoint="tooltipDialog"
+         style="width:300px;" class="jigCacoin">
+      <table class="list"><tbody>
+          <tr>
+            <td colspan="2" class="n">
+              <h2>Opérations sur carte</h2>
+              <p>Change le niveau de zoom, immédiatement ou
+                progressivement si une durée est définie.
+                Si relatif, le changement se fait par rapport au zoom courant.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="n">Zoom</td>
+            <td><input dojoType="dijit.form.NumberSpinner" name="zoom"
+                       smallDelta="1" largeDelta="5"
+                       constraints="{min:-20,max:20,places:0}"></input>
+              <input dojoType="geonef.jig.input.BooleanCheckBox"
+                     name="relative"></input>&nbsp;Relatif</td>
+          </tr>
+          <tr>
+            <td class="n"><input dojoType="geonef.jig.input.BooleanCheckBox"
+                                 dojoAttachPoint="durationCheckBox"
+                                 name="hasDuration"></input>&nbsp;Durée</td>
+            <td><input dojoType="dijit.form.NumberSpinner" name="duration"
+                       dojoAttachPoint="durationInput" disabled="true"
+                       smallDelta="100" largeDelta="500"
+                       constraints="{min:0,max:300000,places:0}"></input>&nbsp;millisecondes</td>
+          </tr>
+          <tr><td colspan="2">
+              <button dojoType="geonef.jig.button.Action"
+                      dojoAttachEvent="onClick:actionDelete"
+                      label="Supprimer"></button></td>
+          </tr>
+        </tbody></table>
+    </div>
+  </button>
+</div>
+

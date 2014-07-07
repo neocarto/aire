@@ -1,0 +1,33 @@
+<div class="ploomapListMapLegend">
+  <table class="jigList"><tbody>
+      <tr>
+        <td>
+          <span dojoType="dijit.form.HorizontalSlider"
+                dojoAttachPoint="resolutionInput"
+                dojoAttachEvent="onChange:onResolutionChange"
+	        minimum="500" maximum="15500" discreteValues="29" value="9000"
+                pageIncrement="1000"
+	        showButtons="false" intermediateChanges="true" slideDuration="500"
+	        style="width:100px; height: 20px;">
+            <div dojoType="dijit.form.HorizontalRule" container="bottomDecoration"
+	         dojoAttachPoint="sliderRule" count="29" style="height:5px;"></div>
+            <div dojoType="dijit.form.HorizontalRuleLabels" container="bottomDecoration"
+	         dojoAttachPoint="imageSizeSliderRuleLabels"
+                 count="2" minimum="500" maximum="15000"
+	         constraints="{pattern:'#'}" style="height:1em;font-size:75%;">
+            </div>
+          </span>
+        </td>
+        <td>
+          <button dojoType="geonef.jig.button.Action"
+                  dojoAttachEvent="onClick:refreshMap"
+                  label="Rafraîchir"></button>
+        </td>
+      </tr>
+      <tr><td colspan="2">
+          <div dojoType="geonef.ploomap.legend.Container"
+               dojoAttachPoint="legendContainer"
+               dojoAttachEvent="onResize:onResize"></div>
+      </td></tr>
+  </tbody></table>
+</div>

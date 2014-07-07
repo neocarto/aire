@@ -1,0 +1,51 @@
+<div class="jigMacroActionScriptEditor">
+  <button dojoType="dijit.form.DropDownButton" class="nolabel"
+          dojoAttachPoint="dropDownButton">
+    <span>props</span>
+    <div dojoType="dijit.TooltipDialog" dojoAttachPoint="tooltipDialog"
+         style="width:450px;" class="jigCacoin">
+      <table class="list"><tbody>
+          <tr>
+            <td colspan="2" class="n">
+              <h2>Code Javascript</h2>
+              <p>Le code Javascript défini ci-dessous est exécuté
+                pendant l'action. Pour déclencher la fin de l'action
+                (si l'option est cochée), le script doit appeler
+                <i><code>this.onEnd();</code></i></p>
+            </td>
+          </tr>
+          <tr>
+            <td class="n" colspan="2">
+                <textarea dojoType="dijit.form.SimpleTextarea" name="script"
+                          style="width: 90%;height:250px;font-family:-moz-fixed;font-size:1.2em;"></textarea>
+          </tr>
+          <tr><td colspan="2">
+              <input dojoType="geonef.jig.input.BooleanCheckBox"
+                     name="scriptCallsOnEnd"></input>&nbsp;Laisser le script déclencher la fin de l'action</td>
+          </tr>
+          <tr><td class="n">
+              <input dojoType="geonef.jig.input.BooleanCheckBox"
+                     dojoAttachPoint="runnerClassCheckBox"
+                     name="defRunnerClass"></input>&nbsp;Classe héritée</td>
+            <td>
+              <!--input dojoType="dijit.form.TextBox"
+                       dojoAttachPoint="runnerClassInput" disabled="true"
+                       name="runnerClass"></input-->
+              <select dojoType="dijit.form.Select"
+                      dojoAttachPoint="runnerClassInput" disabled="true"
+                      name="runnerClass">
+                <option value="geonef.jig.macro.action.Runner">Classe de base</option>
+                <option value="ploomap.macro.action.MapBindingRunner">Action liée à la carte</option>
+              </select>
+            </td>
+          </tr>
+          <tr><td colspan="2">
+              <button dojoType="geonef.jig.button.Action"
+                      dojoAttachEvent="onClick:actionDelete"
+                      label="Supprimer"></button></td>
+          </tr>
+      </tbody></table>
+    </div>
+  </button>
+</div>
+

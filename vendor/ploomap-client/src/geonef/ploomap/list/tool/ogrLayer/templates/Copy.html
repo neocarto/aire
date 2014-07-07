@@ -1,0 +1,31 @@
+<div class="jigCacoin ploomapListToolOgrLayerCopy">
+  <h1>Copie des couches</h1>
+  <table class="jigList"><tbody>
+      <tr>
+        <td class="n">Copier vers la source</td>
+        <td>
+          <div dojoType="geonef.jig.input.AbstractListRow"
+               name="destDataSource"
+               listClass="geonef.ploomap.list.OgrDataSource"
+               nullLabel="Choisir..."
+               listVisibleColumns="selection,name,type,layerCount"></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="n">Couches à copier</td>
+        <td>
+          <div dojoType="geonef.jig.input.List" name="layers"
+               childClass="geonef.ploomap.list.tool.ogrLayer._CopyLayer"
+               readOnly="true"></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="n" colspan="2">
+          <button dojoType="geonef.jig.button.Action"
+                  dojoAttachEvent="onClick:startCopy">Copier</button>
+        </td>
+      </tr>
+  </tbody></table>
+  <table class="jigList"><tbody dojoAttachPoint="logNode">
+  </tbody></table>
+</div>

@@ -1,0 +1,34 @@
+<div class="ploomapPanelLayer">
+  <h2 dojoAttachPoint="titleNode">Couche</h2>
+  <div dojoAttachPoint="generalNode" class="panelContent">
+    <button dojoType="dijit.form.ToggleButton"
+            dojoAttachPoint="toggleSelectControlButton"
+            dojoAttachEvent="onChange:_setSelectControlActiveAttr"
+            iconClass="dijitCheckBoxIcon" class="dijitButton">
+      <!--img src="${iconUrl}"/><br/-->
+      <span>Interactive</span>
+    </button
+  ></div>
+  <div dojoAttachPoint="metadataNode">
+    <h2 dojoAttachPoint="metadataTitleNode">Informations</h2>
+    <table class="jigList"><tbody dojoAttachPoint="metadataListNode">
+    </tbody></table>
+  </div>
+<!--div dojoType="dijit.form.DropDownButton">
+      <span>Style</span>
+      <div dojoType="dijit.TooltipDialog" class="jigCacoin">
+        <div dojoAttachPoint="styleNode" style="width:400px">
+          <h1>Style des vecteurs</h1>
+          <p>
+            Ci-dessous ce trouve la feuille de style au format SLD.
+            Elle est éditable sous cette forme brute, ce qui permet de
+            changer le style de l'apparence des vecteurs sur la carte.
+          </p>
+          <textarea dojoType="dijit.form.SimpleTextarea" dojoAttachPoint="sldTextarea"
+                    style="display: block; width: 98%; height: 230px; ">
+          </textarea>
+        </div>
+      </div>
+    </div -->
+
+</div>

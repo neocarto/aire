@@ -1,0 +1,37 @@
+<div class="jigCacoin padding ploomapToolExport">
+  <form dojoType="geonef.jig.input.Form" dojoAttachPoint="formWidget"
+        dojoAttachEvent="onChange:formChange"><table class="list"><tbody>
+  <tr>
+    <td class="n">Couche à exporter</td>
+    <td><select dojoType="geonef.ploomap.input.Layer" name="layer"
+                required="true"
+                filter="geonef.ploomap.tool.Export.prototype.layerFilter"
+                dojoAttachEvent="onChange:onLayerChange"
+                mapGetterWidget="${id}"></select>
+    <p class="layerNotice" dojoAttachPoint="layerNoticeNode"></p></td>
+  </tr>
+  <tr>
+    <td class="n">Région</td>
+    <td><div dojoType="geonef.ploomap.input.Extent" name="extent" mapGetterWidget="${id}"></div></td>
+  </tr>
+  <tr>
+    <td class="n">Côté max (pixels)</td>
+    <td><input dojoType="dijit.form.NumberSpinner" name="size"
+               dojoAttachPoint="sizeInput"
+               value="600" smallDelta="50"
+               constraints="{min:10,max:10000,places:0}"></input></td>
+  </tr>
+  <tr>
+    <td class="n">Format demandé</td>
+    <td><select dojoType="dijit.form.Select" name="format"
+                dojoAttachPoint="formatSelect"></select></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <button dojoType="dijit.form.Button" dojoAttachPoint="generateButton"
+              dojoAttachEvent="onClick:formSubmit">Générer l'export</button>
+    </td>
+  </tr>
+  </tbody> </table>
+  </form>
+</div>

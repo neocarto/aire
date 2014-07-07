@@ -1,0 +1,30 @@
+<div class="jigCacoin ploomapListEditionMapCollectionDetail">
+<div dojoType="dijit.layout.BorderContainer"
+       dojoAttachPoint="mainContainer"
+       design="headline"
+       style="width:100%;height:100%;padding:0;position:relative;">
+  <div dojoType="dijit.layout.BorderContainer" design="headline"
+       dojoAttachPoint="mapCollectionContainer"
+       region="top" splitter="true" style="height:180px">
+    <div dojoType="dijit.layout.ContentPane"
+         region="top" splitter="false" style="height:22px"
+         ><button dojoType="geonef.jig.button.InstanciateAnchored" class="floatr"
+                  dojoAttachPoint="detailButton"
+                  childWidgetClass="geonef.ploomap.list.tool.mapCollection.Preview"
+                  childWidgetParams="{uuid:'${uuid}'}"
+                  anchor="auto" label="Aperçu"></button
+         ><h1 style="display:inline">Cartes de la collection</h1
+    ></div>
+    <div dojoType="dijit.layout.ContentPane" region="center">
+      <h1>Propriétés de la collection</h1>
+      <div dojoType="geonef.ploomap.list.edition.mapCollection.MultiRepr"
+           uuid="${uuid}"
+           hideControlButtons="false"></div>
+    </div>
+  </div>
+  <div dojoType="dijit.layout.AccordionContainer"
+         dojoAttachPoint="reprContainer"
+         region="center" doLayout="true">
+  </div>
+</div>
+</div>

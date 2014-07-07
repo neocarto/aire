@@ -1,0 +1,22 @@
+<div class="jigList">
+  <table dojoAttachPoint="tableNode">
+    <thead>
+      <tr dojoAttachPoint="queryWidget"
+	  dojoType="${queryWidgetClassName}"
+	  dojoAttachEvent="onChange:onQueryChange"
+          listWidget="${id}"
+	  queryApiModule="${queryApiModule}"></tr>
+      <tr style="display:none" dojoAttachPoint="waitRow"
+	  ><td colspan="${columnCount}" class="wait listColSpan" msgKey="loading">
+	  Chargement...
+      </td
+	 ></tr>
+    </thead>
+    <tbody dojoAttachPoint="rowContainer"></tbody>
+    <tfoot>
+      <tr><td colspan="${columnCount}" class="listColSpan">
+	  <div dojoType="geonef.jig.list.tool.Pager"
+	       adminWidgetId="${id}"></div></td></tr>
+    </tfoot>
+  </table>
+</div>

@@ -1,0 +1,19 @@
+<div class="ploomapPanelHome">
+  <div class="links">
+  </div>
+  <h2>Couches affichées</h2>
+  <div dojoType="geonef.ploomap.tool.Layers"></div>
+  <h2>Couches disponibles</h2>
+  <div dojoType="geonef.ploomap.tool.layerLibrary.AutoGrid"
+       filterProp="featured"
+       filterValue="home"
+       gridNbColumns="4" gridFillDummy="true"></div>
+  <h2>Outils</h2>
+  <div dojoType="geonef.ploomap.tool.MapTools" gridNbColumns="5"></div>
+  <div class="bottomLinks">
+    <span dojoType="geonef.jig.button.Link"
+          dojoAttachEvent="onClick:showCredits">Actualités &amp; Crédits</span>
+    <span dojoType="geonef.jig.button.Link"
+          dojoAttachEvent="onClick:showFeedback">Envoyer un retour</span>
+  </div>
+</div>

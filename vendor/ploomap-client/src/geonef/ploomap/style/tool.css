@@ -1,0 +1,181 @@
+/**
+ ** TOOLS
+ **/
+
+
+/* zoom bar */
+.olControlPanZoomBar {  cursor: default; }
+.ploomapControlSexyZoomBar { top: 10px; left: 5px; padding: 0 5px; margin: 0 0 0 15px; }
+.ploomapControlSexyZoomBar.stick { min-width: 160px; padding: 0 0 0 0; /*0 115px 0 20px;*/ margin: 0 0 0 0; z-index: 42000 !important; }
+.ploomapControlSexyZoomBar .dijitSlider,
+  .ploomapControlSexyZoomBar.notStickySlider.stick .dijitSlider { height: 250px; }
+.ploomapControlSexyZoomBar.notStickySlider .dijitSlider { height: auto; }
+.ploomapControlSexyZoomBar.stick .dijitSlider { margin-left: 20px; }
+.ploomapControlSexyZoomBar > .jigCacoinHelpButton { position: absolute; left: 0 /*53px*/; top: 2px; padding-left:0; }
+.ploomapControlSexyZoomBar .dijitSliderIncrementIconV,
+ .ploomapControlSexyZoomBar .dijitSliderDecrementIconV { background-image: url(icon/zoom-inout.png); width: 24px; height: 24px; margin: 1px; }
+.ploomapControlSexyZoomBar .dijitSliderIncrementIconV { background-position: 0 0; }
+.ploomapControlSexyZoomBar .dijitSliderDecrementIconV { background-position: 0 -24px; }
+.ploomapControlSexyZoomBar > .dijitSlider .dijitButtonNode { width:12px; height:12px; border: none; font-size:0.8em; padding:0px; }
+.ploomapControlSexyZoomBar .leftLabels { /*left: -30px;*/ font-size: 0.8em; width: 20; float: none; left: -8px; }
+.ploomapControlSexyZoomBar .leftLabels .dijitRuleLabelContainer { position:absolute; height: 10px; color: black; line-height: normal; margin-top: -6px; width: 15px; text-align: right; }
+.ploomapControlSexyZoomBar .leftLabels .dijitRuleLabelContainer:hover { background: #369; padding: 0 20px 0 0; margin-right: -20px; color: #fff; }
+.ploomapControlSexyZoomBar .leftLabels .dijitRuleLabelContainer { right: -4px; }
+.ploomapControlSexyZoomBar .rightLabels { top: -5px; left: -13px; }
+.ploomapControlSexyZoomBar .rightLabels .dijitRuleLabelContainer { opacity: 1; border: 1px none #369; padding: 0 0 0 28px; background: #bdf no-repeat 0 0; no-repeat 5px center; width: 85px; }
+/*.ploomapControlSexyZoomBar .rightLabels .dijitRuleLabelContainer:hover { background-color: #9cf; font-weight: bold; }*/
+.ploomapControlSexyZoomBar .rightLabels .dijitRuleLabelContainer.world { background-image: url(icon/zoom_world.png); }
+.ploomapControlSexyZoomBar .rightLabels .dijitRuleLabelContainer.continent { background-image: url(icon/zoom_continent.png); }
+.ploomapControlSexyZoomBar .rightLabels .dijitRuleLabelContainer.country { background-image: url(icon/zoom_country.png); }
+.ploomapControlSexyZoomBar .rightLabels .dijitRuleLabelContainer.region { background-image: url(icon/zoom_region.png); }
+.ploomapControlSexyZoomBar .rightLabels .dijitRuleLabelContainer.department { background-image: url(icon/zoom_department.png); }
+.ploomapControlSexyZoomBar .rightLabels .dijitRuleLabelContainer.city { background-image: url(icon/zoom_city.png); }
+.ploomapControlSexyZoomBar .rightLabels .dijitRuleLabelContainer.district { background-image: url(icon/zoom_district.png); }
+.ploomapControlSexyZoomBar .rightLabels .dijitRuleLabelContainer.street { background-image: url(icon/zoom_street.png); }
+.ploomapControlSexyZoomBar .dijitRuleLabelContainer.world {  }
+.ploomapControlSexyZoomBar .rule { left: -20px; }
+.ploomapControlSexyZoomBar .tools { background: #fdb; }
+.ploomapControlSexyZoomBar .container { margin-top: 5px; border-top: 1px solid #369; }
+.ploomapControlSexyZoomBar .container > * { background: none; }
+.ploomapControlSexyZoomBar .searchAction { position: absolute; right: 5px; top: 30px; font-weight: bold; }
+
+
+/* layers */
+.dijitTooltipContents > .ploomapToolLayers { width: 240px; height: 400px; }
+.ploomapToolLayers > .dijitDropDownButton, .jigCacoin.about > .dijitButton { float: right; }
+.ploomapToolLayers > .list > .dojoDndItemOver { cursor: auto; }
+.ploomapToolLayers > .list > .dojoDndItemOver .dojoDndHandle { cursor: move; }
+.ploomapToolLayers .notInRange { text-decoration: line-through; }
+.ploomapToolLayer {  position: relative; }
+.ploomapToolLayers .list .ploomapToolLayer { /*border-right: 3px solid #0031DE;*/ height: 36px; padding: 0; margin: 0; }
+.ploomapToolLayers .ploomapToolLayer .icon { width: 32px; height: 32px; background-repeat: no-repeat; float: left; margin-right: 3px; }
+.ploomapToolLayers .ploomapToolLayer .sub { padding-top: 3px; }
+.ploomapToolLayers .ploomapToolLayer .slider { float: right; width: 100px; height: 20px; margin-right: 5px; display: none; }
+.ploomapToolLayers .ploomapToolLayer:hover .slider { display: table; }
+
+/* panel layers */
+.ploomapPanelLayer { }
+.ploomapPanelLayer .jigList { margin: 10px; }
+
+
+/* layer library */
+.ploomapToolLayerLibrary { /*width: 320px; depends on tab container */ }
+
+
+/* export */
+.ploomapToolExport .dijitSpinner {  width: 8em; }
+.ploomapToolExport .layerNotice { font-style: italic; color: #500; }
+
+
+/* measure */
+.ploomapToolMeasure ul { list-style-type: none; margin: 10px; }
+.ploomapToolMeasure ul li { text-align: right; font-size: 1.2em; }
+/* .olControlScaleLine { cursor: pointer; } */
+.olControlScaleLine .ploomapToolMeasure {  border: 1px solid; margin-bottom: 5px; }
+.ploomapToolMeasure .total {  font-weight: bold; font-size: 1.4em; }
+.ploomapToolMeasure .clear { text-align: right; }
+td > .dijitTextBox, td > .dijitTextArea { width: 98%; }
+
+
+/* overview map */
+.ploomapMap .ploomapToolOverviewMap { position: absolute; bottom: 0; right: 0; width: 150px; height: 150px; border-top: 2px solid #555; border-left: 2px solid #555; z-index: 42000;
+                                      box-shadow: 0 0 10px 4px #fff;
+                                      -moz-box-shadow: 0 0 10px 4px #fff;
+                                      -webkit-box-shadow: 0 0 10px 4px #fff;
+}
+.ploomapMap .ploomapToolOverviewMap.minimized { width: auto; height: auto; border: none; }
+.ploomapMap .ploomapToolOverviewMap.minimized .options, .ploomapMap .ploomapToolOverviewMap.minimized .olControlOverviewMapElement { display: none; }
+.ploomapMap .ploomapToolOverviewMap.minimized .maximize { display: block; }
+.ploomapToolOverviewMap .options { position: absolute; top: -2px; right: 0; z-index: 42000; display: none; }
+.ploomapToolOverviewMap:hover .options { display: inline; }
+.ploomapToolOverviewMap .olControlOverviewMapElement { padding: 0; width: 100%; height: 100%; }
+.ploomapToolOverviewMap .olMap { width: 100%; height: 100%; }
+.ploomapToolOverviewMap .olControlOverviewMapExtentRectangle { border: 2px solid #f00; background: #fd2; opacity: 0.5; cursor: move; }
+.ploomapToolOverviewMap .olLayerGooglePoweredBy,
+.ploomapToolOverviewMap .olLayerGoogleCopyright { display: none; }
+.ploomapToolOverviewMap .maximize { display: none; }
+.ploomapToolOverviewMap .olControlOverviewMapElement { background-color: #ddd; }
+
+/* street view */
+.ploomapToolStreetView .info span { font-size: 1.2em; margin-right: 20px; }
+.ploomapToolStreetViewScene > div {  width: 100%; height: 100%; }
+.ploomapToolStreetViewScene object { width: 100%; height: 100%; }
+.ploomapToolStreetViewScene .ploomapMap { border-top: 2px solid #ddd; border-left: 2px solid #ddd; background: #fff; }
+
+/* itineraries */
+.ploomapToolItineraries .startAddress,
+ .ploomapToolItineraries .endAddress { font-weight: bold; }
+.ploomapToolItineraries .message { font-weight: bold; font-style: italic; }
+.ploomapToolItineraries .list { margin-top: 10px; }
+.ploomapToolItineraries .step .instr { font-style: italic; margin: 0 0 10px 10px; color: #000; }
+.ploomapToolItineraries .step:hover  { text-decoration: none; }
+.ploomapToolItineraries .step:hover .title { text-decoration: underline; }
+
+/* magnifier */
+.ploomapToolMagnifier h1 { padding: 3px 0 0 5px; margin-bottom: 0 /* instead of 3px, because of "?" */; }
+.magnifyMap { position: absolute; border: 2px solid #b94; z-index: 1001 !important; /*background-color: #ddd;*/ }
+.magnifyMap .olLayerGoogleCopyright, .magnifyMap .olLayerGooglePoweredBy { display: none; }
+
+/* scale line */
+.ploomapMap .olControlScaleLine {  left: 110px; bottom: 20px; font-size: inherit; }
+.olControlScaleLineTop { background-color: #fc9; }
+.olControlScaleLineBottom { display: none; }
+
+
+/* time range */
+.ploomapControl.ploomapInputFeatureTimeRange { top: 10px; left: auto; right: 10px; padding: 20px 65px 26px 15px; margin: 0; }
+.ploomapControl.ploomapInputFeatureTimeRange.stick { padding-left: 140px; padding-bottom: 170px; }
+.ploomapControl.ploomapInputFeatureTimeRange > span.jigCacoinHelpButton { position: absolute; left: 186px; top: 2px; padding-left:0; }
+.ploomapControl.ploomapInputFeatureTimeRange > span.min,
+ .ploomapControl.ploomapInputFeatureTimeRange > span.max { display: block; position: absolute; right: 20px; font-weight: bold; background-color: #9cf; }
+.ploomapControl.ploomapInputFeatureTimeRange > span.max { top: 5px; }
+.ploomapControl.ploomapInputFeatureTimeRange > span.min { top: 430px; }
+.ploomapControl.ploomapInputFeatureTimeRange .dijitSliderMoveable { z-index: 42100; }
+.ploomapControl.ploomapInputFeatureTimeRange .dijitSliderRemainingBar > div .dijitSliderImageHandleV { background-image: url("icon/sliderThumbMax.png"); )}
+.ploomapControl.ploomapInputFeatureTimeRange .dijitSliderRemainingBar > div:first-child .dijitSliderImageHandleV { background-image: url("icon/sliderThumbMin.png"); )}
+.ploomapControl.ploomapInputFeatureTimeRange .dijitSliderProgressBar { position: absolute !important; background-image: url("icon/sliderFullVerticalFocus.png"); }
+.ploomapControl.ploomapInputFeatureTimeRange .labelContainer { font-size: 0.8em; float: none; left: 0; }
+.ploomapControl.ploomapInputFeatureTimeRange .labelContainer .dijitRuleLabelContainer { position: absolute; /*height: 10px;*/ color: black; line-height: normal; text-align: right; }
+.ploomapControl.ploomapInputFeatureTimeRange.stick .labelContainer .dijitRuleLabelContainer { left: -140px; }
+.ploomapControl.ploomapInputFeatureTimeRange .labelContainer .dijitRuleLabelContainer:hover,
+ .ploomapControl.ploomapInputFeatureTimeRange .labelContainer .dijitRuleLabelContainer.focus { z-index: 42000; font-weight: bold; }
+.ploomapControl.ploomapInputFeatureTimeRange .labelContainer .dijitRuleLabelContainer * { background-color: #9cf; border-top: 1px solid black; position: absolute; }
+.ploomapControl.ploomapInputFeatureTimeRange .labelContainer .dijitRuleLabelContainer .label { width: 129px; padding-right: 5px; }
+.ploomapControl.ploomapInputFeatureTimeRange .labelContainer .dijitRuleLabelContainer .date { left: 0; padding-left: 5px; width: 55px; }
+.ploomapControl.ploomapInputFeatureTimeRange.stick .labelContainer .dijitRuleLabelContainer .date { left: 140px; }
+.ploomapControl.ploomapInputFeatureTimeRange .control { position: absolute; top: 445px; left: 0; width: 100%; padding: 10px; }
+.ploomapControl.ploomapInputFeatureTimeRange .control p { font-weight: bold; margin: 5px 0; }
+.ploomapControl.ploomapInputFeatureTimeRange .control p span { font-size: 1.3em; }
+
+/* buttons */
+/*.ploomapButtonWorkspaceDialog { padding: 10px; }*/
+
+/* panel - home */
+.ploomapPanelHome .bottomLinks { margin-top: 20px; }
+.ploomapPanelHome .bottomLinks .link { display: block; margin: 10px; }
+
+/* panel - search */
+.ploomapPanelSearch {  }
+.ploomapPanelSearch .place { display: block; margin: 0 10px 8px 10px; }
+.ploomapPanelSearch .place.hover { background: #FEF97F; }
+.ploomapPanelSearch .seeAll { display: block; margin: 10px; }
+.ploomapPanelSearch .waiting { display: none; }
+.ploomapPanelSearch.waiting * { display: none; }
+.ploomapPanelSearch.waiting .waiting { display: block; }
+
+.ploomapControlGeocoder { padding: 5px; }
+.ploomapControlGeocoder.floating { position: absolute; top: 10px; left: 10px; z-index: 1042; }
+.ploomapControlGeocoder .ploomapPanelSearch { margin-top: 10px; }
+.hasGeocoder .ploomapControlSexyZoomBar, .hasGeocoder #panel { display: none; }
+
+/* submap */
+.ploomapSubMap .olLayerGoogleCopyright, .ploomapSubMap .olLayerGooglePoweredBy { display: none; }
+
+/* tool widgets */
+.ploomapTimeRange { position: relative; width: 120px; height: 110px; margin-bottom: 5px; }
+.ploomapTimeRange .gradient, .ploomapTimeRange ul { top: 10px; bottom: 30px; }
+.ploomapTimeRange .gradient { position: absolute; right: 0; width: 15px; background: #ff0;}
+.ploomapTimeRange ul { position: absolute; left: 5px; right: 10px; padding: 0; margin: 0; list-style-type: none; text-align: right; color: #555; }
+.ploomapTimeRange ul li { position: absolute; left: 3px; right: 0; line-height: 0; margin-top: -1px; }
+.ploomapTimeRange .notice { position: absolute; left: 5px; right: 0; bottom: 0; font-size: 0.8em; color: #333; line-height: 10px; text-align: right; }
+.ploomapTimeRange:hover { color: #000; }

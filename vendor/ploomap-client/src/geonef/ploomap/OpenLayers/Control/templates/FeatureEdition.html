@@ -1,0 +1,21 @@
+<div class="ploomapControl ploomapControlContextual jigButtonArea">
+<div class="opacity"></div>
+<h1 class="opaque">Mode <i>${operationLabel}</i> actif...</h1>
+<div style="display:none" class="opaque" dojoAttachPoint="editInfoNode">
+  <h2>Déplacement en cours de :
+  <span dojoAttachPoint="featureLabelNode"></span></h2>
+  <p class="opaque" style="font-style:italic;">${editTip}</p>
+</div>
+<p class="opaque" style="font-style:italic;" dojoAttachPoint="startTipNode">${startTip}</p>
+<p class="opaque" dojoAttachPoint="countDivNode">
+  <span dojoAttachPoint="countNode">0</span> géométrie(s) modifié(s)
+</p>
+<div class="notSticky opaque" style="max-height:80px;overflow:auto;">
+  <table class="jigList">
+    <tbody dojoAttachPoint="dirtyListNode">
+    </tbody>
+  </table>
+  <br/><br/>
+</div>
+<div class="notSticky" dojoAttachPoint="actionsNode"></div>
+</div>

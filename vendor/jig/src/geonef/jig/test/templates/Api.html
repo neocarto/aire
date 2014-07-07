@@ -1,0 +1,44 @@
+<div>
+<h1>API Tester</h1>
+<p>
+  Use the form below to test the API
+</p>
+<table>
+<thead>
+<tr>
+	<td>URL</td><td><input dojoType="dijit.form.TextBox" name="url" value="/api"/></td>
+</tr>
+</thead>
+<tbody dojoAttachPoint="bodyNode">
+<tr>
+	<td><input dojoType="dijit.form.TextBox" value="module"></td>
+	<td><input dojoType="dijit.form.TextBox" value=""
+			   dojoAttachPoint="moduleTextBox"/></td>
+</tr>
+<tr>
+	<td><input dojoType="dijit.form.TextBox" value="action"/></td>
+	<td><input dojoType="dijit.form.TextBox" value=""/></td>
+</tr>
+<tr>
+	<td><input dojoType="dijit.form.TextBox" value=""/></td>
+	<td><input dojoType="dijit.form.TextBox" value=""/></td>
+</tr>
+<tr>
+	<td><input dojoType="dijit.form.TextBox" value=""/></td>
+	<td><input dojoType="dijit.form.TextBox" value=""/></td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+	<td>
+		<button dojoType="dijit.form.Button" dojoAttachEvent="onClick:addRow">ADD</button>
+	</td>
+	<td>
+		<button dojoType="dijit.form.Button" dojoAttachEvent="onClick:callApi">CALL</button>
+	</td>
+</tr>
+</tfoot>
+</table>
+<h2>Response :</h2>
+
+</div>

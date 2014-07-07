@@ -1,0 +1,39 @@
+<div class="ploomapControl ploomapInputFeatureTimeRange">
+<div class="opacity"></div>
+<!--div class="stick">
+  <input type="checkbox" dojoType="dijit.form.CheckBox"
+         dojoAttachEvent="onChange:_setForceAlternateLayoutAttr"
+  	 checked="false"/>
+  garder visible
+</div-->
+<span class="max" dojoAttachPoint="maxNode"></span>
+<div dojoType="dojox.form.VerticalRangeSlider"
+     dojoAttachPoint="slider" dojoAttachEvent="onChange:onSliderChange,_setPixelValue:onSliderMove"
+     showButtons="false" intermediateChanges="false" _descending="true"
+     style="height:400px;">
+  <div class="dijitRuleContainer dijitRuleContainerV dijitRuleLabelsContainer dijitRuleLabelsContainerV labelContainer"
+       dojoAttachPoint="labelContainer">
+  </div>
+</div>
+<span class="min" dojoAttachPoint="minNode"></span>
+<div class="control notSticky">
+  <p>Filtre : <span dojoAttachPoint="filterMinNode"></span> <span>–</span> <span dojoAttachPoint="filterMaxNode"></span></p>
+  <hr/>
+  <button dojoType="dijit.form.ToggleButton"
+          dojoAttachPoint="startAutoMoveButton"
+          dojoAttachEvent="onChange:_setAutoMoveAttr"
+          iconClass="dijitCheckBoxIcon">
+    <span>Lancer l'animation</span>
+  </button><br/>
+  Durée en secondes : <input dojoType="dijit.form.NumberSpinner"
+                             dojoAttachPoint="durationInput"
+                             dojoAttachEvent="onChange:onDurationChange"
+                             value="20" smallDelta="10"
+                             constraints="{min:1,max:10000,places:0}"></input><br/>
+  Soit : <span dojoAttachPoint="timeScaleUnitNode"></span> mois par seconde<br/>
+      (échelle 1 : <span dojoAttachPoint="timeScaleNode"></span>)<br/>
+  <!--input type="checkbox" dojoType="dijit.form.CheckBox"
+         dojoAttachPoint="autoShowBubblesCheckBox"
+  	 checked="true"/> afficher les bulles automatiquement -->
+</div>
+</div>

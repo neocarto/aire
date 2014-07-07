@@ -1,0 +1,34 @@
+<div class="jigInputFileMedia">
+  <div dojoAttachPoint="newNode">
+    <p>Aucun fichier défini</p>
+    <button dojoType="geonef.jig.button.Action"
+	    dojoAttachEvent="onClick:uploadNewVersion">Envoyer un fichier</button>
+  </div>
+  <div dojoAttachPoint="fileNode" style="display:none">
+    <div dojoType="geonef.jig.input.Group"
+         dojoAttachPoint="infoGroup">
+      Nom&nbsp;: <input dojoType="geonef.jig.input.Label" name="name"
+                        style="font-style:italic"></input><br/>
+      Poids&nbsp;: <input dojoType="geonef.jig.input.Label" name="size"
+                          style="font-style:italic"></input>&nbsp;octets&nbsp;&nbsp;&nbsp;
+      Type&nbsp;: <input dojoType="geonef.jig.input.Label" name="contentType"
+                         style="font-style:italic"></input>
+    </div>
+    <button dojoType="geonef.jig.button.Action"
+	    dojoAttachEvent="onClick:moveIntoNewDirectory">Faire un répertoire</button>
+    <button dojoType="geonef.jig.button.Action"
+	    dojoAttachEvent="onClick:uploadNewVersion">Envoyer une nouvelle version</button>
+    <button dojoType="geonef.jig.button.Action"
+	    dojoAttachEvent="onClick:setNull">Retirer</button>
+  </div>
+  <div dojoAttachPoint="uploadNode">
+    <div class="msg notice" dojoAttachPoint="noticeNode"></div>
+    <div class="msg warning" dojoAttachPoint="warningNode"></div>
+    <div class="msg error" dojoAttachPoint="errorNode"></div>
+  </div>
+  <div dojoAttachPoint="dirNode" style="display:none">
+    <div dojoType="geonef.jig.list.File"
+         dojoAttachPoint="dirList"
+         visibleColumns="selection,name,module,type,size,actions"></div>
+  </div>
+</div>

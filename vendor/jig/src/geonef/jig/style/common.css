@@ -1,0 +1,44 @@
+/*
+ * Common rules - shared across widgets
+ *
+ *********************************************/
+
+/* HTML tags */
+a, .link { color: #530; cursor: pointer; }
+a:hover, .link:hover { color: #500; }
+.link.disabled, .link.disabled:hover { color: #666; cursor: default; text-decoration: none; }
+.link.emphasize { font-weight: bold; }
+
+/* utility classes */
+.bold { font-weight: bold; }
+.pad { padding: 3px !important; }
+.floatr { float: right; }
+.floatl { float: left; }
+
+
+/* buttons (and groups of buttons, with border-radius and border merging) */
+.tundra .dijitButtonNode { border-radius: 3px; -moz-border-radius: 3px; /*font-size: 0.938em;*/ }
+body .dijitToggleButton,
+ body .dijitButton,
+ body .dijitDropDownButton,
+ body .dijitComboButton {  margin: 0; }
+body .jigBorderTop, body .jigBorderTop .dijitButtonNode { -moz-border-radius-topleft: 0 !important; -moz-border-radius-topright: 0 !important; border-top: none; }
+body .jigBorderRight, body .jigBorderRight .dijitButtonNode { -moz-border-radius-topright: 0; -moz-border-radius-bottomright: 0; border-right: none; }
+body .jigBorderLeft, body .jigBorderLeft .dijitButtonNode { -moz-border-radius-topleft: 0; -moz-border-radius-bottomleft: 0; border-left: none; }
+/*.jigBorderTop .dijitButtonNode { @extend .jigBorderTop }*/
+.dijitDropDownButton + .dijitDropDownButton .dijitButtonNode,
+ .dijitButton + .dijitButton .dijitButtonNode,
+ .dijitDropDownButton + .dijitButton .dijitButtonNode,
+ .dijitButton + .dijitDropDownButton .dijitButtonNode { border-left: none; border-radius: 0; -moz-border-radius: 0; } /* merge common border */
+.jigFirstButton > .dijitButtonNode { border-radius: 3px 0 0 3px !important; -moz-border-radius: 3px 0 0 3px !important; }
+.jigLastButton > .dijitButtonNode { border-radius: 0 3px 3px 0 !important; -moz-border-radius: 0 3px 3px 0 !important; border-left: none; }
+.dijitButton .dijitButtonNode * { outline: none; }
+
+.jigDialog { padding: 20px; }
+.jigLinkList .link {  display: block; margin: 10px; }
+
+ul.no { list-style-type: none; padding: 0 0 0 20px; }
+ul.nopadding { list-style-type: none; padding: 0; margin: 0; }
+
+div div.multiEdit.readonly .modifyLink, div div.multiEdit.modify .modifyLink { display: none !important; }
+.multiEdit.modify .hideOnModify { display: none; }

@@ -1,0 +1,75 @@
+<div class="ploomapMacroActionLayerEditor">
+  <button dojoType="dijit.form.DropDownButton" class="nolabel"
+          dojoAttachPoint="dropDownButton">
+    <span>props</span>
+    <div dojoType="dijit.TooltipDialog" dojoAttachPoint="tooltipDialog"
+         style="width:300px;" class="jigCacoin">
+      <table class="list"><tbody>
+          <tr>
+            <td colspan="2" class="n">
+              <h2>Opération sur couche</h2>
+              <p>Modifie les attributs d'une couche. Elle est ajoutée à la
+                carte si elle n'y est pas déjà, et peut aussi au contraire être
+                enlevée. Le <i>focus</i> met en surbrillance la couche dans la
+                liste des couches présentes.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="n">Couche</td>
+            <td><span dojoType="geonef.ploomap.input.LibraryLayer" name="layer"
+                      dojoAttachPoint="layerInput"
+                      mapGetterWidget="${id}"></span></td>
+          </tr>
+          <tr>
+            <td class="n"><input dojoType="geonef.jig.input.BooleanCheckBox"
+                                 dojoAttachPoint="durationCheckBox"
+                                 name="hasDuration"></input>&nbsp;Durée</td>
+            <td><input dojoType="dijit.form.NumberSpinner" name="duration"
+                       dojoAttachPoint="durationInput" disabled="true"
+                       smallDelta="100" largeDelta="500"
+                       constraints="{min:0,max:300000,places:0}"></input></td>
+          </tr>
+          <tr>
+            <td class="n"><input dojoType="geonef.jig.input.BooleanCheckBox"
+                                 dojoAttachPoint="opacityCheckBox"
+                                 name="defOpacity"></input>&nbsp;Opacité</td>
+            <td><input dojoType="dijit.form.NumberSpinner"
+                       name="opacity" dojoAttachPoint="opacityInput"
+                       smallDelta="10" largeDelta="20" disabled="true" value="50"
+                       constraints="{min:0,max:100,places:0}"></input>&nbsp;%</td>
+          </tr>
+          <tr>
+            <td class="n"><input dojoType="geonef.jig.input.BooleanCheckBox"
+                                 dojoAttachPoint="visibilityCheckBox"
+                                 name="defVisibility"></input>&nbsp;Visibilité</td>
+            <td><input dojoType="geonef.jig.input.BooleanCheckBox"
+                       dojoAttachPoint="visibilityInput" disabled="true"
+                       name="visibility"></input>visible</td>
+          </tr>
+          <tr>
+            <td class="n"><input dojoType="geonef.jig.input.BooleanCheckBox"
+                                 dojoAttachPoint="zIndexCheckBox"
+                                 name="defZIndex"></input>&nbsp;Position&nbsp;Z</td>
+            <td><input dojoType="dijit.form.NumberSpinner"
+                       name="zIndex" dojoAttachPoint="zIndexInput"
+                       smallDelta="2" largeDelta="10" disabled="true" value="50"
+                       constraints="{min:0,max:1000,places:0}"></input></td>
+          </tr>
+          <tr>
+            <td colspan="2"><input dojoType="geonef.jig.input.BooleanCheckBox"
+                                   name="highlight"></input>&nbsp;Focus dans les couches présentes</td>
+          </tr>
+          <tr>
+            <td colspan="2"><input dojoType="geonef.jig.input.BooleanCheckBox"
+                                   name="remove"></input>&nbsp;Enlever la couche</td>
+          </tr>
+          <tr><td colspan="2">
+              <button dojoType="geonef.jig.button.Action"
+                      dojoAttachEvent="onClick:actionDelete"
+                      label="Supprimer"></button>
+          </td></tr>
+      </tbody></table>
+    </div>
+  </button>
+</div>
+

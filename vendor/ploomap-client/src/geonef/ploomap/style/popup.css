@@ -1,0 +1,22 @@
+/**
+ ** POPUP
+ **/
+
+.olFramedCloudPopupContent { padding: 0 5px 5px 0; overflow: hidden; }
+.olPopupCloseBox {  /*display: none;*/ background: url("icon/close.gif") no-repeat 0 0; z-index: 2; }
+.olPopupContent h1,
+ .olFramedCloudPopupContent h1 {  font-size: 1em; font-weight: bold; margin: 0; padding: 0 0 5px 0; }
+
+
+/* lists & edition */
+.ploomapListEditionMapProperties .jigList .dijitTextBox,
+ .ploomapListEditionMapProperties .jigList .dijitTextArea { width: 10em; }
+/*.mapLayer td.dojoDndHandle { padding: 0; width: 20px; }*/
+.ploomapListRecordMapView .mapContainer { border: 1px solid #0f0; padding: 0; }
+.ploomapListRecordMapView.loading .mapContainer { border-color: #f00; }
+.ploomapListRecordOgrLayerFieldsDropDown .dijitTooltipContents { max-height: 300px; overflow: auto; }
+
+
+/* feature details */
+.ploomapFeatureDetails dl > dt { font-weight: bold; font-style: italic; }
+.ploomapFeatureDetails dl > dd { margin-bottom: 15px; }

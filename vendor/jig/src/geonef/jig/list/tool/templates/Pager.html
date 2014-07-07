@@ -1,0 +1,64 @@
+<div><table><tbody><tr>
+        <td style="display:none"><h1 dojoAttachPoint="titleNode"></h1></td>
+        <td>
+	  <span dojoAttachPoint="numResultsGroupNode">
+            <span dojoAttachPoint="numResultsNode">...</span>
+	    <span>resultat(s)</span>
+          </span>
+          <span>sur</span>
+	  <span dojoAttachPoint="numPagesNode">...</span>
+	  <span msgKey="labelNumPages">page(s) pour </span
+	  ><select dojoType="dijit.form.ComboBox" required="true"
+                   dojoAttachPoint="pageLengthInput"
+                   dojoAttachEvent="onChange:doRefresh"
+                   style="width:60px;">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+          </select>
+          <!--span dojoAttachPoint="pageLengthNode">...</span-->
+	  <span msgKey="labelPageLength">resultats par page</span>
+        </td><td class="browsePage"
+	  ><button dojoType="geonef.jig.button.Action" class="jigFirstButton"
+	 	   dojoAttachEvent="onClick:goToFirst"
+		   dojoAttachPoint="buttonFirst" msgKey="actionFirst">Début</button
+	  ><button dojoType="geonef.jig.button.Action" class="jigLastButton"
+	 	   dojoAttachEvent="onClick:goToPrevious"
+		   dojoAttachPoint="buttonPrevious" msgKey="actionPrevious">Précédent</button
+        ></td><td style="width:40px;font-size:1.8em;text-align:center;"
+                 class="browsePage">
+	  <span dojoAttachPoint="currentPageNode">1</span>
+        </td><td  class="browsePage">
+	  <div dojoType="dijit.form.HorizontalSlider" name="slider"
+	       dojoAttachPoint="slider"
+	       dojoAttachEvent="onChange:onSliderChange"
+	       value="1"
+	       maximum="1"
+	       minimum="1"
+	       discreteValues="1"
+	       pageIncrement="100"
+	       showButtons="false"
+	       intermediateChanges="false"
+	       slideDuration="500"
+	       style="width:150px; height: 20px;">
+	    <div dojoType="dijit.form.HorizontalRule" container="bottomDecoration"
+		 dojoAttachPoint="sliderRule" count="1" style="height:5px;"></div>
+	    <div dojoType="dijit.form.HorizontalRuleLabels" container="bottomDecoration"
+		 dojoAttachPoint="sliderRuleLabels" count="1" minimum="1"
+		 constraints="{pattern:'#'}"
+		 style="height:1em;font-size:75%;"><ol><li></li><li></li></ol></div>
+	  </div>
+        </td><td class="browsePage"
+	  ><button dojoType="geonef.jig.button.Action" class="jigFirstButton"
+		   dojoAttachEvent="onClick:goToNext"
+		   dojoAttachPoint="buttonNext" msgKey="actionNext">Suivant</button
+	  ><button dojoType="geonef.jig.button.Action" class="jigLastButton"
+		   dojoAttachEvent="onClick:goToLast"
+		   dojoAttachPoint="buttonLast" msgKey="actionLast">Fin</button
+        ></td>
+        <td>
+	  <button dojoType="geonef.jig.button.Action"
+		  dojoAttachEvent="onClick:doRefresh">Rafraîchir</button>
+        </td>
+</tr></tbody></table></div>

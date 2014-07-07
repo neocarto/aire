@@ -1,0 +1,17 @@
+<div>
+  <h1>
+    <button dojoType="geonef.jig.button.Action"
+            dojoAttachEvent="onClick:close"
+            style="float: right">X</button>
+    Propriétés de <i dojoAttachPoint="titleNode"></i>
+    <span dojoAttachPoint="editLinkNode">[<span class="link"
+    dojoAttachEvent="onclick:editProperties">modifier</span>]</span>
+  </h1>
+  <b dojoAttachPoint="savingNode"
+     style="display:none;font-style:italic;font-weight:bold;">Enregistrement en cours...</b>
+  <table class="list"><tbody dojoAttachPoint="listNode">
+  </tbody></table>
+  <div dojoAttachPoint="actionsNode">
+    <h1 dojoAttachPoint="actionsTitleNode">Actions</h1>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="jigMacroActionMacroEditor">
+  <button dojoType="dijit.form.DropDownButton" class="nolabel"
+          dojoAttachPoint="dropDownButton">
+    <span>props</span>
+    <div dojoType="dijit.TooltipDialog" dojoAttachPoint="tooltipDialog"
+         style="width:250px" class="jigCacoin">
+      <table class="list"><tbody>
+          <tr>
+            <td colspan="2" class="n">
+              <h2>Actions sur la présentation</h2>
+              <p>Permet de terminer la présentation prématurément ou de
+                la recommencer immédiatement.</p>
+            </td>
+          </tr>
+          <tr><td colspan="2">
+              <input dojoType="geonef.jig.input.BooleanCheckBox"
+                     name="terminate"></input>&nbsp;Terminer la présentation</td>
+          </tr>
+          <tr><td colspan="2">
+              <input dojoType="geonef.jig.input.BooleanCheckBox"
+                     name="replay"></input>&nbsp;Rejouer la présentation</td>
+          </tr>
+          <tr><td colspan="2">
+              <button dojoType="geonef.jig.button.Action"
+                      dojoAttachEvent="onClick:actionDelete"
+                      label="Supprimer"></button></td>
+          </tr>
+      </tbody></table>
+    </div>
+  </button>
+</div>
+

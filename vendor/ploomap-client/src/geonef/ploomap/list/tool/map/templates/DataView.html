@@ -1,0 +1,98 @@
+<div class="ploomapListToolMapDataView"
+     style="width:400px;">
+  <div dojoType="dijit.layout.TabContainer"
+       dojoAttachPoint="tabContainer" doLayout="false">
+    <div dojoType="dijit.layout.ContentPane" title="Statistiques"
+         dojoAttachPoint="statsPane">
+      <div dojoType="geonef.jig.input.Group"
+           dojoAttachPoint="statisticsGroup">
+        <table class="jigList"><tbody>
+          <tr>
+            <td colspan="2">
+              <button dojoType="geonef.jig.button.Action"
+                      dojoAttachEvent="onClick:getData"
+                      label="Rafraîchir"></button>
+            </td>
+          </tr>
+          <tr>
+            <td><span>Données</span>&nbsp;:</td>
+            <td><span dojoType="geonef.jig.input.Label" name="count"></span></td>
+          </tr>
+          <tr>
+            <td><span>Sans donnée</span>&nbsp;:</td>
+            <td><span dojoType="geonef.jig.input.Label" name="nullCount"></span></td>
+          </tr>
+          <tr>
+            <td><span>Minimum</span>&nbsp;:</td>
+            <td><span dojoType="geonef.jig.input.Label" name="minimum"></span></td>
+          </tr>
+          <tr>
+            <td><span>Maximum</span>&nbsp;:</td>
+            <td><span dojoType="geonef.jig.input.Label" name="maximum"></span></td>
+          </tr>
+          <tr>
+            <td><span>Moyenne</span>&nbsp;:</td>
+            <td><span dojoType="geonef.jig.input.Label" name="average"></span></td>
+          </tr>
+          <tr>
+            <td><span>Médiane</span>&nbsp;:</td>
+            <td><span dojoType="geonef.jig.input.Label" name="median"></span></td>
+          </tr>
+          <tr>
+            <td><span>Écart-type</span>&nbsp;:</td>
+            <td><span dojoType="geonef.jig.input.Label" name="standardDeviation"></span></td>
+          </tr>
+        </tbody></table>
+      </div>
+    </div>
+    <div dojoType="dijit.layout.ContentPane" title="Discrétisation"
+         doLayout="false" dojoAttachPoint="discretPane">
+      <div>
+        Nombre de classes :
+        <input dojoType="dijit.form.NumberSpinner" name="classCount"
+               dojoAttachPoint="classCountInput"
+               dojoAttachEvent="onChange:updateDiscret"
+               smallDelta="1" largeDelta="3" value="3"
+               intermediateChanges="true"
+               constraints="{min:1,max:50,places:0}"></input>
+        <input dojoType="geonef.jig.input.BooleanCheckBox"
+               dojoAttachPoint="showCommasInput"
+               dojoAttachEvent="onChange:updateDiscret"
+               ></input>&nbsp;<span>afficher les virgules</span>
+      </div>
+      <table class="jigList"><tbody dojoAttachPoint="discretBody">
+      </tbody></table>
+    </div>
+    <div dojoType="dijit.layout.ContentPane" title="Répartition"
+         style="width: 400px; height: 350px; overflow: hidden;">
+      <div style="float:left">Pas :</div>
+      <div style="float:right"
+           ><span dojoAttachPoint="stepCountNode"></span>
+           colonnes larges de <span dojoAttachPoint="stepValueNode"></span>&nbsp;&nbsp;</div>
+      <div dojoType="dijit.form.HorizontalSlider"
+           dojoAttachPoint="stepSlider"
+           dojoAttachEvent="onChange:updateChart"
+	   value="0" minimum="1" maximum="1" showButtons="true"
+           intermediateChanges="false"
+	   style="width:150px; height: 20px;">
+        <div dojoType="dijit.form.HorizontalRule" container="bottomDecoration"
+	     dojoAttachPoint="sliderRule" count="5" style="height:5px;"></div>
+        <div dojoType="dijit.form.HorizontalRuleLabels" container="bottomDecoration"
+	     dojoAttachPoint="imageSizeSliderRuleLabels"
+             count="5" minimum="100" maximum="500"
+	     constraints="{pattern:'#'}" style="height:1em;font-size:75%;">
+        </div>
+      </div>
+      <div dojoAttachPoint="chartNode"
+           __style="width: 470px; height: 270px; position:relative; top: -15px; left: -50px;">
+      </div>
+    </div>
+    <div dojoType="dijit.layout.ContentPane" title="Valeurs">
+      <textarea dojoType="dijit.form.SimpleTextarea"
+                dojoAttachPoint="valuesInput"
+                readOnly="true"
+                style="width:95%;height: 300px; position:relative; overflow: auto;">
+      </textarea>
+    </div>
+  </div>
+</div>

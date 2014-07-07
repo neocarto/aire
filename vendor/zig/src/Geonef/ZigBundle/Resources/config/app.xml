@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="geonef.zig.app.manager.class">Geonef\ZigBundle\Service\AppManager</parameter>
+        <parameter
+            key="geonef.zig.converter.doctrine_odm.class">Geonef\ZigBundle\Request\ParamConverter\DoctrineOdmParamConverter</parameter>
+        <parameter key="geonef.zig.swiftmailer.plugin.admin_copy.class">Geonef\ZigBundle\SwiftMailer\Plugin\AdminCopy</parameter>
+        <parameter key="geonef.jig.swiftmailer.admin_copy.email">archive@geonef.fr</parameter>
+    </parameters>
+
+    <services>
+
+      <!-- Application manage for assets -->
+      <service id="zig.app.manager" class="%geonef.zig.app.manager.class%">
+        <argument type="service" id="service_container" />
+      </service>
+
+      <!-- automatic resolution of ID params in controllers -->
+      <service id="geonef.zig.converter.doctrine_odm" class="%geonef.zig.converter.doctrine_odm.class%">
+        <tag name="request.param_converter" />
+        <argument type="service" id="doctrine.odm.mongodb.document_manager" />
+      </service>
+
+      <!-- "AdminCopy" SwiftMailer plugin -->
+      <service id="geonef.zig.swiftmailer.plugin.admin_copy"
+               class="%geonef.zig.swiftmailer.plugin.admin_copy.class%"
+               public="false">
+        <tag name="swiftmailer.plugin" />
+        <argument>%geonef.jig.swiftmailer.admin_copy.email%</argument>
+      </service>
+
+      <service id="fos_user.registration.form.type" class="Geonef\ZigBundle\Form\RegistrationFormType">
+        <tag name="form.type" alias="fos_user_registration" />
+      </service>
+      <!-- <service id="geonef_user.registration.form.type" class="Geonef\ZigBundle\Form\Type\RegistrationFormType"> -->
+      <!--   <tag name="form.type" alias="geonef_user_registration" /> -->
+      <!-- </service> -->
+
+
+    </services>
+
+</container>

@@ -1,0 +1,26 @@
+<td colspan="${colspan}" class="margin">
+  <span dojoAttachEvent="onclick:toggleSort" class="link sortCmd">&nbsp;</span>
+  <div dojoType="dijit.form.DropDownButton" dojoAttachPoint="buttonNode">
+    <span dojoAttachPoint="titleNode" class="title"></span>
+    <div dojoType="dijit.TooltipDialog" class="jigFilterOperators">
+      <!--input dojoType="geonef.jig.input.BooleanCheckBox"
+             dojoAttachPoint="filterCheckBox"
+             dojoAttachEvent="onChange:updateFilterEnabled"></input-->
+      <label msgKey="filter">Filtre</label>
+      <input dojoType="geonef.jig.input.BooleanCheckBox"
+             dojoAttachPoint="inverseCheckBox"></input>
+      <label dojoAttachPoint="inverseLabelNode">inverse</label><br/>
+      <select dojoType="dijit.form.Select" name="op"
+              dojoAttachPoint="opSelect">
+      </select
+      ><input dojoType="geonef.jig.input.TextBox" class="grouped"
+	     dojoAttachPoint="filterWidget"
+	     dojoAttachEvent="onChange:onFilterChange,onExecute:updateFilter"
+	     tooltipPosition="below"
+      ><button dojoType="geonef.jig.button.Action" type="submit" class="jigLastButton"
+	      dojoAttachEvent="onClick:updateFilter" msgKey="apply">Appliquer</button>
+    </div>
+  </div>
+  <div dojoAttachPoint="filterSummaryNode" style="display:none" class="filterSummary">
+    <span dojoAttachPoint="filterSummaryValueNode"></span>&nbsp;<span class="link" dojoAttachEvent="onclick:clearFilter">X</span></div>
+</td>

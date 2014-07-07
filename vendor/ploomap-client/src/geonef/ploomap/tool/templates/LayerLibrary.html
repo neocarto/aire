@@ -1,0 +1,18 @@
+<div class="jigCacoin ploomapToolLayerLibrary">
+  <div dojoType="dijit.layout.TabContainer" dojoAttachPoint="tabContainer"
+       doLayout="true" tabStrip="true" useSlider="false" useMenu="false"
+       style="width:340px;height:450px">
+
+    <div dojoType="dijit.layout.ContentPane" title="Histoire"
+         dojoAttachPoint="standardPane">
+    </div>
+
+    <div dojoType="dijit.layout.ContentPane" title="IGN..."
+         dojoAttachPoint="myPane">
+      <div dojoType="geonef.ploomap.tool.layerLibrary.Geoportal"
+           dojoAttachPoint="geoportalLayers"
+           mapGetterWidget="${id}"></div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,41 @@
+
+* utilité : charger le store en classes, directement (facilité)
+ exemples:
+ 	- routes
+ 	- filtres?
+ 	- caches
+ 	- logs
+ 	
+mais parfois (défaut), c'est juste ArrayAccess (Node?)
+
+special key?
+__class: \X\Zig\Action\Forward\Router\Route
+
+
+pour la validation
+
+app:
+  
+
+
+
+une classes PHP pour 'app'. (avec héritage dyn namespace)
+
+elle "décrit" le site.
+
+
+cli:
+  actionCli:
+    -dispatcherClass: namespace base
+    -notFound class:
+  actionHttp:
+    -dispatcherClass: namespace based
+    json:
+      -dispatcherClass
+      account:
+        -dispatcherMethod
+        authentication:
+
+
+cette classe implémente Node
+ 

@@ -1,0 +1,14 @@
+/*********************************************
+ *
+ * Rules for widgets with information purpose
+ *
+ *********************************************/
+
+/* application about */
+.jigCacoin.about {  /*text-align: justify;*/ }
+.jigCacoin.about ul { padding-left: 20px; }
+.jigCacoin.about ul > li { margin-bottom: 10px; }
+.jigCacoin.about  h1 span { font-style: italic; font-size: 1.1em; }
+.jigCacoin.about .copyright { color: #333; font-style: italic; }
+.jigCacoin.about .copyright span { font-variant: small-caps; }
+.jigCacoin.about { background-color: #ffc; }

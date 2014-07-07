@@ -1,0 +1,114 @@
+
+/**
+ ** Main CSS for Geonef Ploomap workspace
+ **
+ */
+
+/* Style par défaut OpenLayers  */
+@import url("../../../openlayers/theme/default/style.css");
+
+/* Style commun à la plateforme cartapatate */
+@import url("../../../cartapatate/style/cartapatate.css");
+
+/* Polices */
+/* @import url("http://fonts.googleapis.com/css?family=Varela+Round&v2"); */
+/* @import url(http://fonts.googleapis.com/css?family=Muli|Quattrocento+Sans|Maven+Pro&v2); */
+/* @import url(http://fonts.googleapis.com/css?family=Expletus+Sans:400,500|Shanti|Nunito:300,400&v2); */
+
+/*
+ * Couleurs - dominante orange
+ *********/
+
+a, .link, .dijitButtonNode { color: #0031DE; text-decoration: none; }
+a:hover, .link:hover { color: #0031DE; text-decoration: underline; }
+/*.jigButtonArea .dijitButtonHover .dijitButtonNode,
+ .jigButtonArea .dijitDropDownButtonHover .dijitButtonNode,
+ .jigButtonArea .dijitToggleButtonHover .dijitButtonNode { background: #fc3; }*/
+.jigLayoutRootPane .dijitSplitter .dijitSplitterThumb { background-color: #444; }
+.jigLayoutRootPane .dijitSplitterActive {  background-color: #fd5; }
+.jigCacoin { overflow: auto; }
+.jigCacoin, .jigCacoin .dijitContentPane { background: transparent; }
+.jigCacoin .dijitTabContainerTop-tabs div.dijitTabChecked { background-color: #fff; border-bottom-color: #fff; }
+.tundra .dijitBorderContainer-child.jigCacoin { border-color: #005; }
+.tundra .dijitBorderContainer { background-color: #ffe; }
+.jigCacoin .list .item:hover,
+  .jigCacoin table.list > tbody > tr:hover > td,
+  .jigCacoin table.list > tbody > tr.selected > td { background-color: #fec; }
+/*.jigCacoin .list .item.selected, .jigCacoin table.list > tbody > tr.selected > td { background-color: #fff; border: 1px solid #aaa; }*/
+.jigCacoin .list .item, .jigCacoin table.list > tbody > tr > td { /*background: transparent;*/ }
+.jigCacoin.dijitTooltipDialog table.list > tbody > tr > td { /*background-color: #feb;*/ }
+.jigLayoutRootPane .dijitToasterClip { margin-left: 200px; }
+.jigLayoutRootPane .dijitToasterContainer > .opacity { background-color: #ffa; opacity: 0.75; }
+.jigLayoutRootPane .dijitToasterContainer { width: 320px; border-top: 0; border-width: 1px; background: transparent; }
+/* * >*/ .opacity { background-color: #fc9; border-color: #fc0; }
+.jigLayoutSwitch .rightLayoutSwitcher { background-color: #fc9; }
+.ploomapControlSexyZoomBar .rightLabels .dijitRuleLabelContainer { background-color: #fdb; }
+.ploomapControlSexyZoomBar .rightLabels .dijitRuleLabelContainer:hover { background-color: #fc9; }
+.jigLayoutSwitch .opaque { background-color: #fdb; }
+
+.jigCacoin .dijitTabContainerTopStrip { background: transparent; border: none; }
+
+/*
+ * Overloads
+ ********/
+.ploomapMap .olControlScaleLine { bottom: 5px; left: auto; right: 160px; }
+.ploomapMap.overviewMapMinimized .olControlScaleLine { right: 40px; }
+/* .ploomapMap.overviewMapMinimized .olControlAttribution { right: 25px; } */
+.ploomapMap.reduced .olControlAttribution { display: none; }
+.olControlAttribution { left: 10px; bottom: 0; right: auto/*160px*/; }
+.olControlAttribution .item { width: 100px; float: right; }
+/*.olGoogleAttribution.hybrid, .olGoogleAttribution.satellite { color: #333; }*/
+
+/*
+ * General workspace rules
+ */
+body { overflow: hidden; font-size: 13px;
+font-family: arial, sans-serif;
+} /*
+font-family: 'Expletus Sans', cursive;  // bon pour voyage (fin) 12px
+font-family: 'Shanti', sans-serif;      // pas mal du tout, pas trop loin de arial
+font-family: 'Nunito', sans-serif;      // bon pour voyage (gras) 12px
+font-family: 'Varela Round', sans-serif;
+font-family: 'Muli', sans-serif;
+font-family: 'Quattrocento Sans', sans-serif;
+font-family: 'Maven Pro', cursive;
+*/
+#cont { width: 100%; height: 100%; position: relative; }
+/* top bar */
+#top {  height: 30px; overflow: hidden; background: #eee;/*#fec;*//* #FFE7BF;*/ padding-left: 3px; }
+#top .logo {  float: left; margin-right: 10px; }
+#top .logo img { position: relative; border: none; }
+#top .logo:hover img { top: -30px;  }
+#top .toplink { font-size: 1.2em; line-height: 30px; }
+#top .sep { font-size: 1.2em; margin: 0 10px; }
+#top .loading { font-weight: bold; font-style: italic; font-size: 1.3em; padding-left: 20px; color: #555; display: none; }
+#top .signin { font-weight: bold; float: right; line-height: 28px; margin-right: 10px; }
+#top .jigButton { float: right; }
+#top .jigButton .dijitButtonNode { height: 25px; /*padding-top: 5px;*/ border-top: none; border-right: none; border-bottom: none; -moz-border-radius: 0; border-radius: 0; }
+body.loading #top .loading { display: inline; }
+#main { position: absolute; top: 30px; bottom: 0; left: 0; right: 0; background: #fff; border-top: 1px solid #aaa; }
+/* panel */
+#panel { position: absolute; top: 0; bottom: 0; left: 0; width: 379px; border-right: 1px solid #aaa; background: #fff; /*#f5f5f5;*/ }
+.minimized #panel { width: 20px; }
+.minimized #panel .search, .minimized #panel .titleNode, .minimized #panel .dijitStackContainer { display:none; }
+#panel .state { position: absolute; right: 0; top: 8px; z-index: 10; }
+#panel .search { padding: 8px; text-align: center; height: 22px; }
+#panel .search .dijitTextBox { width: 14.5em; font-size: 1.3em; }
+#panel .search .dijitTextBox input { padding-left: 5px !important; }
+#panel .browseTitle { font-size: 1.1em; font-weight: bold; padding: 8px; /*border-top: 1px solid #888;*/ }
+#panel.notitle .browseTitle { display: none; }
+#panel h2 {  font-size: 1em; font-weight: bold; border-bottom: 1px solid #aaa; color: #666; margin: 10px 10px 5px 10px; }
+#panel .panelContainer { position: absolute; top: 80px; bottom: 0; left: 0; right: 0; overflow: auto; }
+#panel.notitle .panelContainer { top: 35px; }
+#panel .backlink { display: block; margin: 20px 10px 0 10px; }
+#panel .ploomapToolMapTools { margin-bottom: 10px; }
+#panel p, #panel .panelContent { margin: 15px 10px; }
+#display { position: absolute; top: 0; bottom: 0; left: 380px; right: 0; }
+.minimized #display { left: 0; }
+
+ /* background-image: url("form/images/buttonArrows.png"); */
+ /*    background-position: -51px 53%; */
+ /*    background-repeat: no-repeat; */
+ /*    height: 15px; */
+ /*    margin: 0 auto; */
+ /*    width: 15px; */

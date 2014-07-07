@@ -1,0 +1,32 @@
+<div>
+<div dojoType="dijit.layout.TabContainer" dojoAttachPoint="tabContainer"
+		doLayout="true" tabStrip="true"
+		style="width:300px;height:200px">
+	<div dojoType="dijit.layout.ContentPane" title="Carte">
+		<button dojoType="dijit.form.Button" dojoAttachEvent="onClick:test"
+				label="Test"></button>
+		<div dojoType="geonef.jig.button.TooltipWidget" label="Ajouter couche"
+			 childWidgetClass="geonef.ploomap.tool.LayerLibrary"
+			 childWidgetParams="{mapWidget:'${relatedWidget.id}'}"></div>
+		<div dojoType="dijit.form.DropDownButton" label="Outils">
+			<div dojoType="dijit.TooltipDialog">
+				<button dojoType="dijit.form.Button"
+						dojoAttachEvent="onClick:actionMapControlZoomBar"
+						label="Barre de zoom"></button>
+				<div dojoType="geonef.jig.button.TooltipWidget" label="Couches"
+					 childWidgetClass="geonef.ploomap.tool.Layers"
+					 childWidgetParams="{mapWidget:'${relatedWidget.id}'}"></div>
+			</div>
+		</div>
+
+	</div>
+	<div dojoType="dijit.layout.ContentPane" title="Application">
+		<button dojoType="dijit.form.Button"
+				dojoAttachEvent="onClick:actionAppDumpCacoin"
+				label="Dumper ce cacoin"></button>
+		<button dojoType="dijit.form.Button"
+				dojoAttachEvent="onClick:actionAppDumpWorkspace"
+				label="Dumper l'espace de travail"></button>
+	</div>
+</div>
+</div>

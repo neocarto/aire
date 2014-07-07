@@ -1,0 +1,34 @@
+<div class="ploomapListRecordMapView">
+  <table class="jigList"><tbody>
+      <tr>
+        <td>Taille en pixels&nbsp;:</td>
+        <td>
+          <div dojoType="dijit.form.HorizontalSlider"
+                name="imageSize"
+	        minimum="100" maximum="500" discreteValues="9" pageIncrement="200"
+	        showButtons="false" intermediateChanges="false" slideDuration="500"
+	        style="width:100px; height: 20px;">
+            <div dojoType="dijit.form.HorizontalRule" container="bottomDecoration"
+	         dojoAttachPoint="sliderRule" count="5" style="height:5px;"></div>
+            <div dojoType="dijit.form.HorizontalRuleLabels" container="bottomDecoration"
+	         dojoAttachPoint="imageSizeSliderRuleLabels"
+                 count="5" minimum="100" maximum="500"
+	         constraints="{pattern:'#'}" style="height:1em;font-size:75%;">
+            </div>
+          </div>
+        </td>
+        <td>
+          <select dojoType="dijit.form.Select" name="format">
+            <option value="image/png">PNG</option>
+            <option value="image/jpeg">JPEG</option>
+            <option value="image/gif">GIF</option>
+          </select
+          ><button dojoType="geonef.jig.button.Action" class="jigLastButton"
+                   dojoAttachEvent="onClick:refreshMap"
+                   label="Rafraîchir"></button>
+        </td>
+      </tr>
+      <tr><td colspan="2" dojoAttachPoint="mapContainerNode" class="mapContainer">
+      </td></tr>
+  </tbody></table>
+</div>

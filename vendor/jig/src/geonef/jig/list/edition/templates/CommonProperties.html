@@ -1,0 +1,23 @@
+<div class="jigCacoin jigListEditionProperties"
+     style="overflow: auto"
+     ><span class="floatr" dojoAttachPoint="buttonsNode"
+        ><button dojoType="geonef.jig.button.Action" class="jigFirstButton jigBorderTop"
+                 dojoAttachPoint="saveButton"
+                 dojoAttachEvent="onClick:saveValues">${saveButtonLabel}</button
+        ><button dojoType="geonef.jig.button.Action"
+                 class="jigBorderTop"
+                 dojoAttachEvent="onClick:autoPool">Mise en commun auto</button
+        ><span dojoType="geonef.jig.data.tool.LocaleSwitch"
+               dojoAttachPoint="localeButton"
+               class="jigLastButton jigBorderTop jigBorderRight"
+               locale="${locale}" readOnly="true"
+               ><p>Pour changer de langue, recharger l'interface.</p></span
+       ></span
+       ><h1>Propriétés communes</h1
+   ><div class="listContainer">
+    <table class="jigList">
+      <tbody dojoAttachPoint="propertyListNode">
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+<!-
+      NOT USED!!!!!!!!!!!!!!!!!!!!
+->
+<div class="item" style="border-left:2px solid;">
+<input dojoType="geonef.jig.input.BooleanCheckBox" name="visible"/>
+<div dojoType="dijit.form.DropDownButton">
+  <span>Données</span>
+  <div dojoType="dijit.TooltipDialog"
+       dojoAttachPoint="formDialog">
+    <table class="list"><tbody>
+        <tr>
+          <td class="n">Géometry type</td>
+          <td><select dojoType="dijit.form.Select"
+                      name="geometryType">
+              <option value="polygon">Polygon</option>
+              <option value="line">Line</option>
+              <option value="point">Point</option>
+              <option value="circle">Circle</option>
+          </select></td>
+        </tr>
+        <tr>
+          <td class="n">Référence spatiale</td>
+          <td><input dojoType="dijit.form.TextBox"
+                     name="spatialRef"/></td>
+        </tr>
+        <tr>
+          <td class="n">Connection type</td>
+          <td><select dojoType="dijit.form.Select"
+                      name="connectionType">
+              <option value="local">Local</option>
+              <option value="ogr">OGR</option>
+              <option value="postgis">PostGIS</option>
+              <option value="wms">WMS</option>
+          </select></td>
+        </tr>
+        <tr>
+          <td class="n">Connection string</td>
+          <td><input dojoType="dijit.form.TextBox"
+                     name="connection"/></td>
+        </tr>
+        <tr>
+          <td class="n">Data source</td>
+          <td><input dojoType="dijit.form.TextBox"
+                     name="data"/></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <button dojoType="geonef.jig.button.Action"
+                    dojoAttachEvent="onClick:destroy"
+                    label="Supprimer"/>
+          </td>
+        </tr>
+    </table>
+  </div>
+</div>
+<span style="font-weight:bold;">Static</span>
+<span dojoAttachPoint="summaryNode" style="font-style:italic;"></span>
+</div>

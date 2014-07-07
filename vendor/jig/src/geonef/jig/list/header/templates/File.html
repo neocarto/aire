@@ -1,0 +1,30 @@
+<tr>
+
+  <td dojoType="geonef.jig.list.header.generic.Selection"></td>
+
+  <td dojoType="geonef.jig.list.header.generic.Uuid"></td>
+
+  <td dojoType="geonef.jig.list.header.generic.Name" label="Titre"></td>
+
+  <td dojoType="geonef.jig.list.header.generic.Module"
+      apiModule="${queryApiModule}"></td>
+
+  <td class="margin center">Type</td>
+
+  <td dojoType="geonef.jig.list.header.generic.NumberField" class="center"
+      name="size" title="Taille"></td>
+
+  <td dojoType="geonef.jig.list.header.file.Actions"
+      dojoAttachPoint="actions">
+    <h1>Répertoire</h1>
+    <input dojoType="dijit.form.TextBox"
+           dojoAttachPoint="dirNameInput"></input>
+    <button dojoType="geonef.jig.button.Action"
+            dojoAttachEvent="onClick:createDirectory">Créer</button>
+    <hr/>
+    <h1>Fichier</h1>
+    <button dojoType="geonef.jig.button.Action"
+            dojoAttachEvent="onClick:uploadFile">Envoyer...</button>
+  </td>
+
+</tr>

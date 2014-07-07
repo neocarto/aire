@@ -1,0 +1,38 @@
+<tr>
+
+  <td dojoType="geonef.jig.list.header.generic.Selection"></td>
+
+  <td dojoType="geonef.jig.list.header.generic.Uuid"></td>
+
+  <td dojoType="geonef.jig.list.header.generic.NumberField" class="center"
+      name="position" title="Position"></td>
+
+  <td dojoType="geonef.jig.list.header.generic.Name" label="Titre"></td>
+
+  <td dojoType="geonef.jig.list.header.generic.SelectEntityFilter"
+      title="Catégorie" name="category" labelProp="title"
+      apiModule="listQuery.mapCategory" inListTitle="true"
+      locale="${listWidget.locale}" class="center"></td>
+
+  <td dojoType="geonef.jig.list.header.generic.Module"
+      apiModule="${queryApiModule}" locale="${listWidget.locale}"></td>
+
+  <td class="margin center">Publié</td>
+
+  <td class="margin center">Cartes</td>
+  <!--td dojoType="geonef.jig.list.header.generic.NumberField" class="center"
+      name="mapCount" title="Cartes"></td-->
+
+  <td dojoType="geonef.ploomap.list.header.mapCollection.Actions">
+    <div dojoType="geonef.jig.list.header.action.CreateModuleButtons"
+         classNamespace="geonef.ploomap.list.edition.mapCollection"
+         saveNoticeChannel="${listWidget.refreshTopic}"
+         apiModule="${queryApiModule}"></div>
+    <!--Titre&nbsp;<input dojoType="dijit.form.TextBox"
+                      dojoAttachPoint="createNewTitle"></input>
+    <button dojoType="geonef.jig.button.Action"
+            dojoAttachEvent="onClick:createNew"
+            label="Créer"></button>-->
+  </td>
+
+</tr>

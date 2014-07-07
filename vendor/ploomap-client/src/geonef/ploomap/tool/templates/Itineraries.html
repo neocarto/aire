@@ -1,0 +1,49 @@
+<div class="jigCacoin padding ploomapToolItineraries">
+  <table class="list"><body>
+    <tr>
+      <td class="n">Départ</td>
+      <td><input dojoType="geonef.jig.input.TextBox"
+                 dojoAttachPoint="startInput"
+                 dojoAttachEvent="onExecute:doQuery"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="n">Arrivée</td>
+      <td><input dojoType="geonef.jig.input.TextBox"
+                 dojoAttachPoint="endInput"
+                 dojoAttachEvent="onExecute:doQuery"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="n"> Mode</td>
+      <td><select dojoType="dijit.form.Select" dojoAttachPoint="travelModeSelect">
+                  <option value="DRIVING">Voiture</option>
+                  <option value="WALKING">Marche</option>
+                  <option value="BICYCLING">Vélo</option>
+                </select>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <input type="checkbox" dojoType="geonef.jig.input.BooleanCheckBox"
+               dojoAttachPoint="avoidHighwaysInput"
+               value="true"/>&nbsp;<span>Éviter les autoroutes</span>&nbsp;&nbsp;
+        <input type="checkbox" dojoType="geonef.jig.input.BooleanCheckBox"
+               dojoAttachPoint="avoidTollsInput"
+               value="true"/>&nbsp;<span>Éviter les péages</span>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <button dojoType="geonef.jig.button.Action" dojoAttachPoint="computeButton"
+                dojoAttachEvent="onClick:doQuery">Calculer</button><br/>
+      </td>
+    </tr>
+  </tbody></table>
+
+  <p class="message" dojoAttachPoint="messageNode"></p>
+
+  <table class="list"><tbody dojoAttachPoint="resultNode">
+  </tbody></table>
+
+</div>

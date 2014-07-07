@@ -1,0 +1,26 @@
+<tr>
+
+  <td dojoType="geonef.jig.list.header.generic.Selection"></td>
+
+  <td dojoType="geonef.jig.list.header.generic.Uuid"></td>
+
+  <td dojoType="geonef.jig.list.header.generic.Name" label="Nom"></td>
+
+  <td class="center">Valide</td>
+
+  <td dojoType="geonef.jig.list.header.generic.Module"
+      apiModule="${queryApiModule}"></td>
+
+  <td class="margin center">Type</td>
+
+  <td class="center">Modif</td>
+
+  <td dojoType="geonef.jig.data.list.header.template.Actions"
+      dojoAttachPoint="actionsField">
+    <div dojoType="geonef.jig.list.header.action.CreateModuleButtons"
+         classNamespace="geonef.ploomap.data.edition.template"
+         saveNoticeChannel="${listWidget.refreshTopic}"
+         apiModule="${queryApiModule}"></div>
+  </td>
+
+</tr>

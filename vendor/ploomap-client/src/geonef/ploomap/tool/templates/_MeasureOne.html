@@ -1,0 +1,23 @@
+<div class="ploomapToolMeasure">
+<!--h2 dojoAttachPoint="titleNode"></h2-->
+<p dojoAttachPoint="helpStartNode">
+  ${helpStart}
+</p>
+<p dojoAttachPoint="geodesicNode">
+  <input dojoType="dijit.form.CheckBox" dojoAttachPoint="geodesicCheckBox"
+         dojoAttachEvent="onChange:toggleGeodesic"
+         checked="true"/>&nbsp;Mesure géodésique
+</p>
+<p class="total" dojoAttachPoint="totalNode"></p>
+<p>
+  <span dojoType="geonef.jig.button.Action"
+        dojoAttachPoint="cancelLink"
+        dojoAttachEvent="onClick:cancel">Annuler</span>
+  <span dojoType="geonef.jig.button.Action" style="display:none"
+        dojoAttachPoint="stopLink"
+        dojoAttachEvent="onClick:stop">Terminer le tracé</span>
+  <span dojoType="geonef.jig.button.Link" style="display:none""
+        dojoAttachPoint="listLink"
+        dojoAttachEvent="onClick:goList">Voir la liste</span>
+</p>
+</div>

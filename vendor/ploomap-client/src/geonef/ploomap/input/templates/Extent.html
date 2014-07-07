@@ -1,0 +1,64 @@
+<span class="ploomapInputExtent">
+<span dojoType="dijit.form.DropDownButton" dojoAttachPoint="mainButton">
+    <span>${label}</span>
+    <div dojoType="dijit.TooltipDialog" class="jigCacoin ploomapInputExtent"
+         dojoAttachEvent="onOpen:onDialogOpen,onClose:onDialogClose">
+      	<div dojoType="dijit.layout.ContentPane" title="Actions">
+            <button dojoType="dijit.form.Button"
+                    dojoAttachPoint="goZoomButton"
+                    dojoAttachEvent="onClick:goZoom">
+              <img src="${iconBaseUrl}/input_extent_zoomIn.png"/><br/>
+              <span>Rétrécir</span>
+            </button
+            ><button dojoType="dijit.form.Button"
+                    dojoAttachPoint="goUnZoomButton"
+                    dojoAttachEvent="onClick:goUnZoom">
+              <img src="${iconBaseUrl}/input_extent_zoomOut.png"/><br/>
+              <span>Agrandir</span>
+            </button
+            ><button dojoType="dijit.form.Button" class="jigBorderRight"
+                    dojoAttachPoint="selectMapExtentButton"
+                    dojoAttachEvent="onClick:selectMapExtent">
+              <img src="${iconBaseUrl}/input_extent_view.png"/><br/>
+              <span>Vue entière</span>
+            </button
+            ><button dojoType="dijit.form.ToggleButton"
+                    dojoAttachPoint="toggleDrawButton"
+                    dojoAttachEvent="onChange:toggleDraw"
+                    iconClass="dijitCheckBoxIcon">
+              <img src="${iconBaseUrl}/input_extent_trace.png"/><br/>
+              <span>Tracer le rectangle</span>
+            </button>
+            <!--button dojoType="dijit.form.Button"
+                    dojoAttachPoint="goBackwardButton"
+                    dojoAttachEvent="onClick:goBackward">
+              <img src="${iconBaseUrl}/input_extent_back.png"/>
+            </button>
+            <button dojoType="dijit.form.Button"
+                    dojoAttachPoint="goForwardButton"
+                    dojoAttachEvent="onClick:goForward">
+              <img src="${iconBaseUrl}/input_extent_next.png"/>
+            </button-->
+          <br/><br/>
+            <button dojoType="dijit.form.Button"
+                    dojoAttachPoint="zoomToCurrentButton"
+                    dojoAttachEvent="onClick:zoomToCurrent">
+              <img src="${iconBaseUrl}/input_extent_zoomTo.png"/><br/>
+              <span>Zoom</span>
+            </button
+            ><button dojoType="dijit.form.Button"
+                    dojoAttachEvent="onClick:copyToClipboard"
+                    __iconClass="dijitEditorIcon dijitEditorIconCopy">
+              <img src="${iconBaseUrl}/input_extent_copy.png"/><br/>
+              <span>Copier la région</span>
+            </button
+            ><button dojoType="dijit.form.Button"
+                    dojoAttachEvent="onClick:pasteFromClipboard"
+                    __iconClass="dijitEditorIcon dijitEditorIconPaste">
+              <img src="${iconBaseUrl}/input_extent_paste.png"/><br/>
+              <span>Coller la région</span>
+            </button>
+      	</div>
+    </div>
+</span>
+</span>

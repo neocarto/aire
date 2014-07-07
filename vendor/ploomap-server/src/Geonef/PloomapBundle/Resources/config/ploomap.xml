@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="geonef.ploomap.cache_warmer.mapserver.class">Geonef\PloomapBundle\CacheWarmer\MapServerCacheWarmer</parameter>
+        <parameter key="geonef.ploomap.geocache.class">Geonef\PloomapBundle\Service\GeoCache</parameter>
+        <parameter key="geonef.ploomap.geocache.configPath">%kernel.cache_dir%/geocache.xml</parameter>
+        <parameter key="geonef.ploomap.geocache.cachePath">%kernel.cache_dir%/tiles</parameter>
+        <!-- <parameter key="geonef.ploomap.listener.map.class">Geonef\PloomapBundle\Listener\MapListener</parameter> -->
+    </parameters>
+
+    <services>
+        <!-- Cache warmers -->
+        <service id="geonef.ploomap.cache_warmer.mapserver" class="%geonef.ploomap.cache_warmer.mapserver.class%" public="false">
+            <tag name="kernel.cache_warmer" />
+            <argument type="service" id="service_container" />
+        </service>
+
+        <!-- GeoCache -->
+        <service id="geonef.ploomap.geocache" class="%geonef.ploomap.geocache.class%">
+            <argument>%geonef.ploomap.geocache.configPath%</argument>
+            <argument>%geonef.ploomap.geocache.cachePath%</argument>
+            <call method="setDocumentManager">
+              <argument type="service" id="doctrine.odm.mongodb.document_manager"/>
+            </call>
+            <call method="setContainer">
+              <argument type="service" id="service_container"/>
+            </call>
+        </service>
+
+        <!-- Doctrine listeners -->
+        <!-- <service id="geonef.ploomap.listener.map" class="%geonef.ploomap.listener.map.class%"> -->
+        <!--     <call method="setContainer"> -->
+        <!--         <argument type="service" id="service_container" /> -->
+        <!--     </call> -->
+        <!--     <tag name="doctrine.odm.mongodb.default_event_subscriber" priority="-10"/> -->
+        <!-- </service> -->
+    </services>
+
+</container>

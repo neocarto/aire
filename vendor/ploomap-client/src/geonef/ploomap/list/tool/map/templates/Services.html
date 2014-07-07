@@ -1,0 +1,58 @@
+<div class="ploomapListMapServices"
+     style="width:400px;">
+  <div dojoType="dijit.layout.TabContainer"
+       dojoAttachPoint="tabContainer" doLayout="false">
+    <div dojoType="dijit.layout.ContentPane" title="WMS">
+      <table class="jigList"><tbody>
+        <tr><td colspan="2">
+          Via les services WMS et WFS, la carte peut être visualisée ou
+          manipulée depuis des logiciels externes, tels que
+          <a href="http://www.qgis.org/" target="_blank">Quantum
+          GIS</a> (voir aussi WFS).
+        </td></tr>
+        <tr>
+          <td class="n">Service WMS</td>
+          <td><a dojoAttachPoint="owsUrlNode" target="_blank"></a></td>
+        </tr>
+        <tr>
+          <td class="n">WMS GetCapabilities</td>
+          <td><a dojoAttachPoint="wmsGetCapsUrlNode" target="_blank"></a></td>
+        </tr>
+        <tr>
+          <td class="n">WFS GetCapabilities</td>
+          <td><a dojoAttachPoint="wfsGetCapsUrlNode" target="_blank"></a></td>
+        </tr>
+      </tbody></table>
+    </div>
+    <div dojoType="dijit.layout.ContentPane" title="Export">
+      <table class="jigList"><tbody>
+        <tr><td colspan="2">
+          Utilisation des services WMS et WFS pour exporter la carte
+          en différents formats.
+        </td></tr>
+        <tr>
+        </tr>
+      </tbody></table>
+      <ul dojoAttachPoint="exportNode"></ul>
+    </div>
+    <div dojoType="dijit.layout.ContentPane" title="MapFile"
+         dojoAttachPoint="mapFilePane">
+      <p>
+        Ci-dessous le contenu du MapFile généré à partir des
+        paramètres.
+        <button dojoType="geonef.jig.button.Action" class="jigFirstButton"
+                dojoAttachEvent="onClick:getMapString">Actualiser</button
+        ><button dojoType="geonef.jig.button.Action"
+                dojoAttachEvent="onClick:clearBuild">Effacer</button
+        ><button dojoType="geonef.jig.button.Action" class="jigLastButton"
+                dojoAttachEvent="onClick:rebuild">Regénérer</button
+      ></p>
+      <textarea dojoType="dijit.form.SimpleTextarea"
+                dojoAttachPoint="mapFileArea" readOnly="true"
+                style="display: block; width: 98%; height: 230px; ">
+      </textarea>
+    </div>
+    <div dojoType="dijit.layout.ContentPane" title="SQL"
+         dojoAttachPoint="sqlPane" style="max-height:300px;overflow:auto;">
+    </div>
+</div>

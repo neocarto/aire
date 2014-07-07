@@ -1,0 +1,24 @@
+<div style="background:#fda" style="min-height:280px; min-width: 40px;">
+
+	<div dojoType="dijit.form.VerticalSlider"
+		 dojoAttachPoint="slider"
+		 dojoAttachEvent="onChange:onSliderChange"
+		value="1"
+		minimum="1"
+		maximum="1"
+		discreteValues="1"
+		pageIncrement="3"
+		showButtons="true"
+		intermediateChanges="false"
+		slideDuration="500"
+		style="height:250px; width: 40px; margin-top: 26px;"
+		>
+		<div dojoType="dijit.form.VerticalRule" container="bottomDecoration"
+			 dojoAttachPoint="sliderRule" count="1" style="width:5px;"></div>
+		<div dojoType="dijit.form.VerticalRuleLabels" container="bottomDecoration"
+			 dojoAttachPoint="sliderRuleLabels" count="1" minimum="1"
+			 constraints="{pattern:'#'}"
+			 style="width:1em;font-size:75%;"><ol><li></li><li></li></ol></div>
+	</div>
+
+</div>

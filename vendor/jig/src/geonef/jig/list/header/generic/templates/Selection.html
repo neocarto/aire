@@ -1,0 +1,24 @@
+<td class="center selection">
+  <span dojoType="dijit.form.DropDownButton"
+         dojoAttachPoint="buttonNode" class="nolabel">
+    <div dojoType="dijit.TooltipDialog">
+      <div dojoAttachPoint="generalNode">
+        Sélectionner&nbsp;:
+	<button dojoType="geonef.jig.button.Action" type="submit"
+                dojoAttachPoint="selectAllButton"
+	        dojoAttachEvent="onClick:selectAll"
+                class="jigFirstButton">
+          <span msgKey="selectAll">tout</span></button
+	><button dojoType="geonef.jig.button.Action" type="submit"
+                dojoAttachPoint="unselectAllButton"
+	        dojoAttachEvent="onClick:unselectAll">
+          <span msgKey="unselectAll">aucun</span></button
+	><button dojoType="geonef.jig.button.Action" type="submit"
+                dojoAttachPoint="inverseSelectionButton"
+	        dojoAttachEvent="onClick:inverseSelection"
+                class="jigLastButton">
+          <span msgKey="inverseSel">l'inverse</span></button
+      ></div>
+    </div>
+  </span>
+</td>

@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="geonef_zig.static_cache.manager_class">Geonef\ZigBundle\Service\StaticCacheManager</parameter>
+        <parameter key="geonef_zig.static_cache.warmer_class">Geonef\ZigBundle\Service\StaticCacheWarmer</parameter>
+        <parameter key="geonef_zig.static_cache.kernel_listener_class">Geonef\ZigBundle\EventListener\StaticCacheKernelListener</parameter>
+        <parameter key="geonef_zig.static_cache.doctrine_listener_class">Geonef\ZigBundle\EventListener\StaticCacheDoctrineListener</parameter>
+        <parameter key="geonef_zig.static_cache.cache_dir">%kernel.cache_dir%/staticCache</parameter>
+    </parameters>
+
+    <services>
+        <service id="geonef_zig.static_cache.manager" class="%geonef_zig.static_cache.manager_class%">
+          <argument>%geonef_zig.static_cache.cache_dir%</argument>
+          <argument type="service" id="doctrine.odm.mongodb.document_manager" />
+          <argument type="service" id="session" />
+          <argument type="service" id="logger" />
+          <tag name="monolog.logger" channel="cache" />
+          <tag name="kernel.event_listener" event="model.document.onDispatch" method="onDocumentDispatch" />
+        </service>
+        <service id="geonef_zig.static_cache.kernel_listener" class="%geonef_zig.static_cache.kernel_listener_class%">
+          <argument type="service" id="geonef_zig.static_cache.manager" />
+          <tag name="kernel.event_listener" event="kernel.response" method="onKernelResponse" />
+        </service>
+        <service id="geonef_zig.static_cache.warmer" class="%geonef_zig.static_cache.warmer_class%">
+          <argument type="service" id="geonef_zig.static_cache.manager" />
+          <argument type="service" id="router" />
+          <tag name="kernel.cache_warmer" />
+        </service>
+        <!-- <service id="geonef_zig.static_cache.doctrine_listener" class="%geonef_zig.static_cache.doctrine_listener_class%"> -->
+        <!--   <argument type="service" id="geonef_zig.static_cache.manager" /> -->
+        <!--   <argument type="service" id="session" /> -->
+        <!--   <tag name="doctrine.odm.mongodb.default_event_subscriber" priority="-10"/> -->
+        <!-- </service> -->
+    </services>
+
+</container>

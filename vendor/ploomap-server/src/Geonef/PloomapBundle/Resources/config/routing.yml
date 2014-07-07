@@ -1,0 +1,20 @@
+
+# Handled through annotations
+
+
+geonef_ploomap_controllers:
+  resource: "@GeonefPloomapBundle/Controller"
+  prefix:   /
+  type:     annotation
+
+# geonefPloomapOwsDefault:
+#   pattern: /ows/{mapRef}
+#   defaults: { _controller: "GeonefPloomapBundle:Ows:request" }
+
+# geonefPloomapMapSvg:
+#   pattern: /map/{id}/svg
+#   defaults: { _controller: "GeonefPloomapBundle:Map:svg" }
+
+# geonefPloomapMapSld:
+#   pattern: /map/{id}/sld/{layer}
+#   defaults: { _controller: "GeonefPloomapBundle:Map:sld" }

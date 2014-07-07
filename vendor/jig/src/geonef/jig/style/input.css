@@ -1,0 +1,32 @@
+/*********************************************
+ *
+ * Rules for input widgets
+ *
+ *********************************************/
+
+
+
+/* jig input color */
+@import url("../../../dojox/widget/ColorPicker/ColorPicker.css");
+.jigInputColor .dijitButtonText.hexa { font-family: monospace; }
+.jigInputColorList .dropDownButton .dijitButtonText { padding: 0; position: relative; top: -5px; }
+
+
+/*  */
+.tundra .dijitTextBox { border-radius: 3px; -moz-border-radius: 3px; }
+.tundra .dijitTextBox.grouped { border-radius: 0; -moz-border-radius: 0; margin: 0; border-left: none; width: 10em; }
+.tundra .dijitTextBoxFocused { border-color: #ccc; background-color: #f4c8ff; }
+.tundra .dijitTextBox input { height: 19px; }
+.tundra .dijitTextBox .dijitButtonNode input { height: 19px !important; }
+.tundra .dijitDateTextBox { width: 6em; }
+.tundra .dijitTimeTextBox { width: 4em; }
+/*  */
+.tundra .dijitSelect { margin: 0; }
+.tundra .dijitSelect .dijitButtonContents { padding: 0.1em 0; }
+
+.jigInputFileUpload .uploadForm { position: relative;  }
+.jigInputFileUpload .open { width: 130px; }
+.jigInputFileUpload .fileInput { display: none; width: 130px; }
+/* upload trick: when !(isFF >= 4), opacity=0 trick for file input */
+.jigInputFileUpload.uploadTrick form { position: absolute; top: 0; left: 0; width: 130px; overflow: hidden; }
+.jigInputFileUpload.uploadTrick .fileInput { opacity: 0; display: inline; }

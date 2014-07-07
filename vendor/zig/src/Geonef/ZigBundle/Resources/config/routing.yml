@@ -1,0 +1,21 @@
+
+#zigWorkspaceView:
+#  pattern: /workspace/:key
+#  defaults: { _bundle: Zig, _controller: Workspace, _action: view }
+
+#zigWorkspaceViewDefault:
+#  pattern: /workspace
+#  defaults: { _bundle: Zig, _controller: Workspace, _action: view, key: default }
+
+zigViewX:
+  pattern: /view/:path
+  defaults: { _controller: "GeonefZigBundle:ViewClass:render" }
+
+zigApi:
+  pattern: /api
+  defaults: { _controller: "GeonefZigBundle:Api:dispatch" }
+
+geonef_zig_controller_translation:
+  resource: "@GeonefZigBundle/Controller/TranslationController.php"
+  prefix:   /
+  type:     annotation

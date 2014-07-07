@@ -1,0 +1,170 @@
+<div class="dijit dijitReset dijitInlineTable dijitLeft locationInput ${cssClass}"
+	waiRole="presentation" id="widget_${id}"
+	><div dojoAttachPoint="menuHandle" class="menuHandle"
+			>&nbsp;</div
+	><div dojoAttachPoint="coordNode" class="coord"
+	>?, ?</div
+	><div dojoAttachPoint="menu" dojoType="dijit.Menu"
+			leftClickToOpen="true"
+			style="display: none;"
+			><div dojoType="room.menu.dndTargetItem"
+				  class="dndTarget ploomapBounds"
+				  moveableClass="geonef.ploomap.input._LocationDndTargetDefault"
+				  relatedWidget="${id}"
+				>Coller avec zoom</div
+			><div dojoType="room.menu.dndTargetItem"
+				  class="dndTarget ploomapBounds"
+				  moveableClass="geonef.ploomap.input._LocationDndTargetLonLat"
+				  relatedWidget="${id}"
+				>Coller sans zoom</div
+			><div dojoType="dijit.PopupMenuItem"
+				  class="dndTarget ploomapBounds"
+				><span>Synchroniser</span
+				><div dojoType="dijit.Menu"
+					><div dojoType="room.menu.dndTargetItem"
+						  moveableClass="geonef.ploomap.input._LocationDndTargetSync"
+						  relatedWidget="${id}"
+						  argument="no"
+						>Sans zoom</div
+					><div dojoType="room.menu.dndTargetItem"
+						  moveableClass="geonef.ploomap.input._LocationDndTargetSync"
+						  relatedWidget="${id}"
+						  argument="5"
+						>Avec zoom +5</div
+					><div dojoType="room.menu.dndTargetItem"
+						  moveableClass="geonef.ploomap.input._LocationDndTargetSync"
+						  relatedWidget="${id}"
+						  argument="4"
+						>Avec zoom +4</div
+					><div dojoType="room.menu.dndTargetItem"
+						  moveableClass="geonef.ploomap.input._LocationDndTargetSync"
+						  relatedWidget="${id}"
+						  argument="3"
+						>Avec zoom +3</div
+					><div dojoType="room.menu.dndTargetItem"
+						  moveableClass="geonef.ploomap.input._LocationDndTargetSync"
+						  relatedWidget="${id}"
+						  argument="2"
+						>Avec zoom +2</div
+					><div dojoType="room.menu.dndTargetItem"
+						  moveableClass="geonef.ploomap.input._LocationDndTargetSync"
+						  relatedWidget="${id}"
+						  argument="1"
+						>Avec zoom +1</div
+					><div dojoType="room.menu.dndTargetItem"
+						  moveableClass="geonef.ploomap.input._LocationDndTargetSync"
+						  relatedWidget="${id}"
+						  argument="0"
+						>Avec même zoom</div
+					><div dojoType="room.menu.dndTargetItem"
+						  moveableClass="geonef.ploomap.input._LocationDndTargetSync"
+						  relatedWidget="${id}"
+						  argument="-1"
+						>Avec zoom -1</div
+					><div dojoType="room.menu.dndTargetItem"
+						  moveableClass="geonef.ploomap.input._LocationDndTargetSync"
+						  relatedWidget="${id}"
+						  argument="-2"
+						>Avec zoom -2</div
+					><div dojoType="room.menu.dndTargetItem"
+						  moveableClass="geonef.ploomap.input._LocationDndTargetSync"
+						  relatedWidget="${id}"
+						  argument="-3"
+						>Avec zoom -3</div
+					><div dojoType="room.menu.dndTargetItem"
+						  moveableClass="geonef.ploomap.input._LocationDndTargetSync"
+						  relatedWidget="${id}"
+						  argument="-4"
+						>Avec zoom -4</div
+					><div dojoType="room.menu.dndTargetItem"
+						  moveableClass="geonef.ploomap.input._LocationDndTargetSync"
+						  relatedWidget="${id}"
+						  argument="-5"
+						>Avec zoom -5</div
+					></div
+			></div
+			><div dojoType="dijit.MenuItem" disabled="false"
+				  style="font-weight:bold;">Emplacement</div
+			><div dojoType="dijit.PopupMenuItem"
+				><span>Chercher</span
+				><div dojoType="dijit.Menu"
+					  dojoAttachPoint="geocoderMenu"
+					><div dojoType="dijit.PopupMenuItem"
+						><span>Taper l'adresse</span
+						><div dojoType="room.form.WatermarkTextBox"
+							  dojoAttachPoint="textbox"></div
+					></div
+					><div dojoType="dijit.MenuItem"
+						  dojoAttachPoint="clearGeocoderResultsItem"
+						  dojoAttachEvent="onClick:clearGeocoderResults"
+						  >Effacer les résultats</div
+					><div dojoType="dijit.MenuSeparator"></div
+				></div
+			></div
+			><div dojoType="dijit.PopupMenuItem"
+				><span>Presse-papier</span
+				><div dojoType="dijit.Menu"
+					><div dojoType="dijit.MenuItem"
+						  dojoAttachEvent="onClick:copyToClipBoard"
+						>Copier</div
+					><div dojoType="dijit.MenuItem"
+						  dojoAttachEvent="onClick:pasteFromClipBoard"
+						>Coller</div
+					><div dojoType="dijit.MenuItem"
+						  dojoAttachEvent="onClick:_pasteFromClipBoardNoZoom"
+						>Coller sans le zoom</div
+				></div
+			></div
+			><div dojoType="dijit.PopupMenuItem"
+				><span>Appliquer l'échelle</span
+				><div dojoType="dijit.Menu"
+					><div dojoType="dijit.MenuItem"
+						  dojoAttachEvent="onClick:_askScale"
+						>Définir...</div
+					><div dojoType="dijit.PopupMenuItem"
+						><span>Réduction</span
+						><div dojoType="dijit.Menu"
+							><div dojoType="dijit.MenuItem"
+								  dojoAttachEvent="onClick:_scale10"
+								>10 %</div
+							><div dojoType="dijit.MenuItem"
+								  dojoAttachEvent="onClick:_scale25"
+								>25 %</div
+							><div dojoType="dijit.MenuItem"
+								  dojoAttachEvent="onClick:_scale33"
+								>33 %</div
+							><div dojoType="dijit.MenuItem"
+								  dojoAttachEvent="onClick:_scale50"
+								>50%</div
+							><div dojoType="dijit.MenuItem"
+								  dojoAttachEvent="onClick:_scale75"
+								>75%</div
+						></div></div
+					><div dojoType="dijit.PopupMenuItem"
+						><span>Agrandissement</span
+						><div dojoType="dijit.Menu"
+							><div dojoType="dijit.MenuItem"
+								  dojoAttachEvent="onClick:_scale150"
+								>150 %</div
+							><div dojoType="dijit.MenuItem"
+								  dojoAttachEvent="onClick:_scale200"
+								>200 %</div
+							><div dojoType="dijit.MenuItem"
+								  dojoAttachEvent="onClick:_scale500"
+								>500 %</div
+							><div dojoType="dijit.MenuItem"
+								  dojoAttachEvent="onClick:_scale1000"
+								>1000 %</div
+						></div></div
+				></div
+			></div
+			><div dojoType="room.menu.dndSourceItem"
+				  moveableClass="geonef.ploomap.input._LocationDndSource"
+				  relatedWidget="${id}"
+			>Exporter vers...</div
+			><div dojoType="dijit.MenuItem" style="display:none"
+				  dojoAttachPoint="stopSynchronisationItem"
+				  dojoAttachEvent="onClick:stopSynchronisation"
+				>Casser la synchro</div
+	></div
+></div>

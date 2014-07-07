@@ -1,0 +1,76 @@
+<tr>
+
+  <td class="select">
+    <input type="checkbox" dojoType="dijit.form.CheckBox"
+	   dojoAttachPoint="selectCheckBoxNode"
+	   dojoAttachEvent="onChange:onSelectCheckBoxChange"/>
+  </td>
+
+  <td dojoAttachPoint="nameNode" class="pad bold"></td>
+
+  <td dojoAttachPoint="sourceNode" class="center"></td>
+
+  <td class="center">
+    <span dojoType="geonef.jig.input.Label" isMapped="true"
+            map="geonef.ploomap.input.OgrGeometryType.prototype.geometryTypes"
+            dojoAttachPoint="geometryTypeSelect"></span>
+  </td>
+
+  <td class="center buttonRight">
+    <span dojoType="dijit.form.DropDownButton" class="nolabel"
+          dojoAttachPoint="fieldsButton">
+      <div dojoType="dijit.TooltipDialog"
+           class="ploomapListRecordOgrLayerFieldsDropDown">
+        <table class="jigList">
+          <thead><tr>
+              <td>Nom</td><td>Type</td><td>taille</td><td>Précision</td><td>Justification</td>
+          </tr></thead>
+          <tbody dojoAttachPoint="fieldListNode">
+            <tr>
+              <td dojoAttachPoint="fidFieldNode"></td>
+              <td>Identifiant</td>
+              <td colspan="4">&nbsp;</td>
+            </tr>
+            <tr>
+              <td dojoAttachPoint="geometryFieldNode"></td>
+              <td>Géométrie</td>
+              <td colspan="4">&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </span>
+    <span dojoAttachPoint="fieldsNode"></span>
+  </td>
+
+  <!--<td dojoAttachPoint="fidColumnNode" class="center"></td>
+
+  <td dojoAttachPoint="geometryColumnNode" class="center"></td>-->
+
+  <td dojoAttachPoint="featureCountNode" class="center"></td>
+
+  <td class="center buttonRight">
+    <span dojoType="dijit.form.DropDownButton" class="nolabel"
+          dojoAttachPoint="extentButton">
+      <div dojoType="dijit.TooltipDialog" style="padding:5px">
+        <p>Étendue de la couche dans l'unité spatiale :</p>
+        <div dojoAttachPoint="extentNode"></div>
+      </div>
+    </span>
+    <span dojoAttachPoint="extentLabelNode"></span>
+  </td>
+
+  <td dojoAttachPoint="spatialRefNode" class="center">
+    <button dojoType="geonef.jig.button.TooltipWidget"
+            dojoAttachPoint="spatialRefButton"
+            childWidgetClass="geonef.ploomap.input.SpatialRef"
+            childWidgetParams="{value:'${spatialRef}'}"></button>
+  </td>
+
+  <td dojoAttachPoint="actionNode" class="center">
+    <button dojoType="geonef.jig.button.Action"
+            dojoAttachEvent="onClick:featuresAction"
+            label="contenu"/>
+  </td>
+
+</tr>

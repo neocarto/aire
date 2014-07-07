@@ -1,0 +1,86 @@
+/*********************************************
+ *
+ * Layout-related rules
+ *
+ *********************************************/
+
+/* colors */
+.jigLayoutRootPane .dijitSplitter .dijitSplitterThumb { background-color: #444; }
+.jigLayoutRootPane .dijitSplitterActive {  background-color: #fd5; }
+.jigCacoin, .jigCacoin .dijitContentPane { background-color: #efe; }
+.jigCacoin .dijitTabChecked { background-color: #efe; }
+.tundra .dijitBorderContainer-child.jigCacoin { border-color: #050; }
+.tundra .dijitSplitContainer-child, .tundra .dijitBorderContainer-child { border-radius: 3px; -moz-border-radius: 3px; }
+.tundra .dijitBorderContainer { background-color: #ffe; }
+
+
+/* Root elements */
+html { width: 100%; height: 100%; }
+body { width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden; font-family: arial; font-size: 80%; font-size: 0.8em; }
+.devOnly { display: none; }
+body.dev .devOnly { display: inline; }
+body.dev div.devOnly { display: block; }
+.grippy {  background: url("icon/grippy.png") no-repeat 4px 50%; }
+#wait { margin: 100px auto; text-align: center; font-weight: bold; font-size: 1.5em; font-variant: small-caps; color: #003; }
+#wait h1 { font-size: 1.5em; font-style: italic; margin: 0 0 30px 0; }
+
+
+/* Box model, dijit containers & splitters */
+.jigLayoutRootPane { overflow: hidden; }
+.jigLayoutRootPane .dijitContainer {  overflow: auto; }
+.jigLayoutRootPane .dijitSplitter { background-color: inherit; }
+.jigLayoutRootPane .dijitSplitterV { width: 3px; }
+.jigLayoutRootPane .dijitSplitterH { height: 3px; }
+.dj_chrome .jigLayoutRootPane .dijitSplitterV { cursor: col-resize; }
+.dj_chrome .jigLayoutRootPane .dijitSplitterH { cursor: row-resize; }
+.jigLayoutRootPane .dijitSplitterV .dijitSplitterThumb { left:1px; }
+.jigLayoutRootPane .dijitSplitterH .dijitSplitterThumb { top: 1px; }
+.jigLayoutRootPane .dijitGutterV {  display: none; }
+.jigLayoutRootPane .dijitGutterH {  display: none; }
+
+.jigLayoutRootPane .dijitArrowButtonInner { margin: 0 4px; }
+
+
+/* Toaster */
+@import url("../../dojox/widget/Toaster/Toaster.css");
+.jigLayoutRootPane .dijitToasterClip { z-index: 998; }
+.jigLayoutRootPane .dijitToasterContainer { z-index:998; background-color:#ffa; color: #000; border: 3px solid; padding: 0; width: 'auto'; font: inherit; }
+.jigLayoutRootPane .dijitToasterContainer .close { position: absolute; bottom: 1px; right: 1px; padding: 3px; border-top: 1px solid; border-left: 1px solid; border-color: #555; background: #ff8; font-weight: bold; }
+.jigLayoutRootPane .dijitToasterContainer .close:hover { background: #fa4; }
+.jigLayoutRootPane .dijitToasterContent { background: none; font: inherit; padding: 5px; }
+.jigLayoutRootPane .jigToasterBlUp > div { border-bottom: none; border-left: none; }
+.jigLayoutRootPane .jigToasterTrDown > div { border-top: none; border-left: none; }
+.jigLayoutRootPane .dijitTabPaneWrapper { overflow: auto; }
+.tundra .dijitTabPaneWrapper { border-radius: 3px; -moz-border-radius: 3px; }
+.dijitTooltipContainer h1 { margin: 10px 3px 5px; padding: 0 3px; border-bottom: 1px solid; font-size: 1.2em; font-weight: normal; }
+/*.dijitTooltipContents {  overflow: auto; }*/
+/*.jigCacoin .dijitTooltipContainer { padding: 0; } (OLD) */
+body .dijitTooltipDialog .dijitTooltipContainer { padding: 0; }
+.dijitDropDownButton.nolabel .dijitButtonText { display: none; }
+body .dijitSpinner { width: 6em; }
+body .dojoDndHandle { cursor: move; }
+.dijitSlider.labelWithin .dijitSliderImageHandle { padding-top: 4px; text-align: center; font-size: 0.8em; font-weight: bold;  }
+body .dijitMenuItem { font-family: inherits; font-size: 12px; }
+.dojoxScrollWindow { overflow: hidden; }
+
+/* Tab container */
+.tundra .dijitTabContainerTop-tabs { border-color: #aaa; }
+.tundra .dijitTabContainerTop-tabs .dijitTabContent { border-color: #aaa; }
+.tundra .dijitTabContainerTop-dijitContentPane,
+.tundra .dijitTabContainerLeft-dijitContentPane,
+.tundra .dijitTabContainerBottom-dijitContentPane,
+.tundra .dijitTabContainerRight-dijitContentPane,
+.tundra .dijitAccordionContainer-dijitContentPane { padding: 0; }
+.tundra .dijitTab { border-radius: 3px 3px 0 0; -moz-border-radius: 3px 3px 0 0; }
+.tundra .dijitTabChecked { background-color: #fec; background-image: none; border-color: #aaa; font-weight: bold; }
+.tundra .dijitTab * { outline: none; }
+.tundra .dijitTabContainer .dijitTabChecked { border-bottom-color: #fec; }
+.tundra .dijitTabContainer .dijitTabCheckedHover { background: #fec; border-bottom-color: #fec; }
+
+
+/* Drop-downs */
+.dijitDropDownButton > .dijitOffScreen { display: none; /* don't need the fake button; no HTML form */ }
+
+/* Misc */
+.dijitTooltipContainer { background-color: #eee; }
+.dijitTooltipContainer .dijitTooltipContents { font-size: inherit; /* tooltip size is computed before DOM insertion */ }

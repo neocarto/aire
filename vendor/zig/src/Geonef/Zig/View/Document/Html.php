@@ -1,0 +1,16 @@
+<?php
+
+namespace Geonef\Zig\View\Document;
+
+class Html extends XHtml
+{
+  public $xmlHead = '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">';
+
+  public function buildRootNode()
+  {
+    return $this->tag('html', array(),
+                      $this->buildXHtmlHead()
+                      . $this->buildXHtmlBody());
+  }
+
+}

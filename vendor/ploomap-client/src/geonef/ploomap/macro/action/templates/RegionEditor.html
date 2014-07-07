@@ -1,0 +1,45 @@
+<div class="ploomapMacroActionRegionEditor">
+  <button dojoType="dijit.form.DropDownButton" class="nolabel"
+          dojoAttachPoint="dropDownButton">
+    <span>props</span>
+    <div dojoType="dijit.TooltipDialog" dojoAttachPoint="tooltipDialog"
+         style="width:280px;" class="jigCacoin">
+      <table class="list"><tbody>
+          <tr>
+            <td colspan="2" class="n">
+              <h2>Zoom sur région</h2>
+              <p>Déplace la carte vers la région donnée, immédiatement ou
+              progressivement si une durée est définie.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="n">Région</td>
+            <td><div dojoType="geonef.ploomap.input.Extent" name="region"
+                     dojoAttachPoint="extentInput"
+                     geocodingEnabled="false" mapGetterWidget="${id}"></div></td>
+          </tr>
+          <tr>
+            <td class="n"><input dojoType="geonef.jig.input.BooleanCheckBox"
+                                 dojoAttachPoint="durationCheckBox"
+                                 name="hasDuration"></input>&nbsp;Durée</td>
+            <td><input dojoType="dijit.form.NumberSpinner" name="duration"
+                       dojoAttachPoint="durationInput" disabled="true"
+                       smallDelta="100" largeDelta="500" value="0"
+                       constraints="{min:0,max:300000,places:0}"></input>&nbsp;millisecondes</td>
+          </tr>
+          <tr><td colspan="2"><input dojoType="geonef.jig.input.BooleanCheckBox"
+                                     name="noZoomChange"></input>&nbsp;Ne pas changer de zoom</td>
+          </tr>
+          <!--tr><td colspan="2"><input dojoType="geonef.jig.input.BooleanCheckBox"
+                                     name="noZoomChange"></input>&nbsp;Sauvegarder avant déplacement</td>
+          </tr-->
+          <tr><td colspan="2">
+              <button dojoType="geonef.jig.button.Action"
+                      dojoAttachEvent="onClick:actionDelete"
+                      label="Supprimer"></button></td>
+          </tr>
+      </tbody></table>
+    </div>
+  </button>
+</div>
+

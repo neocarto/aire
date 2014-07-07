@@ -1,0 +1,23 @@
+<div>
+  <div class="search">
+    <input dojoType="geonef.jig.input.TextBox"
+           dojoAttachPoint="searchBox"
+           dojoAttachEvent="onExecute:search"/>
+    <button dojoType="geonef.jig.button.Action"
+            dojoAttachEvent="onClick:search">Chercher</button>
+  </div>
+  <h1 class="browseTitle" dojoAttachPoint="titleNode">
+  </h1>
+  <div dojoType="geonef.jig.layout.StackContainer"
+       dojoAttachPoint="container"
+       doLayout="false" class="panelContainer">
+    <div dojoType="${homePaneClass}"
+         dojoAttachPoint="homePane">
+    </div>
+  </div>
+  <button dojoType="geonef.jig.button.Action"
+          dojoAttachPoint="stateButton"
+          dojoAttachEvent="onClick:changeState"
+          class="state nolabel jigBorderRight">&lt;</button>
+
+</div>

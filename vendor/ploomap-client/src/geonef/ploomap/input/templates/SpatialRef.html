@@ -1,0 +1,22 @@
+<div style="width:300px;max-height:300px;overflow:auto;">
+  <table class="jigList"><tbody>
+    <tr><td>
+      <button dojoType="geonef.jig.button.Action"
+              dojoAttachEvent="onClick:requestDetail">Rafraîchir</button>
+    </td></tr>
+    <tr><td><b>Informations</b></td></tr>
+    <tr><td>
+        Type : <span dojoAttachPoint="typeNode"></span>
+    </td></tr>
+    <tr><td><b>Répertoriée</b></td></tr>
+    <tr><td dojoAttachPoint="authorityNode"></td></tr>
+    <tr><td><b>Format PROJ.4</b></td></tr>
+    <tr><td dojoAttachPoint="proj4Node"></td></tr>
+    <tr><td><b>Format WKT compact</b></td></tr>
+    <tr><td dojoAttachPoint="wktNode"></td></tr>
+    <tr><td><b>Format WKT indenté</b></td></tr>
+    <tr><td><code dojoAttachPoint="wktPNode"></code></td></tr>
+    <tr><td><b>Format XML</b></td></tr>
+    <tr><td><code dojoAttachPoint="xmlNode"></code></td></tr>
+  </tbody></table>
+</div>

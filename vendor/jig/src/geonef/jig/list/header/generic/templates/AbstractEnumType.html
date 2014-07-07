@@ -1,0 +1,23 @@
+<td class="jigListFilterEnum" colspan="${colspan}">
+  <span dojoAttachEvent="onclick:toggleSort" class="link sortCmd">&nbsp;</span>
+  <div dojoType="dijit.form.DropDownButton" dojoAttachPoint="buttonNode">
+       <span dojoAttachPoint="titleNode" class="title"></span>
+       <div dojoType="dijit.TooltipDialog" class="jigListFilterEnum">
+         <label msgKey="show">Filtre</label>&nbsp;:
+         <button dojoType="geonef.jig.button.Action" label="tout"
+                 dojoAttachEvent="onClick:checkAll"></button>
+         <button dojoType="geonef.jig.button.Action" label="inverse"
+                 dojoAttachEvent="onClick:checkInverse"></button>
+    	 <div dojoType="geonef.jig.input.Group" dojoAttachPoint="filterWidget"
+              class="values jigList" booleanUnion="true">
+    	 </div>
+	 <button dojoType="geonef.jig.button.Action" type="submit"
+	         dojoAttachEvent="onClick:updateFilter" msgKey="apply">Filtrer</button>
+
+       </div>
+  </div>
+  <div dojoAttachPoint="filterSummaryNode" style="display:none" class="filterSummary">
+    <span dojoAttachPoint="filterSummaryValueNode"></span>
+    <span class="link" dojoAttachEvent="onclick:clearFilter">X</span>
+  </div>
+</td>

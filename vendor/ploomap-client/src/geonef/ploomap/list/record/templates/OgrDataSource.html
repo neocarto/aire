@@ -1,0 +1,37 @@
+<tr>
+  <td class="select">
+    <input type="checkbox" dojoType="dijit.form.CheckBox"
+	   dojoAttachPoint="selectCheckBoxNode"
+	   dojoAttachEvent="onChange:onSelectCheckBoxChange"/>
+  </td>
+  <td dojoAttachPoint="uuidNode" class="center"></td>
+  <td dojoAttachPoint="nameNode" class="pad"></td>
+  <td dojoAttachPoint="moduleNode" class="center"></td>
+  <td class="center">
+    <span dojoAttachPoint="layerCountNode"></span>
+    <button dojoType="${listWidget.layersButtonClass}"
+            dojoAttachPoint="showLayersButton"
+            maxHeight="300"
+            anchor="auto"
+            childWidgetClass="geonef.ploomap.list.OgrLayer"
+            __childWidgetParams="{ogrSourceUuid:'${uuid}',ogrSourceName:'${name}'}"
+            __childWidgetStyle="{width:'640px',height:'480px'}"
+            label="Couches"></button>
+  </td>
+  <td dojoAttachPoint="actionNode" class="center">
+    <button dojoType="geonef.jig.button.InstanciateAnchored"
+            __dojoType="geonef.jig.button.TooltipWidget"
+            dojoAttachPoint="editButton"
+            __dropDownPosition="before,after"
+            childWidgetClass="geonef.ploomap.list.edition.ogrDataSource.${module}"
+            childWidgetParams="{uuid:'${uuid}',recordListRow:'${id}'}"
+            __childWidgetStyle="width:'400px'"
+            anchor="auto"
+            label="Propriétés "></button>
+    <!--button dojoType="geonef.jig.button.TooltipWidget"
+            dojoAttachPoint="editButton"
+            childWidgetClass="geonef.ploomap.list.edition.ogrDataSource.${module}"
+            childWidgetParams="{uuid:'${uuid}'}"
+            label="Éditer"></button-->
+  </td>
+</tr>

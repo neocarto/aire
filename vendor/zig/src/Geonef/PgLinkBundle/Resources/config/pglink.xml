@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="zig_pglink.manager.class">Geonef\PgLinkBundle\Manager</parameter>
+        <parameter key="zig_pglink.database.class">Geonef\PgLinkBundle\Database</parameter>
+    </parameters>
+
+    <services>
+        <service id="zig_pglink.manager" class="%zig_pglink.manager.class%">
+            <argument type="service" id="zig_pglink.database" />
+        </service>
+
+        <service id="zig_pglink.database" class="%zig_pglink.database.class%">
+            <argument type="service" id="logger" on-invalid="null"/>
+            <argument>%zig_pglink.connection.database%</argument>
+            <argument>%zig_pglink.connection.user%</argument>
+            <argument>%zig_pglink.connection.password%</argument>
+        </service>
+    </services>
+</container>

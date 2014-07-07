@@ -1,0 +1,57 @@
+<div class="jigMacroActionTextEditor">
+  <button dojoType="dijit.form.DropDownButton" class="nolabel"
+          dojoAttachPoint="dropDownButton">
+    <span>props</span>
+    <div dojoType="dijit.TooltipDialog" dojoAttachPoint="tooltipDialog"
+         style="width:300px" class="jigCacoin">
+      <table class="list"><tbody>
+          <tr>
+            <td colspan="2" class="n">
+              <h2>Affichage de texte</h2>
+              <p>Sur option, le texte précédent est effacé, ce qui fait
+                apparaître ce texte seul, au lieu de s'ajouter en dessous.
+                La continuation manuelle bloque la présentation jusqu'à ce
+                que l'utilisateur clique sur <i>Suivant</i>.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="n" colspan="2">
+                <textarea dojoType="dijit.form.SimpleTextarea" name="text"
+                          style="width: 90%; height: 60px;"></textarea>
+          </tr>
+          <tr>
+          <tr><td colspan="2">
+              <input dojoType="geonef.jig.input.BooleanCheckBox"
+                     name="clear"></input>&nbsp;Effacer le texte précédent</td>
+          </tr>
+          <tr><td colspan="2">
+              <input dojoType="geonef.jig.input.BooleanCheckBox"
+                     name="manualNext"></input>&nbsp;Continuation manuelle</td>
+          </tr>
+          <tr><td colspan="2">
+              <input dojoType="geonef.jig.input.BooleanCheckBox"
+                     name="styleBold"></input>&nbsp;Police <b>grasse</b></td>
+          </tr>
+          <tr><td colspan="2">
+              <input dojoType="geonef.jig.input.BooleanCheckBox"
+                     name="styleItalic"></input>&nbsp;Police <i>italique</i></td>
+          </tr>
+          <tr>
+            <td class="n"><input dojoType="geonef.jig.input.BooleanCheckBox"
+                                 dojoAttachPoint="styleSizeCheckBox"
+                                 name="defStyleSize"></input>&nbsp;Taille de la police</td>
+            <td><input dojoType="dijit.form.NumberSpinner"
+                       name="styleSize" dojoAttachPoint="styleSizeInput"
+                       smallDelta="10" largeDelta="30" disabled="true" value="100"
+                       constraints="{min:10,max:400,places:0}"></input>&nbsp;%</td>
+          </tr>
+          <tr><td colspan="2">
+              <button dojoType="geonef.jig.button.Action"
+                      dojoAttachEvent="onClick:actionDelete"
+                      label="Supprimer"></button></td>
+          </tr>
+      </tbody></table>
+    </div>
+  </button>
+</div>
+

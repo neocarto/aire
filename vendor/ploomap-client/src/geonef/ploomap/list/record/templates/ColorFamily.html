@@ -1,0 +1,27 @@
+<tr>
+
+  <td class="select">
+    <input type="checkbox" dojoType="dijit.form.CheckBox"
+	   dojoAttachPoint="selectCheckBoxNode"
+	   dojoAttachEvent="onChange:onSelectCheckBoxChange"/>
+  </td>
+
+  <td dojoAttachPoint="uuidNode" class="center"></td>
+
+  <td dojoAttachPoint="titleNode" class="pad" style="font-weight:bold"></td>
+
+  <td class="pad center" dojoAttachPoint="colorsNode"></td>
+
+  <td dojoAttachPoint="actionNode" class="center">
+    <button dojoType="geonef.jig.button.InstanciateAnchored"
+            __dojoType="geonef.jig.button.TooltipWidget"
+            dojoAttachPoint="editButton"
+            __dropDownPosition="before,after"
+            childWidgetClass="geonef.ploomap.list.edition.ColorFamily"
+            childWidgetParams="{uuid:'${uuid}',recordListRow:'${id}'}"
+            childWidgetStyle="{width:'400px'}"
+            anchor="auto"
+            label="Éditer"></button>
+  </td>
+
+</tr>

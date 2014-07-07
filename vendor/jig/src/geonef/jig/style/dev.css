@@ -1,0 +1,16 @@
+/*********************************************
+ *
+ * Dev-related rules
+ *
+ *********************************************/
+
+/*
+ * Exception dump
+ *********************************************/
+.jigToolDevExceptionDump .message { font-weight: bold; }
+.jigToolDevExceptionDump > div { margin: 10px 20px; }
+.jigToolDevExceptionDump .call { margin: 10px 0px; }
+.jigToolDevExceptionDump .function { font-weight: bold;  }
+.jigToolDevExceptionDump .function .link { font-style: italic;  }
+.jigToolDevExceptionDump .file { font-style: italic; }
+

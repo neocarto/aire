@@ -1,0 +1,26 @@
+<div class="jigCacoin ploomapToolMeasure">
+  <p>
+    Cet outil permet de calculer la distance d'un chemin ou l'aire
+    d'un polygone tracé sur la carte.
+  </p>
+  <p>
+      <button dojoType="geonef.jig.button.Action" class="jigFirstButton"
+              dojoAttachPoint="distanceButton"
+              dojoAttachEvent="onClick:measureDistance">Mesurer une distance</button
+      ><button dojoType="geonef.jig.button.Action" class="jigLastButton"
+               dojoAttachPoint="areaButton"
+               dojoAttachEvent="onClick:measureArea">Mesurer une aire</button
+      ><!--button dojoType="dijit.form.Button" dojoAttachPoint="cancelButton"
+              dojoAttachEvent="onClick:cancel" disabled="true">Naviguer</button-->
+  </p>
+  <div class="measureNode" style="display:none"
+       dojoAttachPoint="measureNode">
+    <h2>Liste des mesures</h2>
+    <ul dojoAttachPoint="listNode">
+    </ul>
+    <p class="clear">
+      <button dojoType="dijit.form.Button" dojoAttachPoint="cleanButton"
+              dojoAttachEvent="onClick:clean">Effacer</button>
+    </p>
+  </div>
+</div>

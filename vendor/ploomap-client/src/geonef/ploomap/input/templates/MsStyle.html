@@ -1,0 +1,32 @@
+<div>
+<span dojoType="dijit.form.DropDownButton" dojoAttachPoint="button">
+    <span>Style</span>
+    <div dojoType="dijit.TooltipDialog"
+         dojoAttachPoint="dialog">
+      <table class="jigList"><tbody>
+          <tr>
+            <td class="n">Colour</td>
+            <td><input dojoType="geonef.jig.input.BooleanCheckBox"
+                       toggleInput="${id}-background"></input></td>
+            <td><span dojoType="geonef.jig.input.Color" name="background"
+                      id="${id}-background"></span></td>
+          </tr>
+          <tr>
+            <td class="n">Outline colour</td>
+            <td><input dojoType="geonef.jig.input.BooleanCheckBox"
+                       toggleInput="${id}-outline"></input></td>
+            <td><span dojoType="geonef.jig.input.Color" name="outline"
+                      id="${id}-outline"></span></td>
+          </tr>
+          <tr>
+            <td class="n">Outline width</td>
+            <td><input dojoType="geonef.jig.input.BooleanCheckBox"
+                       toggleInput="${id}-width"></input></td>
+            <td><input dojoType="dijit.form.TextBox" name="width"
+                       id="${id}-width"/></td>
+          </tr>
+      </table>
+
+    </div>
+</span>
+</div>

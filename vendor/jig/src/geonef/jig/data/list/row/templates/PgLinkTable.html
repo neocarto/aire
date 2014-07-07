@@ -1,0 +1,47 @@
+<tr>
+
+  <td class="select">
+    <input type="checkbox" dojoType="dijit.form.CheckBox"
+	   dojoAttachPoint="selectCheckBoxNode"
+	   dojoAttachEvent="onChange:onSelectCheckBoxChange"/>
+  </td>
+
+  <td dojoAttachPoint="uuidNode" class="center"></td>
+
+  <td class="center buttonRight">
+    <span dojoType="dijit.form.DropDownButton" class="nolabel"
+          dojoAttachPoint="columnsButton">
+      <div dojoType="dijit.TooltipDialog"
+           class="ploomapListRecordOgrLayerColumnsDropDown">
+        <table class="jigList">
+          <thead><tr>
+              <td>Nom</td><td>Type</td>
+          </tr></thead>
+          <tbody dojoAttachPoint="columnListNode">
+          </tbody>
+        </table>
+      </div>
+    </span>
+    <span dojoAttachPoint="columnsNode"></span>
+  </td>
+
+  <td class="center">
+    <span dojoAttachPoint="viewCountNode"></span>
+    <button dojoType="${listWidget.viewsButtonClass}"
+            dojoAttachPoint="showViewsButton"
+            maxHeight="300"
+            anchor="auto"
+            childWidgetClass="geonef.jig.data.list.PgLinkView"
+            label="Vues"></button>
+  </td>
+
+  <td dojoAttachPoint="actionNode" class="center">
+    <button dojoType="geonef.jig.button.InstanciateAnchored"
+            dojoAttachPoint="editButton"
+            childWidgetClass="geonef.jig.data.edition.PgLinkTable"
+            childWidgetParams="{uuid:'${uuid}',recordListRow:'${id}'}"
+            anchor="auto"
+            label="Structure"></button>
+  </td>
+
+</tr>

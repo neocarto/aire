@@ -1,0 +1,23 @@
+<div>
+<div>
+	<div dojoType="dijit.form.CheckBox"
+		 dojoAttachPoint="visibilityCheckBox"
+		 dojoAttachEvent="onChange:toggleVisibility"></div>
+	${layer.name}
+</div>
+	 
+	<div dojoType="dijit.form.HorizontalSlider"
+		 dojoAttachPoint="slider"
+		 dojoAttachEvent="onChange:changeOpacity"
+		value="100"
+		minimum="0"
+		maximum="100"
+		pageIncrement="10"
+		showButtons="true"
+		intermediateChanges="true"
+		slideDuration="500"
+		style="height:30px; width: 90%; display: none;"
+		>
+	</div>
+
+</div>

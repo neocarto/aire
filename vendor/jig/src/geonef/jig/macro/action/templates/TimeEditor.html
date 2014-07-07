@@ -1,0 +1,30 @@
+<div class="jigMacroActionTimeEditor">
+  <button dojoType="dijit.form.DropDownButton" class="nolabel"
+          dojoAttachPoint="dropDownButton">
+    <span>props</span>
+    <div dojoType="dijit.TooltipDialog" dojoAttachPoint="tooltipDialog"
+         style="width:250px;" class="jigCacoin">
+      <table class="list"><tbody>
+          <tr>
+            <td colspan="2" class="n">
+              <h2>Attente</h2>
+              <p>La présentation attend le temps défini avant de passer
+                à l'étape suivante.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="n">Durée</td>
+            <td><input dojoType="dijit.form.NumberSpinner" name="time"
+                       smallDelta="100" largeDelta="500"
+                       constraints="{min:100,max:300000,places:0}"></input> millisecondes</td>
+          </tr>
+          <tr><td colspan="2">
+              <button dojoType="geonef.jig.button.Action"
+                      dojoAttachEvent="onClick:actionDelete"
+                      label="Supprimer"></button></td>
+          </tr>
+      </tbody></table>
+    </div>
+  </button>
+</div>
+

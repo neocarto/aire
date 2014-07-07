@@ -1,0 +1,30 @@
+
+<div class="layer jigList">
+  <table><tbody>
+      <div dojoType="geonef.ploomap.list.record.OgrLayer"
+           dojoAttachPoint="infoGroup">
+  </tbody></table>
+  <table class="settings jigList"
+         dojoAttachPoint="settingsNode"><tbody>
+      <tr>
+        <td class="n">Nouveau nom</td>
+        <td>
+          <input dojoType="dijit.form.TextBox" name="name"></input>
+        </td>
+      </tr>
+      <tr>
+        <td class="n">Nouveau type</td>
+        <td>
+          <select dojoType="geonef.ploomap.input.OgrGeometryType"
+                  name="geometryType"></select>
+          (attention, les types doivent être compatibles !)
+        </td>
+      </tr>
+      <tr>
+        <td class="n" colspan="2">
+          <input dojoType="geonef.jig.input.BooleanCheckBox"
+                 name="copyFeatures" value="true"></input>&nbsp;Copier les données
+        </td>
+      </tr>
+  </tbody></table>
+</div>
