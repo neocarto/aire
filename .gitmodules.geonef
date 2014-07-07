@@ -1,0 +1,42 @@
+[submodule "vendor/doctrine-common"]
+	path = vendor/doctrine-common
+	url = git.geonef.fr:/var/lib/git/github/doctrine-common.git
+[submodule "vendor/doctrine-mongodb"]
+	path = vendor/doctrine-mongodb
+	url = git.geonef.fr:/var/lib/git/github/doctrine-mongodb.git
+[submodule "vendor/doctrine-mongodb-odm"]
+	path = vendor/doctrine-mongodb-odm
+	url = git.geonef.fr:/var/lib/git/github/doctrine-mongodb-odm.git
+[submodule "vendor/bundles/Symfony/Bundle/DoctrineMongoDBBundle"]
+	path = vendor/bundles/Symfony/Bundle/DoctrineMongoDBBundle
+	url = git.geonef.fr:/var/lib/git/github/doctrine-mongodb-bundle.git
+[submodule "vendor/symfony"]
+	path = vendor/symfony
+	url = git.geonef.fr:/var/lib/git/github/symfony.git
+[submodule "vendor/twig"]
+	path = vendor/twig
+	url = git.geonef.fr:/var/lib/git/github/twig.git
+[submodule "vendor/monolog"]
+	path = vendor/monolog
+	url = git.geonef.fr:/var/lib/git/github/monolog.git
+[submodule "vendor/bundles/Sensio/Bundle/FrameworkExtraBundle"]
+	path = vendor/bundles/Sensio/Bundle/FrameworkExtraBundle
+	url = git.geonef.fr:/var/lib/git/github/framework-extra-bundle.git
+[submodule "vendor/bundles/Funkiton/InjectorBundle"]
+	path = vendor/bundles/Funkiton/InjectorBundle
+	url = git.geonef.fr:/var/lib/git/github/funkiton-injector-bundle.git
+[submodule "vendor/gedmo-doctrine-extensions"]
+	path = vendor/gedmo-doctrine-extensions
+	url = git.geonef.fr:/var/lib/git/github/doctrine-extensions.git
+[submodule "vendor/bundles/Stof/DoctrineExtensionsBundle"]
+	path = vendor/bundles/Stof/DoctrineExtensionsBundle
+	url = git.geonef.fr:/var/lib/git/github/doctrine-extensions-bundle.git
+[submodule "vendor/bundles/JMS/DiExtraBundle"]
+	path = vendor/bundles/JMS/DiExtraBundle
+	url = git.geonef.fr:/var/lib/git/github/jms-di-extra-bundle.git
+[submodule "vendor/metadata"]
+	path = vendor/metadata
+	url = git.geonef.fr:/var/lib/git/github/metadata.git
+[submodule "vendor/bundles/FOS/UserBundle"]
+	path = vendor/bundles/FOS/UserBundle
+	url = git://github.com/FriendsOfSymfony/FOSUserBundle.git
