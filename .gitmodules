@@ -16,21 +16,9 @@
 [submodule "vendor/twig"]
 	path = vendor/twig
 	url = git.geonef.fr:/var/lib/git/github/twig.git
-[submodule "vendor/zig"]
-	path = vendor/zig
-	url = git.geonef.fr:/var/lib/git/package/zig.git
-[submodule "vendor/jig"]
-	path = vendor/jig
-	url = git.geonef.fr:/var/lib/git/package/jig.git
-[submodule "vendor/ploomap-server"]
-	path = vendor/ploomap-server
-	url = git.geonef.fr:/var/lib/git/package/ploomap-server.git
 [submodule "vendor/monolog"]
 	path = vendor/monolog
 	url = git.geonef.fr:/var/lib/git/github/monolog.git
-[submodule "vendor/ploomap-client"]
-	path = vendor/ploomap-client
-	url = git.geonef.fr:/var/lib/git/package/ploomap-client.git
 [submodule "vendor/bundles/Sensio/Bundle/FrameworkExtraBundle"]
 	path = vendor/bundles/Sensio/Bundle/FrameworkExtraBundle
 	url = git.geonef.fr:/var/lib/git/github/framework-extra-bundle.git
