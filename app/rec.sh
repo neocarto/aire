@@ -1,6 +1,6 @@
 #/bin/sh
 
-for i in vendor/{cartapatate,zig,jig,ploomap-server,ploomap-client}; do
+for i in vendor/{zig,jig,ploomap-server,ploomap-client}; do
     cd $i
     echo
     echo "*** Moved to $i"
