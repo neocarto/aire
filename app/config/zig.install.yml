@@ -51,8 +51,8 @@ geonef_zig:
       - ^x/dojo/resources/blank\.gif$
       - ^x/dijit/themes/tundra/images/
       - ^x/geonef/[^/]+/style/icon/
-      - ^x/cartapatate/style/icon/
-      - ^lib/cartapatate/style/icon/
+      # - ^x/cartapatate/style/icon/
+      # - ^lib/cartapatate/style/icon/
       - ^lib/geonef/ploomap/style/marker/
       - ^x/.*/sld/[^/]+\.xml$
       - ^x/dojox/widget/ColorPicker/images/
@@ -63,7 +63,7 @@ geonef_zig:
     public_dir: %kernel.cache_dir%/public
     public_mappings:
       - { location: '', directory: '../src/Riate/AireBundle/Resources/public' }
-      - { location: '', directory: '../vendor/cartapatate' }
+      # - { location: '', directory: '../vendor/cartapatate' }
       - { location: 'lib', directory: '../vendor/ploomap-client/src' }
       - { location: 'lib', directory: '../vendor/jig/src' }
       - { location: 'images/openlayers', directory: '../vendor/ploomap-client/src/geonef/ploomap/style/openlayers' }
@@ -84,7 +84,7 @@ geonef_zig:
           - { ns: dojo, path: %kernel.cache_dir%/public/lib/dojo }
           - { ns: dijit, path: %kernel.cache_dir%/public/lib/dijit }
           - { ns: dojox, path: %kernel.cache_dir%/public/lib/dojox }
-          - { ns: cartapatate, path: %kernel.cache_dir%/public/lib/cartapatate }
+          # - { ns: cartapatate, path: %kernel.cache_dir%/public/lib/cartapatate }
           - { ns: geonef, path: %kernel.cache_dir%/public/lib/geonef }
           - { ns: aire, path: %kernel.cache_dir%/public/lib/aire }
           - { ns: package, path: %kernel.cache_dir%/public/lib/package }
@@ -92,28 +92,28 @@ geonef_zig:
           -
             name: ../admin.js
             resourceName: package.admin
-            copyrightFile: '../vendor/cartapatate/lib/cartapatate/copyright.txt'
+            copyrightFile: '../src/Riate/AireBundle/Resources/public/copyright.txt'
             dependencies:
               - geonef.jig.start.loadWorkspace
               - package.admin
           -
             name: ../home.js
             resourceName: package.home
-            copyrightFile: '../vendor/cartapatate/lib/cartapatate/copyright.txt'
+            copyrightFile: '../src/Riate/AireBundle/Resources/public/copyright.txt'
             dependencies:
               - package.home
               - aire.start.home
           -
             name: ../collection.js
             resourceName: package.collection
-            copyrightFile: '../vendor/cartapatate/lib/cartapatate/copyright.txt'
+            copyrightFile: '../src/Riate/AireBundle/Resources/public/copyright.txt'
             dependencies:
               - package.collection
               - aire.start.collection
           -
             name: ../print.js
             resourceName: package.print
-            copyrightFile: '../vendor/cartapatate/lib/cartapatate/copyright.txt'
+            copyrightFile: '../src/Riate/AireBundle/Resources/public/copyright.txt'
             dependencies:
               - package.print
               - aire.start.print

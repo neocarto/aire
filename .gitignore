@@ -1,3 +1,5 @@
 app/instance
 app/htpasswd
 app/logs/*
+app/cache/*
+

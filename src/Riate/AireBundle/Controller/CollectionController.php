@@ -4,6 +4,7 @@ namespace Riate\AireBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Geonef\PloomapBundle\Document\MapCategory;
+use Geonef\PloomapBundle\Document\MapCollection;
 use Geonef\PloomapBundle\Document\MapCollection\MultiRepr as MapCollectionMultiRepr;
 use Geonef\PloomapBundle\Document\MapCollection\SingleRepr as MapCollectionSingleRepr;
 use Riate\AireBundle\Display\AireMap;
@@ -50,7 +51,7 @@ class CollectionController extends Controller
    *                { class="Document\Map", filter={"collection"="id"} }
    *              })
    */
-  public function visuAction(MapCollectionMultiRepr $collection)
+  public function visuAction(/*MapCollectionMultiRepr*/ MapCollection $collection)
   {
     $categories = MapCategory::getCategories($this->container);
     //$collection = $this->getCollection($id);
@@ -90,7 +91,7 @@ class CollectionController extends Controller
   /*   return $coll; */
   /* } */
 
-  protected function getMaps(MapCollectionMultiRepr $coll)
+  protected function getMaps(/*MapCollectionMultiRepr*/ MapCollection $coll)
   {
     $maps = array();
     $mapTypes = MapCollectionMultiRepr::$mapTypes;
